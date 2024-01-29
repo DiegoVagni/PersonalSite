@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Page from "./Page";
-import ContactInfo from "../components/contactInfo/ContactInfo"
+import ContactInfo from "../components/contactInfo/contactInfo"
 import Locale from "../utils/Locale";
 import Instagram from "../resources/icons/instagram.svg"
 import Linkedin from "../resources/icons/linkedin.svg"

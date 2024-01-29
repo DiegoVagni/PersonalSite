@@ -12,7 +12,7 @@ import StyleSheet from "./utils/StyleSheet.js"
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
-import CV from "./pages/CV";
+import CV from "./pages/cv";
 import Projects from "./pages/Projects";
 import Loading from "./components/basics/loading/Loading"
 import WelcomeAnimation from "./components/basics/homeAnimationWelcome/WelcomeAnimation"

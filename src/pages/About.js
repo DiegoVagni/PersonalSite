@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Page from "./Page";
 import AboutMeCard from "../components/aboutMeCards/AboutMeCard"
-import Milano from "../resources/images/milano.jpg"
+
 
 class About extends Component {
 	render() {
@@ -18,7 +18,7 @@ class About extends Component {
     return (
 		<Page StyleSheet={this.props.StyleSheet}>
 			<div style={divStyle}>
-				<AboutMeCard src={Milano } StyleSheet={this.props.StyleSheet} title={"FirstSteps"}></AboutMeCard>
+				<AboutMeCard StyleSheet={this.props.StyleSheet} title={"FirstSteps"}></AboutMeCard>
 				<AboutMeCard  StyleSheet={this.props.StyleSheet} title={"SUPSIME"}></AboutMeCard>
 				<AboutMeCard StyleSheet={this.props.StyleSheet} title={"G3CLABSME"}></AboutMeCard>
 				<AboutMeCard  StyleSheet={this.props.StyleSheet} title={"OnlyMe"}></AboutMeCard>

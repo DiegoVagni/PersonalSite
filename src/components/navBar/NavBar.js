@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Locale from "../../utils/Locale";
-import NavBarButton from "./NavBarButton";
+import NavBarButton from "./NavbarButton";
 import NavBarSubMenu from "./NavBarSubMenu";
 import { useLocation } from "react-router-dom";
 import MenuButton from "../basics/menuButton/MenuButton"
