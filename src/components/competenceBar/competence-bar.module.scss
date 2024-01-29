@@ -1,0 +1,74 @@
+@import "../../App.module.scss";
+
+$competence-basic-color: red;
+$competence-medium-color: yellow;
+$competence-good-color: #5aff00;
+$competence-excellent-color: Green;
+$border-size: 1px;
+.Level {
+  width: 15px;
+  height: 7px;
+  border-bottom: solid $small-border-color $border-size;
+  border-top: solid $small-border-color $border-size;
+  border-left: solid $small-border-color $border-size;
+  display: inline-block;
+}
+.BasicLevel {
+  background-color: $competence-basic-color;
+}
+.MediumLevel {
+  background-color: $competence-medium-color;
+}
+.GoodLevel {
+  background-color: $competence-good-color;
+}
+
+.ExcellentLevel {
+  background-color: $competence-excellent-color;
+}
+
+.EmptyLevel {
+  background-color: transparent;
+}
+
+.CompetenceContainer {
+  margin-left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.CompetenceContainer :last-child {
+  border-right: solid $small-border-color $border-size;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.CompetenceContainer :first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.CompetenceCard {
+  width: fit-content;
+  height: fit-content;
+  margin: 2px;
+  display: flexbox;
+}
+
+.Title {
+	font-size: medium;
+	margin: 2px;
+	line-height: 1em;
+	font: Tahoma, serif;
+}
+
+.Competence {
+  font-size: small;
+  margin-left: 4px;
+}
+
+.CompetenceWrapper {
+  display: inline-flex;
+  height: auto;
+  justify-content: flex-start;
+}

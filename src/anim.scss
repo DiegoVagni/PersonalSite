@@ -1,0 +1,28 @@
+@keyframes fadeInRight {
+	0% {
+		transform: translate(130%,0px) ;
+		opacity:0
+	}
+	10% {
+		transform: translate(130%,0px) ;
+		opacity:1
+	}
+	30%{
+		transform:translate(0px,0px)
+	}
+	50%{
+		transform:translate(50px,0px)
+	}
+	100%{
+		transform: translate(0px,0px)
+	}
+}
+@keyframes fade {
+	0% {
+		opacity:0
+	}
+
+	100% {
+		opacity:1
+	}
+}

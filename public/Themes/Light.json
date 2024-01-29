@@ -1,0 +1,38 @@
+{
+	"Navbar_Color": "#87E0E0",
+	"Navbar_Active_Button_Color": "#BAEDE6",
+	"Navbar_Hover_Button_Color": "#DBF9F9",
+	"Navbar_Button_Border_Color": "#BAEDE6",
+
+	"Navbar_Text_Color": "#000000",
+	"Navbar_ActiveText_Button_Color": "#000000",
+	"Navbar_Hover_Text_Button_Color": "#000000",
+	"Button_Text_Color": "#000000",
+
+	"Setting_Button_Border_Color": "#9394a5",
+
+	"Modal_Color": "#A0E7E5",
+	"Modal_Border": "#87E0E0",
+
+	"Home_Background": "#A0E7E5",
+	"Home_Links_Color": "#9394a5",
+
+	"Shadow": "#484b6a",
+	"Text_Color": "#484b6a",
+
+	"Page_Background": "#BAEDE6",
+	"Card_Background": "#CEF2EE",
+
+	"Button_Color": "#94BDCF",
+
+	"Cool_Stamp": "#1800F2",
+	"New_Stamp": "#F10000",
+	"Cool_Stamp_BorderColor": "#FFFFFF",
+	"New_Stamp_BorderColor": "#FFFFFF",
+
+	"WelcomeAnimColor1": "#FFFFFF",
+	"WelcomeAnimColor2": "#F10000",
+	"WelcomeAnimColor3": "#C2BD18",
+	"WelcomeAnimColor4": "#F8F7D2"
+
+}
