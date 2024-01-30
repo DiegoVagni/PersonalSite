@@ -30,7 +30,6 @@ class App extends Component {
 
 		this.state = {
 			refreshApp: false,
-			Stylesheet: new StyleSheet(),
 			ready: false,
 			first:true
 		};
@@ -47,7 +46,7 @@ class App extends Component {
 		})
 	}
 	componentDidMount() {
-		this.state.Stylesheet.LoadDefaultStyle(this.loadedStyle)
+		StyleSheet.LoadDefaultStyle(this.loadedStyle)
 		this.ChangeLanguage(Locale.defaultLocale);
 	}
 	RefreshApplication() {
@@ -68,23 +67,23 @@ class App extends Component {
 }
 	render() {
 		if (!this.state.ready) { return <Loading></Loading> }
-		let backCol = this.props.location !== "/" ? this.state.Stylesheet.Style("Page_Background") : this.state.Stylesheet.Style("Home_Background");
+		let backCol = this.props.location !== "/" ? StyleSheet.Style("Page_Background") : StyleSheet.Style("Home_Background");
 		document.body.style.backgroundColor = backCol
 		return (
 			<>
-				{this.state.first ? (<WelcomeAnimation backCol={backCol }StyleSheet={this.state.Stylesheet} end={this.EndAnimHook} ></WelcomeAnimation >) : (<>
+				{this.state.first ? (<WelcomeAnimation backCol={backCol} StyleSheet={StyleSheet} end={this.EndAnimHook} ></WelcomeAnimation >) : (<>
 
-					<NavBar  root={this.props.root} StyleSheet={this.state.Stylesheet} languageChange={this.ChangeLanguage} refreshApp={this.RefreshApplication} />
+					<NavBar root={this.props.root} StyleSheet={StyleSheet} languageChange={this.ChangeLanguage} refreshApp={this.RefreshApplication} />
 					<div style={{ height: "10%", maxHeight: "50px", minHeight: "50px", width: "100%" }}>
 
 					</div>
 					<Routes>
-						<Route exact path="/" element={<Home StyleSheet={this.state.Stylesheet} />} />
-						<Route path="/contacts" element={<Contacts StyleSheet={this.state.Stylesheet} />} />
-						<Route path="/about" element={<About StyleSheet={this.state.Stylesheet} />} />
-						<Route path="/projects" element={<Projects StyleSheet={this.state.Stylesheet} />} />
+						<Route exact path="/" element={<Home StyleSheet={StyleSheet} />} />
+						<Route path="/contacts" element={<Contacts StyleSheet={StyleSheet} />} />
+						<Route path="/about" element={<About StyleSheet={StyleSheet} />} />
+						<Route path="/projects" element={<Projects StyleSheet={StyleSheet} />} />
 
-						<Route path="/skills" element={<CV StyleSheet={this.state.Stylesheet} />} />
+						<Route path="/skills" element={<CV StyleSheet={StyleSheet} />} />
 					</Routes></>
 				) 
 	}

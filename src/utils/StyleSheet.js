@@ -1,32 +1,39 @@
 
 
 class StyleSheet {
-	styles = null;
-	GetStyleSheet() {
-		return this.styles
+	static styles = null;
+	
+	static GetStyleSheet() {
+		return StyleSheet.styles
 	}
-	Style(styleCode) {
-		if (this.styles == null) return "#fffff"
-		return this.styles.get(styleCode)
+	static Style(styleCode) {
+		if (StyleSheet.styles == null) return "#fffff"
+		return StyleSheet.styles.get(styleCode)
 	}
 
-	ChangeStyle(key, value) {
+	static ChangeStyle(key, value) {
 	
-		this.styles.set(key, value);
+		StyleSheet.styles.set(key, value);
 	}
-	LoadDefaultStyle(refreshApp) {
+	static LoadDefaultStyle(refreshApp) {
 	
 		fetch('Themes/Light.json', {
 			headers: {
 				'Accept': 'application/json'
 			},
 			method: 'GET'
-		}).then((data) => { return data.json() }).then((json) => { this.ChangeTheme(json); }).then(() => refreshApp());
+		}).then((data) => { return data.json() }).then((json) => { StyleSheet.ChangeTheme(json); }).then(() => refreshApp());
 	}
-	ChangeTheme(json) {
+	static ChangeTheme(json) {
+		StyleSheet.styles = new Map(Object.entries(json));
+	}
 
-		this.styles = new Map(Object.entries(json));
+	static GetLayoutStyle(key) {
+		switch (key) {
+			case "text": return { fontSize: "20px" }
+			default: return {}
 
+		}
 	}
 }
 export default StyleSheet
