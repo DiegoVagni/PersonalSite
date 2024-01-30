@@ -1,9 +1,8 @@
 import { Component } from "react"
 
-import Select from "../../components/basics/select/Select";
-import Option from "../../components/basics/select/Option";
+import Select from "../../components/general/select/Select";
 class ThemeSheetSelector extends Component {
-	Themes = ["Light", "Dark"]
+	Themes = [{ name: "Light", value: "Light.json" }, { name: "Dark", value: "Dark.json" }]
 	constructor(props) {
 		super(props)
 		this.ChangeTheme = this.ChangeTheme.bind(this);
@@ -25,15 +24,10 @@ class ThemeSheetSelector extends Component {
 			<div>
 				
 				<Select
-				defaultValue={this.Themes[0]}
-					onChange={this.ChangeTheme}>
-					{this.Themes.map((theme, index) => (
-						<Option key={index} yek={index} value={this.Themes[index] + ".json"}>
-							{this.Themes[index]}
-					</Option>
-				))}
-			</Select>
-			</div>
+					defaultValue={this.Themes[0]}
+					onChange={this.ChangeTheme}
+					values={ this.Themes} />
+	</div>
 		)
 	}
 }

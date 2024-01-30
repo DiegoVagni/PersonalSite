@@ -3,8 +3,8 @@ class Locale {
 	static defaultLocale = localStorage["locale"] ? localStorage["locale"] : "it";
 	static invariantMap = null;
 	static localeList = [
-		{ name: "English", code: "en", lang: "English" },
-		{ name: "Italiano", code: "it", lang: "Italian" },
+		{ name: "English", value: "en", lang: "English" },
+		{ name: "Italiano", value: "it", lang: "Italian" },
 	];
 
 	static ChangeLocale(localCode, refreshAppHook) {

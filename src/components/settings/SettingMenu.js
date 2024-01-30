@@ -55,7 +55,7 @@ class SettingMenu extends Component {
 				</SettingContainer>
 				<SettingContainer>
 					<p style={textStyle}>{Locale.GetMessages("Change_Colors")}</p>
-					<ChangeColorButton StyleSheet={this.props.StyleSheet } root={ this.props.root} refreshApp={this.props.refreshApp} StyleSheet={this.props.StyleSheet} />
+					<ChangeColorButton StyleSheet={this.props.StyleSheet } root={ this.props.root} refreshApp={this.props.refreshApp} />
 				</SettingContainer>
 				<SettingContainer>
 					

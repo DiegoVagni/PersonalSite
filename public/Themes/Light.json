@@ -33,6 +33,8 @@
 	"WelcomeAnimColor1": "#FFFFFF",
 	"WelcomeAnimColor2": "#F10000",
 	"WelcomeAnimColor3": "#C2BD18",
-	"WelcomeAnimColor4": "#F8F7D2"
+	"WelcomeAnimColor4": "#F8F7D2",
+
+	"Select_BackgroundColor": "#FFFFFF"
 
 }
