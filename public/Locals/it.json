@@ -49,22 +49,7 @@
 	"WelcomeAnimColor4": "Animazione iniziale colore 4",
 
 	"Hard_Skills": "Hard skills",
-	"CSharp": "C#",
-	"Java": "Java",
-	"Javascript": "Javascript",
-	"CPlus": "C++",
-	"C": "C",
-	"Python": "Python",
-	"PHP": "PHP",
-	"Html": "HTML",
-	"Css": "CSS",
-	"Latex": "Latex",
-	"React": "React",
-	"Spring": "Spring",
-	"Unity": "Unity",
-	"NodeJS": "NodeJS",
-	"Hardware": "Hardware",
-	"GitHub": "GitHub",
+
 	"Languages": "Lingue",
 	"Software_Design": "Design del software",
 	"Graphic_Design": "Design grafico",
@@ -79,9 +64,7 @@
 	"Markup_Languages": "Linguaggi di markup",
 	"Programming_Languages": "Linguaggi di programmazione",
 
-	"Mail": "E-Mail",
-	"Instagram": "Instagram",
-	"Linkedin": "Linkedin",
+
 
 	"Soft_Skills": "Soft skills",
 	"Consciousness": "Consapevolezza del sè",
@@ -104,7 +87,6 @@
 
 	"Licenses": "Licenze",
 
-	"svgrepo.com": "SVGRepo.com",
 
 	"Stamp": "Francobollo ",
 	"HomeAnimation": "Animazione iniziale",
