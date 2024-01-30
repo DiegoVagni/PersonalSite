@@ -1,6 +1,7 @@
 import { Component } from "react"
 import Locale from "../../utils/Locale"
-import Modal from "../basics/modal/Modal"
+import Modal from "../general/modal/Modal"
+import Button from "../general/button/Button"
 import ColorPicker from "./ColorPicker"
 class ChangeColorButton extends Component {
 	constructor(props) {
@@ -45,7 +46,7 @@ class ChangeColorButton extends Component {
 		return (
 			<div>
 				<button style={changeColorStyle} onClick={this.showModal}><p style={textStyle}> {Locale.GetMessages("Colors_Setting")}</p></button>
-				<Modal apply={ true} root={this.props.root } show={this.state.show} StyleSheet={this.props.StyleSheet} handleClose={this.hideModal} handleApply={this.Apply}>
+				<Modal root={this.props.root} show={this.state.show} handleClose={this.hideModal} buttons={[<Button text={Locale.GetMessages("Apply")} onClick={this.Apply} />]}>
 					<div>
 						{ pickers}
 					</div>
