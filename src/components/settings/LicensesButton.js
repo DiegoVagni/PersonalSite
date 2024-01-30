@@ -1,6 +1,6 @@
 import { Component } from "react"
 import Locale from "../../utils/Locale"
-import Modal from "../general/modal/Modal"
+import Modal from "../general/Modal"
 
 class LicensesButton extends Component {
 	constructor(props) {

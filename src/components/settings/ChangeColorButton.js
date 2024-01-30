@@ -1,7 +1,7 @@
 import { Component } from "react"
 import Locale from "../../utils/Locale"
-import Modal from "../general/modal/Modal"
-import Button from "../general/button/Button"
+import Modal from "../general/Modal"
+import Button from "../general/Button"
 import ColorPicker from "./ColorPicker"
 class ChangeColorButton extends Component {
 	constructor(props) {

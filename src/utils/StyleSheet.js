@@ -5,8 +5,8 @@ class StyleSheet {
 	static titleFont = "old london, sans-serif"; 
 	static navBarFont = "old london, sans-serif"; 
 
-
-
+	static themes = [{ name: "Light", value: "Light.json" }, { name: "Dark", value: "Dark.json" }]
+	static currentIndex = 0;
 	static styles = null;
 	
 	static GetStyleSheet() {
@@ -21,18 +21,16 @@ class StyleSheet {
 	
 		StyleSheet.styles.set(key, value);
 	}
-	static LoadDefaultStyle(refreshApp) {
-	
-		fetch('Themes/Light.json', {
+	static loadStyle(index, refreshApp) {
+		StyleSheet.currentIndex = index;
+		fetch('Themes/' + StyleSheet.themes[StyleSheet.currentIndex].value, {
 			headers: {
 				'Accept': 'application/json'
 			},
 			method: 'GET'
-		}).then((data) => { return data.json() }).then((json) => { StyleSheet.ChangeTheme(json); }).then(() => refreshApp());
+		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json))}).then(() => refreshApp());
 	}
-	static ChangeTheme(json) {
-		StyleSheet.styles = new Map(Object.entries(json));
-	}
+
 
 	static getLayoutStyle(key) {
 		switch (key) {
@@ -75,6 +73,7 @@ class StyleSheet {
 				overflowY: "auto",
 				overflowX: "none"
 			}
+			case "Modal_Container": return {}
 			default: return {}
 
 		}

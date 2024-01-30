@@ -46,7 +46,7 @@ class App extends Component {
 		})
 	}
 	componentDidMount() {
-		StyleSheet.LoadDefaultStyle(this.loadedStyle)
+		StyleSheet.loadStyle(0, this.loadedStyle)
 		this.ChangeLanguage(Locale.defaultLocale);
 	}
 	RefreshApplication() {
