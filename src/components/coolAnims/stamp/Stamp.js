@@ -1,28 +1,33 @@
 import { Component } from "react"
-import "./stamp.css"
+import "./stamp.scss"
 
 
 class Stamp extends Component {
+   root = document.documentElement;
 	render() {
-	
-		let divStyle = {
+
+		let stampContent = {
 			backgroundColor: this.props.color,
-			
+
 		}
-		let outerStyle = {
-			backgroundColor:this.props.borderColor,
+		let stampContainer = {
+			backgroundColor: this.props.borderColor,
 			transform: "rotateZ(" + (this.props.rot ? this.props.rot : 0) + ")",
 			position: "fixed",
 			right: "130px",
 			top: "85px",
 			zIndex: "2"
-}
+		}
+		this.root?.style.setProperty(
+			"--base-color",
+			this.props.parentColor
+		);
 		return (
-			<div style={outerStyle}>
-			<div style={divStyle} className={"stamp"}><p>{this.props.children}</p></div>
+			<div style={stampContainer}>
+				<div style={stampContent} className={"stamp"}><p>{this.props.children}</p></div>
 			</div>
 
-			)
+		)
 	}
 }
 

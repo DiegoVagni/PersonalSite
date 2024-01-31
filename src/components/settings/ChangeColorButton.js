@@ -3,6 +3,8 @@ import Locale from "../../utils/Locale"
 import Modal from "../general/Modal"
 import Button from "../general/Button"
 import ColorPicker from "./ColorPicker"
+import KeyGenerator from "../../utils/KeyGenerator"
+
 class ChangeColorButton extends Component {
 	constructor(props) {
 		super(props)
@@ -40,12 +42,12 @@ class ChangeColorButton extends Component {
 		}
 		let pickers = []
 		this.props.StyleSheet.GetStyleSheet().forEach((value, key) => {
-			pickers.push(< ColorPicker StyleSheet={this.props.StyleSheet} change={this.change} target={key} value={value} key={key} />)
+			pickers.push(< ColorPicker StyleSheet={this.props.StyleSheet} change={this.change} target={key} value={value} childrenKey={key} />)
 		})
 
 		return (
 			<div>
-				<button style={changeColorStyle} onClick={this.showModal}><p style={textStyle}> {Locale.GetMessages("Colors_Setting")}</p></button>
+				<button key={KeyGenerator.getNextKey()} style={changeColorStyle} onClick={this.showModal}><p style={textStyle}> {Locale.GetMessages("Colors_Setting")}</p></button>
 				<Modal root={this.props.root} show={this.state.show} handleClose={this.hideModal} buttons={[<Button text={Locale.GetMessages("Apply")} onClick={this.Apply} />]}>
 					<div>
 						{ pickers}

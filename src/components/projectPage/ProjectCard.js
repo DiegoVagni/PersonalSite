@@ -9,7 +9,8 @@ import TeamWork from "../../resources/icons/teamwork.svg"
 import Committer from "../../resources/icons/committer.svg"
 import ProjectTecnologies from "./ProjectTecnologies"
 import GitHub from "../../resources/icons/gitHub.svg"
-import Stamp from "../coolAnims/stamp/Stamp"
+import NewStamp from "../coolAnims/stamp/prefabStamps/NewStamp"
+import CoolStamp from "../coolAnims/stamp/prefabStamps/CoolStamp"
 class ProjectCard extends Component {
 	constructor(props) {
 		super(props);
@@ -90,14 +91,14 @@ class ProjectCard extends Component {
 		}
 		let stampType;
 		if (this.props.stamp == "new") {
-			stampType = ["New_Stamp", "New_Stamp_Message","New_Stamp_BorderColor"]
+			stampType = <NewStamp parentColor={this.props.StyleSheet.Style("Card_Background")} rot={"25deg" } />
 		} else if (this.props.stamp == "cool") {
-			stampType = ["Cool_Stamp", "Cool_Stamp_Message", "Cool_Stamp_BorderColor"]
+			stampType = <CoolStamp parentColor={this.props.StyleSheet.Style("Card_Background")} rot={"25deg"} />
 		}
 		return (
 
 			<div style={outerStyle}>
-				{(this.state.haveStamp && this.props.stamp) ? <Stamp StyleSheet={this.props.StyleSheet} rot={this.props.stampRot} color={this.props.StyleSheet.Style(stampType[0])} borderColor={this.props.StyleSheet.Style(stampType[2])}>{Locale.GetMessages(stampType[1])} </Stamp> : <></>}
+				{(this.state.haveStamp && this.props.stamp) ? stampType : <></>}
 			<div style={cardStyle}>
 					<p style={titleStyle}>{Locale.GetMessages(title)}</p>
 					<p style={textStyle}>{Locale.GetMessages(title + "_Starting_Date")} - {Locale.GetMessages(title + "_End_Date")}</p>
