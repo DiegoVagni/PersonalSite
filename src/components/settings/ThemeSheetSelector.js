@@ -19,7 +19,7 @@ class ThemeSheetSelector extends Component {
 			<div>
 				
 				<Select
-					defaultValue={StyleSheet.currentIndex}
+					value={StyleSheet.themes[StyleSheet.currentIndex].value}
 					onChange={this.ChangeTheme}
 					values={StyleSheet.themes} />
 	</div>

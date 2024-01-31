@@ -7,7 +7,7 @@ class LanguageSelector extends Component {
     render() {
  
         return (<Select
-            defaultValue={Locale.defaultLocale}
+            value={Locale.defaultLocale}
             onChange={this.props.languageChange}
             values={Locale.localeList} />
         )

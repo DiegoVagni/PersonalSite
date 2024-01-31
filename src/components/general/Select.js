@@ -6,11 +6,12 @@ export class Select extends Component {
     render() {
     
       return (
-        <select style={StyleSheet.getLayoutStyle("Setting_Select")}
-        onChange={this.props.onChange}
+          <select style={StyleSheet.getLayoutStyle("Setting_Select")}
+              onChange={this.props.onChange}
+              value={this.props.value}
       >
               {this.props.values.map((value, index) => (
-                  <Option key={KeyGenerator.getNextKey()} selected={index == this.props.defaultValue || value.value == this.props.defaultValue ? "selected":""} index={index} value={value.value}>
+                  <Option key={KeyGenerator.getNextKey()} index={index} value={value.value}>
                     {value.name}
                 </Option>
             ))}
