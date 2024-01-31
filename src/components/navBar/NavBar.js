@@ -3,7 +3,7 @@ import Locale from "../../utils/Locale";
 import NavBarButton from "./NavbarButton";
 import NavBarSubMenu from "./NavBarSubMenu";
 import { useLocation } from "react-router-dom";
-import MenuButton from "../basics/menuButton/MenuButton"
+import MenuButton from "../general/MenuButton"
 import setting from "../../resources/icons/settings.svg"
 import home from "../../resources/icons/home.svg"
 import SettingMenu from "../settings/SettingMenu";

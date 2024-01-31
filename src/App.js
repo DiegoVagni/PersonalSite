@@ -14,7 +14,7 @@ import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import CV from "./pages/cv";
 import Projects from "./pages/Projects";
-import Loading from "./components/basics/loading/Loading"
+import Loading from "./components/general/Loading"
 import WelcomeAnimation from "./components/basics/homeAnimationWelcome/WelcomeAnimation"
 function withLocation(Component) {
 
@@ -67,6 +67,7 @@ class App extends Component {
 	this.setState({first:false})
 }
 	render() {
+		
 		if (!this.state.ready) { return <Loading></Loading> }
 		let backCol = this.props.location !== "/" ? StyleSheet.Style("Page_Background") : StyleSheet.Style("Home_Background");
 		document.body.style.backgroundColor = backCol

@@ -1,14 +1,14 @@
 
 
 class StyleSheet {
-	static font = "old london, sans-serif"; 
-	static titleFont = "old london, sans-serif"; 
-	static navBarFont = "old london, sans-serif"; 
+	static font = "old london, sans-serif";
+	static titleFont = "old london, sans-serif";
+	static navBarFont = "old london, sans-serif";
 
 	static themes = [{ name: "Light", value: "Light.json" }, { name: "Dark", value: "Dark.json" }]
 	static currentIndex = 0;
 	static styles = null;
-	
+
 	static GetStyleSheet() {
 		return StyleSheet.styles
 	}
@@ -18,7 +18,7 @@ class StyleSheet {
 	}
 
 	static ChangeStyle(key, value) {
-	
+
 		StyleSheet.styles.set(key, value);
 	}
 	static loadStyle(index, refreshApp) {
@@ -28,7 +28,7 @@ class StyleSheet {
 				'Accept': 'application/json'
 			},
 			method: 'GET'
-		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json))}).then(() => refreshApp());
+		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json)) }).then(() => refreshApp());
 	}
 
 
@@ -36,9 +36,14 @@ class StyleSheet {
 		switch (key) {
 			case "Normal_Text": return {
 				fontSize: "1rem",
-				fontFamily: StyleSheet.font, }
+				fontFamily: StyleSheet.font,
+			}
 			case "Title_Text": return {
 				fontSize: "2rem",
+				fontFamily: StyleSheet.titleFont,
+			}
+			case "Biggest_Text": return {
+				fontSize: "4rem",
 				fontFamily: StyleSheet.titleFont,
 			}
 			case "Small_Text": return {
@@ -52,7 +57,7 @@ class StyleSheet {
 			case "Setting_Select_Option": return {
 				fontSize: "1rem",
 				fontFamily: StyleSheet.font,
-				backgroundColor:StyleSheet.Style("Select_BackgroundColor")
+				backgroundColor: StyleSheet.Style("Select_BackgroundColor")
 			}
 			case "Setting_Select": return {
 				fontSize: "1rem",
@@ -72,6 +77,22 @@ class StyleSheet {
 				backgroundColor: StyleSheet.Style("Modal_Color"),
 				overflowY: "auto",
 				overflowX: "none"
+			}
+			case "Menu_Button": return {
+				width: "100%",
+				height: "100%",
+				maxHeight: "50px",
+				maxWidth: "50px",
+				boxShadow: "0px 7px 10px -7px " + StyleSheet.Style("Shadow")
+
+			}
+			case "Center_Column_Flex": return {
+				display: "flex",
+				height: "100%",
+				width: "100%",
+				flexDirection: "column",
+				alignItems: "center",
+				justifyContent: "center"
 			}
 			case "Modal_Container": return {}
 			default: return {}

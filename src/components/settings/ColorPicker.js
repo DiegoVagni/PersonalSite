@@ -1,5 +1,6 @@
 import { Component } from "react"
 import Locale from "../../utils/Locale"
+import KeyGenerator from "../../utils/KeyGenerator"
 
 class ColorPicker extends Component {
 	
@@ -23,8 +24,8 @@ class ColorPicker extends Component {
 			textAlign: "start",
 
 		}
-		return(
-			<div style={ style}>
+		return (
+			<div key={KeyGenerator.getNextKey()} style={style}>
 				<p style={pStyle}>{Locale.GetMessages(this.props.target)}</p>
 				<input onChange={this.props.change} type="color" defaultValue={this.props.value} target={ this.props.target} />
 			</div>

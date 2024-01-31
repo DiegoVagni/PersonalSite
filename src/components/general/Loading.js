@@ -1,5 +1,6 @@
 import { Component } from "react";
-import Cube from "../../coolAnims/cube/Cube"
+import Cube from "../coolAnims/cube/Cube"
+import StyleSheet from "../../utils/StyleSheet"
 class Loading extends Component {
 	constructor(props) {
 		super(props)
@@ -20,25 +21,15 @@ class Loading extends Component {
 		this.setState({ haveCube: window.innerWidth > 800 && window.innerHeight > 800 });
 	}
 	render() {
-		let titleStyle = {
-			font: "80px 'Baskerville', serif",
-			margin: "3px",
-			color: "black"
-		}
-		let centerStyle = {
-			display: "flex",
-			height: "100%",
-			width: "100%",
-			flexDirection: "column",
-			alignItems: "center",
-			justifyContent: "center"
-		}
+		
+	
 		return (
 
 
-			<div style={centerStyle}>
+			<div style={StyleSheet.getLayoutStyle("Center_Column_Flex")}
+>
 				{this.state.haveCube ? (<Cube translateX={0} translateY={-75}></Cube>) : (<></>)}
-				<p style={titleStyle}>LOADING</p>
+				<p style={StyleSheet.getLayoutStyle("Biggest_Text")}>LOADING</p>
 			</div>
 		)
 	}
