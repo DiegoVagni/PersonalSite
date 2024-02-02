@@ -1,6 +1,7 @@
 import { Component } from "react";
-import Locale from "../../utils/Locale";
-import styles from "./competence-bar.module.scss";
+import Locale from "../../../../utils/Locale";
+import StyleSheet from "../../../../utils/StyleSheet";
+import styles from "./competenceBar.module.scss";
 
 class CompetenceBar extends Component {
   render() {
@@ -10,11 +11,7 @@ class CompetenceBar extends Component {
     let cl = this.props.competenceLevel;
     let cr = cl / mc;
       let levelText;
-      let textStyle = {
-          margin: "3px",
-          color: this.props.StyleSheet.Style("Text_Color"),
-
-      }
+   
     if (cr <= 0.3) {
       colorClass = styles.BasicLevel;
         levelText = Locale.GetMessages("basic_level");
@@ -42,11 +39,11 @@ class CompetenceBar extends Component {
     }
 
     return (
-      <div className={styles.CompetenceCard}>
-            <p style={textStyle} className={styles.Title}>{this.props.competence}</p>
+        <div className={styles.CompetenceCard}>
+            <p style={StyleSheet.getLayoutStyle("Normal_Text")} >{this.props.competence}</p>
         <div className={styles.CompetenceWrapper}>
                 <div className={styles.CompetenceContainer}>{competence}</div>
-                <p style={textStyle} className={styles.Competence}>
+                <p style={StyleSheet.getLayoutStyle("Small_Text")} className={styles.Competence}>
             {this.props.text ? this.props.text : levelText}
           </p>
         </div>

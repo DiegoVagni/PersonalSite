@@ -1,6 +1,6 @@
 import { Component } from "react"
-import "./welcomeAnimation.scss"
-class WelcomeAnimation extends Component {
+import "./startAnimation.scss"
+class StartAnimation extends Component {
 	constructor(props) {
 		super(props)
 		setTimeout(this.props.end
@@ -146,4 +146,4 @@ class WelcomeAnimation extends Component {
 		)
 	}
 }
-export default WelcomeAnimation
+export default StartAnimation

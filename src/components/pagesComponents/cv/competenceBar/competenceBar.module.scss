@@ -1,4 +1,4 @@
-@import "../../App.module.scss";
+@import "../../../../App.module.scss";
 
 $competence-basic-color: red;
 $competence-medium-color: yellow;
@@ -55,12 +55,6 @@ $border-size: 1px;
   display: flexbox;
 }
 
-.Title {
-	font-size: medium;
-	margin: 2px;
-	line-height: 1em;
-	font: Tahoma, serif;
-}
 
 .Competence {
   font-size: small;
