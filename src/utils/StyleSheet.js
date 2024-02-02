@@ -50,6 +50,10 @@ class StyleSheet {
 				fontSize: "4rem",
 				fontFamily: StyleSheet.titleFont,
 			}
+			case "Big_Text": return {
+				fontSize: "3rem",
+				fontFamily: StyleSheet.titleFont,
+			}
 			case "Small_Text": return {
 				fontSize: "0.5rem",
 				fontFamily: StyleSheet.font,
@@ -162,6 +166,12 @@ class StyleSheet {
 				maxHeight: "50px",
 				maxWidth: "50px"
 			}
+			case "Medium_Image": return {
+				width: "100%",
+				height: "100%",
+				maxHeight: "200px",
+				maxWidth: "200px"
+			}
 			case "Flex_Row_Center_Container": return {
 				display: "flex",
 				flexDirection: "row",
@@ -169,6 +179,20 @@ class StyleSheet {
 				alignItems: "center",
 				justifyItems: "center",
 				margin: "5px"
+			}
+			case "Competence_Container": return {
+				display: "flex",
+				alignItems: "center",
+				justifyContent: "center",
+				justifyItems: "center",
+				margin: "5px",
+				flexWrap: "wrap"
+			}
+			case "Contact_Info": return {
+				display: "flex",
+				alignContent: "center",
+				justifyContent: "center",
+				alignItems: "center"
 			}
 			default: return {}
 
