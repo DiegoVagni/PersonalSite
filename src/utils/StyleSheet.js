@@ -176,6 +176,12 @@ class StyleSheet {
 				maxHeight: "50px",
 				maxWidth: "50px"
 			}
+			case "Preview_Image": return {
+				width: "100%",
+				height: "100%",
+				maxHeight: "50px",
+				maxWidth: "50px"
+			}
 			case "Medium_Image": return {
 				width: "100%",
 				height: "100%",
@@ -194,6 +200,12 @@ class StyleSheet {
 				alignItems: "center",
 				justifyItems: "center",
 				margin: "5px"
+			}
+			case "Flex_Column_Center_Container": return {
+				width: "100%",
+				display: "flex",
+				justifyContent: "flex-start",
+				flexDirection: "column",
 			}
 			case "Competence_Container": return {
 				display: "flex",
@@ -289,7 +301,19 @@ class StyleSheet {
 				display: "flex",
 				flexDirection: "row",
 				flexWrap: "wrap"
-}
+			}
+			case "Download_Section": return {
+				width: "100%",
+				display: "flex",
+				flexDirection: "row",
+				margin: "15px"
+
+			}
+			case "Download_Link": return {
+				...{
+					textDecoration: "none"
+				}, ...StyleSheet.getLayoutStyle("Normal_Text")
+			}
 			default: return {}
 
 		}
