@@ -309,6 +309,51 @@ class StyleSheet {
 				margin: "15px"
 
 			}
+			case "Setting_Menu": return {
+				width: "auto",
+				height: "auto",
+				minHeight: "100px",
+				minWidth: "200px",
+				maxWidth: "1000px",
+				MaxHeight: "100%",
+				backgroundColor: StyleSheet.Style("Navbar_Color"),
+				overflowX: "none",
+				overflowY: "auto",
+				display: "flex",
+				flexDirection: "column",
+				alignItems: "flex-start",
+				justifyItems: "top",
+				position: "absolute",
+				right: "0px",
+				top: "130%",
+				padding: "5px",
+				borderRadius: "10px 7px 10px 10px",
+				borderBottom: "2px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
+				borderLeft: "2px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
+				borderRight: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color")
+
+			}
+			case "Setting_Container": return {
+				display: "flex",
+				flexDirection: "row",
+				justifyContent: "space-between",
+				alignItems: "center",
+				alignContent: "flex-start",
+				width: "100%",
+				maxHeight: "50px"
+
+			}
+			case "ColorPicker": return {
+				width: "100%",
+				height: "auto",
+				maxHeight: "50px",
+				minHeight: "20px",
+				display: "flex",
+				flexDirection: "row",
+				justifyContent: "space-between",
+				alignItems: "center"
+
+			}
 			case "Download_Link": return {
 				...{
 					textDecoration: "none"

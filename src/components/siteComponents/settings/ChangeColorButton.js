@@ -1,10 +1,10 @@
 import { Component } from "react"
-import Locale from "../../utils/Locale"
-import Modal from "../general/Modal"
-import Button from "../general/Button"
+import Locale from "../../../utils/Locale"
+import Modal from "../../general/Modal"
+import Button from "../../general/Button"
 import ColorPicker from "./ColorPicker"
-import KeyGenerator from "../../utils/KeyGenerator"
-
+import KeyGenerator from "../../../utils/KeyGenerator"
+import StyleSheet from "../../../utils/StyleSheet"
 class ChangeColorButton extends Component {
 	constructor(props) {
 		super(props)
@@ -28,21 +28,21 @@ class ChangeColorButton extends Component {
 	}
 	Apply() {
 		
-		this.state.values.forEach((value, key) => { this.props.StyleSheet.ChangeStyle(key,value) })
+		this.state.values.forEach((value, key) => { StyleSheet.ChangeStyle(key,value) })
 		this.props.refreshApp();
 	}
 	render() {
-		let buttonColor = this.props.StyleSheet.Style("Button_Color");
+		let buttonColor = StyleSheet.Style("Button_Color");
 		let changeColorStyle = {
 			backgroundColor: buttonColor
 		}
 		let textStyle = {
-			color: this.props.StyleSheet.Style("Text_Color")
+			color: StyleSheet.Style("Text_Color")
 
 		}
 		let pickers = []
-		this.props.StyleSheet.GetStyleSheet().forEach((value, key) => {
-			pickers.push(< ColorPicker StyleSheet={this.props.StyleSheet} change={this.change} target={key} value={value} childrenKey={key} />)
+		StyleSheet.GetStyleSheet().forEach((value, key) => {
+			pickers.push(< ColorPicker StyleSheet={StyleSheet} change={this.change} target={key} value={value}/>)
 		})
 
 		return (

@@ -6,7 +6,6 @@ class MenuButton extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
             cursor: "default"
         };
 
@@ -23,7 +22,7 @@ class MenuButton extends Component {
     render() {
   
         let cursorStyle = {
-            backgroundColor: this.state.cursor != "pointer" ? this.props.StyleSheet.Style("Navbar_Color") : this.props.StyleSheet.Style("Navbar_Hover_Button_Color"),
+            backgroundColor: this.state.cursor != "pointer" ? StyleSheet.Style("Navbar_Color") : StyleSheet.Style("Navbar_Hover_Button_Color"),
             cursor: this.state.cursor
         }
 

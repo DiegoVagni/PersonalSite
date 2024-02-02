@@ -8,7 +8,7 @@ class AboutMeCard extends Component {
 	render() {
 		return (
 			<Card title={this.props.title}>
-					<p style={StyleSheet.getLayoutStyle("Normal_Text")}>{Locale.GetMessages(this.props.title + "_Description")}</p>
+					<p style={StyleSheet.getLayoutStyle("Parag_Text")}>{Locale.GetMessages(this.props.title + "_Description")}</p>
 			</Card>
 			)
 	}

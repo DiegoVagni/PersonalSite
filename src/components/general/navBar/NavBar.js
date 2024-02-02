@@ -4,7 +4,7 @@ import NavBarButton from "./NavBarButton";
 import NavBarSubMenu from "./NavBarSubMenu";
 import MenuButton from "../MenuButton"
 
-import SettingMenu from "../../settings/SettingMenu";
+import SettingMenu from "../../siteComponents/settings/SettingMenu";
 import StyleSheet from "../../../utils/StyleSheet";
 import KeyGenerator from "../../../utils/KeyGenerator";
 

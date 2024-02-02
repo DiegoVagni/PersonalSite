@@ -1,15 +1,15 @@
 import { Component } from "react"
-
+import StyleSheet from "../../../utils/StyleSheet"
 class TrapezoidUp extends Component {
 
 	render() {
-		let navbarColor = this.props.StyleSheet.Style("Navbar_Color");
+		let navbarColor = StyleSheet.Style("Navbar_Color");
 		let centerSpanStyle = {
 			content: "",
 			borderLeft: "12px solid " + navbarColor,
 			borderRight: "12px solid " + navbarColor,
 			borderTop: "1px solid " + navbarColor,
-			borderBottom: "5px solid " + navbarColor,
+			borderBottom: "5px solid " + navbarColor
 		}
 		let leftSpanStyle = {
 			position: "absolute",
@@ -19,7 +19,7 @@ class TrapezoidUp extends Component {
 			borderRight: " 7px solid " + navbarColor,
 			borderLeft: "7px solid transparent",
 			borderTop: "7px solid transparent ",
-			borderBottom: "10px solid " + navbarColor,
+			borderBottom: "10px solid " + navbarColor
 		}
 
 		let rightSpanStyle = {
@@ -28,13 +28,12 @@ class TrapezoidUp extends Component {
 			borderLeft: " 7px solid " + navbarColor,
 			borderRight: "7px solid transparent",
 			borderTop: "7px solid transparent ",
-			borderBottom: "10px solid" + navbarColor,
+			borderBottom: "10px solid" + navbarColor
 		}
 		let trapezoidStyle = {
 			position: "absolute",
 			right: "20px",
-			top: "100%",
-
+			top: "100%"
 		}
 
 		return (

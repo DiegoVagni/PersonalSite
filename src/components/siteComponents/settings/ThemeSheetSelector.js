@@ -1,6 +1,6 @@
 import { Component } from "react"
-import StyleSheet from "../../utils/StyleSheet"
-import Select from "../../components/general/Select";
+import StyleSheet from "../../../utils/StyleSheet"
+import Select from "../../general/Select";
 class ThemeSheetSelector extends Component {
 	
 	constructor(props) {
@@ -14,15 +14,14 @@ class ThemeSheetSelector extends Component {
 	}
 	render() {
 		
-		console.log(StyleSheet.currentIndex);
+
 		return (
-			<div>
-				
+			
 				<Select
 					value={StyleSheet.themes[StyleSheet.currentIndex].value}
 					onChange={this.ChangeTheme}
 					values={StyleSheet.themes} />
-	</div>
+
 		)
 	}
 }
