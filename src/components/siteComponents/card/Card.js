@@ -38,7 +38,7 @@ class Card extends Component {
 					<p style={StyleSheet.getLayoutStyle("Title_Text")}>{this.props.title}</p>
 					{this.props.subTitle && <p style={StyleSheet.getLayoutStyle("SubTitle_Text")}>{this.props.subTitle}</p>}
 				</div>
-				{this.props.preview? this.props.preview : <></>}
+				{this.props.preview ? this.props.preview : <></>}
 				<div style={StyleSheet.getLayoutStyle("Card_Container")}>
 					{this.props.children}
 				</div>

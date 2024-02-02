@@ -4,7 +4,7 @@ class Preview extends Component {
 	render() {
 
 		return (
-			<div style={StyleSheet.getLayoutStyle("Preview")}>{this.props.preview}</div>
+			<div style={StyleSheet.getLayoutStyle("Preview")}>{this.props.children}</div>
 		)
 	}
 }

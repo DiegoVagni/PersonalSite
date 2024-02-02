@@ -4,18 +4,19 @@ import { Component } from "react";
 import { Routes, Route } from "react-router-dom";
 import Locale from "./utils/Locale";
 
-import NavBar from "./components/navBar/NavBar.js";
+import DVNavBar from "./components/siteComponents/navBar/DVNavBar";
 import { useLocation } from "react-router-dom";
 import StyleSheet from "./utils/StyleSheet.js"
 
 //pages
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contacts from "./pages/Contacts";
-import CV from "./pages/cv";
-import Projects from "./pages/Projects";
+import Home from "./pagesLayouts/Home";
+import Page from "./pagesLayouts/Page";
+import About from "./pagesLayouts/About";
+import Contacts from "./pagesLayouts/Contacts";
+import CV from "./pagesLayouts/CV";
+import Projects from "./pagesLayouts/Projects";
 import Loading from "./components/general/Loading"
-import WelcomeAnimation from "./components/basics/homeAnimationWelcome/WelcomeAnimation"
+import StartAnimation from "./components/coolAnims/startAnimation/StartAnimation"
 function withLocation(Component) {
 
 	return function WrappedComponent(props) {
@@ -73,9 +74,10 @@ class App extends Component {
 		document.body.style.backgroundColor = backCol
 		return (
 			<>
-				{this.state.first ? (<WelcomeAnimation backCol={backCol} StyleSheet={StyleSheet} end={this.EndAnimHook} ></WelcomeAnimation >) : (<>
-
-					<NavBar root={this.props.root} StyleSheet={StyleSheet} languageChange={this.ChangeLanguage} refreshApp={this.RefreshApplication} />
+				{this.state.first ? (<StartAnimation backCol={backCol} end={this.EndAnimHook} ></StartAnimation>) : (<>
+					
+					<DVNavBar root={this.props.root} languageChange={this.ChangeLanguage} location={this.props.location} refreshApp={this.RefreshApplication} />
+					<Page>
 					<div style={{ height: "10%", maxHeight: "50px", minHeight: "50px", width: "100%" }}>
 
 					</div>
@@ -86,7 +88,9 @@ class App extends Component {
 						<Route path="/projects" element={<Projects StyleSheet={StyleSheet} />} />
 
 						<Route path="/skills" element={<CV StyleSheet={StyleSheet} />} />
-					</Routes></>
+					</Routes>
+					</Page>
+					</>
 				) 
 	}
 

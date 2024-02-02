@@ -45,7 +45,7 @@ class StyleSheet {
 				}
 			}
 			case "Title_Text": return {
-				fontSize: "2rem",
+				fontSize: "2.5rem",
 				fontFamily: StyleSheet.titleFont,
 			}
 			case "SubTitle_Text": return {
@@ -83,6 +83,13 @@ class StyleSheet {
 				backgroundColor: StyleSheet.Style("Select_BackgroundColor"),
 				width: "100%",
 				height: "100%"
+			}
+			case "Page": return {
+
+				height: "95%",
+				width: "100%",
+				display: "flex",
+				overflow: "hidden"
 			}
 			case "Modal": return {
 				position: "fixed",
@@ -125,6 +132,39 @@ class StyleSheet {
 				overflowY: "auto",
 				overflowX: "auto"
 			}
+			case "Skills_Section_Layout": return {
+				height: "100%",
+				width: "80%",
+				display: "flex",
+				flexDirection: "column"
+			}
+			case "Card_Container": return {
+				height: "100%",
+				width: "100%",
+				display: "flex",
+				justifyContent: "flex-start",
+				alignItems: "center",
+				justifyItems: "center",
+				flexDirection: "column",
+				overflowY: "auto"
+			}
+			case "Contact_Container": return {
+				display: "flex", flexWrap: "wrap", width: "100%", height: "100%", flexDirection: "row", justifyContent: "space-around"
+			}
+			case "CV_Section": return {
+				width: "100%",
+				display: "flex",
+				flexDirection: "column",
+				margin: "15px"
+			}
+			case "CV_Section_Container": return {
+				width: "100%",
+				display: "flex",
+				alignItems: "center",
+				justifyContent: "flex-start",
+				flexDirection: "row",
+				flexFlow: "row wrap"
+			}
 			case "Card": return {
 				width: "90%",
 				height: "80%",
@@ -155,7 +195,7 @@ class StyleSheet {
 				alignItems: "center",
 				justifyItems: "center"
 			}
-			case "Card_Container": return {
+			case "Competence_Container": return {
 				display: "flex",
 				flexDirection: "row",
 				padding: "5px",
@@ -207,14 +247,7 @@ class StyleSheet {
 				justifyContent: "flex-start",
 				flexDirection: "column",
 			}
-			case "Competence_Container": return {
-				display: "flex",
-				alignItems: "center",
-				justifyContent: "center",
-				justifyItems: "center",
-				margin: "5px",
-				flexWrap: "wrap"
-			}
+		
 			case "Tech_Container": return {
 
 				display: "flex",
@@ -344,10 +377,6 @@ class StyleSheet {
 
 			}
 			case "ColorPicker": return {
-				width: "100%",
-				height: "auto",
-				maxHeight: "50px",
-				minHeight: "20px",
 				display: "flex",
 				flexDirection: "row",
 				justifyContent: "space-between",

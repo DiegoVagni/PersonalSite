@@ -1,7 +1,7 @@
 import { Component } from "react"
 import Locale from "../../utils/Locale"
 import StyleSheet from "../../utils/StyleSheet"
-class DownloadPDFSection extends Component() {
+class DownloadPDFSection extends Component {
 	render() {
 	
 		return (

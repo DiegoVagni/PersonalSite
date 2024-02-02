@@ -9,7 +9,7 @@ class HomeImage extends Component {
 	}
 	render() {
 		let borderRadius = 150;
-let linkColor = this.props.StyleSheet.Style("Home_Links_Color")
+let linkColor = StyleSheet.Style("Home_Links_Color")
 	    
 		let ImageStyle = {
 		

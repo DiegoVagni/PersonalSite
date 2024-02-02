@@ -11,6 +11,8 @@ class DVNavBar extends Component {
 				homeButton={{ src: home, to: "/", local: "Navbar_Home" }}
 				navButtons={[{ to: "/projects", local: "Navbar_projects" }, { to: "/about", local: "Navbar_about" }, { to: "/skills", local: "Navbar_cv" }, { to: "/contacts", local: "Navbar_contact" }]}
 				settingButton={{ src: setting, local: "Setting_ToolTip" }}
+				refreshApp={this.props.refreshApp}
+				languageChange={this.props.languageChange}
 			/>
 		)
 	}
