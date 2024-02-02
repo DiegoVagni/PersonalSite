@@ -38,6 +38,12 @@ class StyleSheet {
 				fontSize: "1rem",
 				fontFamily: StyleSheet.font,
 			}
+			case "Parag_Text": return {
+				...StyleSheet.getLayoutStyle("Normal_Text"), ...{
+					textAlign: "justify",
+					textJustify: "inter-word"
+				}
+			}
 			case "Title_Text": return {
 				fontSize: "2rem",
 				fontFamily: StyleSheet.titleFont,
@@ -57,6 +63,10 @@ class StyleSheet {
 			case "Small_Text": return {
 				fontSize: "0.5rem",
 				fontFamily: StyleSheet.font,
+			}
+			case "NavBar_Text": return {
+				fontSize: "1rem",
+				fontFamily: StyleSheet.navBarFont,
 			}
 			case "Navbar_Text": return {
 				fontSize: "0.75rem",
@@ -175,7 +185,7 @@ class StyleSheet {
 			case "Home_Image": return {
 
 				border: "10px solid " + StyleSheet.Style("Home_Links_Color"),
-			
+
 			}
 			case "Flex_Row_Center_Container": return {
 				display: "flex",
@@ -192,6 +202,15 @@ class StyleSheet {
 				justifyItems: "center",
 				margin: "5px",
 				flexWrap: "wrap"
+			}
+			case "Tech_Container": return {
+
+				display: "flex",
+				flexDirection: "row",
+				justifyItems: "center",
+				justifyContent: "center",
+				alignItems: "center",
+				margin: "5px"
 			}
 			case "Contact_Info": return {
 				display: "flex",
@@ -211,7 +230,7 @@ class StyleSheet {
 				alignItems: "center",
 				justifyContent: "center"
 			}
-			case "Home_Link":return {
+			case "Home_Link": return {
 				textDecoration: "none",
 				color: StyleSheet.Style("Home_Links_Color"),
 				position: "absolute",
@@ -227,12 +246,50 @@ class StyleSheet {
 			}
 			case "Home_Link_Container": return {
 				width: "auto",
-	
+
 				textDecoration: "underline",
 				color: StyleSheet.Style("Home_Links_Color"),
 				position: "absolute",
 
 			}
+			case "NavBar": return {
+				position: "fixed",
+				flexDirection: "row",
+				width: "100%",
+				height: "10%",
+				alignItems: "flex-start",
+				maxHeight: "50px",
+				minHeight: "50px",
+				zIndex: "10",
+				top: "0px",
+				backgroundColor: StyleSheet.Style("Navbar_Color"),
+
+			}
+			case "NavBar_Button": return {
+				width: "100%",
+				height: "100%",
+				alignItems: "center",
+				justifyContent: "center",
+				borderLeft: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
+				borderRight: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
+				display: "flex",
+				maxHeight: "50px",
+				textDecoration: "none",
+
+			}
+			case "NavBar_SubMenu": return {
+				display: "flex",
+				flexDirection: "Column",
+				alignItems: "center",
+				backgroundColor: StyleSheet.Style("Navbar_Color"),
+				width: "auto",
+				minHeight: "50px"
+			}
+			case "Project_Card_Stats_Container": return {
+				display: "flex",
+				flexDirection: "row",
+				flexWrap: "wrap"
+}
 			default: return {}
 
 		}

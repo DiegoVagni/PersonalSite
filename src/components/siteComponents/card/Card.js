@@ -26,9 +26,9 @@ class Card extends Component {
 	render() {
 		let stampType;
 		if (this.props.stamp == "new") {
-			stampType = <NewStamp parentColor={this.props.StyleSheet.Style("Card_Background")} rot={"25deg"} />
+			stampType = <NewStamp parentColor={StyleSheet.Style("Card_Background")} rot={"25deg"} />
 		} else if (this.props.stamp == "cool") {
-			stampType = <CoolStamp parentColor={this.props.StyleSheet.Style("Card_Background")} rot={"25deg"} />
+			stampType = <CoolStamp parentColor={StyleSheet.Style("Card_Background")} rot={"25deg"} />
 		}
 
 		return (<div style={StyleSheet.getLayoutStyle("Card_Outer")}>

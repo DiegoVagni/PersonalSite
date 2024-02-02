@@ -1,5 +1,5 @@
 import { Component } from "react"
-
+import StyleSheet from "../../../../utils/StyleSheet"
 class Preview extends Component {
 	render() {
 

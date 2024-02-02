@@ -4,6 +4,9 @@ class KeyGenerator {
 	static getNextKey() {
 		let toReturn = KeyGenerator.key;
 		KeyGenerator.key++;
+		if (KeyGenerator.key === Number.MAX_SAFE_INTEGER) {
+			KeyGenerator.key = 0;
+		}
 		return toReturn;
 	}
 }
