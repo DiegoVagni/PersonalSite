@@ -1,4 +1,6 @@
 import { Component } from "react"
+
+import StyleSheet from "../../../utils/StyleSheet"
 class CardStat extends Component {
 	render() {
 		let imgStyle = {
@@ -20,10 +22,10 @@ class CardStat extends Component {
 			color:this.props.StyleSheet.Style("Text_Color")
 		}
 		return (<div style={divStyle}>
-			<img style={imgStyle } src={this.props.src} alt={this.props.title }>
+			<img style={StyleSheet.getLayoutStyle("Small_Image")} src={this.props.src} alt={this.props.title}>
 			</img>
-			<p style={textStyle }>{this.props.title +": "}</p>
-			<p style={textStyle}>{this.props.value }</p>
+			<p style={StyleSheet.getLayoutStyle("Normal_Text")}>{this.props.title + ": "}</p>
+			<p style={StyleSheet.getLayoutStyle("Normal_Text")}>{this.props.value }</p>
 		</div>)
 	}
 }

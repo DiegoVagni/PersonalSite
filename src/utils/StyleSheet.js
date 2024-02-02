@@ -42,6 +42,10 @@ class StyleSheet {
 				fontSize: "2rem",
 				fontFamily: StyleSheet.titleFont,
 			}
+			case "SubTitle_Text": return {
+				fontSize: "2rem",
+				fontFamily: StyleSheet.titleFont,
+			}
 			case "Biggest_Text": return {
 				fontSize: "4rem",
 				fontFamily: StyleSheet.titleFont,
@@ -69,6 +73,7 @@ class StyleSheet {
 			case "Modal": return {
 				position: "fixed",
 				width: "40%",
+				height: "80%",
 				padding: "20px",
 				borderRadius: "10px",
 				left: "30%",
@@ -78,13 +83,17 @@ class StyleSheet {
 				overflowY: "auto",
 				overflowX: "none"
 			}
-			case "Menu_Button": return {
+			case "Modal_Content": return {
 				width: "100%",
 				height: "100%",
-				maxHeight: "50px",
-				maxWidth: "50px",
-				boxShadow: "0px 7px 10px -7px " + StyleSheet.Style("Shadow")
-
+				backgroundColor: StyleSheet.Style("Modal_Color"),
+				overflowY: "auto",
+				overflowX: "auto"
+			}
+			case "Menu_Button": return {
+				...StyleSheet.getLayoutStyle("Small_Image"), ...{
+					boxShadow: "0px 7px 10px -7px " + StyleSheet.Style("Shadow")
+				}
 			}
 			case "Center_Column_Flex": return {
 				display: "flex",
@@ -94,7 +103,73 @@ class StyleSheet {
 				alignItems: "center",
 				justifyContent: "center"
 			}
-			case "Modal_Container": return {}
+			case "Modal_Container": return {
+
+				width: "100%",
+				height: "100%",
+				backgroundColor: StyleSheet.Style("Modal_Color"),
+				overflowY: "auto",
+				overflowX: "auto"
+			}
+			case "Card": return {
+				width: "90%",
+				height: "80%",
+				borderRadius: "20px",
+				margin: "10px",
+				display: "flex",
+				justifyContent: "flex-start",
+				alignItems: "center",
+				justifyItems: "center",
+				flexDirection: "column",
+				flexGrow: "1",
+				overflowY: "auto",
+				padding: "5px",
+				border: "1px solid " + StyleSheet.Style("Modal_Border"),
+				backgroundColor: StyleSheet.Style("Card_Background"),
+				boxShadow: StyleSheet.Style("Shadow") + " 0px 4px 12px"
+
+			}
+			case "Card_Outer": return {
+				minHeight: "95%",
+				width: "90%",
+				height: "95%",
+				minWidth: "600px",
+				overflowX: "hidden",
+				overflowY: "hidden",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				justifyItems: "center"
+			}
+			case "Card_Container": return {
+				display: "flex",
+				flexDirection: "row",
+				padding: "5px",
+				overflowY: "auto",
+				justifyItems: "flex-start"
+			}
+			case "Card_Title_Container": return {
+
+			}
+			case "Preview": return {
+				width: "80%",
+				height: "80%",
+				borderRadius: "10%"
+			}
+			case "Small_Image": return {
+				width: "100%",
+				height: "100%",
+				maxHeight: "50px",
+				maxWidth: "50px"
+			}
+			case "Flex_Row_Center_Container": return {
+				display: "flex",
+				flexDirection: "row",
+				justifyContent: "flex-start",
+				alignItems: "center",
+				justifyItems: "center",
+				margin: "5px"
+			}
 			default: return {}
 
 		}
