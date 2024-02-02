@@ -172,6 +172,11 @@ class StyleSheet {
 				maxHeight: "200px",
 				maxWidth: "200px"
 			}
+			case "Home_Image": return {
+
+				border: "10px solid " + StyleSheet.Style("Home_Links_Color"),
+			
+			}
 			case "Flex_Row_Center_Container": return {
 				display: "flex",
 				flexDirection: "row",
@@ -193,6 +198,40 @@ class StyleSheet {
 				alignContent: "center",
 				justifyContent: "center",
 				alignItems: "center"
+			}
+
+			case "Home_Container": return {
+				width: "100%",
+				height: "100%",
+				minWidth: "900px",
+				top: "5%",
+				left: "15%",
+				position: "fixed",
+				display: "flex",
+				alignItems: "center",
+				justifyContent: "center"
+			}
+			case "Home_Link":return {
+				textDecoration: "none",
+				color: StyleSheet.Style("Home_Links_Color"),
+				position: "absolute",
+				fontFamily: " Optima, serif",
+				margin: "0px",
+				padding: "0px"
+			}
+			case "Home_Link_Dash": return {
+				border: "2px solid " + StyleSheet.Style("Home_Links_Color"),
+				height: "0 px",
+				backgroundColor: StyleSheet.Style("Home_Links_Color"),
+				position: "absolute"
+			}
+			case "Home_Link_Container": return {
+				width: "auto",
+	
+				textDecoration: "underline",
+				color: StyleSheet.Style("Home_Links_Color"),
+				position: "absolute",
+
 			}
 			default: return {}
 
