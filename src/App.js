@@ -78,7 +78,7 @@ class App extends Component {
 					
 					<Page>
 					<DVNavBar root={this.props.root} languageChange={this.ChangeLanguage} location={this.props.location} refreshApp={this.RefreshApplication} />
-					<div style={{ height: "10%", maxHeight: "50px", minHeight: "50px", width: "100%" }}>
+					<div style={{ height: "10%", maxHeight: "64px", minHeight: "64px", width: "100%" }}>
 
 					</div>
 					<Routes>
