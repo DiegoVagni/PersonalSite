@@ -34,15 +34,19 @@ class StyleSheet {
 
 	static getLayoutStyle(key) {
 		switch (key) {
+			case "Full_Parent": return {
+				width: "100%",
+				height: "100%"
+			}
 			case "Normal_Text": return {
 				fontSize: "1rem",
 				fontFamily: StyleSheet.font,
 			}
 			case "Parag_Text": return {
-				...StyleSheet.getLayoutStyle("Normal_Text"), ...{
+				...{
 					textAlign: "justify",
 					textJustify: "inter-word"
-				}
+				}, ...StyleSheet.getLayoutStyle("Normal_Text")
 			}
 			case "Title_Text": return {
 				fontSize: "2.5rem",
@@ -68,28 +72,25 @@ class StyleSheet {
 				fontSize: "1rem",
 				fontFamily: StyleSheet.navBarFont,
 			}
-			case "Navbar_Text": return {
-				fontSize: "0.75rem",
-				fontFamily: StyleSheet.titleFont,
-			}
 			case "Setting_Select_Option": return {
 				fontSize: "1rem",
 				fontFamily: StyleSheet.font,
 				backgroundColor: StyleSheet.Style("Select_BackgroundColor")
 			}
 			case "Setting_Select": return {
-				fontSize: "1rem",
-				fontFamily: StyleSheet.font,
-				backgroundColor: StyleSheet.Style("Select_BackgroundColor"),
-				width: "100%",
-				height: "100%"
+				...{
+					fontSize: "1rem",
+					fontFamily: StyleSheet.font,
+					backgroundColor: StyleSheet.Style("Select_BackgroundColor"),
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "Page": return {
-
-				height: "95%",
-				width: "100%",
-				display: "flex",
-				overflow: "hidden"
+				...{
+					display: "flex",
+					overflowX: "hidden",
+					overflowY: "auto",
+					flexDirection: "column"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "Modal": return {
 				position: "fixed",
@@ -105,11 +106,12 @@ class StyleSheet {
 				overflowX: "none"
 			}
 			case "Modal_Content": return {
-				width: "100%",
-				height: "100%",
-				backgroundColor: StyleSheet.Style("Modal_Color"),
-				overflowY: "auto",
-				overflowX: "auto"
+				...{
+					backgroundColor: StyleSheet.Style("Modal_Color"),
+					overflowY: "auto",
+					overflowX: "auto"
+
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "Menu_Button": return {
 				...StyleSheet.getLayoutStyle("Small_Image"), ...{
@@ -117,20 +119,20 @@ class StyleSheet {
 				}
 			}
 			case "Center_Column_Flex": return {
-				display: "flex",
-				height: "100%",
-				width: "100%",
-				flexDirection: "column",
-				alignItems: "center",
-				justifyContent: "center"
+				...{
+					display: "flex",
+					flexDirection: "column",
+					alignItems: "center",
+					justifyContent: "center"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "Modal_Container": return {
+				...{
 
-				width: "100%",
-				height: "100%",
-				backgroundColor: StyleSheet.Style("Modal_Color"),
-				overflowY: "auto",
-				overflowX: "auto"
+					backgroundColor: StyleSheet.Style("Modal_Color"),
+					overflowY: "auto",
+					overflowX: "auto"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "Skills_Section_Layout": return {
 				height: "100%",
@@ -139,17 +141,23 @@ class StyleSheet {
 				flexDirection: "column"
 			}
 			case "Card_Container": return {
-				height: "100%",
-				width: "100%",
-				display: "flex",
-				justifyContent: "flex-start",
-				alignItems: "center",
-				justifyItems: "center",
-				flexDirection: "column",
-				overflowY: "auto"
+				...{
+
+					display: "flex",
+					justifyContent: "flex-start",
+					alignItems: "center",
+					justifyItems: "center",
+					flexDirection: "column",
+					overflowY: "auto"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "Contact_Container": return {
-				display: "flex", flexWrap: "wrap", width: "100%", height: "100%", flexDirection: "row", justifyContent: "space-around"
+				...{
+					display: "flex",
+					flexWrap: "wrap",
+					flexDirection: "row",
+					justifyContent: "space-around"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "CV_Section": return {
 				width: "100%",
@@ -211,23 +219,20 @@ class StyleSheet {
 				borderRadius: "10%"
 			}
 			case "Small_Image": return {
-				width: "100%",
-				height: "100%",
-				maxHeight: "50px",
-				maxWidth: "50px"
-			}
-			case "Preview_Image": return {
-				width: "100%",
-				height: "100%",
-				maxHeight: "50px",
-				maxWidth: "50px"
+				...{
+
+					maxHeight: "64px",
+					maxWidth: "64px"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "Medium_Image": return {
-				width: "100%",
-				height: "100%",
-				maxHeight: "200px",
-				maxWidth: "200px"
+				...{
+
+					maxHeight: "64px",
+					maxWidth: "64px"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
+			case "Preview_Image": return StyleSheet.getLayoutStyle("Full_Parent")
 			case "Home_Image": return {
 
 				border: "10px solid " + StyleSheet.Style("Home_Links_Color"),
@@ -238,6 +243,7 @@ class StyleSheet {
 				flexDirection: "row",
 				justifyContent: "flex-start",
 				alignItems: "center",
+				alignContent: "center",
 				justifyItems: "center",
 				margin: "5px"
 			}
@@ -247,7 +253,7 @@ class StyleSheet {
 				justifyContent: "flex-start",
 				flexDirection: "column",
 			}
-		
+
 			case "Tech_Container": return {
 
 				display: "flex",
@@ -265,15 +271,16 @@ class StyleSheet {
 			}
 
 			case "Home_Container": return {
-				width: "100%",
-				height: "100%",
-				minWidth: "900px",
-				top: "5%",
-				left: "15%",
-				position: "fixed",
-				display: "flex",
-				alignItems: "center",
-				justifyContent: "center"
+				...{
+
+					minWidth: "900px",
+
+					position: "fixed",
+					display: "flex",
+					alignItems: "center",
+					alignContent: "center",
+					justifyContent: "center"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "Home_Link": return {
 				textDecoration: "none",
@@ -303,32 +310,33 @@ class StyleSheet {
 				width: "100%",
 				height: "10%",
 				alignItems: "flex-start",
-				maxHeight: "50px",
-				minHeight: "50px",
+				maxHeight: "64px",
+				minHeight: "64px",
 				zIndex: "10",
 				top: "0px",
 				backgroundColor: StyleSheet.Style("Navbar_Color"),
 
 			}
 			case "NavBar_Button": return {
-				width: "100%",
-				height: "100%",
-				alignItems: "center",
-				justifyContent: "center",
-				borderLeft: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
-				borderRight: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
-				display: "flex",
-				maxHeight: "50px",
-				textDecoration: "none",
+				...{
 
+					alignItems: "center",
+					justifyContent: "center",
+					borderLeft: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
+					borderRight: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
+					display: "flex",
+					maxHeight: "64px",
+					textDecoration: "none"
+				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
+
 			case "NavBar_SubMenu": return {
 				display: "flex",
 				flexDirection: "Column",
 				alignItems: "center",
 				backgroundColor: StyleSheet.Style("Navbar_Color"),
 				width: "auto",
-				minHeight: "50px"
+				minHeight: "64px"
 			}
 			case "Project_Card_Stats_Container": return {
 				display: "flex",

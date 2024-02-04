@@ -76,8 +76,8 @@ class App extends Component {
 			<>
 				{this.state.first ? (<StartAnimation backCol={backCol} end={this.EndAnimHook} ></StartAnimation>) : (<>
 					
-					<DVNavBar root={this.props.root} languageChange={this.ChangeLanguage} location={this.props.location} refreshApp={this.RefreshApplication} />
 					<Page>
+					<DVNavBar root={this.props.root} languageChange={this.ChangeLanguage} location={this.props.location} refreshApp={this.RefreshApplication} />
 					<div style={{ height: "10%", maxHeight: "50px", minHeight: "50px", width: "100%" }}>
 
 					</div>
