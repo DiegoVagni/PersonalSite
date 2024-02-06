@@ -31,6 +31,7 @@ import TeamWork from "../resources/icons/teamwork.svg"
 import Flexible from "../resources/icons/flexible.svg"
 import FastLearner from "../resources/icons/fastLearner.svg"
 import AIPrompting from "../resources/icons/aiPrompting.svg"
+import Net from "../resources/icons/net.svg"
 import "../anim.scss"
 import SkillContainer from "../components/pagesComponents/cv/SkillContainer";
 import SkillsPageSection from "../components/pagesComponents/cv/SkillsPageSection";
@@ -48,15 +49,16 @@ class CV extends Component {
 		return (
 
 			<>
-				<SkillsPageSection title={Locale.GetMessages("Hard_Skills")}>
+				<SkillsPageSection title={"Hard_Skills"}>
 					<SkillContainer title={Locale.GetMessages("Programming_Languages")}>
 						<CompetenceBarContainer animTime={1} src={CSharp} maxCompetence={maxCompetence} competenceLevel={10} competence={Locale.GetMessages("CSharp")}></CompetenceBarContainer>
 						<CompetenceBarContainer animTime={1.3} src={C} maxCompetence={maxCompetence} competenceLevel={8} competence={Locale.GetMessages("C")}></CompetenceBarContainer>
 						<CompetenceBarContainer animTime={1.6} src={Javascript} maxCompetence={maxCompetence} competenceLevel={8} competence={Locale.GetMessages("Javascript")}></CompetenceBarContainer>
-						<CompetenceBarContainer animTime={1.9} src={Java} maxCompetence={maxCompetence} competenceLevel={7} competence={Locale.GetMessages("Java")}></CompetenceBarContainer>
-						<CompetenceBarContainer animTime={2.2} src={CPlus} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("CPlus")}></CompetenceBarContainer>
-						<CompetenceBarContainer animTime={2.5} src={Python} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("Python")}></CompetenceBarContainer>
-						<CompetenceBarContainer animTime={2.8} src={PHP} maxCompetence={maxCompetence} competenceLevel={4} competence={Locale.GetMessages("PHP")}></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={1.9} src={Net} maxCompetence={maxCompetence} competenceLevel={8} competence={Locale.GetMessages("Net")}></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={2.2} src={Java} maxCompetence={maxCompetence} competenceLevel={7} competence={Locale.GetMessages("Java")}></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={2.5} src={CPlus} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("CPlus")}></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={2.8} src={Python} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("Python")}></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={3.1} src={PHP} maxCompetence={maxCompetence} competenceLevel={4} competence={Locale.GetMessages("PHP")}></CompetenceBarContainer>
 					</SkillContainer>
 					<SkillContainer title={Locale.GetMessages("Markup_Languages")}>
 						<CompetenceBarContainer animTime={1} src={Html} maxCompetence={maxCompetence} competenceLevel={10} competence={Locale.GetMessages("Html")}></CompetenceBarContainer>
@@ -84,7 +86,7 @@ class CV extends Component {
 						<CompetenceBarContainer animTime={2.5} src={GraphicDesign} maxCompetence={maxCompetence} competenceLevel={3} competence={Locale.GetMessages("Graphic_Design")} ></CompetenceBarContainer>
 					</SkillContainer>
 				</SkillsPageSection>
-				<SkillsPageSection title={Locale.GetMessages("Soft_Skills")}>
+				<SkillsPageSection title={"Soft_Skills"}>
 					<SkillContainer >
 						<SoftSkill animTime={1} src={Empaty} competence={Locale.GetMessages("Empaty")}></SoftSkill>
 						<SoftSkill animTime={1.3} src={Consciousness} competence={Locale.GetMessages("Consciousness")}></SoftSkill>

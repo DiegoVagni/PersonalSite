@@ -50,6 +50,7 @@
 	"Select_BackgroundColor": "Colore sfondo selettori",
 
 	"Hard_Skills": "Hard skills",
+	"Soft_Skills": "Soft skills",
 
 	"Languages": "Lingue",
 	"Software_Design": "Design del software",
@@ -67,7 +68,6 @@
 
 
 
-	"Soft_Skills": "Soft skills",
 	"Consciousness": "Consapevolezza del sè",
 	"TeamWork": "Capacità di teamwork",
 	"Indipendent": "Mindset indipendente",
@@ -139,8 +139,8 @@
 	"Tesi_End_Date": "6.2021",
 	"Tesi_Description": "La tesi l'ho sviluppata nell'ambito del game development. L'obbiettivo era quello di creare, in Unity, un mondo proceduralmente generato simile a quello di Minecraft.\n Ho deciso di usare un Octree, una struttura ad albero, per rappresentare il mondo. La particolarità degli Octree è la dimensione variabile delle foglie, cosa che ho sfruttato per migliorare le performance di gioco. Grazie a ciò ho optato per generare diversi chunk anche sull'asse Y del mondo, a differenza di Minecraft in cui ciò non avviene.\n Un altro aspetto fondamentale del lavoro è stata la cura per l'estensibilità e l'ottimizzazione del codice.\nLa tesi è stata valutata molto positivamente, in quanto ho dato un prodotto funzionante. \n Oggigiorno il sistema è ancora funzionante, ma necessita un paio di accortezze in più prima di essere messo in un ambiente di produzione.",
 	"DownloadTesi": "Download tesi",
-	"Poster_Italian": "Download Poster (Italiano)",
-
+	"Poster_Italian": "Poster (Italiano)",
+	"Downloads": "Download",
 	"Comunication_Framework": "Communication Framework",
 	"Comunication_Framework_Time": "1 anno (saltuario)",
 	"Comunication_Framework_TeamSize": "1 sviluppatore",

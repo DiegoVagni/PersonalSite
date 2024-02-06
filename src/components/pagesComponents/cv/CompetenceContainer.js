@@ -11,7 +11,6 @@ class CompetenceContainer extends Component {
 		let s = {
 			...containerStyle, ...StyleSheet.getLayoutStyle("Competence_Container")
 		}
-		console.log(s)
 		return (
 			<div style={s}>
 				<img style={{

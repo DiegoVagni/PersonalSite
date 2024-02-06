@@ -3,7 +3,6 @@ import Locale from "../../../utils/Locale"
 import StyleSheet from "../../../utils/StyleSheet"
 
 import CardStat from "../../siteComponents/card/CardStat"
-import Preview from "../../siteComponents/card/previews/Preview"
 import Card from "../../siteComponents/card/Card"
 import ProjectTecnologies from "./ProjectTecnologies"
 
@@ -25,7 +24,8 @@ class ProjectCard extends Component {
 				<CardStat  src={GitHub} title={Locale.GetMessages("GitHub")} value={this.props.GitHub} ></CardStat>
 			</div>
 			<ProjectTecnologies tech={this.props.tech}></ProjectTecnologies>
-			<div><p style={StyleSheet.getLayoutStyle("Parag_Text")}>{Locale.GetMessages(this.props.title + "_Description")}</p></div>
+			<div style={{ height: "fit-content", padding:"10px" }}><p style={StyleSheet.getLayoutStyle("Parag_Text")}>{Locale.GetMessages(this.props.title + "_Description")}</p></div>
+			{this.props.downloads ? this.props.downloads:<></> }
 		</Card >
 		)
 	}

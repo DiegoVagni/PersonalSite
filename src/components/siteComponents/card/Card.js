@@ -1,6 +1,7 @@
 import { Component } from 'react'
 
 import StyleSheet from "../../../utils/StyleSheet"
+import Locale from "../../../utils/Locale"
 
 import NewStamp from "../../coolAnims/stamp/prefabStamps/NewStamp"
 import CoolStamp from "../../coolAnims/stamp/prefabStamps/CoolStamp"
@@ -31,11 +32,11 @@ class Card extends Component {
 			stampType = <CoolStamp parentColor={StyleSheet.Style("Card_Background")} rot={"25deg"} />
 		}
 
-		return (<div style={StyleSheet.getLayoutStyle("Card_Outer")}>
+		return (<div style={this.props.minHeight ? StyleSheet.getLayoutStyle("Card_Outer_Min") : StyleSheet.getLayoutStyle("Card_Outer")}>
 			{(this.state.haveStamp && this.props.stamp) ? stampType : <></>}
 			<div style={StyleSheet.getLayoutStyle("Card")}>
 				<div style={StyleSheet.getLayoutStyle("Card_Title_Container")}>
-					<p style={StyleSheet.getLayoutStyle("Title_Text")}>{this.props.title}</p>
+					<p style={StyleSheet.getLayoutStyle("Title_Text")}>{Locale.GetMessages(this.props.title)}</p>
 					{this.props.subTitle && <p style={StyleSheet.getLayoutStyle("SubTitle_Text")}>{this.props.subTitle}</p>}
 				</div>
 				{this.props.preview ? this.props.preview : <></>}
