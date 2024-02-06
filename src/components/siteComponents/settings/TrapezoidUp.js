@@ -19,7 +19,7 @@ class TrapezoidUp extends Component {
 			borderRight: " 7px solid " + navbarColor,
 			borderLeft: "7px solid transparent",
 			borderTop: "7px solid transparent ",
-			borderBottom: "10px solid " + navbarColor
+			borderBottom: "15px solid " + navbarColor
 		}
 
 		let rightSpanStyle = {
@@ -28,7 +28,7 @@ class TrapezoidUp extends Component {
 			borderLeft: " 7px solid " + navbarColor,
 			borderRight: "7px solid transparent",
 			borderTop: "7px solid transparent ",
-			borderBottom: "10px solid" + navbarColor
+			borderBottom: "15px solid" + navbarColor
 		}
 		let trapezoidStyle = {
 			position: "absolute",

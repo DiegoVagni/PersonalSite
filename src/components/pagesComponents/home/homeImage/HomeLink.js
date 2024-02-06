@@ -24,12 +24,10 @@ class HomeLink extends Component {
 		let stringheight = 55;
 		let fontsize = 50
 		let text = this.props.text;
-
-		let dashXSize = this.getTextWidth(this.props.text, "Optima , serif;") * (text.length - 3);
 		let dashXOffset = this.props.dashXOffset;
 		let dashYOffset = this.props.dashYOffset;
 		let transformationString = "translate(" + (Math.cos(this.degToRad(xdeg)) * (borderRadius) + (hrWidth * xOffset)) + "%, " + (Math.sin(this.degToRad(xdeg)) * (borderRadius) + (hrWidth * yOffset)) + "% ) rotateZ(" + xdeg + "deg)";
-		let stringTransformationString = "translate(" + (Math.cos(this.degToRad(xdeg)) * (borderRadius) + (dashXSize + dashXOffset)) + "%, " + (Math.sin(this.degToRad(xdeg)) * (borderRadius) + (dashYOffset) - stringheight * 0.5) + "% )"
+		let stringTransformationString = "translate(" + (Math.cos(this.degToRad(xdeg)) * (borderRadius) + ( dashXOffset)) + "%, " + (Math.sin(this.degToRad(xdeg)) * (borderRadius) + (dashYOffset) - stringheight * 0.5) + "% )"
 
 		let hrStyle = {
 			transform: transformationString,
@@ -42,7 +40,8 @@ class HomeLink extends Component {
 				height: stringheight + " px",
 				fontSize: fontsize + "px",
 				transform: stringTransformationString,
-				width: dashXSize
+
+				whiteSpace: "nowrap"
 			}
 		}
 		if (this.props.up) {

@@ -1,6 +1,7 @@
 import { Component } from "react"
 import Locale from "../../utils/Locale"
 import StyleSheet from "../../utils/StyleSheet"
+import KeyGenerator from "../../utils/KeyGenerator"
 
 import Button from "./Button"
 
@@ -18,7 +19,7 @@ class Modal extends Component {
 				<div style={{ ...StyleSheet.getLayoutStyle("Modal_Content") } }>
 					{this.props.children}
 					<div style={StyleSheet.getLayoutStyle("Buttons_Container")}></div>
-					<Button onClick={this.props.handleClose} text={Locale.GetMessages("Close")} />
+					<Button key={KeyGenerator.getNextKey()} onClick={this.props.handleClose} text={Locale.GetMessages("Close")} />
 					{this.props.buttons}
 				</div>
 			</div>,

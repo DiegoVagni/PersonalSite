@@ -263,8 +263,10 @@ class StyleSheet {
 				...{
 
 					minWidth: "900px",
-					position: "fixed",
-				}, ...StyleSheet.getLayoutStyle("Full_Parent"), ...StyleSheet.getLayoutStyle("Flex_Row_Center")
+					justifyContent: "Center",
+					position:"absolute",
+					top:"25%"
+				}, ...StyleSheet.getLayoutStyle("Flex_Row_Center")
 			}
 			case "Home_Link": return {
 				textDecoration: "none",
