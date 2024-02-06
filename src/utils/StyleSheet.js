@@ -70,7 +70,7 @@ class StyleSheet {
 				fontFamily: StyleSheet.font,
 			}
 			case "NavBar_Text": return {
-				fontSize: "2rem",
+				fontSize: "1.5rem",
 				fontFamily: StyleSheet.navBarFont,
 			}
 			case "Setting_Select_Option": return {
@@ -90,9 +90,11 @@ class StyleSheet {
 					minWidth: "760px",
 					minHeight:"900px",
 					overflowX: "auto",
-					overflowY:"auto"
+					overflowY: "auto",
+					width: "100%",
+					height:"calc(100%-64px)"
 
-				}, ...StyleSheet.getLayoutStyle("Full_Parent"), ...StyleSheet.getLayoutStyle("Flex_Column_Center")
+				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center")
 			}
 			case "Modal": return {
 				position: "fixed",
@@ -101,7 +103,7 @@ class StyleSheet {
 				padding: "20px",
 				borderRadius: "10px",
 				left: "30%",
-				top: "20%",
+				top: "10%",
 				border: "2px solid " + StyleSheet.Style("Modal_Border"),
 				backgroundColor: StyleSheet.Style("Modal_Color"),
 				overflowX: "none"
@@ -311,6 +313,12 @@ class StyleSheet {
 					justifyContent:"center"
 				}, ...StyleSheet.getLayoutStyle("Full_Parent"), ...StyleSheet.getLayoutStyle("Flex_Column_Center")
 			}
+			case "Button": return {
+				...{
+					backgroundColor: StyleSheet.Style("Button_Color"),
+					borderRadius: "10px",
+				}, ...StyleSheet.getLayoutStyle("Small_Text")
+			}
 
 			case "NavBar_SubMenu": return {
 				...{
@@ -345,6 +353,7 @@ class StyleSheet {
 				overflowX: "none",
 				overflowY: "auto",
 				display: "flex",
+				flexDirection: "column",
 				flexDirection: "column",
 				alignItems: "flex-start",
 				justifyItems: "top",

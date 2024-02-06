@@ -11,7 +11,7 @@ class ContactInfo extends Component {
 		return (
 			<div style={{ ...StyleSheet.getLayoutStyle("Contact_Info"), ...anim }}>
 				<img style={StyleSheet.getLayoutStyle("Small_Image")} src={this.props.src} alt={this.props.title} />
-				<p style={StyleSheet.getLayoutStyle("Big_Text")}>{this.props.social}:</p>
+				<p style={StyleSheet.getLayoutStyle("Title_Text")}>{this.props.social}:</p>
 				{this.props.children }
 			</div>
 			)

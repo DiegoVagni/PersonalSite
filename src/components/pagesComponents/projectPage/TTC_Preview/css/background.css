@@ -1,0 +1,30 @@
+.ground {
+  height: 50%;
+  width: 100%;
+  z-index: -3;
+  position: fixed;
+  transform: translateY(100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: chartreuse;
+}
+.sky {
+  z-index: -2;
+  height: 70%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: lightblue;
+  position: fixed;
+}
+.sun {
+  z-index: -1;
+  height: 100px;
+  width: 100px;
+  transform: translate(20px, 20px);
+  border-radius: 100px;
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: yellow;
+}

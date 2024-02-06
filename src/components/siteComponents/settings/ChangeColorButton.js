@@ -32,24 +32,21 @@ class ChangeColorButton extends Component {
 		this.props.refreshApp();
 	}
 	render() {
-		let buttonColor = StyleSheet.Style("Button_Color");
-		let changeColorStyle = {
-			backgroundColor: buttonColor
-		}
+
 		let textStyle = {
 			color: StyleSheet.Style("Text_Color")
 
 		}
 		let pickers = []
-		StyleSheet.GetStyleSheet().forEach((value, key) => {
-			pickers.push(< ColorPicker StyleSheet={StyleSheet} change={this.change} target={key} value={value}/>)
+		StyleSheet.GetStyleSheet().forEach((value, keys) => {
+			pickers.push(< ColorPicker key={KeyGenerator.getNextKey()}   StyleSheet={StyleSheet} change={this.change} target={keys} value={value} />)
 		})
 
 		return (
 			<div>
-				<button key={KeyGenerator.getNextKey()} style={changeColorStyle} onClick={this.showModal}><p style={textStyle}> {Locale.GetMessages("Colors_Setting")}</p></button>
-				<Modal root={this.props.root} show={this.state.show} handleClose={this.hideModal} buttons={[<Button text={Locale.GetMessages("Apply")} onClick={this.Apply} />]}>
-					<div>
+				<Button key={KeyGenerator.getNextKey()}  style={StyleSheet.getLayoutStyle("Button")} onClick={this.showModal} text={Locale.GetMessages("Colors_Setting") } />
+				<Modal key={KeyGenerator.getNextKey()} root={this.props.root} show={this.state.show} handleClose={this.hideModal} buttons={[<Button text={Locale.GetMessages("Apply")} onClick={this.Apply} />]}>
+					<div key={KeyGenerator.getNextKey()} >
 						{ pickers}
 					</div>
 				</Modal>

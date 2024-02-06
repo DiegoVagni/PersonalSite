@@ -1,0 +1,132 @@
+.errorField {
+  border: 2px solid rgb(124, 40, 40);
+}
+.correctField {
+  border: 2px solid green;
+}
+.inputBox {
+  width: 200px;
+  height: 20px;
+  border-radius: 4px;
+  margin: auto;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.fieldLabel {
+  margin: auto;
+}
+
+.button {
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid green;
+  color: green;
+}
+
+.button:hover {
+  background-color: green;
+  border: 2px solid white;
+  color: white;
+}
+.form {
+  border: 2px solid rgba(0, 0, 0, 1);
+  background: rgba(94, 94, 94, 0.3);
+  border-radius: 10px;
+
+  height: 250px;
+  width: 400px;
+
+  margin: auto;
+  transform: translateY(30vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.miniButtons {
+  display: none;
+}
+.buttons {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.checkField {
+  display: flex;
+  flex-direction: row;
+}
+.checkBoxes {
+  display: flex;
+  flex-direction: row;
+}
+input[type="checkbox"].inputBox {
+  width: 30px;
+  height: 20px;
+  margin: 5px;
+  margin-right: auto;
+  margin-left: 5px;
+}
+.fieldLabel.checkLabel {
+  margin-left: auto;
+  margin-right: 5px;
+}
+.fields {
+  width: 100%;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 250ms;
+}
+@media screen and (max-width: 480px) {
+  .buttons {
+    display: none;
+  }
+  .miniButtons {
+    display: inline-block;
+  }
+  .form {
+    flex-direction: row;
+    height: 400px;
+    width: 380px;
+  }
+
+  .fade-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .fade-exit {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  .fade-enter-active,
+  .fade-exit-active {
+    transition: opacity 500ms, transform 500ms;
+  }
+}

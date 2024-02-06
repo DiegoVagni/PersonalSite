@@ -87,6 +87,7 @@
 
 
 	"Licenses": "Licenze",
+	"Downloads": "Download",
 
 
 	"Stamp": "Francobollo ",
@@ -115,6 +116,14 @@
 	"LastRun_End_Date": "11.2020",
 	"LastRun_Description": "Nel corso di gamedevelopment della supsi ci hanno dato un progetto da fare in gruppo. Il progetto fatto con il mio compagno riguardava la realizzazione di un gioco a scelta. \n Io e il mio compagno abbiamo deciso di fare qualcosa di simile al gioco Fall Guys, sviluppato per giocatore singolo. Insieme al mio collega abbiamo sviluppato tutto il necessario per un gioco base. Personalmente mi sono impegnato particolarmente sulla generazione procedurale dei tracciati di gioco. \n Questo progetto è stato ottimo per rafforzare le conoscenze, allora ancora solo amatoriali, riguardante Unity",
 
+	"TTC": "TTC",
+	"TTC_Time": "3 giorni",
+	"TTC_TeamSize": "1 persona",
+	"TTC_Committer": "-",
+	"TTC_Starting_Date": "28.01.2022",
+	"TTC_End_Date": "01.02.2022",
+	"TTC_Description": "Nonostante lavorassi già in G3CLabs, mi è stato proposto come test per una postazione lavorativa la realizzazione di un form funzionante in react. Il tempo necessario era di una settimana, ma per via di impegni lavorativi ho dovuto consegnare il lavoro concluso dopo solo 3 giorni, fatto durante le pause pranzo. Il risultato richiesto c'è, anche se l'aspetto grafico non è dei migliori. Sono comunque molto fiero del lavoro svolto, soprattutto dei fiorellini dinamici e delle foglie a bordo input. \n All'interno del progetto ho usato anche diversi stili di codice (class components | functional components) perchè non mi era stato detto come lavorare, e ho optato per mostrare la mia abilità in ambedue i modi. \n È comunque stato un test non passato.",
+
 	"SmashWorld": "SmashWorld",
 	"SmashWorld_Time": "2 anni",
 	"SmashWorld_TeamSize": "3 sviluppatori",
@@ -128,7 +137,7 @@
 	"LudoGame_TeamSize": "2 sviluppatori",
 	"LudoGame_Committer": "Diego Vagni",
 	"LudoGame_Starting_Date": "27.09.2021",
-	"LudoGame_End_Date": "7.10.2023",
+	"LudoGame_End_Date": "7.10.2021",
 	"LudoGame_Description": "Insieme a un collega di università, per imparare ad utilizzare Photonengine, il principale sistema di API multiplayer per Unity. Per farlo abbiamo sviluppato la versione virtuale del gioco LUDO. \n Lo sviluppo di questo progetto è stato fondamentale per capire a fondo le sfide di un sistema di gioco online e come risolverle. ",
 
 	"Tesi": "Tesi",
@@ -140,7 +149,7 @@
 	"Tesi_Description": "La tesi l'ho sviluppata nell'ambito del game development. L'obbiettivo era quello di creare, in Unity, un mondo proceduralmente generato simile a quello di Minecraft.\n Ho deciso di usare un Octree, una struttura ad albero, per rappresentare il mondo. La particolarità degli Octree è la dimensione variabile delle foglie, cosa che ho sfruttato per migliorare le performance di gioco. Grazie a ciò ho optato per generare diversi chunk anche sull'asse Y del mondo, a differenza di Minecraft in cui ciò non avviene.\n Un altro aspetto fondamentale del lavoro è stata la cura per l'estensibilità e l'ottimizzazione del codice.\nLa tesi è stata valutata molto positivamente, in quanto ho dato un prodotto funzionante. \n Oggigiorno il sistema è ancora funzionante, ma necessita un paio di accortezze in più prima di essere messo in un ambiente di produzione.",
 	"DownloadTesi": "Download tesi",
 	"Poster_Italian": "Poster (Italiano)",
-	"Downloads": "Download",
+
 	"Comunication_Framework": "Communication Framework",
 	"Comunication_Framework_Time": "1 anno (saltuario)",
 	"Comunication_Framework_TeamSize": "1 sviluppatore",

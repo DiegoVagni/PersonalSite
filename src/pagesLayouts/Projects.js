@@ -6,6 +6,7 @@ import IFramePreview from "../components/siteComponents/card/previews/IFramePrev
 import Locale from "../utils/Locale"
 import StyleSheet from "../utils/StyleSheet"
 import Css from "../resources/icons/css.svg"
+import Net from "../resources/icons/net.svg"
 import Javascript from "../resources/icons/javascript.svg"
 import Html from "../resources/icons/html.svg"
 import React from "../resources/icons/react.svg"
@@ -20,6 +21,8 @@ import ComFram from "../resources/images/ComFram.png"
 import Tesi from "../resources/images/tesi_preview.png"
 import SmashWorlds from "../resources/images/smashWorlds.jpg"
 import KeyGenerator from "../utils/KeyGenerator";
+import TTC from "../components/pagesComponents/projectPage/TTC_Preview/TTC"
+import Preview from "../components/siteComponents/card/previews/Preview"
 class Projects extends Component {
 	render() {
 
@@ -39,7 +42,7 @@ class Projects extends Component {
 				<ProjectCard
 					key={KeyGenerator.getNextKey()}
 					title={"Comunication_Framework"}
-					tech={[[CSharp, Locale.GetMessages("CSharp")]]}
+					tech={[[CSharp, Locale.GetMessages("CSharp")], [Net, Locale.GetMessages("Net")]]}
 					stamp={"cool"}
 					stampRot={"30deg"}
 					GitHub={"Coming soon"}
@@ -65,6 +68,15 @@ class Projects extends Component {
 					downloads={<DownloadPDFSection title={"Downloads"} links={[{ download: "Diego_Vagni_TESI_ITA.pdf", to: "/public/tesi.pdf", local: "Italian" }, { download: "Diego_Vagni_POSTER_TESI_ITA.pdf", to: "/public/poster_tesi.pdf", local: "Poster_Italian" }]} /> }
 					/>
 			
+				<ProjectCard
+					key={KeyGenerator.getNextKey()}
+					title={"TTC"}
+					tech={[[Css, Locale.GetMessages("Css")], [Javascript, Locale.GetMessages("Javascript")], [Html, Locale.GetMessages("Html")], [React, Locale.GetMessages("React")]]}
+					GitHub={<a style={{ textDecoration: "none" }} href={"https://github.com/DiegoVagni/TTC"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("This_Repo")}</a>}
+
+					to={'/'}
+					preview={<Preview><TTC></TTC></Preview>} />
+
 				<ProjectCard title={"LudoGame"}
 					key={KeyGenerator.getNextKey()}
 					tech={[[CSharp, Locale.GetMessages("CSharp")], [Unity, Locale.GetMessages("Unity")]]}
@@ -79,7 +91,6 @@ class Projects extends Component {
 					GitHub={Locale.GetMessages("Private")}
 					to={'https://supsi.ch'}
 					preview={<ImgPreview src={LastRun} local={"LastRun"} />} />
-
 				<ProjectCard
 					key={KeyGenerator.getNextKey()}
 					title={"TwitchStats"}

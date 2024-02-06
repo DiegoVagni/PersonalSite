@@ -20,10 +20,10 @@ let linkColor = StyleSheet.Style("Home_Links_Color")
 
 		return (
 			<div style={StyleSheet.getLayoutStyle("Home_Container")} >
-				<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={-45} xOffset={0.2} yOffset={-40} dashXOffset={0} dashYOffset={-205} to={"/contacts"} text={Locale.GetMessages("Navbar_contact")} up={false}></HomeLink>
-				<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={0} xOffset={0} yOffset={0} dashXOffset={-20} dashYOffset={-26} to={"/about"} text={Locale.GetMessages("Navbar_about")} up={false}></HomeLink>
-				<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={-45} xOffset={-3.2} yOffset={30} dashXOffset={-300} dashYOffset={390} to={"/projects"} text={Locale.GetMessages("Navbar_projects")} up={true}> </HomeLink>
-				<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={45} xOffset={-3.3} yOffset={-40} dashXOffset={-300} dashYOffset={-405} to={"/skills"} text={Locale.GetMessages("Navbar_cv")} up={false}></HomeLink>
+				<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={-45} xOffset={0.2} yOffset={-40} dashXOffset={0} dashYOffset={-245} to={"/contacts"} text={Locale.GetMessages("Navbar_contact")} up={false}></HomeLink>
+				<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={0} xOffset={0} yOffset={0} dashXOffset={-20} dashYOffset={-25} to={"/about"} text={Locale.GetMessages("Navbar_about")} up={false}></HomeLink>
+				<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={-45} xOffset={-3.2} yOffset={30} dashXOffset={-300} dashYOffset={420} to={"/projects"} text={Locale.GetMessages("Navbar_projects")} up={true}> </HomeLink>
+				<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={45} xOffset={-3.3} yOffset={-40} dashXOffset={-300} dashYOffset={-440} to={"/skills"} text={Locale.GetMessages("Navbar_cv")} up={false}></HomeLink>
 
 			
 

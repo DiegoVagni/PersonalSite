@@ -42,10 +42,6 @@ class CV extends Component {
 
 		let maxCompetence = 10
 
-
-	
-
-
 		return (
 
 			<>
@@ -96,7 +92,7 @@ class CV extends Component {
 					</SkillContainer>
 
 				</SkillsPageSection>
-				<DownloadPDFSection title={"DownloadCV"} links={[{ download: "Diego_Vagni_CV_ITA.pdf", to: "/public/cvita.pdf", local: "Italian" }]} />
+				<DownloadPDFSection title={"DownloadCV"} links={[{ download: "Diego_Vagni_CV_ITA.pdf", to: "/public/cvita.pdf", local: "Italian" }, { download: "Diego_Vagni_CV_ENG.pdf", to: "/public/cveng.pdf", local: "English" }]} />
 			</>
 		);
 	}

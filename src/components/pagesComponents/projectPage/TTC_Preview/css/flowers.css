@@ -1,0 +1,73 @@
+.flower {
+  border-radius: 5px;
+  margin-top: 20px;
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 10px;
+}
+.flower::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 10px;
+  border-radius: 5px;
+  position: relative;
+  transform: rotate(-60deg);
+}
+.flower::after {
+  z-index: -2;
+  content: "";
+  display: block;
+  width: 28px;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: -10px;
+  position: relative;
+  transform: rotate(60deg);
+}
+.flowerCenter {
+  background: yellow;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  position: absolute;
+
+  transform: translate(10px, -10px);
+}
+.pink-flower {
+  background: hotpink;
+}
+.pink-flower::before {
+  background: hotpink;
+}
+.pink-flower::after {
+  background: hotpink;
+}
+.blue-flower {
+  background: blueviolet;
+}
+.blue-flower::before {
+  background: blueviolet;
+}
+.blue-flower::after {
+  background: blueviolet;
+}
+.red-flower {
+  background: red;
+}
+.red-flower::before {
+  background: red;
+}
+.red-flower::after {
+  background: red;
+}
+.white-flower {
+  background: white;
+}
+.white-flower::before {
+  background: white;
+}
+.white-flower::after {
+  background: white;
+}

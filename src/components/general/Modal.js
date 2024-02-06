@@ -12,13 +12,12 @@ class Modal extends Component {
 		let showStyle = {
 			display: showModal
 		}
-		
 
 		return ReactDOM.createPortal(
-			<div style={{ ...showStyle, ...StyleSheet.getLayoutStyle("Modal") }}>
-				<div style={{ ...StyleSheet.getLayoutStyle("Modal_Content") } }>
+			<div style={{ ...showStyle, ...StyleSheet.getLayoutStyle("Modal")}}>
+				<div style={{ ...StyleSheet.getLayoutStyle("Modal_Content") }}>
 					{this.props.children}
-					<div style={StyleSheet.getLayoutStyle("Buttons_Container")}></div>
+					<div key={KeyGenerator.getNextKey()}  style={StyleSheet.getLayoutStyle("Buttons_Container")}></div>
 					<Button key={KeyGenerator.getNextKey()} onClick={this.props.handleClose} text={Locale.GetMessages("Close")} />
 					{this.props.buttons}
 				</div>
