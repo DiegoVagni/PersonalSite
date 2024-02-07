@@ -88,11 +88,10 @@ class StyleSheet {
 			case "Page": return {
 				...{
 					minWidth: "760px",
-					minHeight:"900px",
+					minHeight:"100%",
 					overflowX: "auto",
 					overflowY: "auto",
-					width: "100%",
-					height:"calc(100%-64px)"
+					width: "100%"
 
 				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center")
 			}
@@ -164,7 +163,8 @@ class StyleSheet {
 					display: "flex",
 					flexWrap: "wrap",
 					flexDirection: "row",
-					justifyContent: "space-around"
+					justifyContent: "space-around",
+					top:"40%"
 				}, ...StyleSheet.getLayoutStyle("Full_Parent")
 			}
 			case "CV_Section": return {
