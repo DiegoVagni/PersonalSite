@@ -1,6 +1,6 @@
 import InvariantLabels from "../resources/invariant_labels.json"
 class Locale {
-	static defaultLocale = localStorage["locale"] ? localStorage["locale"] : "it";
+	static defaultLocale = localStorage["locale"] ? localStorage["locale"] : "en";
 	static invariantMap = null;
 	static localeList = [
 		{ name: "English", value: "en", lang: "English" },
