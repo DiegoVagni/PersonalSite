@@ -22,19 +22,19 @@
 
 
 	"Navbar_Color": "Colore navbar",
-	"Navbar_Text_Color": "Testo navbar",
-	"Navbar_ActiveText_Button_Color": "Testo (attivo) navbar",
-	"Navbar_Hover_Text_Button_Color": "Testo (highlited) navbar",
+	"Navbar_Text_Color": "Colore testo navbar",
+	"Navbar_ActiveText_Button_Color": "Colore testo (attivo) navbar",
+	"Navbar_Hover_Text_Button_Color": "Colore testo (highlited) navbar",
 	"Navbar_Active_Button_Color": "Colore (attivo) navbar",
 	"Navbar_Hover_Button_Color": "Colore (highlited) navbar",
 	"Navbar_Button_Border_Color": "Colore bordo navbar",
-	"Setting_Button_Border_Color": "Colore bottoni",
+	"Setting_Button_Border_Color": "Colore bordo bottoni",
 	"Modal_Color": "Colore sfondo modali",
 	"Modal_Border": "Colore bordo modali",
 	"Home_Background": "Colore sfondo home",
 	"Home_Links_Color": "Colore link home",
 	"Page_Background": "Colore sfondo pagine",
-	"Card_Background": "Colore sfondo 2",
+	"Card_Background": "Colore sfondo carte",
 	"New_Stamp": "Colore francobollo \"Nuovo\"",
 	"Cool_Stamp": "Colore francobollo \"Cool\"",
 	"Cool_Stamp_BorderColor": "Colore bordo francobollo \"Cool\" ",
@@ -49,8 +49,6 @@
 	"WelcomeAnimColor4": "Animazione iniziale colore 4",
 	"Select_BackgroundColor": "Colore sfondo selettori",
 
-	"Hard_Skills": "Hard skills",
-	"Soft_Skills": "Soft skills",
 
 	"Languages": "Lingue",
 	"Software_Design": "Design del software",
@@ -101,7 +99,7 @@
 	"Cool_Stamp_Message": "COOL",
 
 	"Site": "Questo sito",
-	"Site_Time": "12 Giorni lavorativi",
+	"Site_Time": "12 giorni lavorativi",
 	"Site_TeamSize": "1 persona",
 	"Site_Committer": "Diego Vagni",
 	"Site_Starting_Date": "24.01.2024",
@@ -151,7 +149,7 @@
 	"Poster_Italian": "Poster (Italiano)",
 
 	"Comunication_Framework": "Communication Framework",
-	"Comunication_Framework_Time": "1 anno (saltuario)",
+	"Comunication_Framework_Time": "1 anno (part time)",
 	"Comunication_Framework_TeamSize": "1 sviluppatore",
 	"Comunication_Framework_Committer": "Diego Vagni",
 	"Comunication_Framework_Starting_Date": "03.2023",
