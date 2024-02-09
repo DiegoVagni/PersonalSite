@@ -28,7 +28,8 @@ class ChangeColorButton extends Component {
 	}
 	Apply() {
 		
-		this.state.values.forEach((value, key) => { StyleSheet.ChangeStyle(key,value) })
+		this.state.values.forEach((value, key) => { StyleSheet.ChangeStyle(key, value) })
+		localStorage.setItem("style", JSON.stringify(Array.from(StyleSheet.styles.entries())))
 		this.props.refreshApp();
 	}
 	render() {

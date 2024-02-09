@@ -13,6 +13,7 @@ class StyleSheet {
 		return StyleSheet.styles
 	}
 	static Style(styleCode) {
+		console.log(StyleSheet.styles)
 		if (StyleSheet.styles == null) return "#fffff"
 		return StyleSheet.styles.get(styleCode)
 	}
@@ -21,14 +22,22 @@ class StyleSheet {
 
 		StyleSheet.styles.set(key, value);
 	}
+	static loadFromLocalStorage(refreshApp) {
+		StyleSheet.styles = new Map(JSON.parse(localStorage["style"]))
+		refreshApp()
+	}
+	static loadDefaultStyle(refreshApp) {
+		localStorage["style"] ? StyleSheet.loadFromLocalStorage(refreshApp) : StyleSheet.loadStyle(0, refreshApp);
+	}
 	static loadStyle(index, refreshApp) {
+		
 		StyleSheet.currentIndex = index;
 		fetch('Themes/' + StyleSheet.themes[StyleSheet.currentIndex].value, {
 			headers: {
 				'Accept': 'application/json'
 			},
 			method: 'GET'
-		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json)) }).then(() => refreshApp());
+		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json)) }).then(() => localStorage.setItem("style", JSON.stringify(Array.from(StyleSheet.styles.entries())))).then(() => refreshApp());
 	}
 
 
@@ -83,7 +92,9 @@ class StyleSheet {
 			case "Setting_Select": return {
 				...{
 					backgroundColor: StyleSheet.Style("Select_BackgroundColor"),
-				}, ...StyleSheet.getLayoutStyle("Full_Parent"), ...StyleSheet.getLayoutStyle("Normal_Text")
+					width: "auto",
+					heigth:"auto"
+				}, ...StyleSheet.getLayoutStyle("Normal_Text")
 			}
 			case "Page": return {
 				...{
@@ -150,7 +161,8 @@ class StyleSheet {
 			case "Card_Container": return {
 				...{
 					justifyContent: "flex-Start",
-					height:"fit-content"
+					height: "fit-content",
+					padding:"10px"
 				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center")
 			}
 			case "Card_Page": return {
@@ -164,8 +176,9 @@ class StyleSheet {
 					flexWrap: "wrap",
 					flexDirection: "row",
 					justifyContent: "space-around",
-					top:"40%"
-				}, ...StyleSheet.getLayoutStyle("Full_Parent")
+					height: "90vh",
+					width:"100%"
+				}
 			}
 			case "CV_Section": return {
 				width: "100%",
@@ -264,7 +277,7 @@ class StyleSheet {
 			case "Home_Container": return {
 				...{
 
-					minWidth: "900px",
+					minWidth: "400px",
 					justifyContent: "Center",
 					position:"absolute",
 					top:"25%"
@@ -374,7 +387,9 @@ class StyleSheet {
 				alignItems: "center",
 				alignContent: "flex-start",
 				width: "100%",
-				maxHeight: "50px"
+				
+				maxHeight: "50px",
+
 
 			}
 			case "ColorPicker": return {

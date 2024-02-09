@@ -15,7 +15,7 @@ class SettingMenu extends Component {
 			<div style={StyleSheet.getLayoutStyle("Setting_Menu")}>
 
 				<SettingContainer key={KeyGenerator.getNextKey()}>
-					<p style={StyleSheet.getLayoutStyle("Normal_Text")}>{Locale.GetMessages("Language_Setting")}</p>
+					<p style={{ ...StyleSheet.getLayoutStyle("Normal_Text"), ...{wrap:"no-wrap"} }}>{Locale.GetMessages("Language_Setting")}</p>
 					<LanguageSelector languageChange={this.props.languageChange} />
 				</SettingContainer>
 				<SettingContainer key={KeyGenerator.getNextKey()}>

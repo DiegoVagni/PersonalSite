@@ -32,14 +32,14 @@ class App extends Component {
 		this.state = {
 			refreshApp: false,
 			ready: false,
-			first:true
+			first: true,
 		};
 		this.ChangeLanguage = this.ChangeLanguage.bind(this);
 		this.RefreshApplication = this.RefreshApplication.bind(this);
 		this.loadedStyle = this.loadedStyle.bind(this)
 		this.EndAnimHook = this.EndAnimHook.bind(this)
-
 	}
+
 	loadedStyle() {
 		this.setState({
 			refreshApp: !this.state.refreshApp,
@@ -47,7 +47,7 @@ class App extends Component {
 		})
 	}
 	componentDidMount() {
-		StyleSheet.loadStyle(0, this.loadedStyle)
+		StyleSheet.loadDefaultStyle(this.loadedStyle)
 		this.ChangeLanguage(Locale.defaultLocale);
 	}
 	RefreshApplication() {
