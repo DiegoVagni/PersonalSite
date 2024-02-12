@@ -8,12 +8,12 @@ class StyleSheet {
 	static themes = [{ name: "Light", value: "Light.json" }, { name: "Dark", value: "Dark.json" }]
 	static currentIndex = 0;
 	static styles = null;
-
+	static animation = localStorage["animations"] ? true : localStorage["animations"]
 	static GetStyleSheet() {
 		return StyleSheet.styles
 	}
 	static Style(styleCode) {
-		console.log(StyleSheet.styles)
+
 		if (StyleSheet.styles == null) return "#fffff"
 		return StyleSheet.styles.get(styleCode)
 	}
