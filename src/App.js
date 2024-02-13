@@ -6,7 +6,7 @@ import Locale from "./utils/Locale";
 
 import DVNavBar from "./components/siteComponents/navBar/DVNavBar";
 import { useLocation } from "react-router-dom";
-import StyleSheet from "./utils/StyleSheet.js"
+import styleSheet from "./utils/StyleSheet"
 
 //pages
 import Home from "./pagesLayouts/Home";
@@ -36,18 +36,18 @@ class App extends Component {
 		};
 		this.ChangeLanguage = this.ChangeLanguage.bind(this);
 		this.RefreshApplication = this.RefreshApplication.bind(this);
-		this.loadedStyle = this.loadedStyle.bind(this)
+		this.loadedstyle = this.loadedstyle.bind(this)
 		this.EndAnimHook = this.EndAnimHook.bind(this)
 	}
 
-	loadedStyle() {
+	loadedstyle() {
 		this.setState({
 			refreshApp: !this.state.refreshApp,
 			ready: true
 		})
 	}
 	componentDidMount() {
-		StyleSheet.loadDefaultStyle(this.loadedStyle)
+		styleSheet.loadDefaultstyle(this.loadedstyle)
 		this.ChangeLanguage(Locale.defaultLocale);
 	}
 	RefreshApplication() {
@@ -68,13 +68,12 @@ class App extends Component {
 	this.setState({first:false})
 }
 	render() {
-		
 		if (!this.state.ready) { return <Loading></Loading> }
-		let backCol = this.props.location !== "/" ? StyleSheet.Style("Page_Background") : StyleSheet.Style("Home_Background");
+		let backCol = this.props.location !== "/" ? styleSheet.style("Page_Background") : styleSheet.style("Home_Background");
 		document.body.style.backgroundColor = backCol
 		return (
 			<>
-				{this.state.first ? (<StartAnimation backCol={backCol} end={this.EndAnimHook} ></StartAnimation>) : (<>
+				{styleSheet.getAnimationBool() && this.state.first ? (<StartAnimation backCol={backCol} end={this.EndAnimHook} ></StartAnimation>) : (<>
 					
 					<DVNavBar root={this.props.root} languageChange={this.ChangeLanguage} location={this.props.location} refreshApp={this.RefreshApplication} />
 					<Page>
@@ -82,12 +81,12 @@ class App extends Component {
 
 					</div>
 					<Routes>
-						<Route exact path="/" element={<Home StyleSheet={StyleSheet} />} />
-						<Route path="/contacts" element={<Contacts StyleSheet={StyleSheet} />} />
-						<Route path="/about" element={<About StyleSheet={StyleSheet} />} />
-						<Route path="/projects" element={<Projects StyleSheet={StyleSheet} />} />
+						<Route exact path="/" element={<Home styleSheet={styleSheet} />} />
+						<Route path="/contacts" element={<Contacts styleSheet={styleSheet} />} />
+						<Route path="/about" element={<About styleSheet={styleSheet} />} />
+						<Route path="/projects" element={<Projects styleSheet={styleSheet} />} />
 
-						<Route path="/skills" element={<CV StyleSheet={StyleSheet} />} />
+						<Route path="/skills" element={<CV styleSheet={styleSheet} />} />
 					</Routes>
 					</Page>
 					</>

@@ -4,7 +4,7 @@ import './cube.scss';
 class Cube extends Component {
     render() {
         let cubes = {
-            transformStyle: "preserve-3d",
+            transformstyle: "preserve-3d",
             width: "20%",
             height: "20%",
             maxHeight: "20%",

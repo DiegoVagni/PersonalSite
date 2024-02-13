@@ -1,6 +1,6 @@
 import { Component } from "react"
 import Locale from "../../../utils/Locale"
-import StyleSheet from "../../../utils/StyleSheet"
+import styleSheet from "../../../utils/StyleSheet"
 
 import CardStat from "../../siteComponents/card/CardStat"
 import Card from "../../siteComponents/card/Card"
@@ -17,14 +17,14 @@ class ProjectCard extends Component {
 	render() {
 
 		return (<Card title={this.props.title} subTitle={Locale.GetMessages(this.props.title + "_Starting_Date") + "-" + Locale.GetMessages(this.props.title + "_End_Date")} stamp={this.props.stamp} preview={this.props.preview}>
-			<div style={StyleSheet.getLayoutStyle("Project_Card_Stats_Container")}>
+			<div style={styleSheet.getLayoutstyle("Project_Card_Stats_Container")}>
 				<CardStat  src={Flexible} title={Locale.GetMessages("CardStat_Time")} value={Locale.GetMessages(this.props.title + "_Time")} ></CardStat>
 				<CardStat  src={TeamWork} title={Locale.GetMessages("CardStat_TeamSize")} value={Locale.GetMessages(this.props.title + "_TeamSize")} ></CardStat>
 				<CardStat  src={Committer} title={Locale.GetMessages("CardStat_Committer")} value={<a style={{ textDecoration: "none" }} href={this.props.to} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages(this.props.title + "_Committer")}</a>} ></CardStat>
 				<CardStat  src={GitHub} title={Locale.GetMessages("GitHub")} value={this.props.GitHub} ></CardStat>
 			</div>
 			<ProjectTecnologies tech={this.props.tech}></ProjectTecnologies>
-			<div style={{ height: "fit-content", padding:"10px" }}><p style={StyleSheet.getLayoutStyle("Parag_Text")}>{Locale.GetMessages(this.props.title + "_Description")}</p></div>
+			<div style={{ height: "fit-content", padding:"10px" }}><p style={styleSheet.getLayoutstyle("Parag_Text")}>{Locale.GetMessages(this.props.title + "_Description")}</p></div>
 			{this.props.downloads ? this.props.downloads:<></> }
 		</Card >
 		)

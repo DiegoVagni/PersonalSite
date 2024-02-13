@@ -1,6 +1,6 @@
 
 
-class StyleSheet {
+class styleSheet {
 	static font = "old london, sans-serif";
 	static titleFont = "old london, sans-serif";
 	static navBarFont = "old london, sans-serif";
@@ -8,40 +8,49 @@ class StyleSheet {
 	static themes = [{ name: "Light", value: "Light.json" }, { name: "Dark", value: "Dark.json" }]
 	static currentIndex = 0;
 	static styles = null;
-	static animation = localStorage["animations"] ? true : localStorage["animations"]
-	static GetStyleSheet() {
-		return StyleSheet.styles
-	}
-	static Style(styleCode) {
-
-		if (StyleSheet.styles == null) return "#fffff"
-		return StyleSheet.styles.get(styleCode)
+	//Really? localStorage bool is read as a string ?
+	static animation = localStorage["animations"] === "true" ? true :false
+	static getAnimationBool() {
+		return styleSheet.animation
 	}
 
-	static ChangeStyle(key, value) {
+	static toggleAnimations() {
+		styleSheet.animation = !styleSheet.animation
+		localStorage["animations"] = styleSheet.animation
+	}
+	static getstyleSheet() {
+		return styleSheet.styles
+	}
+	static style(styleCode) {
 
-		StyleSheet.styles.set(key, value);
+		if (styleSheet.styles == null) return "#fffff"
+		return styleSheet.styles.get(styleCode)
+	}
+
+	static changeStyle(key, value) {
+
+		styleSheet.styles.set(key, value);
 	}
 	static loadFromLocalStorage(refreshApp) {
-		StyleSheet.styles = new Map(JSON.parse(localStorage["style"]))
+		styleSheet.styles = new Map(JSON.parse(localStorage["style"]))
 		refreshApp()
 	}
-	static loadDefaultStyle(refreshApp) {
-		localStorage["style"] ? StyleSheet.loadFromLocalStorage(refreshApp) : StyleSheet.loadStyle(0, refreshApp);
+	static loadDefaultstyle(refreshApp) {
+		localStorage["style"] ? styleSheet.loadFromLocalStorage(refreshApp) : styleSheet.loadstyle(0, refreshApp);
 	}
-	static loadStyle(index, refreshApp) {
+	static loadstyle(index, refreshApp) {
 		
-		StyleSheet.currentIndex = index;
-		fetch('Themes/' + StyleSheet.themes[StyleSheet.currentIndex].value, {
+		styleSheet.currentIndex = index;
+		fetch('Themes/' + styleSheet.themes[styleSheet.currentIndex].value, {
 			headers: {
 				'Accept': 'application/json'
 			},
 			method: 'GET'
-		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json)) }).then(() => localStorage.setItem("style", JSON.stringify(Array.from(StyleSheet.styles.entries())))).then(() => refreshApp());
+		}).then((data) => { return data.json() }).then((json) => { styleSheet.styles = new Map(Object.entries(json)) }).then(() => localStorage.setItem("style", JSON.stringify(Array.from(styleSheet.styles.entries())))).then(() => refreshApp());
 	}
 
 
-	static getLayoutStyle(key) {
+	static getLayoutstyle(key) {
 		switch (key) {
 			case "Full_Parent": return {
 				width: "100%",
@@ -49,52 +58,52 @@ class StyleSheet {
 			}
 			case "Normal_Text": return {
 				fontSize: "1rem",
-				fontFamily: StyleSheet.font,
+				fontFamily: styleSheet.font,
 			}
 			case "Parag_Text": return {
 				...{
 					textAlign: "justify",
 					textJustify: "inter-word",
 	
-				}, ...StyleSheet.getLayoutStyle("Normal_Text")
+				}, ...styleSheet.getLayoutstyle("Normal_Text")
 			}
 			case "Title_Text": return {
 				fontSize: "2.5rem",
-				fontFamily: StyleSheet.titleFont,
+				fontFamily: styleSheet.titleFont,
 			}
 			case "SubTitle_Text": return {
 				fontSize: "2rem",
-				fontFamily: StyleSheet.titleFont,
+				fontFamily: styleSheet.titleFont,
 			}
 			case "Biggest_Text": return {
 				fontSize: "4rem",
-				fontFamily: StyleSheet.titleFont,
+				fontFamily: styleSheet.titleFont,
 			}
 			case "Big_Text": return {
 				fontSize: "3rem",
-				fontFamily: StyleSheet.titleFont,
+				fontFamily: styleSheet.titleFont,
 			}
 			case "Small_Text": return {
 				fontSize: "0.5rem",
-				fontFamily: StyleSheet.font,
+				fontFamily: styleSheet.font,
 			}
 			case "NavBar_Text": return {
 				fontSize: "1.5rem",
-				fontFamily: StyleSheet.navBarFont,
+				fontFamily: styleSheet.navBarFont,
 			}
 			case "Setting_Select_Option": return {
 				...{
 					fontSize: "1rem",
-					fontFamily: StyleSheet.font,
-					backgroundColor: StyleSheet.Style("Select_BackgroundColor")
-				}, ...StyleSheet.getLayoutStyle("Normal_Text")
+					fontFamily: styleSheet.font,
+					backgroundColor: styleSheet.style("Select_BackgroundColor")
+				}, ...styleSheet.getLayoutstyle("Normal_Text")
 			}
 			case "Setting_Select": return {
 				...{
-					backgroundColor: StyleSheet.Style("Select_BackgroundColor"),
+					backgroundColor: styleSheet.style("Select_BackgroundColor"),
 					width: "auto",
 					heigth:"auto"
-				}, ...StyleSheet.getLayoutStyle("Normal_Text")
+				}, ...styleSheet.getLayoutstyle("Normal_Text")
 			}
 			case "Page": return {
 				...{
@@ -104,7 +113,7 @@ class StyleSheet {
 					overflowY: "auto",
 					width: "100%"
 
-				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center")
+				}, ...styleSheet.getLayoutstyle("Flex_Column_Center")
 			}
 			case "Modal": return {
 				position: "fixed",
@@ -114,20 +123,20 @@ class StyleSheet {
 				borderRadius: "10px",
 				left: "30%",
 				top: "10%",
-				border: "2px solid " + StyleSheet.Style("Modal_Border"),
-				backgroundColor: StyleSheet.Style("Modal_Color"),
+				border: "2px solid " + styleSheet.style("Modal_Border"),
+				backgroundColor: styleSheet.style("Modal_Color"),
 				overflowX: "none"
 			}
 			case "Modal_Content": return {
 				...{
-					backgroundColor: StyleSheet.Style("Modal_Color"),
+					backgroundColor: styleSheet.style("Modal_Color"),
 					overflowY: "auto",
 					overflowX: "auto"
-				}, ...StyleSheet.getLayoutStyle("Full_Parent")
+				}, ...styleSheet.getLayoutstyle("Full_Parent")
 			}
 			case "Menu_Button": return {
-				...StyleSheet.getLayoutStyle("Small_Image"), ...{
-					boxShadow: "0px 7px 10px -7px " + StyleSheet.Style("Shadow")
+				...styleSheet.getLayoutstyle("Small_Image"), ...{
+					boxShadow: "0px 7px 10px -7px " + styleSheet.style("Shadow")
 				}
 			}
 			case "Flex_Column_Center": return {
@@ -148,27 +157,27 @@ class StyleSheet {
 			case "Modal_Container": return {
 				...{
 
-					backgroundColor: StyleSheet.Style("Modal_Color"),
+					backgroundColor: styleSheet.style("Modal_Color"),
 					overflowY: "auto",
 					overflowX: "auto"
-				}, ...StyleSheet.getLayoutStyle("Full_Parent")
+				}, ...styleSheet.getLayoutstyle("Full_Parent")
 			}
 			case "Skills_Section_Layout": return {
 				...{
 					width: "80%",
-				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center")
+				}, ...styleSheet.getLayoutstyle("Flex_Column_Center")
 			}
 			case "Card_Container": return {
 				...{
 					justifyContent: "flex-Start",
 					height: "fit-content",
 					padding:"10px"
-				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center")
+				}, ...styleSheet.getLayoutstyle("Flex_Column_Center")
 			}
 			case "Card_Page": return {
 				...{
 					justifyContent: "flex-start",
-				}, ...StyleSheet.getLayoutStyle("Full_Parent"), ...StyleSheet.getLayoutStyle("Flex_Column_Center")
+				}, ...styleSheet.getLayoutstyle("Full_Parent"), ...styleSheet.getLayoutstyle("Flex_Column_Center")
 			}
 			case "Contact_Container": return {
 				...{
@@ -197,36 +206,36 @@ class StyleSheet {
 			case "Card": return {
 				...{
 					display: "flex",
-					backgroundColor: StyleSheet.Style("Card_Background"),
+					backgroundColor: styleSheet.style("Card_Background"),
 					minHeight: "98%",
 					minWidth:"98%",
 					
-				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center"), ...StyleSheet.getLayoutStyle("Full_Parent")
+				}, ...styleSheet.getLayoutstyle("Flex_Column_Center"), ...styleSheet.getLayoutstyle("Full_Parent")
 			}
 			case "Card_Outer": return {
 				...{
-					boxShadow: StyleSheet.Style("Shadow") + " 0px 4px 12px",
+					boxShadow: styleSheet.style("Shadow") + " 0px 4px 12px",
 					borderRadius: "10px",
 					margin:"10px",
-					border: "1px solid " + StyleSheet.Style("Modal_Border"),
+					border: "1px solid " + styleSheet.style("Modal_Border"),
 					width: "90%",
 					minHeight:"95%",
 					overflowX: "hidden",
 					overflowY: "auto",
-					backgroundColor: StyleSheet.Style("Card_Background")
+					backgroundColor: styleSheet.style("Card_Background")
 				}
 			}
 			case "Card_Outer_Min": return {
 				...{
-					boxShadow: StyleSheet.Style("Shadow") + " 0px 4px 12px",
+					boxShadow: styleSheet.style("Shadow") + " 0px 4px 12px",
 					borderRadius: "10px",
 					margin:"10px",
-					border: "1px solid " + StyleSheet.Style("Modal_Border"),
+					border: "1px solid " + styleSheet.style("Modal_Border"),
 					width: "90%",
 					minHeight:"fit-content",
 					overflowX: "hidden",
 					overflowY: "auto",
-					backgroundColor: StyleSheet.Style("Card_Background")
+					backgroundColor: styleSheet.style("Card_Background")
 				}
 			}
 			case "Competence_Container": return {...{
@@ -234,11 +243,11 @@ class StyleSheet {
 				padding: "5px",
 				justifyItems: "flex-start"
 
-			}, ...StyleSheet.getLayoutStyle("Flex_Row_Center")
+			}, ...styleSheet.getLayoutstyle("Flex_Row_Center")
 		}
 			case "Card_Title_Container": return {
-				...{ backgroundColor: StyleSheet.Style("Card_Background" )},
-				...StyleSheet.getLayoutStyle("Flex_Column_Center")
+				...{ backgroundColor: styleSheet.style("Card_Background" )},
+				...styleSheet.getLayoutstyle("Flex_Column_Center")
 			}
 			case "Preview": return {
 				...{
@@ -246,7 +255,7 @@ class StyleSheet {
 					height: "80%",
 					borderRadius: "10%",
 					margin: "5px",
-				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center")
+				}, ...styleSheet.getLayoutstyle("Flex_Column_Center")
 				
 			}
 			case "Small_Image": return {
@@ -254,25 +263,25 @@ class StyleSheet {
 
 					maxHeight: "64px",
 					maxWidth: "64px"
-				}, ...StyleSheet.getLayoutStyle("Full_Parent")
+				}, ...styleSheet.getLayoutstyle("Full_Parent")
 			}
 			case "Medium_Image": return {
 				...{
 					maxHeight: "64px",
 					maxWidth: "64px"
-				}, ...StyleSheet.getLayoutStyle("Full_Parent")
+				}, ...styleSheet.getLayoutstyle("Full_Parent")
 			}
-			case "Preview_Image": return StyleSheet.getLayoutStyle("Preview")
+			case "Preview_Image": return styleSheet.getLayoutstyle("Preview")
 			case "Home_Image": return {
-				border: "10px solid " + StyleSheet.Style("Home_Links_Color"),
+				border: "10px solid " + styleSheet.style("Home_Links_Color"),
 			}
 			case "Tech_Container": return {
 				...{
 					margin: "5px",
-					backgroundColor: StyleSheet.Style("Card_Background")
-				}, ...StyleSheet.getLayoutStyle("Flex_Row_Center")
+					backgroundColor: styleSheet.style("Card_Background")
+				}, ...styleSheet.getLayoutstyle("Flex_Row_Center")
 			}
-			case "Contact_Info": return StyleSheet.getLayoutStyle("Flex_Row_Center")
+			case "Contact_Info": return styleSheet.getLayoutstyle("Flex_Row_Center")
 
 			case "Home_Container": return {
 				...{
@@ -281,26 +290,26 @@ class StyleSheet {
 					justifyContent: "Center",
 					position:"absolute",
 					top:"25%"
-				}, ...StyleSheet.getLayoutStyle("Flex_Row_Center")
+				}, ...styleSheet.getLayoutstyle("Flex_Row_Center")
 			}
 			case "Home_Link": return {
 				textDecoration: "none",
-				color: StyleSheet.Style("Home_Links_Color"),
+				color: styleSheet.style("Home_Links_Color"),
 				position: "absolute",
 				fontFamily: " Optima, serif",
 				margin: "0px",
 				padding: "0px"
 			}
 			case "Home_Link_Dash": return {
-				border: "2px solid " + StyleSheet.Style("Home_Links_Color"),
+				border: "2px solid " + styleSheet.style("Home_Links_Color"),
 				height: "0 px",
-				backgroundColor: StyleSheet.Style("Home_Links_Color"),
+				backgroundColor: styleSheet.style("Home_Links_Color"),
 				position: "absolute"
 			}
 			case "Home_Link_Container": return {
 				width: "auto",
 				textDecoration: "underline",
-				color: StyleSheet.Style("Home_Links_Color"),
+				color: styleSheet.style("Home_Links_Color"),
 				position: "absolute",
 
 			}
@@ -314,38 +323,38 @@ class StyleSheet {
 				minHeight: "64px",
 				zIndex: "10",
 				top: "0px",
-				backgroundColor: StyleSheet.Style("Navbar_Color"),
+				backgroundColor: styleSheet.style("Navbar_Color"),
 
 			}
 			case "NavBar_Button": return {
 				...{
-					borderLeft: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
-					borderRight: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
+					borderLeft: "1px solid " + styleSheet.style("Navbar_Button_Border_Color"),
+					borderRight: "1px solid " + styleSheet.style("Navbar_Button_Border_Color"),
 					maxHeight: "64px",
 					textDecoration: "none",
 					justifyContent:"center"
-				}, ...StyleSheet.getLayoutStyle("Full_Parent"), ...StyleSheet.getLayoutStyle("Flex_Column_Center")
+				}, ...styleSheet.getLayoutstyle("Full_Parent"), ...styleSheet.getLayoutstyle("Flex_Column_Center")
 			}
 			case "Button": return {
 				...{
-					backgroundColor: StyleSheet.Style("Button_Color"),
+					backgroundColor: styleSheet.style("Button_Color"),
 					borderRadius: "10px",
-				}, ...StyleSheet.getLayoutStyle("Small_Text")
+				}, ...styleSheet.getLayoutstyle("Small_Text")
 			}
 
 			case "NavBar_SubMenu": return {
 				...{
-					backgroundColor: StyleSheet.Style("Navbar_Color"),
+					backgroundColor: styleSheet.style("Navbar_Color"),
 					width: "auto",
 					minHeight: "64px"
-				}, ...StyleSheet.getLayoutStyle("Flex_Column_Center")}
+				}, ...styleSheet.getLayoutstyle("Flex_Column_Center")}
 			case "Project_Card_Stats_Container": return {
 				...{
-					backgroundColor: StyleSheet.Style("Card_Background"),
+					backgroundColor: styleSheet.style("Card_Background"),
 					justifyContent: "center",
 					flexWrap: "wrap",
 					width:"auto",
-				}, ...StyleSheet.getLayoutStyle("Flex_Row_Center")
+				}, ...styleSheet.getLayoutstyle("Flex_Row_Center")
 			}
 			case "Download_Section": return {
 				...{
@@ -353,7 +362,7 @@ class StyleSheet {
 					margin: "15px",
 					justifyContent:"center"
 
-				}, ...StyleSheet.getLayoutStyle("Flex_Row_Center")
+				}, ...styleSheet.getLayoutstyle("Flex_Row_Center")
 			}
 			case "Setting_Menu": return {
 				width: "auto",
@@ -362,7 +371,7 @@ class StyleSheet {
 				minWidth: "200px",
 				maxWidth: "1000px",
 				MaxHeight: "100%",
-				backgroundColor: StyleSheet.Style("Navbar_Color"),
+				backgroundColor: styleSheet.style("Navbar_Color"),
 				overflowX: "none",
 				overflowY: "auto",
 				display: "flex",
@@ -375,9 +384,9 @@ class StyleSheet {
 				top: "130%",
 				padding: "5px",
 				borderRadius: "10px 7px 10px 10px",
-				borderBottom: "2px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
-				borderLeft: "2px solid " + StyleSheet.Style("Navbar_Button_Border_Color"),
-				borderRight: "1px solid " + StyleSheet.Style("Navbar_Button_Border_Color")
+				borderBottom: "2px solid " + styleSheet.style("Navbar_Button_Border_Color"),
+				borderLeft: "2px solid " + styleSheet.style("Navbar_Button_Border_Color"),
+				borderRight: "1px solid " + styleSheet.style("Navbar_Button_Border_Color")
 
 			}
 			case "Setting_Container": return {
@@ -402,11 +411,11 @@ class StyleSheet {
 			case "Download_Link": return {
 				...{
 					textDecoration: "none"
-				}, ...StyleSheet.getLayoutStyle("Normal_Text")
+				}, ...styleSheet.getLayoutstyle("Normal_Text")
 			}
 			default: return {}
 
 		}
 	}
 }
-export default StyleSheet
+export default styleSheet

@@ -1,5 +1,5 @@
 import { Component } from "react"
-import StyleSheet from "../../../utils/StyleSheet"
+import styleSheet from "../../../utils/StyleSheet"
 import Select from "../../general/Select";
 class ThemeSheetSelector extends Component {
 	
@@ -10,7 +10,7 @@ class ThemeSheetSelector extends Component {
 	ChangeTheme(e) {
 		let themeIndex = e.target.options.selectedIndex;
 
-		StyleSheet.loadStyle(themeIndex,this.props.refreshApp)
+		styleSheet.loadstyle(themeIndex,this.props.refreshApp)
 	}
 	render() {
 		
@@ -18,9 +18,9 @@ class ThemeSheetSelector extends Component {
 		return (
 			
 				<Select
-					value={StyleSheet.themes[StyleSheet.currentIndex].value}
+					value={styleSheet.themes[styleSheet.currentIndex].value}
 					onChange={this.ChangeTheme}
-					values={StyleSheet.themes} />
+					values={styleSheet.themes} />
 
 		)
 	}

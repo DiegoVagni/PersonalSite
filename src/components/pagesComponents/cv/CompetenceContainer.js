@@ -1,20 +1,20 @@
 import { Component } from "react";
-import StyleSheet from "../../../utils/StyleSheet"
+import styleSheet from "../../../utils/StyleSheet"
 import "../../../anim.scss"
 class CompetenceContainer extends Component {
 	render() {
 
-		let containerStyle = {
+		let containerstyle = {
 
-			animation: "fadeInRight " + this.props.animTime + "s linear",
+			animation: styleSheet.getAnimationBool() ? "fadeInRight " + this.props.animTime + "s linear":"",
 		}
 		let s = {
-			...containerStyle, ...StyleSheet.getLayoutStyle("Competence_Container")
+			...containerstyle, ...styleSheet.getLayoutstyle("Competence_Container")
 		}
 		return (
 			<div style={s}>
 				<img style={{
-					...StyleSheet.getLayoutStyle("Small_Image"), ...{ minWidth: "64px", minHeight: "64px" }
+					...styleSheet.getLayoutstyle("Small_Image"), ...{ minWidth: "64px", minHeight: "64px" }
 				}
 				} src={this.props.src} alt={this.props.competence} />
 				{this.props.children}

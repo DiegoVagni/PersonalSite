@@ -1,5 +1,5 @@
 import { Component } from "react"
-import StyleSheet from "../../../utils/StyleSheet"
+import styleSheet from "../../../utils/StyleSheet"
 class SettingContainer extends Component {
 	
 	render() {
@@ -7,7 +7,7 @@ class SettingContainer extends Component {
 	
 		return (
 
-			<div style={StyleSheet.getLayoutStyle("Setting_Container")}>
+			<div style={styleSheet.getLayoutstyle("Setting_Container")}>
 				{this.props.children}
 			</div>
 		)

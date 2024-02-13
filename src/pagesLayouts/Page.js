@@ -1,14 +1,14 @@
 import { Component } from "react";
-import StyleSheet from "../utils/StyleSheet"
+import styleSheet from "../utils/StyleSheet"
 class Page extends Component {
     render() {
-        let bgColor = this.props.color? this.props.color : StyleSheet.Style("Page_Background");
-        let divStyle = {
+        let bgColor = this.props.color? this.props.color : styleSheet.style("Page_Background");
+        let divstyle = {
             backgroundColor: bgColor
         }
 
         return (
-            <div style={{ ...divStyle,...StyleSheet.getLayoutStyle("Page")}}>
+            <div style={{ ...divstyle,...styleSheet.getLayoutstyle("Page")}}>
                 {this.props.children}
             </div>
         );

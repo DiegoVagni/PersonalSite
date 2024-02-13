@@ -1,6 +1,6 @@
 import { Component } from "react"
 import Locale from "../../../../utils/Locale"
-import StyleSheet from "../../../../utils/StyleSheet"
+import styleSheet from "../../../../utils/StyleSheet"
 import Preview from "./Preview"
 class ImgPreview extends Component {
 
@@ -10,7 +10,7 @@ class ImgPreview extends Component {
 
 		return (<Preview>
 			
-				<img style={{ ...StyleSheet.getLayoutStyle("Full_Parent"), ...{borderRadius:"10px"}  }} src={this.props.src} alt={Locale.GetMessages(this.props.local)}></img>
+				<img style={{ ...styleSheet.getLayoutstyle("Full_Parent"), ...{borderRadius:"10px"}  }} src={this.props.src} alt={Locale.GetMessages(this.props.local)}></img>
 				{this.props.children}
 
 		</Preview>

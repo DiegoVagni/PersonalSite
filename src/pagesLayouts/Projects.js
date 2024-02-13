@@ -4,7 +4,7 @@ import ImgPreview from "../components/siteComponents/card/previews/ImgPreview"
 import IFramePreview from "../components/siteComponents/card/previews/IFramePreview"
 
 import Locale from "../utils/Locale"
-import StyleSheet from "../utils/StyleSheet"
+import styleSheet from "../utils/StyleSheet"
 import Css from "../resources/icons/css.svg"
 import Net from "../resources/icons/net.svg"
 import Javascript from "../resources/icons/javascript.svg"
@@ -27,7 +27,7 @@ class Projects extends Component {
 	render() {
 
 		return (
-				<div style={StyleSheet.getLayoutStyle("Card_Page")}>
+				<div style={styleSheet.getLayoutstyle("Card_Page")}>
 				<ProjectCard
 					key={KeyGenerator.getNextKey()}
 					title={"Site"}

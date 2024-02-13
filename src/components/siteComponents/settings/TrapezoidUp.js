@@ -1,17 +1,17 @@
 import { Component } from "react"
-import StyleSheet from "../../../utils/StyleSheet"
+import styleSheet from "../../../utils/StyleSheet"
 class TrapezoidUp extends Component {
 
 	render() {
-		let navbarColor = StyleSheet.Style("Navbar_Color");
-		let centerSpanStyle = {
+		let navbarColor = styleSheet.style("Navbar_Color");
+		let centerSpanstyle = {
 			content: "",
 			borderLeft: "12px solid " + navbarColor,
 			borderRight: "12px solid " + navbarColor,
 			borderTop: "1px solid " + navbarColor,
 			borderBottom: "5px solid " + navbarColor
 		}
-		let leftSpanStyle = {
+		let leftSpanstyle = {
 			position: "absolute",
 			left: "-50%",
 			top: "-5%",
@@ -22,7 +22,7 @@ class TrapezoidUp extends Component {
 			borderBottom: "15px solid " + navbarColor
 		}
 
-		let rightSpanStyle = {
+		let rightSpanstyle = {
 			position: "absolute",
 			content: "",
 			borderLeft: " 7px solid " + navbarColor,
@@ -30,7 +30,7 @@ class TrapezoidUp extends Component {
 			borderTop: "7px solid transparent ",
 			borderBottom: "15px solid" + navbarColor
 		}
-		let trapezoidStyle = {
+		let trapezoidstyle = {
 			position: "absolute",
 			right: "20px",
 			top: "100%"
@@ -38,10 +38,10 @@ class TrapezoidUp extends Component {
 
 		return (
 
-			<div style={trapezoidStyle}>
-				<span style={leftSpanStyle}></span>
-				<span style={centerSpanStyle}></span>
-				<span style={rightSpanStyle}></span>
+			<div style={trapezoidstyle}>
+				<span style={leftSpanstyle}></span>
+				<span style={centerSpanstyle}></span>
+				<span style={rightSpanstyle}></span>
 			</div>
 		)
 	}

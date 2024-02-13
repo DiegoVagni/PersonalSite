@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import StyleSheet from "../../../../utils/StyleSheet";
+import styleSheet from "../../../../utils/StyleSheet";
 class HomeLink extends Component {
 	degToRad(deg) {
 		return deg * (Math.PI / 180);
@@ -29,14 +29,14 @@ class HomeLink extends Component {
 		let transformationString = "translate(" + (Math.cos(this.degToRad(xdeg)) * (borderRadius) + (hrWidth * xOffset)) + "%, " + (Math.sin(this.degToRad(xdeg)) * (borderRadius) + (hrWidth * yOffset)) + "% ) rotateZ(" + xdeg + "deg)";
 		let stringTransformationString = "translate(" + (Math.cos(this.degToRad(xdeg)) * (borderRadius) + ( dashXOffset)) + "%, " + (Math.sin(this.degToRad(xdeg)) * (borderRadius) + (dashYOffset) - stringheight * 0.5) + "% )"
 
-		let hrStyle = {
+		let hrstyle = {
 			transform: transformationString,
 			width: hrWidth + "px",
 	
 		}
-		let linkStyle
-		let extraLinkStyle = {
-			...StyleSheet.getLayoutStyle("Home_Link"), ...{
+		let linkstyle
+		let extraLinkstyle = {
+			...styleSheet.getLayoutstyle("Home_Link"), ...{
 				height: stringheight + " px",
 				fontSize: fontsize + "px",
 				transform: stringTransformationString,
@@ -45,25 +45,25 @@ class HomeLink extends Component {
 			}
 		}
 		if (this.props.up) {
-			linkStyle = {
-				borderTop: "4px solid " + StyleSheet.Style("Home_Links_Color"),
+			linkstyle = {
+				borderTop: "4px solid " + styleSheet.style("Home_Links_Color"),
 			}
 		} else {
-			linkStyle = {
-				borderBottom: "4px solid " + StyleSheet.Style("Home_Links_Color"),
+			linkstyle = {
+				borderBottom: "4px solid " + styleSheet.style("Home_Links_Color"),
 			}
 		}
 
-		let containerStyle = {
+		let containerstyle = {
 			height: stringheight + " px",
 			fontSize: fontsize + "px",
 		}
 		return (
-			<div style={{ ...containerStyle, ...StyleSheet.getLayoutStyle("Home_Link_Container") } } >
+			<div style={{ ...containerstyle, ...styleSheet.getLayoutstyle("Home_Link_Container") } } >
 				<Link to={this.props.to}>
-					<p style={{ ...linkStyle, ...extraLinkStyle }}>{text}</p>
+					<p style={{ ...linkstyle, ...extraLinkstyle }}>{text}</p>
 				</Link>
-				<hr style={{...hrStyle ,...StyleSheet.getLayoutStyle("Home_Link_Dash")}}></hr>
+				<hr style={{...hrstyle ,...styleSheet.getLayoutstyle("Home_Link_Dash")}}></hr>
 
 			</div>
 

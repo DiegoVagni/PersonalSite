@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import StyleSheet from "../../utils/StyleSheet"
+import styleSheet from "../../utils/StyleSheet"
 import KeyGenerator from "../../utils/KeyGenerator"
 import Option from "./Option"
 export class Select extends Component {
     render() {
     
       return (
-          <select style={StyleSheet.getLayoutStyle("Setting_Select")}
+          <select style={styleSheet.getLayoutstyle("Setting_Select")}
               onChange={this.props.onChange}
               value={this.props.value}
       >

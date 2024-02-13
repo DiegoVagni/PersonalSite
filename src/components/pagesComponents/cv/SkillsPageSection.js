@@ -1,12 +1,12 @@
 
 import { Component } from "react"
-import StyleSheet from "../../../utils/StyleSheet"
+import styleSheet from "../../../utils/StyleSheet"
 import Locale from "../../../utils/Locale"
 class SkillsPageSection extends Component {
 	render() {
 		return (
-			<div style={StyleSheet.getLayoutStyle("Skills_Section_Layout")} >
-				<p style={StyleSheet.getLayoutStyle("Title_Text")}>
+			<div style={styleSheet.getLayoutstyle("Skills_Section_Layout")} >
+				<p style={styleSheet.getLayoutstyle("Title_Text")}>
 					{Locale.GetMessages(this.props.title)}
 				</p>
 				{this.props.children}

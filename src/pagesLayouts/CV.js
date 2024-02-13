@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Locale from "../utils/Locale"
-import StyleSheet from "../utils/StyleSheet"
 import CompetenceBarContainer from "../components/pagesComponents/cv/CompetenceBarContainer";
 import SoftSkill from "../components/pagesComponents/cv/SoftSkill";
 
