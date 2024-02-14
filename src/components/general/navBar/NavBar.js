@@ -35,10 +35,10 @@ class NavBar extends Component {
 	}
 
 	toggleSettingMenu() {
-		this.setState({ settingsMenuOpen: !this.state.settingsMenuOpen });
+		this.setState({ settingsMenuOpen: !this.state.settingsMenuOpen, minWidthMenu:false });
 	}
 	toggleMiniMenu() {
-		this.setState({ minWidthMenu: !this.state.minWidthMenu });
+		this.setState({ minWidthMenu: !this.state.minWidthMenu, settingsMenuOpen: false });
 	}
 	render() {
 

@@ -33,7 +33,7 @@ class Projects extends Component {
 					title={"Site"}
 					tech={[[Css, Locale.GetMessages("Css")], [Javascript, Locale.GetMessages("Javascript")], [Html, Locale.GetMessages("Html")], [React, Locale.GetMessages("React")]]}
 					stamp="new"
-					stampRot={"30deg"}
+					stampRot={"15deg"}
 					GitHub={"Coming Soon"}
 					to={'/'}
 					preview={<IFramePreview title={Locale.GetMessages("Site")} src={"/"} />}
@@ -44,7 +44,7 @@ class Projects extends Component {
 					title={"Comunication_Framework"}
 					tech={[[CSharp, Locale.GetMessages("CSharp")], [Net, Locale.GetMessages("Net")]]}
 					stamp={"cool"}
-					stampRot={"30deg"}
+					stampRot={"15deg"}
 					GitHub={"Coming soon"}
 					to={'/'}
 					preview={<ImgPreview src={ComFram} local={"ComFram"}/> }
@@ -62,7 +62,7 @@ class Projects extends Component {
 					title={"Tesi"}
 					tech={[[CSharp, Locale.GetMessages("CSharp")], [Unity, Locale.GetMessages("Unity")]]}
 					stamp={"cool"}
-					stampRot={"30deg"}
+					stampRot={"15deg"}
 					GitHub={Locale.GetMessages("Private")}
 					to={'https://supsi.ch'} preview={<ImgPreview src={Tesi} local={"Tesi"} ></ImgPreview>}
 					downloads={<DownloadPDFSection title={"Downloads"} links={[{ download: "Diego_Vagni_TESI_ITA.pdf", to: "/public/tesi.pdf", local: "Italian" }, { download: "Diego_Vagni_POSTER_TESI_ITA.pdf", to: "/public/poster_tesi.pdf", local: "Poster_Italian" }]} /> }

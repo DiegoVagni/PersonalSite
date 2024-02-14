@@ -27,9 +27,9 @@ class Card extends Component {
 	render() {
 		let stampType;
 		if (this.props.stamp == "new") {
-			stampType = <NewStamp parentColor={styleSheet.style("Card_Background")} rot={"25deg"} />
+			stampType = <NewStamp parentColor={styleSheet.style("Card_Background")} rot={this.props.stampRot} />
 		} else if (this.props.stamp == "cool") {
-			stampType = <CoolStamp parentColor={styleSheet.style("Card_Background")} rot={"25deg"} />
+			stampType = <CoolStamp parentColor={styleSheet.style("Card_Background")} rot={this.props.stampRot} />
 		}
 
 		return (<div style={this.props.minHeight ? styleSheet.getLayoutstyle("Card_Outer_Min") : styleSheet.getLayoutstyle("Card_Outer")}>
