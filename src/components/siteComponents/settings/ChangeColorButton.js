@@ -13,6 +13,7 @@ class ChangeColorButton extends Component {
 		this.showModal = this.showModal.bind(this);
 		this.Apply = this.Apply.bind(this);
 		this.change = this.change.bind(this);
+		this.CopyStyleSheet = this.CopyStyleSheet.bind(this)
 	}
 	change(e) {
 	
@@ -32,6 +33,12 @@ class ChangeColorButton extends Component {
 		localStorage.setItem("style", JSON.stringify(Array.from(styleSheet.styles.entries())))
 		this.props.refreshApp();
 	}
+	CopyStyleSheet() {
+		this.state.values.forEach((value, key) => { styleSheet.changeStyle(key, value) })
+		let styleJson = JSON.stringify(Array.from(styleSheet.styles.entries()))
+		navigator.clipboard.writeText(styleJson);
+		alert(Locale.GetMessages("CopiedStyleSheet"))
+	}
 	render() {
 
 	
@@ -43,7 +50,7 @@ class ChangeColorButton extends Component {
 		return (
 			<div key={KeyGenerator.getNextKey()}>
 				<Button key={KeyGenerator.getNextKey()} style={styleSheet.getLayoutstyle("Button")} onClick={this.showModal} text={Locale.GetMessages("Colors_Setting") } />
-				<Modal key={KeyGenerator.getNextKey()} root={this.props.root} show={this.state.show} handleClose={this.hideModal} buttons={[<Button key={KeyGenerator.getNextKey()} text={Locale.GetMessages("Apply")} onClick={this.Apply} />]}>
+				<Modal key={KeyGenerator.getNextKey()} root={this.props.root} show={this.state.show} handleClose={this.hideModal} buttons={[<Button key={KeyGenerator.getNextKey()} text={Locale.GetMessages("Apply")} onClick={this.Apply} />, <Button key={KeyGenerator.getNextKey()} text={Locale.GetMessages("CopyStyleSheet")} onClick={this.CopyStyleSheet} />]}>
 					<div key={KeyGenerator.getNextKey()} >
 						{ pickers}
 					</div>

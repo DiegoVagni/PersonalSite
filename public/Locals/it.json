@@ -83,6 +83,8 @@
 	"TakenBy": "trovate su",
 	"Private": "Privato",
 	"MadeBy": "fatte da",
+	"CopiedStyleSheet": "Json dello stile copiato negli appunti",
+	"CopyStyleSheet": "Esporta stile in json",
 
 	"Licenses": "Licenze",
 	"Downloads": "Download",

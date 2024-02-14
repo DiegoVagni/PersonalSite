@@ -82,8 +82,8 @@
   "TakenBy": "found on",
   "Private": "Private",
   "MadeBy": "made by",
-
-
+  "CopiedStyleSheet": "StyleSheet json copied to clipboard!",
+  "CopyStyleSheet": "Export style to json",
   "Licenses": "Licenses",
   "Downloads": "Download",
 
