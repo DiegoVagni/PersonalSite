@@ -9,7 +9,7 @@ class styleSheet {
 	static currentIndex = 0;
 	static styles = null;
 	//Really? localStorage bool is read as a string ?
-	static animation = localStorage["animations"] === "true" ? true :false
+	static animation = localStorage["animations"] === "true" ? true : localStorage["animations"] != undefined ? true:false
 	static getAnimationBool() {
 		return styleSheet.animation
 	}
