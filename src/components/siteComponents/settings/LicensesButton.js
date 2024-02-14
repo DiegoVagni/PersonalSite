@@ -2,6 +2,8 @@ import { Component } from "react"
 import Locale from "../../../utils/Locale"
 import Modal from "../../general/Modal"
 import styleSheet from "../../../utils/StyleSheet"
+import SmallContactInfo from "../../pagesComponents/contacts/SmallContactInfo"
+import Instagram from "../../../resources/icons/instagram.svg"
 class LicensesButton extends Component {
 	constructor(props) {
 		super(props)
@@ -39,7 +41,11 @@ class LicensesButton extends Component {
 						<p style={styleSheet.getLayoutstyle("Normal_Text")}>{Locale.GetMessages("Home_Cube")} {Locale.GetMessages("Inspired")}: <a href={"https://codepen.io/t_afif/pen/PoJeqwN"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("This_CodePen")}</a></p>
 						<p style={styleSheet.getLayoutstyle("Normal_Text")}>{Locale.GetMessages("Stamp")} {Locale.GetMessages("Inspired")}: <a href={"https://codepen.io/slimsmearlapp/pen/DqVqPy"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("This_CodePen")}</a></p>
 						<p style={styleSheet.getLayoutstyle("Normal_Text")}>{Locale.GetMessages("HomeAnimation")} {Locale.GetMessages("Inspired")}: <a href={"https://codepen.io/hisamikurita/pen/oNvEjMj"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("This_CodePen")}</a></p>
-						<p style={styleSheet.getLayoutstyle("Normal_Text")}>{Locale.GetMessages("Icons")} {Locale.GetMessages("TakenBy")}: <a href={"https://www.svgrepo.com/"} target={"_blank"} rel={ "noreferrer"}>{Locale.GetMessages("svgrepo.com")}</a></p>
+						<p style={styleSheet.getLayoutstyle("Normal_Text")}>{Locale.GetMessages("Icons")} {Locale.GetMessages("TakenBy")}: <a href={"https://www.svgrepo.com/"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("svgrepo.com")}</a></p>
+						<div style={{ ...styleSheet.getLayoutstyle("Flex_Row_Center")}}>
+							<p style={{ ...styleSheet.getLayoutstyle("Normal_Text"), ...{ marginRight: "20px" } }}>{Locale.GetMessages("Icons")} {Locale.GetMessages("MadeBy")}: <a href={"https://carolsebastiano.myportfolio.com/"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("Karoll")}</a></p>
+							<SmallContactInfo src={Instagram} alt={Locale.GetMessages("Instagram")} social={Locale.GetMessages("Instagram")} ><a href={"https://www.instagram.com/kerolsphoto/"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("Karoll_Insta")}</a></SmallContactInfo>
+						</div>
 					</div>
 				</Modal>
 			</div>

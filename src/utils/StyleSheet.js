@@ -111,11 +111,14 @@ class styleSheet {
 					minHeight:"640px",
 					overflowX: "auto",
 					overflowY: "auto",
-					width: "100%"
+					width: "100%",
+					height:"100%"
 
 				}, ...styleSheet.getLayoutstyle("Flex_Column_Center")
 			}
 			case "Modal": return {
+				minWidth: "412px",
+				minHeight: "640px",
 				position: "fixed",
 				width: "40%",
 				height: "80%",
