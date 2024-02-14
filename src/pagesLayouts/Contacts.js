@@ -8,16 +8,19 @@ import Git from "../resources/icons/gitHub.svg"
 import styleSheet from "../utils/StyleSheet";
 class Contacts extends Component {
 	render() {
-	
+
 		return (
 
-			<div style={styleSheet.getLayoutstyle("Contact_Container")}>
+			<div style={{
+				...styleSheet.getLayoutstyle("Contact_Container"), ...{ animation: styleSheet.animation ? "fadeIn 2s ease-in 0s 1 normal forwards" : "" }
+			}
+			}>
 				<ContactInfo src={Mail} alt={Locale.GetMessages("Mail")} social={Locale.GetMessages("Mail")} ><p style={styleSheet.getLayoutstyle("Normal_Text")}>DiegoVagni.dv@gmail.com</p></ContactInfo>
 				<ContactInfo src={Instagram} alt={Locale.GetMessages("Instagram")} social={Locale.GetMessages("Instagram")} ><p style={styleSheet.getLayoutstyle("Normal_Text")}>coming soon</p></ContactInfo>
 				<ContactInfo src={Linkedin} alt={Locale.GetMessages("Linkedin")} social={Locale.GetMessages("Linkedin")} ><p style={styleSheet.getLayoutstyle("Normal_Text")}>coming soon</p></ContactInfo>
 				<ContactInfo src={Git} alt={Locale.GetMessages("GitHub")} social={Locale.GetMessages("GitHub")} ><p style={styleSheet.getLayoutstyle("Normal_Text")}><a style={{ textDecoration: "none" }} href={"https://github.com/DiegoVagni"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("GitHub")}</a></p></ContactInfo>
 			</div>
-	
+
 		);
 	}
 }

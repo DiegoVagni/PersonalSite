@@ -6,7 +6,7 @@ class NavBarSubMenu extends Component {
 	render() {
 
 		return (<div style={styleSheet.getLayoutstyle("NavBar_SubMenu")}>
-			<TrapezoidUp />
+			{this.props.trapezoid && <TrapezoidUp />}
 			{ this.props.children}
 			
 		</div >);

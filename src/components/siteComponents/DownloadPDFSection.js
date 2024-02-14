@@ -6,16 +6,16 @@ class DownloadPDFSection extends Component {
 	render() {
 	
 		return (
-			<>
+			<div style={styleSheet.getLayoutstyle("Flex_Column_Center")}>
 				<p style={styleSheet.getLayoutstyle("Big_Text")}>
 					{Locale.GetMessages(this.props.title)}
 				</p>
 				<div style={styleSheet.getLayoutstyle("Download_Section")}>
-					<div style={styleSheet.getLayoutstyle("Flex_Column_Center_Container")}>
+					<div style={styleSheet.getLayoutstyle("Flex_Column_Center")}>
 						{this.props.links.map((link) => { return (<a key={KeyGenerator.getNextKey()} style={styleSheet.getLayoutstyle("Download_Link")} download={link.download} href={link.to}> {Locale.GetMessages(link.local)}</a>) })}
 					</div>
 				</div>
-			</>
+			</div>
 		)
 	}
 }

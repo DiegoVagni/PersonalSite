@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Locale from "../utils/Locale"
+import styleSheet from "../utils/StyleSheet"
 import CompetenceBarContainer from "../components/pagesComponents/cv/CompetenceBarContainer";
 import SoftSkill from "../components/pagesComponents/cv/SoftSkill";
 
@@ -43,7 +44,7 @@ class CV extends Component {
 
 		return (
 
-			<>
+			<div style={{ width: "90%", height: "90%", animation: styleSheet.animation ? "fadeIn 2s ease-in 0s 1 normal forwards" : "" } }>
 				<SkillsPageSection title={"Hard_Skills"}>
 					<SkillContainer title={Locale.GetMessages("Programming_Languages")}>
 						<CompetenceBarContainer animTime={1} src={CSharp} maxCompetence={maxCompetence} competenceLevel={10} competence={Locale.GetMessages("CSharp")}></CompetenceBarContainer>
@@ -92,7 +93,7 @@ class CV extends Component {
 
 				</SkillsPageSection>
 				<DownloadPDFSection title={"DownloadCV"} links={[{ download: "Diego_Vagni_CV_ITA.pdf", to: "/public/cvita.pdf", local: "Italian" }, { download: "Diego_Vagni_CV_ENG.pdf", to: "/public/cveng.pdf", local: "English" }]} />
-			</>
+			</div>
 		);
 	}
 }

@@ -4,7 +4,8 @@ class Page extends Component {
     render() {
         let bgColor = this.props.color? this.props.color : styleSheet.style("Page_Background");
         let divstyle = {
-            backgroundColor: bgColor
+            backgroundColor: bgColor,
+            
         }
 
         return (

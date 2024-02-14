@@ -27,7 +27,7 @@ class Projects extends Component {
 	render() {
 
 		return (
-				<div style={styleSheet.getLayoutstyle("Card_Page")}>
+			<div style={{ ...styleSheet.getLayoutstyle("Card_Page"), ...{ animation: styleSheet.animation ? "fadeIn 2s ease-in 0s 1 normal forwards" : "" } }}>
 				<ProjectCard
 					key={KeyGenerator.getNextKey()}
 					title={"Site"}

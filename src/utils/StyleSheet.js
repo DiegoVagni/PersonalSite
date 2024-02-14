@@ -108,7 +108,7 @@ class styleSheet {
 			case "Page": return {
 				...{
 					minWidth: "412px",
-					minHeight:"640px",
+					minHeight:"550px",
 					overflowX: "auto",
 					overflowY: "auto",
 					width: "100%",
@@ -141,6 +141,12 @@ class styleSheet {
 				...styleSheet.getLayoutstyle("Small_Image"), ...{
 					minWidth: "64px",
 					minHeight:"64px",
+					boxShadow: "0px 7px 10px -7px " + styleSheet.style("Shadow")
+				}
+			}
+			case "Mini_Button": return {
+		 ...{
+			
 					boxShadow: "0px 7px 10px -7px " + styleSheet.style("Shadow")
 				}
 			}
@@ -214,7 +220,7 @@ class styleSheet {
 					backgroundColor: styleSheet.style("Card_Background"),
 					minHeight: "98%",
 					minWidth:"98%",
-					
+					height:"fit-content",
 				}, ...styleSheet.getLayoutstyle("Flex_Column_Center"), ...styleSheet.getLayoutstyle("Full_Parent")
 			}
 			case "Card_Outer": return {
@@ -257,7 +263,8 @@ class styleSheet {
 			case "Preview": return {
 				...{
 					width: "80%",
-					height: "80%",
+					height: "auto",
+					minHeight:"80%",
 					borderRadius: "10%",
 					margin: "5px",
 				}, ...styleSheet.getLayoutstyle("Flex_Column_Center")
@@ -274,6 +281,12 @@ class styleSheet {
 				...{
 					maxHeight: "64px",
 					maxWidth: "64px"
+				}, ...styleSheet.getLayoutstyle("Full_Parent")
+			}
+			case "Large_Image": return {
+				...{
+					maxHeight: "256px",
+					maxWidth: "256px"
 				}, ...styleSheet.getLayoutstyle("Full_Parent")
 			}
 			case "Preview_Image": return styleSheet.getLayoutstyle("Preview")
@@ -301,6 +314,14 @@ class styleSheet {
 				textDecoration: "none",
 				color: styleSheet.style("Home_Links_Color"),
 				position: "absolute",
+				fontFamily: " Optima, serif",
+				margin: "0px",
+				padding: "0px"
+			}
+			case "Dashless_Home_Link": return {
+				textDecoration: "none",
+				color: styleSheet.style("Home_Links_Color"),
+			
 				fontFamily: " Optima, serif",
 				margin: "0px",
 				padding: "0px"

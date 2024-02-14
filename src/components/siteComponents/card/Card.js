@@ -22,7 +22,7 @@ class Card extends Component {
 	}
 
 	updatePredicate() {
-		this.setState({ haveStamp: window.innerWidth > 1000 && window.innerHeight > 1000 });
+		this.setState({ haveStamp: window.innerWidth > 600});
 	}
 	render() {
 		let stampType;
