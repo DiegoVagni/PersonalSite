@@ -107,8 +107,8 @@ class styleSheet {
 			}
 			case "Page": return {
 				...{
-					minWidth: "760px",
-					minHeight:"100%",
+					minWidth: "412px",
+					minHeight:"640px",
 					overflowX: "auto",
 					overflowY: "auto",
 					width: "100%"
@@ -136,6 +136,8 @@ class styleSheet {
 			}
 			case "Menu_Button": return {
 				...styleSheet.getLayoutstyle("Small_Image"), ...{
+					minWidth: "64px",
+					minHeight:"64px",
 					boxShadow: "0px 7px 10px -7px " + styleSheet.style("Shadow")
 				}
 			}
@@ -376,7 +378,7 @@ class styleSheet {
 				overflowY: "auto",
 				display: "flex",
 				flexDirection: "column",
-				flexDirection: "column",
+			
 				alignItems: "flex-start",
 				justifyItems: "top",
 				position: "absolute",
