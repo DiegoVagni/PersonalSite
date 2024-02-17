@@ -42,7 +42,7 @@ class NavBarButton extends Component {
 			color: colorText
 		}
 		return (
-			<Link onMouseEnter={this.activeHover} onMouseLeave={this.deactiveHover} style={{ ...Buttonstyle,...styleSheet.getLayoutstyle("NavBar_Button") }} to={this.props.to}><p style={{ ...textstyle, ...styleSheet.getLayoutstyle("NavBar_Text") }}>{this.props.children}</p></Link>
+			<Link onClick={this.props.onClick } onMouseEnter={this.activeHover} onMouseLeave={this.deactiveHover} style={{ ...Buttonstyle,...styleSheet.getLayoutstyle("NavBar_Button") }} to={this.props.to}><p style={{ ...textstyle, ...styleSheet.getLayoutstyle("NavBar_Text") }}>{this.props.children}</p></Link>
 		)
 	}
 }

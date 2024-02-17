@@ -19,6 +19,7 @@ class NavBar extends Component {
 		this.toggleSettingMenu = this.toggleSettingMenu.bind(this);
 		this.toggleMiniMenu = this.toggleMiniMenu.bind(this);
 		this.updatePredicate = this.updatePredicate.bind(this)
+		this.closeMenu = this.closeMenu.bind(this)
 	}
 
 	componentDidMount() {
@@ -39,6 +40,9 @@ class NavBar extends Component {
 	}
 	toggleMiniMenu() {
 		this.setState({ minWidthMenu: !this.state.minWidthMenu, settingsMenuOpen: false });
+	}
+	closeMenu() {
+		this.setState({ minWidthMenu: false, settingsMenuOpen: false });
 	}
 	render() {
 
@@ -64,8 +68,8 @@ class NavBar extends Component {
 					<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
 					<div style={{ ...{ width: "100%", minWidth:"132px" }, ...styleSheet.getLayoutstyle("Mini_Button") }}>
 					<MiniButton onClick={this.toggleMiniMenu} src={openButton} alt={Locale.GetMessages(this.props.settingButton.local)} />
-					{this.state.minWidthMenu && <NavBarSubMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} >{
-							this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to}>{Locale.GetMessages(button.local)}</NavBarButton>) }) 
+						{this.state.minWidthMenu && <NavBarSubMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} >{
+							this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to} onClick={this.closeMenu}>{Locale.GetMessages(button.local)}</NavBarButton>) }) 
 					}</NavBarSubMenu>
 					}
 					</div>
