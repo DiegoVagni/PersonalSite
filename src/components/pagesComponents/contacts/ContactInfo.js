@@ -1,17 +1,18 @@
 import { Component } from "react"
 import styleSheet from "../../../utils/StyleSheet" 
-import "../../../anim.scss"
+import AnimStyle from "../../../scss/Anim.module.scss"
+import ImageStyle from "../../../scss/Images.module.scss"
+import TextStyle from "../../../scss/Texts.module.scss"
+import AppStyle from "../../../scss/App.module.scss"
 class ContactInfo extends Component {
 	render() {
-		let anim = {
-			animation:styleSheet.getAnimationBool() ? "fade "+this.props.animTime +"s ease-in":""
-		}
+		
 
 
 		return (
-			<div style={{ ...styleSheet.getLayoutstyle("Contact_Info"), ...anim }}>
-				<img style={styleSheet.getLayoutstyle("Small_Image")} src={this.props.src} alt={this.props.alt} />
-				<p style={styleSheet.getLayoutstyle("Title_Text")}>{this.props.social}:</p>
+			<div className={[AppStyle.FlexRowCenter, styleSheet.getAnimationBool() ? AnimStyle.Fade2Sec : ""]}>
+				<img className={ImageStyle.MediumImage} src={this.props.src} alt={this.props.alt} />
+				<p className={TextStyle.TitleText}>{this.props.social}:</p>
 				{this.props.children }
 			</div>
 			)

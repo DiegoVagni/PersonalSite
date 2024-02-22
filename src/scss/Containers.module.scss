@@ -1,0 +1,36 @@
+@import "./ThemeVariables.scss";
+.CompetenceContainer {
+	padding: 5px;
+	justify-items: flex-start
+}
+
+.ContactContainer {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 90%;
+	width: 100%
+}
+.CVSectionContainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row;
+	flex-flow: row wrap
+}
+
+.TechContainer {
+	margin: 5px;
+	background-color: $Card_Background
+}
+
+.HomeContainer {
+	min-width: 400px;
+	justify-content: center;
+	position: absolute;
+	top: 25%
+}
+.ButtonContainer {
+}

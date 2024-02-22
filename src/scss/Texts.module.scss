@@ -1,0 +1,39 @@
+@import "./ThemeVariables.scss";
+.NormalText {
+	font-size: 1rem;
+	font-family: $Parag_Font
+}
+.ButtonText {
+	font-size: 1rem;
+	font-family: $Parag_Font;
+	color: $Button_Text_Color;
+}
+.ParagText {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.TitleText {
+	font-size: 2.5rem;
+	font-family: $Title_Font
+}
+
+.SubTitleText {
+	font-size: 2rem;
+	font-family: $Title_Font
+}
+
+.BiggestText {
+	font-size: 4rem;
+	font-family: $Title_Font
+}
+
+.BigText {
+	font-size: 3rem;
+	font-family: $Title_Font
+}
+
+.SmallText {
+	font-size: 0.5rem;
+	font-family: $Parag_Font
+}

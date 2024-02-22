@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Locale from "../../../../utils/Locale";
-import styleSheet from "../../../../utils/StyleSheet";
+import TextStyle from "../../../../scss/Texts.module.scss";
 import styles from "./competenceBar.module.scss";
 
 class CompetenceBar extends Component {
@@ -40,10 +40,10 @@ class CompetenceBar extends Component {
 
     return (
         <div className={styles.CompetenceCard}>
-            <p style={styleSheet.getLayoutstyle("Normal_Text")} >{this.props.competence}</p>
+            <p className={TextStyle.NormalText } >{this.props.competence}</p>
         <div className={styles.CompetenceWrapper}>
                 <div className={styles.CompetenceContainer}>{competence}</div>
-                <p style={styleSheet.getLayoutstyle("Small_Text")} className={styles.Competence}>
+                <p className={[styles.Competence, TextStyle.SmallText]}>
             {this.props.text ? this.props.text : levelText}
           </p>
         </div>

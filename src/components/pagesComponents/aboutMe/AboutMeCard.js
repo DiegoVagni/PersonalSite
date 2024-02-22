@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Locale from "../../../utils/Locale"
-import styleSheet from "../../../utils/StyleSheet"
+import TextStyles from "../../scss/Texts.module.scss"
 import Card from "../../siteComponents/card/Card"
 
 class AboutMeCard extends Component {
@@ -8,7 +8,7 @@ class AboutMeCard extends Component {
 	render() {
 		return (
 			<Card minHeight={true } title={this.props.title}>
-					<p style={styleSheet.getLayoutstyle("Parag_Text")}>{Locale.GetMessages(this.props.title + "_Description")}</p>
+				<p className={[TextStyles.NormalText, TextStyles.ParagText] }>{Locale.GetMessages(this.props.title + "_Description")}</p>
 			</Card>
 			)
 	}

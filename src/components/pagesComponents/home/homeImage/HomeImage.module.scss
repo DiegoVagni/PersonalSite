@@ -1,0 +1,42 @@
+
+@import "../../../../scss/ThemeVariables.module.scss";
+.HomeImage {
+	border: 10px solid $Home_Links_Color
+}
+
+.HomeContainer {
+	display: flex;
+	align-items: inherit;
+	justify-content: center;
+}
+
+.DashlessHomeLink {
+	text-decoration: none;
+	font-family: $Link_Font;
+	color: $Home_Links_Color;
+	margin: 0px;
+	padding: 0px
+}
+
+.HomeLinkDash {
+	height: 0px;
+	position: absolute;
+	border: 2px solid $Home_Links_Color;
+	background-color: $Home_Links_Color;
+}
+
+.HomeLinkContainer {
+	width: auto;
+	text-decoration: underline;
+	color: $Home_Links_Color;
+	position: absolute;
+}
+
+.HomeLink {
+	text-decoration: none;
+	color: $Home_Links_Color;
+	position: absolute;
+	font-family: $Link_Font;
+	margin: 0px;
+	padding: 0px;
+}

@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import styleSheet from "../../../../utils/StyleSheet";
+import AppStyle from "../../../../scss/App.module.scss";
+import TextStyle from "../../../../scss/Text.module.scss";
+import HomeStyle from "./HomeImage.module.scss";
 class DashLessHomeLink extends Component {
 	degToRad(deg) {
 		return deg * (Math.PI / 180);
@@ -17,9 +19,9 @@ class DashLessHomeLink extends Component {
 		
 
 		return (
-			<div style={{ ...styleSheet.getLayoutstyle("Full_Parent"), ...{ display: "flex", alignItems: "inherit", justifyContent: "center" } }} >
-				<Link style={{textDecoration:"none"}} to={this.props.to}>
-					<p style={{ ...styleSheet.getLayoutstyle("Dashless_Home_Link"), ...{fontSize:"2em"}}}>{this.props.text}</p>
+			<div className={[AppStyle.FullParent, HomeStyle.HomeContainer] }>
+				<Link to={this.props.to}>
+					<p className={[HomeStyle.DashLessHomeLink, TextStyle.LinkText]}>{this.props.text}</p>
 				</Link>
 			</div>
 

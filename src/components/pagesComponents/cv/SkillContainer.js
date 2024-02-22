@@ -1,14 +1,17 @@
 
 import { Component } from "react"
-import styleSheet from "../../../utils/StyleSheet"
+
+import ContainerStyle from "../../../scss/Containers.module.scss"
+import TextStyle from "../../../scss/Texts.module.scss"
+import AppStyle from "../../../scss/App.module.scss"
 class SkillContainer extends Component {
 	render() {
 		return (
-			<div style={styleSheet.getLayoutstyle("CV_Section")}>
-				{this.props.title ? (<p style={styleSheet.getLayoutstyle("SubTitle_Text")}>
+			<div className={AppStyle.CVSection}>
+				{this.props.title ? (<p className={TextStyle.SubTitleText}>
 					{this.props.title}
-				</p>):<></>}
-				<div style={styleSheet.getLayoutstyle("CV_Section_Container")}>
+				</p>) : <></>}
+				<div className={ContainerStyle.CVSectionContainer}>
 					{ this.props.children}
 				</div>
 			</div>

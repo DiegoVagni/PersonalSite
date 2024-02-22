@@ -2,13 +2,16 @@ import { Component } from "react";
 import Locale from "../../../utils/Locale";
 import NavBarButton from "./NavBarButton";
 import NavBarSubMenu from "./NavBarSubMenu";
-import MenuButton from "../MenuButton"
-import MiniButton from "../MiniButton"
+import MenuButton from "./MenuButton"
+import MiniButton from "./MiniButton"
 import openButton from "../../../resources/icons/openMenu.svg"
 import SettingMenu from "../../siteComponents/settings/SettingMenu";
 import styleSheet from "../../../utils/StyleSheet";
 import KeyGenerator from "../../../utils/KeyGenerator";
 
+import NavBarStyle from "./Navbar.module.scss"
+import AnimStyle from "../../../scss/Anim.module.scss"
+import AppStyle from "../../../scss/App.module.scss"
 
 class NavBar extends Component {
 	constructor(props) {
@@ -45,16 +48,13 @@ class NavBar extends Component {
 		this.setState({ minWidthMenu: false, settingsMenuOpen: false });
 	}
 	render() {
-
-		var Navstyle = {
-			display: this.props.location !== "/" ? "flex" : "none",
-			animation: styleSheet.getAnimationBool() ? "fade "+ this.props.animTime + "s ease-in":""
-			
+		if (this.props.location == "/") {
+			return(<></>)
 		}
 		if (!this.state.miniWidth) {
 			return (
 
-				<nav style={{ ...Navstyle, ...styleSheet.getLayoutstyle("NavBar") }}>
+				<nav className={[NavBarStyle.NavBar, AppStyle.NavBarSeparator, AppStyle.FlexRowCenter, styleSheet.GetAnimationBool() ? AnimStyle.FadeAnim2Sec: ""]}>
 					<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
 					{this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to}>{Locale.GetMessages(button.local)}</NavBarButton>) })}
 					<MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
@@ -64,9 +64,9 @@ class NavBar extends Component {
 			);
 		} else {
 			return (
-				<nav style={{ ...Navstyle, ...styleSheet.getLayoutstyle("NavBar"), ...{ width: "100%" } }}>
+				<nav className={[NavBarStyle.NavBar, AppStyle.NavBarSeparator, AppStyle.FlexRowCenter, styleSheet.GetAnimationBool() ? AnimStyle.FadeAnim2Sec : ""]}>
 					<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
-					<div style={{ ...{ width: "100%", minWidth:"132px" }, ...styleSheet.getLayoutstyle("Mini_Button") }}>
+					<div className={[NavBarStyle.MiniButton,NavBarStyle.MiniMenu,AppStyle.FlexColumnCenter] } >
 					<MiniButton onClick={this.toggleMiniMenu} src={openButton} alt={Locale.GetMessages(this.props.settingButton.local)} />
 						{this.state.minWidthMenu && <NavBarSubMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} >{
 							this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to} onClick={this.closeMenu}>{Locale.GetMessages(button.local)}</NavBarButton>) }) 

@@ -1,0 +1,112 @@
+@import "../../../scss/ThemeVariables.module.scss";
+.ActiveMouse {
+	cursor:pointer;
+}
+.NormalMouse{
+	cursor:default;
+}
+.NavBar {
+	position: fixed;
+	flex-direction: row;
+	align-items: flex-start;
+	z-index: 10;
+	top: 0px;
+	width:100%;
+	background-color: $Navbar_Color
+}
+.NavBarInactiveButton {
+	background-color: $Navbar_Color;
+	color: $Navbar_Text_Color;
+	box-shadow: 0px 7px 10px -7px $Shadow;
+}
+.NavBarActiveButton {
+	background-color: $Navbar_Active_Button_Color;
+	color: $Navbar_ActiveText_Button_Color;
+}
+.NavBarButton {
+	&:hover {
+		background-color: $Navbar_Hover_Button_Color;
+		color: $Navbar_Hover_Text_Button_Color;
+	}
+
+
+	max-height: 64px;
+	text-decoration: none;
+	justify-content: center;
+	border-left: 1px solid $Navbar_Button_Border_Color;
+	border-right: 1px solid $Navbar_Button_Border_Color;
+}
+
+.NavBarSubMenu {
+	background-color: $Navbar_Color;
+	width: auto;
+	min-height: 64px;
+}
+SettingMenu {
+	width: auto;
+	height: auto;
+	min-height: 100px;
+	min-width: 200px;
+	max-width: 1000px;
+	max-height: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-items: start;
+	position: absolute;
+	right: 0px;
+	top: 130%;
+	padding: 5px;
+	border-radius: 10px 7px 10px 10px;
+	background-color: $Navbar_Color;
+	border-bottom: 2px solid $Navbar_Button_Border_Color;
+	border-left: 2px solid $Navbar_Button_Border_Color;
+	border-right: 2px solid $Navbar_Button_Border_Color;
+}
+
+.SettingContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-content: flex-start;
+	width: 100%;
+	max-height: 50px
+}
+
+.ColorPicker {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center
+}
+
+
+.NavbarText {
+	font-size: 1.5rem;
+	font-family: $NavBar_Font;
+}
+
+.MenuButton {
+	&:hover {
+		background-color: $Navbar_Hover_Button_Color;
+		cursor: pointer;
+	}
+	min-width: 64px;
+	min-height: 64px;
+	box-shadow: 0px 7px 10px -7px $Shadow
+}
+
+.MiniButton {
+	&:hover {
+		background-color: $Navbar_Hover_Button_Color;
+		cursor: pointer;
+	}
+
+	box-shadow: 0px 7px 10px -7px $Shadow
+}
+.MiniMenu{
+	width:100%;
+	min-width:132px;
+}

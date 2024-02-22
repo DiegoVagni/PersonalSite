@@ -1,11 +1,11 @@
-import "./App.css";
+import "./scss/App.scss";
 import { Component } from "react";
 
 import { Routes, Route } from "react-router-dom";
 import Locale from "./utils/Locale";
+import { useLocation } from "react-router-dom";
 
 import DVNavBar from "./components/siteComponents/navBar/DVNavBar";
-import { useLocation } from "react-router-dom";
 import styleSheet from "./utils/StyleSheet"
 
 //pages
@@ -77,17 +77,17 @@ class App extends Component {
 					
 					<DVNavBar root={this.props.root} languageChange={this.ChangeLanguage} location={this.props.location} refreshApp={this.RefreshApplication} />
 					<Page>
-					<div style={{ height: "10%", maxHeight: "64px", minHeight: "64px", width: "100%" }}>
+						<div className={"NavBarSeparator"} >
 
 					</div>
-					<Routes>
-						<Route exact path="/" element={<Home styleSheet={styleSheet} />} />
-						<Route path="/contacts" element={<Contacts styleSheet={styleSheet} />} />
-						<Route path="/about" element={<About styleSheet={styleSheet} />} />
-						<Route path="/projects" element={<Projects styleSheet={styleSheet} />} />
+						{<Routes>
+							<Route exact path="/" element={<Home styleSheet={styleSheet} />} />
+							<Route path="/contacts" element={<Contacts styleSheet={styleSheet} />} />
+							<Route path="/about" element={<About styleSheet={styleSheet} />} />
+							<Route path="/projects" element={<Projects styleSheet={styleSheet} />} />
 
-						<Route path="/skills" element={<CV styleSheet={styleSheet} />} />
-					</Routes>
+							<Route path="/skills" element={<CV styleSheet={styleSheet} />} />
+						</Routes>}
 					</Page>
 					</>
 					

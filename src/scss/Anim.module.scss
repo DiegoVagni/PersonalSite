@@ -1,3 +1,10 @@
+.FadeAnim2Sec {
+	animation:fade 2s ease-in
+}
+.RightAnim2Sec {
+	animation: fadeInRight 2s linear
+}
+
 @keyframes fadeInRight {
 	0% {
 		transform: translate(130%,0px) ;

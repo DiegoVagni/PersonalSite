@@ -1,0 +1,26 @@
+@import "../../../scss/ThemeVariables.module.scss";
+.Modal {
+	min-width: 412px;
+	min-height: 600px;
+	position: fixed;
+	width: 40%;
+	height: 80%;
+	padding: 20px;
+	border-radius: 10%;
+	left: 30%;
+	top: 10%;
+	border: 2px solid $Modal_Border;
+	background-color: $Modal_Color;
+	overflow: auto;
+}
+
+.ModalContent {
+	background-color: $Modal_Color;
+	overflow: auto;
+}
+.Show{
+	display:block
+}
+.Hide{
+	display:none
+}

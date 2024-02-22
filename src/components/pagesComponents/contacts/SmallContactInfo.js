@@ -1,14 +1,15 @@
 import { Component } from "react"
-import styleSheet from "../../../utils/StyleSheet" 
-import "../../../anim.scss"
+import ImageStyle from "../../../scss/Images.module.scss"
+import TextStyle from "../../../scss/Texts.module.scss"
+import AppStyle from "../../../scss/App.module.scss"
 class SmallContactInfo extends Component {
 	render() {
 
 
 		return (
-			<div style={{ ...styleSheet.getLayoutstyle("Contact_Info")}}>
-				<img style={{ width: "24px", height: "24px" }} src={this.props.src} alt={this.props.alt} />
-				<p style={styleSheet.getLayoutstyle("Normal_Text")}>{this.props.social}:</p>
+			<div className={AppStyle.FlexRowCenter }>
+				<img className={AppStyle.SmallerImage} src={this.props.src} alt={this.props.alt} />
+				<p className={TextStyle.NormalText}>{this.props.social}:</p>
 				{this.props.children }
 			</div>
 			)

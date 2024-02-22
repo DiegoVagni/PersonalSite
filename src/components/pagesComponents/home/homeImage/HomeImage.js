@@ -1,9 +1,10 @@
 import { Component } from "react";
-import Home from "../../../../resources/images/Mitro.jpg"
+import Home from "../../../../resources/images/Diego_Vagni_IT_Engineer.jpg"
 import Locale from "../../../../utils/Locale";
 import styleSheet from "../../../../utils/StyleSheet";
 import HomeLink from "./HomeLink";
 import DashLessHomeLink from "./DashLessHomeLink";
+
 class HomeImage extends Component {
 	constructor(props) {
 		super(props);

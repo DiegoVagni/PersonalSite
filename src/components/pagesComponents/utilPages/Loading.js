@@ -1,6 +1,8 @@
 import { Component } from "react";
 import Cube from "../coolAnims/cube/Cube"
 import styleSheet from "../../utils/StyleSheet"
+import "../../scss/Texts.scss"
+import "../../scss/App.scss"
 class Loading extends Component {
 	constructor(props) {
 		super(props)
@@ -26,10 +28,10 @@ class Loading extends Component {
 		return (
 
 
-			<div style={{ ...styleSheet.getLayoutstyle("Flex_Column_Center"), ...styleSheet.getLayoutstyle("Full_Parent"), ...{ justifyContent:"center" } }}
+			<div className={["FlexColumnCenter","FullParent"]}
 			>
 				{this.state.haveCube && styleSheet.getAnimationBool() ? (<Cube translateX={0} translateY={-50}></Cube>) : (<></>)}
-				<p style={styleSheet.getLayoutstyle("Biggest_Text")}>LOADING</p>
+				<p className={"BiggestText" }>LOADING</p>
 			</div>
 		)
 	}

@@ -1,0 +1,12 @@
+@import "../../../scss/ThemeVariables.module.scss";
+.Option {
+	font-size: 1rem;
+	font-family: styleSheet.font;
+	background-color: $Select_BackgroundColor
+}
+
+.Select {
+	width: auto;
+	height: auto;
+	background-color: $Select_BackgroundColor
+}
