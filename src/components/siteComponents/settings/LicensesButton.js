@@ -1,6 +1,6 @@
 import { Component } from "react"
 import Locale from "../../../utils/Locale"
-import Modal from "../../general/Modal"
+import Modal from "../../general/Modal/Modal"
 import styleSheet from "../../../utils/StyleSheet"
 import SmallContactInfo from "../../pagesComponents/contacts/SmallContactInfo"
 import Instagram from "../../../resources/icons/instagram.svg"

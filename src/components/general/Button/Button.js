@@ -1,6 +1,6 @@
 import { Component } from "react"
-import KeyGenerator from "../../utils/KeyGenerator"
-import TextsStyle from "../../scss/Texts.module.scss"
+import KeyGenerator from "../../../utils/KeyGenerator"
+import TextsStyle from "../../../scss/Texts.module.scss"
 import ButtonStyle from "./Button.module.scss"
 class Button extends Component {
 	render(){

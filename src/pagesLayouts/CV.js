@@ -32,7 +32,7 @@ import Flexible from "../resources/icons/flexible.svg"
 import FastLearner from "../resources/icons/fastLearner.svg"
 import AIPrompting from "../resources/icons/aiPrompting.svg"
 import Net from "../resources/icons/net.svg"
-import "../anim.scss"
+import "../scss/Anim.module.scss"
 import SkillContainer from "../components/pagesComponents/cv/SkillContainer";
 import SkillsPageSection from "../components/pagesComponents/cv/SkillsPageSection";
 import DownloadPDFSection from "../components/siteComponents/DownloadPDFSection"

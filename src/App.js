@@ -1,4 +1,4 @@
-import "./scss/App.scss";
+import "./scss/App.module.scss";
 import { Component } from "react";
 
 import { Routes, Route } from "react-router-dom";
@@ -15,7 +15,7 @@ import About from "./pagesLayouts/About";
 import Contacts from "./pagesLayouts/Contacts";
 import CV from "./pagesLayouts/CV";
 import Projects from "./pagesLayouts/Projects";
-import Loading from "./components/general/Loading"
+import Loading from "./components/pagesComponents/utilPages/Loading"
 import StartAnimation from "./components/coolAnims/startAnimation/StartAnimation"
 function withLocation(Component) {
 

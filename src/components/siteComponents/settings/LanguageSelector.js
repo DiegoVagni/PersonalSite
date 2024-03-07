@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Locale from "../../../utils/Locale";
-import Select from "../../general/Select";
+import Select from "../../general/Select/Select";
 
 
 class LanguageSelector extends Component {

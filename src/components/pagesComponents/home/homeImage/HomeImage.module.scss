@@ -1,15 +1,32 @@
 
 @import "../../../../scss/ThemeVariables.module.scss";
 .HomeImage {
-	border: 10px solid $Home_Links_Color
+	border: 5px solid $Home_Links_Color
 }
-
 .HomeContainer {
+	min-width: 900px;
+	min-height: 900px;
+	max-width: 900px;
+	max-height: 900px;
+	margin: auto;
 	display: flex;
-	align-items: inherit;
+	align-items: center;
 	justify-content: center;
+
 }
 
+.HomeImageRounded {
+	border-radius: 50%;
+	margin-top: 5%;
+}
+.ImageVert {
+	width: 50%;
+	height: auto;
+}
+.ImageHor {
+	height: 50%;
+	width: auto;
+}
 .DashlessHomeLink {
 	text-decoration: none;
 	font-family: $Link_Font;
@@ -20,23 +37,78 @@
 
 .HomeLinkDash {
 	height: 0px;
+	width:100px;
 	position: absolute;
 	border: 2px solid $Home_Links_Color;
 	background-color: $Home_Links_Color;
 }
 
+.TopBorder {
+	border-top: 4px solid $Home_Links_Color;
+}
+.BottomBorder {
+	border-bottom: 4px solid $Home_Links_Color;
+}
+.Link{
+	text-decoration:none;
+}
+.HomeLink {
+	text-decoration: none;
+	color: $Home_Links_Color;
+	font-size:2.5rem;
+	white-space:nowrap;
+	position: absolute;
+	font-family: $Link_Font;
+	margin: 0px;
+	padding: 0px;
+}
 .HomeLinkContainer {
-	width: auto;
+	width:150px;
+	height:100px;
 	text-decoration: underline;
 	color: $Home_Links_Color;
 	position: absolute;
 }
 
-.HomeLink {
-	text-decoration: none;
-	color: $Home_Links_Color;
-	position: absolute;
-	font-family: $Link_Font;
-	margin: 0px;
-	padding: 0px;
+.TopLeft{
+	top:150px;
+	left:90px;
+}
+
+.TopRight {
+	top: 150px;
+	left: 660px;
+}
+
+.BottomLeft {
+	bottom: 50px;
+	left: 90px;
+}
+
+.BottomRight {
+	bottom: 50px;
+	left: 670px;
+}
+.TopLeftDash {
+	top:75%;
+	left: 75%;
+	transform:rotateZ(45deg)
+}
+
+.TopRightDash {
+	top: 75%;
+	right: 75%;
+	transform: rotateZ(-45deg);
+}
+
+.BottomLeftDash {
+	top: -45%;
+	left: 90%;
+	transform: rotateZ(-45deg)
+}
+
+.BottomRightDash {
+	top: -45%;
+	left: -50%;
+	transform: rotateZ(45deg);
 }

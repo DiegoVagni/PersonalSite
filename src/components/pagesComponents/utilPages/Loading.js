@@ -1,8 +1,8 @@
 import { Component } from "react";
-import Cube from "../coolAnims/cube/Cube"
-import styleSheet from "../../utils/StyleSheet"
-import "../../scss/Texts.scss"
-import "../../scss/App.scss"
+import Cube from "../../coolAnims/cube/Cube"
+import styleSheet from "../../../utils/StyleSheet"
+import "../../../scss/Texts.module.scss"
+import "../../../scss/App.module.scss"
 class Loading extends Component {
 	constructor(props) {
 		super(props)

@@ -1,0 +1,25 @@
+.FlexColumnCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	justify-content:center;
+}
+
+.FlexRowCenter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	justify-content: center;
+}
+.FlexColumnCenterTop {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	justify-content: flex-start;
+}

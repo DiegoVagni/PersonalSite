@@ -8,9 +8,9 @@ class ContactInfo extends Component {
 	render() {
 		
 
-
+		let fadeSec = styleSheet.getAnimationBool() ? AnimStyle.Fade2Sec : "";
 		return (
-			<div className={[AppStyle.FlexRowCenter, styleSheet.getAnimationBool() ? AnimStyle.Fade2Sec : ""]}>
+			<div className={`${AppStyle.FlexRowCenter} ${fadeSec}`}>
 				<img className={ImageStyle.MediumImage} src={this.props.src} alt={this.props.alt} />
 				<p className={TextStyle.TitleText}>{this.props.social}:</p>
 				{this.props.children }

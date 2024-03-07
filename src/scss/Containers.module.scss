@@ -1,4 +1,4 @@
-@import "./ThemeVariables.scss";
+@import "./ThemeVariables.module.scss";
 .CompetenceContainer {
 	padding: 5px;
 	justify-items: flex-start
@@ -26,11 +26,6 @@
 	background-color: $Card_Background
 }
 
-.HomeContainer {
-	min-width: 400px;
-	justify-content: center;
-	position: absolute;
-	top: 25%
-}
+
 .ButtonContainer {
 }

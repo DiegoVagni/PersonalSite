@@ -1,10 +1,12 @@
 import { Component } from "react";
 import Home from "../../../../resources/images/Diego_Vagni_IT_Engineer.jpg"
 import Locale from "../../../../utils/Locale";
-import styleSheet from "../../../../utils/StyleSheet";
 import HomeLink from "./HomeLink";
 import DashLessHomeLink from "./DashLessHomeLink";
-
+import HomeStyle from "./HomeImage.module.scss"
+import AppStyle from "../../../../scss/App.module.scss"
+import FlexStyle from "../../../../scss/Flexes.module.scss"
+import ImageStyle from "../../../../scss/Images.module.scss"
 class HomeImage extends Component {
 	constructor(props) {
 		super(props);
@@ -24,42 +26,34 @@ class HomeImage extends Component {
 	}
 
 	updatePredicate() {
-		this.setState({ miniWidth: window.innerWidth < 1000, miniHeight: window.innerHeight < 600 });
+		this.setState({ miniWidth: window.innerWidth < 1200, miniHeight: window.innerHeight < 1000 });
 	}
 	degToRad(deg) {
 		return deg * (Math.PI / 180);
 	}
+//					<HomeLink className={HomeStyle.BottomLeft} to={"/about"} text={Locale.GetMessages("Navbar_about")} up={false}></HomeLink>
+//	<HomeLink className={HomeStyle.TopRight} to={"/projects"} text={Locale.GetMessages("Navbar_projects")} up={true}> </HomeLink>
+//	<HomeLink className={HomeStyle.BottomRight} to={"/skills"} text={Locale.GetMessages("Navbar_cv")} up={false}></HomeLink>
 	render() {
-		let borderRadius = 150;
-		let linkColor = styleSheet.style("Home_Links_Color")
 
-		let Imagestyle = {
-
-			borderRadius: borderRadius + "px",
-			width: borderRadius * 2 + "px",
-			height: borderRadius * 2 + "px"
-		}
-
+		
 		if (!this.state.miniWidth && !this.state.miniHeight) {
 			return (
-				<div style={styleSheet.getLayoutstyle("Home_Container")} >
-					<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={-45} xOffset={0.2} yOffset={-40} dashXOffset={0} dashYOffset={-245} to={"/contacts"} text={Locale.GetMessages("Navbar_contact")} up={false}></HomeLink>
-					<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={0} xOffset={0.1} yOffset={0} dashXOffset={-20} dashYOffset={-25} to={"/about"} text={Locale.GetMessages("Navbar_about")} up={false}></HomeLink>
-					<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={-45} xOffset={-3.2} yOffset={30} dashXOffset={-300} dashYOffset={420} to={"/projects"} text={Locale.GetMessages("Navbar_projects")} up={true}> </HomeLink>
-					<HomeLink dashWidth={200} color={linkColor} borderRadius={borderRadius} xdeg={45} xOffset={-3.3} yOffset={-40} dashXOffset={-300} dashYOffset={-440} to={"/skills"} text={Locale.GetMessages("Navbar_cv")} up={false}></HomeLink>
+				<div className={HomeStyle.HomeContainer} >
+					<HomeLink topClassName={HomeStyle.TopLeft} hrClassName={HomeStyle.TopLeftDash} to={"/contacts"} text={Locale.GetMessages("Navbar_contact")} up={false}></HomeLink>
+					<HomeLink topClassName={HomeStyle.BottomLeft} hrClassName={HomeStyle.BottomLeftDash} to={"/about"} text={Locale.GetMessages("Navbar_about")} up={true}></HomeLink>
+					<HomeLink topClassName={HomeStyle.TopRight} hrClassName={HomeStyle.TopRightDash} to={"/projects"} text={Locale.GetMessages("Navbar_projects")} up={false}> </HomeLink>
+					<HomeLink topClassName={HomeStyle.BottomRight} hrClassName={HomeStyle.BottomRightDash} to={"/skills"} text={Locale.GetMessages("Navbar_cv")} up={true}></HomeLink>
 
 
-
-					<img style={{ ...Imagestyle, ...styleSheet.getLayoutstyle("Home_Image") }} src={Home} alt="Home" />
+					<img className={`${HomeStyle.HomeImageRounded} ${HomeStyle.HomeImage} ${ImageStyle.LargeImage}`} src={Home} alt="Home" />
 
 				</div>
 			);
 		} else if (this.state.miniWidth) {
 			return (
-				<div style={{ ...styleSheet.getLayoutstyle("Full_Parent"), ...{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", overflow: "hidden" } }} >
-					<img style={{
-						...Imagestyle, ...styleSheet.getLayoutstyle("Large_Image")
-					}} src={Home} alt="Home" />
+				<div className={`${AppStyle.FullParent} ${FlexStyle.FlexColumnCenterTop}`} >
+					<img className={`${HomeStyle.HomeImageRounded} ${HomeStyle.HomeImage} ${HomeStyle.ImageVert}`} src={Home} alt="Home" />
 					<DashLessHomeLink to={"/contacts"} text={Locale.GetMessages("Navbar_contact")}></DashLessHomeLink>
 					<DashLessHomeLink to={"/about"} text={Locale.GetMessages("Navbar_about")}></DashLessHomeLink>
 					<DashLessHomeLink to={"/projects"} text={Locale.GetMessages("Navbar_projects")}></DashLessHomeLink>
@@ -68,9 +62,9 @@ class HomeImage extends Component {
 			)
 		} else {
 			return (
-				<div style={{ ...styleSheet.getLayoutstyle("Full_Parent"), ...{ display: "flex", flexDirection: "column", alignItems: "center", justifyItems: "center",overflow: "hidden" } }} >
-					<img style={{ ...Imagestyle, ...styleSheet.getLayoutstyle("Large_Image") }} src={Home} alt="Home" />
-					<div style={{ ...styleSheet.getLayoutstyle("Flex_Row_Center"), ...styleSheet.getLayoutstyle("Full_Parent")}}>
+				<div className={`${AppStyle.FullParent} ${FlexStyle.FlexColumnCenterTop}`}>
+					<img className={`${HomeStyle.HomeImageRounded} ${HomeStyle.HomeImage} ${HomeStyle.ImageHor}`} src={Home} alt="Home" />
+					<div className={`${AppStyle.FullParent} ${FlexStyle.FlexRowCenter}`}>
 					<DashLessHomeLink to={"/contacts"} text={Locale.GetMessages("Navbar_contact")}></DashLessHomeLink>
 					<DashLessHomeLink to={"/about"} text={Locale.GetMessages("Navbar_about")}></DashLessHomeLink>
 					<DashLessHomeLink to={"/projects"} text={Locale.GetMessages("Navbar_projects")}></DashLessHomeLink>

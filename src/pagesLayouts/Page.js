@@ -1,15 +1,10 @@
 import { Component } from "react";
-import styleSheet from "../utils/StyleSheet"
+import AppStyle from "../scss/App.module.scss"
 class Page extends Component {
     render() {
-        let bgColor = this.props.color? this.props.color : styleSheet.style("Page_Background");
-        let divstyle = {
-            backgroundColor: bgColor,
-            
-        }
-
+       
         return (
-            <div style={{ ...divstyle,...styleSheet.getLayoutstyle("Page")}}>
+            <div className={AppStyle.Page }>
                 {this.props.children}
             </div>
         );

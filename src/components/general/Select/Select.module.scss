@@ -1,7 +1,7 @@
 @import "../../../scss/ThemeVariables.module.scss";
 .Option {
 	font-size: 1rem;
-	font-family: styleSheet.font;
+	font-family: $Parag_Font;
 	background-color: $Select_BackgroundColor
 }
 

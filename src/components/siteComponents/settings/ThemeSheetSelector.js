@@ -1,6 +1,6 @@
 import { Component } from "react"
 import styleSheet from "../../../utils/StyleSheet"
-import Select from "../../general/Select";
+import Select from "../../general/Select/Select";
 class ThemeSheetSelector extends Component {
 	
 	constructor(props) {

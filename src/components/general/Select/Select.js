@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import KeyGenerator from "../../utils/KeyGenerator"
+import KeyGenerator from "../../../utils/KeyGenerator"
 import Option from "./Option"
 import SelectStyle from "./Select.module.scss"
 export class Select extends Component {
