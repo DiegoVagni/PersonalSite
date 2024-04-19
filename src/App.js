@@ -6,6 +6,7 @@ import Locale from "./utils/Locale";
 import { useLocation } from "react-router-dom";
 
 import DVNavBar from "./components/siteComponents/navBar/DVNavBar";
+import NavBarStyle from "./components/general/navBar/Navbar.module.scss";
 import styleSheet from "./utils/StyleSheet"
 
 //pages
@@ -77,7 +78,7 @@ class App extends Component {
 					
 					<DVNavBar root={this.props.root} languageChange={this.ChangeLanguage} location={this.props.location} refreshApp={this.RefreshApplication} />
 					<Page>
-						<div className={"NavBarSeparator"} >
+						<div className={NavBarStyle.NavBarSeparator} >
 
 					</div>
 						{<Routes>

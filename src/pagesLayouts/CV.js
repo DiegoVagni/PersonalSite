@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Locale from "../utils/Locale"
-import styleSheet from "../utils/StyleSheet"
+import StyleSheet from "../utils/StyleSheet"
 import CompetenceBarContainer from "../components/pagesComponents/cv/CompetenceBarContainer";
 import SoftSkill from "../components/pagesComponents/cv/SoftSkill";
 
@@ -32,7 +32,8 @@ import Flexible from "../resources/icons/flexible.svg"
 import FastLearner from "../resources/icons/fastLearner.svg"
 import AIPrompting from "../resources/icons/aiPrompting.svg"
 import Net from "../resources/icons/net.svg"
-import "../scss/Anim.module.scss"
+import ContainerStyle from "../scss/Containers.module.scss"
+import AnimStyle from "../scss/Anim.module.scss"
 import SkillContainer from "../components/pagesComponents/cv/SkillContainer";
 import SkillsPageSection from "../components/pagesComponents/cv/SkillsPageSection";
 import DownloadPDFSection from "../components/siteComponents/DownloadPDFSection"
@@ -44,7 +45,7 @@ class CV extends Component {
 
 		return (
 
-			<div style={{ width: "90%", height: "90%", animation: styleSheet.animation ? "fadeIn 2s ease-in 0s 1 normal forwards" : "" } }>
+			<div className={` ${ContainerStyle.CVPageContainer} ${StyleSheet.animation?AnimStyle.FadeInRight:""}`}>
 				<SkillsPageSection title={"Hard_Skills"}>
 					<SkillContainer title={Locale.GetMessages("Programming_Languages")}>
 						<CompetenceBarContainer animTime={1} src={CSharp} maxCompetence={maxCompetence} competenceLevel={10} competence={Locale.GetMessages("CSharp")}></CompetenceBarContainer>

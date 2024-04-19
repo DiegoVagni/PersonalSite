@@ -1,10 +1,11 @@
 import { Component } from "react"
 import styleSheet from "../../../../utils/StyleSheet"
+import PreviewStyle from "./Preview.module.scss"
 class Preview extends Component {
 	render() {
 
 		return (
-			<div style={styleSheet.getLayoutstyle("Preview")}>{this.props.children}</div>
+			<div className={PreviewStyle.Preview}>{this.props.children}</div>
 		)
 	}
 }

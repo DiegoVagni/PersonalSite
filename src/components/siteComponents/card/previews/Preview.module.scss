@@ -1,0 +1,17 @@
+@import "../../../../scss/ThemeVariables.module.scss";
+
+.PreviewBorders {
+	border-radius: 10px;
+}
+
+.FramePreview{
+	min-width:80%;
+	min-height:400px;
+}
+.Preview {
+	width: 80%;
+	height: auto;
+	min-height: 80%;
+	border-radius: 10%;
+	margin: 5px
+}

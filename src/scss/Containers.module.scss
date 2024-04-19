@@ -1,7 +1,17 @@
 @import "./ThemeVariables.module.scss";
+
 .CompetenceContainer {
 	padding: 5px;
-	justify-items: flex-start
+	justify-items: flex-start;
+	flex-direction: row;
+	display: flex;
+	align-items: center
+}
+
+.CVPageContainer {
+	width: 90%;
+	height: 90%;
+	padding:10px;
 }
 
 .ContactContainer {
@@ -12,6 +22,7 @@
 	height: 90%;
 	width: 100%
 }
+
 .CVSectionContainer {
 	width: 100%;
 	display: flex;

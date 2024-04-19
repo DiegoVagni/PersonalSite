@@ -5,9 +5,10 @@ import ContainerStyle from "../../../scss/Containers.module.scss"
 import ImagesStyle from "../../../scss/Images.module.scss"
 class CompetenceContainer extends Component {
 	render() {
+	
+		return ( 
 
-		return (
-			<div className={[ContainerStyle.CompetenceContainer, styleSheet.getAnimationBool() ? AnimStyle.FadeInRight:""]}>
+		<div className={`${ContainerStyle.CompetenceContainer} ${styleSheet.getAnimationBool() ? AnimStyle.FadeInRight : ""}` }>
 				<img className={ImagesStyle.SmallImage} src={this.props.src} alt={this.props.competence} />
 				{this.props.children}
 			</div>

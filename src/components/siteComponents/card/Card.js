@@ -4,6 +4,7 @@ import styleSheet from "../../../utils/StyleSheet"
 import Locale from "../../../utils/Locale"
 import CardStyle from "./Card.module.scss"
 import TextStyle from "../../../scss/Texts.module.scss"
+import FlexStyle from "../../../scss/Flexes.module.scss"
 import NewStamp from "../../coolAnims/stamp/prefabStamps/NewStamp"
 import CoolStamp from "../../coolAnims/stamp/prefabStamps/CoolStamp"
 
@@ -33,9 +34,9 @@ class Card extends Component {
 			stampType = <CoolStamp parentColor={styleSheet.style("Card_Background")} rot={this.props.stampRot} />
 		}
 
-		return (<div className={this.props.minHeight ? CardStyle.CardOuterMin : CardStyle.CardOuter	}>
+		return (<div className={`${CardStyle.CardOuter}`}>
 			{(this.state.haveStamp && this.props.stamp) ? stampType : <></>}
-			<div className={CardStyle.Card}>
+			<div className={`${CardStyle.Card} ${FlexStyle.FlexColumnCenterTop}`}>
 				<div className={CardStyle.CardTitleContainer}>
 					<p className={TextStyle.TitleText}>{Locale.GetMessages(this.props.title)}</p>
 					{this.props.subTitle && <p className={TextStyle.SubTitleText }>{this.props.subTitle}</p>}

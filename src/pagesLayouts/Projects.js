@@ -23,11 +23,13 @@ import SmashWorlds from "../resources/images/smashWorlds.jpg"
 import KeyGenerator from "../utils/KeyGenerator";
 import TTC from "../components/pagesComponents/projectPage/TTC_Preview/TTC"
 import Preview from "../components/siteComponents/card/previews/Preview"
+
+import FlexStyle from "../scss/Flexes.module.scss"
 class Projects extends Component {
 	render() {
 
 		return (
-			<div style={{ ...styleSheet.getLayoutstyle("Card_Page"), ...{ animation: styleSheet.animation ? "fadeIn 2s ease-in 0s 1 normal forwards" : "" } }}>
+			<div className={FlexStyle.FlexColumnCenterTop}>
 				<ProjectCard
 					key={KeyGenerator.getNextKey()}
 					title={"Site"}

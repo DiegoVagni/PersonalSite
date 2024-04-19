@@ -65,7 +65,7 @@ class NavBar extends Component {
 	return (
 		<nav className={`${NavBarStyle.NavBar} ${NavBarStyle.NavBarSeparator} ${FlexStyle.FlexRowCenter} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`}>
 			<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
-			<div className={[NavBarStyle.MiniButton, NavBarStyle.MiniMenu, FlexStyle.FlexColumnCenter]} >
+			<div className={`${NavBarStyle.MiniButton} ${NavBarStyle.MiniMenu} ${FlexStyle.FlexColumnCenterTop}`}>
 				<MiniButton onClick={this.toggleMiniMenu} src={openButton} alt={Locale.GetMessages(this.props.settingButton.local)} />
 				{this.state.minWidthMenu && <NavBarSubMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} >{
 					this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to} onClick={this.closeMenu}>{Locale.GetMessages(button.local)}</NavBarButton>) })

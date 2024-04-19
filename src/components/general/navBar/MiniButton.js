@@ -15,7 +15,7 @@ class MiniButton extends Component {
                 <img className={`${NavBarStyle.MiniButton} ${ImagesStyle.SmallImage}`} src={this.props.src} alt={this.props.alt} />
             </Link>)
         }
-        return (<img className={`${NavBarStyle.MiniButton} ${ImagesStyle.SmallImage}`} src={this.props.src} alt={this.props.alt} onClick={this.props.onClick} />);
+        return (<img className={`${NavBarStyle.MiniButton} ${ImagesStyle.FixedHeightSmallImage}`} src={this.props.src} alt={this.props.alt} onClick={this.props.onClick} />);
     }
 }
 
