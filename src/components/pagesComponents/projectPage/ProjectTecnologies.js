@@ -1,7 +1,10 @@
 import { Component } from "react"
 import styleSheet from "../../../utils/StyleSheet"
 import KeyGenerator from "../../../utils/KeyGenerator"
-
+import FlexStyle from "../../../scss/Flexes.module.scss"
+import ContainerStyle from "../../../scss/Containers.module.scss"
+import TextStyle from "../../../scss/Texts.module.scss"
+import ImageStyle from "../../../scss/Images.module.scss"
 class ProjectTecnologies extends Component {
 
 
@@ -10,13 +13,11 @@ class ProjectTecnologies extends Component {
 		let technologies = []
 
 		this.props.tech.forEach((tec) => {
-			technologies.push((<div style={{ ...styleSheet.getLayoutstyle("Flex_Column_Center") }} key={KeyGenerator.getNextKey()}>< img style={{ ...styleSheet.getLayoutstyle("Small_Image"), ...{ minWidth: "64px", minHeight: "64px" } }} key={KeyGenerator.getNextKey()} src={tec[0]} alt={tec[1]} /><p key={KeyGenerator.getNextKey()} style={styleSheet.getLayoutstyle("Normal_Text")}>{tec[1]}</p></div>))
+			technologies.push((<div className={FlexStyle.FlexColumnCenter} key={KeyGenerator.getNextKey()}>< img className={ImageStyle.SmallImage} key={KeyGenerator.getNextKey()} src={tec[0]} alt={tec[1]} /><p key={KeyGenerator.getNextKey()} className={TextStyle.NormalText}>{tec[1]}</p></div>))
 		})
 		
 		return (
-			<div style={{
-				...styleSheet.getLayoutstyle("Tech_Container"), ...styleSheet.getLayoutstyle("Flex_Row_Center"),
-			}}>
+			<div className={`${FlexStyle.FlexRowCenter} ${ContainerStyle.TechContainer}`}>
 				{technologies}
 			</div>
 		)

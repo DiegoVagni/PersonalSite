@@ -1,0 +1,39 @@
+@import "../../../scss/ThemeVariables.module.scss";
+.CardContainer {
+	justify-content: flex-Start;
+	height: fit-content;
+	padding: 10px
+}
+
+.CardPage {
+	justify-content: flex-start;
+}
+
+.Card {
+	display: flex;
+	min-height: 98%;
+	min-width: 98%;
+	height: fit-content;
+	background-color: $Card_Background
+}
+
+.CardOuter {
+	border-radius: 10px;
+	margin: 10px;
+	width: 90%;
+	min-height: 95%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	box-shadow: $Shadow 0px 4px 12px;
+	border: 1px solid $Modal_Border;
+	background-color: $Card_Background;
+}
+
+.CardTitleContainer {
+	background-color: $Card_Background;
+}
+
+.MP{
+	margin:10px;
+	padding:10px;
+}

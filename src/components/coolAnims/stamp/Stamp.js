@@ -22,6 +22,8 @@ class Stamp extends Component {
 			"--base-color",
 			this.props.parentColor
 		);
+		//parentcolor=$variabile sarcazzo.scss della card background - color: $Card_Background;
+
 		return (
 			<div style={stampContainer}>
 				<div style={stampContent} className={"stamp"}><p>{this.props.children}</p></div>

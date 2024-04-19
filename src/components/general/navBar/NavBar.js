@@ -6,18 +6,18 @@ import MenuButton from "./MenuButton"
 import MiniButton from "./MiniButton"
 import openButton from "../../../resources/icons/openMenu.svg"
 import SettingMenu from "../../siteComponents/settings/SettingMenu";
-import styleSheet from "../../../utils/StyleSheet";
+import StyleSheet from "../../../utils/StyleSheet";
 import KeyGenerator from "../../../utils/KeyGenerator";
 
 import NavBarStyle from "./Navbar.module.scss"
+import FlexStyle from "../../../scss/Flexes.module.scss"
 import AnimStyle from "../../../scss/Anim.module.scss"
-import AppStyle from "../../../scss/App.module.scss"
 
 class NavBar extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			settingsMenuOpen: false, miniWidth: false, minWidthMenu:false
+			settingsMenuOpen: false, miniWidth: false, minWidthMenu: false
 		};
 		this.toggleSettingMenu = this.toggleSettingMenu.bind(this);
 		this.toggleMiniMenu = this.toggleMiniMenu.bind(this);
@@ -35,11 +35,11 @@ class NavBar extends Component {
 	}
 
 	updatePredicate() {
-		this.setState({ miniWidth: window.innerWidth < 500, minWidthMenu: this.state.minWidthMenu && window.innerWidth<500 });
+		this.setState({ miniWidth: window.innerWidth < 500, minWidthMenu: this.state.minWidthMenu && window.innerWidth < 500 });
 	}
 
 	toggleSettingMenu() {
-		this.setState({ settingsMenuOpen: !this.state.settingsMenuOpen, minWidthMenu:false });
+		this.setState({ settingsMenuOpen: !this.state.settingsMenuOpen, minWidthMenu: false });
 	}
 	toggleMiniMenu() {
 		this.setState({ minWidthMenu: !this.state.minWidthMenu, settingsMenuOpen: false });
@@ -49,37 +49,36 @@ class NavBar extends Component {
 	}
 	render() {
 		if (this.props.location == "/") {
-			return(<></>)
+			return (<></>)
 		}
 		if (!this.state.miniWidth) {
 			return (
-
-				<nav className={[NavBarStyle.NavBar, AppStyle.NavBarSeparator, AppStyle.FlexRowCenter, styleSheet.GetAnimationBool() ? AnimStyle.FadeAnim2Sec: ""]}>
-					<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
-					{this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to}>{Locale.GetMessages(button.local)}</NavBarButton>) })}
-					<MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
-					{this.state.settingsMenuOpen && <NavBarSubMenu trapezoid={true } root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} ><SettingMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} /></NavBarSubMenu>
-					}
-				</nav>
+				<nav className={`${NavBarStyle.NavBar} ${NavBarStyle.NavBarSeparator} ${FlexStyle.FlexRowCenter} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`}>
+			<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
+			{this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to}>{Locale.GetMessages(button.local)}</NavBarButton>) })}
+			<MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
+			{this.state.settingsMenuOpen && <NavBarSubMenu trapezoid={true} root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} ><SettingMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} /></NavBarSubMenu>
+			}
+		</nav>
 			);
-		} else {
-			return (
-				<nav className={[NavBarStyle.NavBar, AppStyle.NavBarSeparator, AppStyle.FlexRowCenter, styleSheet.GetAnimationBool() ? AnimStyle.FadeAnim2Sec : ""]}>
-					<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
-					<div className={[NavBarStyle.MiniButton,NavBarStyle.MiniMenu,AppStyle.FlexColumnCenter] } >
-					<MiniButton onClick={this.toggleMiniMenu} src={openButton} alt={Locale.GetMessages(this.props.settingButton.local)} />
-						{this.state.minWidthMenu && <NavBarSubMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} >{
-							this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to} onClick={this.closeMenu}>{Locale.GetMessages(button.local)}</NavBarButton>) }) 
-					}</NavBarSubMenu>
-					}
-					</div>
-					<MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
-					{this.state.settingsMenuOpen && <NavBarSubMenu trapezoid={true} root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} ><SettingMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} /></NavBarSubMenu>
-					}
-				</nav>
-			
-			)
-		}
+	} else {
+	return (
+		<nav className={`${NavBarStyle.NavBar} ${NavBarStyle.NavBarSeparator} ${FlexStyle.FlexRowCenter} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`}>
+			<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
+			<div className={[NavBarStyle.MiniButton, NavBarStyle.MiniMenu, FlexStyle.FlexColumnCenter]} >
+				<MiniButton onClick={this.toggleMiniMenu} src={openButton} alt={Locale.GetMessages(this.props.settingButton.local)} />
+				{this.state.minWidthMenu && <NavBarSubMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} >{
+					this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to} onClick={this.closeMenu}>{Locale.GetMessages(button.local)}</NavBarButton>) })
+				}</NavBarSubMenu>
+				}
+			</div>
+			<MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
+			{this.state.settingsMenuOpen && <NavBarSubMenu trapezoid={true} root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} ><SettingMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} /></NavBarSubMenu>
+			}
+		</nav>
+
+	)
+}
 
 	}
 }

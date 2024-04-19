@@ -6,7 +6,7 @@ import Card from "../../siteComponents/card/Card"
 import ProjectTecnologies from "./ProjectTecnologies"
 import ProjectStyle from "./ProjectPage.module.scss"
 import TextStyle from "../../../scss/Texts.module.scss"
-import AppStyle from "../../../scss/App.module.scss"
+import FlexStyle from "../../../scss/Flexes.module.scss"
 import Flexible from "../../../resources/icons/flexible.svg"
 import TeamWork from "../../../resources/icons/teamwork.svg"
 import Committer from "../../../resources/icons/committer.svg"
@@ -18,7 +18,7 @@ class ProjectCard extends Component {
 	render() {
 
 		return (<Card title={this.props.title} subTitle={Locale.GetMessages(this.props.title + "_Starting_Date") + "-" + Locale.GetMessages(this.props.title + "_End_Date")} stamp={this.props.stamp} stampRot={this.props.stampRot} preview={this.props.preview}>
-			<div className={ AppStyle.FlexRowCenter}>
+			<div className={ FlexStyle.FlexRowCenter}>
 				<CardStat  src={Flexible} title={Locale.GetMessages("CardStat_Time")} value={Locale.GetMessages(this.props.title + "_Time")} ></CardStat>
 				<CardStat src={TeamWork} title={Locale.GetMessages("CardStat_TeamSize")} value={Locale.GetMessages(this.props.title + "_TeamSize")} ></CardStat>
 				<CardStat src={Committer} title={Locale.GetMessages("CardStat_Committer")} value={<a className={ProjectStyle.NoneDeco} href={this.props.to} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages(this.props.title + "_Committer")}</a>} ></CardStat>

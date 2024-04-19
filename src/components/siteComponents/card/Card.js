@@ -2,7 +2,8 @@ import { Component } from 'react'
 
 import styleSheet from "../../../utils/StyleSheet"
 import Locale from "../../../utils/Locale"
-
+import CardStyle from "./Card.module.scss"
+import TextStyle from "../../../scss/Texts.module.scss"
 import NewStamp from "../../coolAnims/stamp/prefabStamps/NewStamp"
 import CoolStamp from "../../coolAnims/stamp/prefabStamps/CoolStamp"
 
@@ -32,15 +33,15 @@ class Card extends Component {
 			stampType = <CoolStamp parentColor={styleSheet.style("Card_Background")} rot={this.props.stampRot} />
 		}
 
-		return (<div style={this.props.minHeight ? styleSheet.getLayoutstyle("Card_Outer_Min") : styleSheet.getLayoutstyle("Card_Outer")}>
+		return (<div className={this.props.minHeight ? CardStyle.CardOuterMin : CardStyle.CardOuter	}>
 			{(this.state.haveStamp && this.props.stamp) ? stampType : <></>}
-			<div style={styleSheet.getLayoutstyle("Card")}>
-				<div style={styleSheet.getLayoutstyle("Card_Title_Container")}>
-					<p style={styleSheet.getLayoutstyle("Title_Text")}>{Locale.GetMessages(this.props.title)}</p>
-					{this.props.subTitle && <p style={styleSheet.getLayoutstyle("SubTitle_Text")}>{this.props.subTitle}</p>}
+			<div className={CardStyle.Card}>
+				<div className={CardStyle.CardTitleContainer}>
+					<p className={TextStyle.TitleText}>{Locale.GetMessages(this.props.title)}</p>
+					{this.props.subTitle && <p className={TextStyle.SubTitleText }>{this.props.subTitle}</p>}
 				</div>
 				{this.props.preview ? this.props.preview : <></>}
-				<div style={styleSheet.getLayoutstyle("Card_Container")}>
+				<div className={CardStyle.CardContainer}>
 					{this.props.children}
 				</div>
 			</div>

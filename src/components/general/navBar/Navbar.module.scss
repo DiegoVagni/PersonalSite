@@ -6,13 +6,11 @@
 	cursor:default;
 }
 .NavBar {
-	position: fixed;
-	flex-direction: row;
-	align-items: flex-start;
 	z-index: 10;
 	top: 0px;
-	width:100%;
-	background-color: $Navbar_Color
+	width: 100%;
+	background-color: $Navbar_Color;
+	
 }
 .NavBarInactiveButton {
 	background-color: $Navbar_Color;
@@ -24,15 +22,16 @@
 	color: $Navbar_ActiveText_Button_Color;
 }
 .NavBarButton {
+
 	&:hover {
 		background-color: $Navbar_Hover_Button_Color;
 		color: $Navbar_Hover_Text_Button_Color;
 	}
-
-
+	
 	max-height: 64px;
+	height:64px;
 	text-decoration: none;
-	justify-content: center;
+	width:100%;
 	border-left: 1px solid $Navbar_Button_Border_Color;
 	border-right: 1px solid $Navbar_Button_Border_Color;
 }
@@ -83,9 +82,10 @@ SettingMenu {
 }
 
 
-.NavbarText {
+.NavBarText {
 	font-size: 1.5rem;
 	font-family: $NavBar_Font;
+	text-align:center;
 }
 
 .MenuButton {
@@ -109,4 +109,10 @@ SettingMenu {
 .MiniMenu{
 	width:100%;
 	min-width:132px;
+}
+.NavBarSeparator {
+	max-height: 64px;
+	min-height: 64px;
+	width: 100%;
+	height: 10%;
 }

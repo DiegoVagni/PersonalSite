@@ -1,5 +1,5 @@
 import { Component } from "react"
-import styleSheet from "../../../utils/StyleSheet" 
+import StyleSheet from "../../../utils/StyleSheet" 
 import AnimStyle from "../../../scss/Anim.module.scss"
 import ImageStyle from "../../../scss/Images.module.scss"
 import TextStyle from "../../../scss/Texts.module.scss"
@@ -8,7 +8,7 @@ class ContactInfo extends Component {
 	render() {
 		
 
-		let fadeSec = styleSheet.getAnimationBool() ? AnimStyle.Fade2Sec : "";
+		let fadeSec = StyleSheet.getAnimationBool() ? AnimStyle.Fade2Sec : "";
 		return (
 			<div className={`${AppStyle.FlexRowCenter} ${fadeSec}`}>
 				<img className={ImageStyle.MediumImage} src={this.props.src} alt={this.props.alt} />
