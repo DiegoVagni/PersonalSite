@@ -1,12 +1,12 @@
 @import "../../../scss/ThemeVariables.module.scss";
 .Option {
 	font-size: 1rem;
-	font-family: $Parag_Font;
-	background-color: $Select_BackgroundColor
+	font-family: var(--Parag_Font);
+	background-color: var(--Select_BackgroundColor)
 }
 
 .Select {
 	width: auto;
 	height: auto;
-	background-color: $Select_BackgroundColor
+	background-color: var(--Select_BackgroundColor)
 }

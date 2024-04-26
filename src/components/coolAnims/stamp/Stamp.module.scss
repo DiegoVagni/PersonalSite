@@ -1,14 +1,17 @@
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-$base-color: #fefefe;
-.stamp {
+
+@import "../../../scss/ThemeVariables.module.scss";
+
+
+.Stamp {
 	width: 200px;
 	height: 200px;
 	padding: 10px;
-	border: 1px solid #ddd;
+	border: 1px solid var(--base-stamp-color);
 	background-size: cover;
 	background-clip: content-box;
-	
+
 	box-sizing: border-box;
 	position: relative;
 	margin: auto;
@@ -16,29 +19,53 @@ $base-color: #fefefe;
 	color: #fbfbfb;
 	text-indent: 20px;
 }
-	.stamp p {
+	.Stamp p {
 		text-align:center;
 	}
-.stamp:after {
+.Stamp:after {
 	content: "";
 	display: block;
 	position: absolute;
 	border: 50px solid transparent;
-	border-bottom: 50px solid var(--base-color,$base-color);
+	border-bottom: 50px solid var(--base-stamp-color);
 	bottom: -60px;
 	right: -65px;
 	box-shadow: 0px 7px 6px -9px black;
 	transform: rotate(135deg);
 }
 
-.stamp:before {
+.Stamp:before {
 	content: "";
 	display: block;
 	position: absolute;
 	border: 50px solid transparent;
-	border-top: 50px solid var(--base-color,$base-color);
+	border-top: 50px solid var(--base-stamp-color);
 	top: -60px;
 	left: -65px;
 	box-shadow: 0px -7px 6px -9px black;
 	transform: rotate(135deg);
+}
+.StampContainer {
+	--color: green;
+	--border-color: blue;
+	transform: rotateZ(var(--base-stamp-rot));
+	position: fixed;
+	right: 2%;
+	top: 5%;
+	z-index: 2
+}
+
+.NewOut {
+	background-color: var(--New_Stamp_BorderColor)
+}
+.NewIn{
+	background-color: var(--New_Stamp)
+	
+}
+.CoolOut {
+	background-color: var(--Cool_Stamp_BorderColor)
+}
+
+.CoolIn {
+	background-color: var(--Cool_Stamp)
 }

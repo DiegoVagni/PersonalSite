@@ -5,6 +5,7 @@ import FlexStyle from "../../../scss/Flexes.module.scss"
 import ContainerStyle from "../../../scss/Containers.module.scss"
 import TextStyle from "../../../scss/Texts.module.scss"
 import ImageStyle from "../../../scss/Images.module.scss"
+import UtilStyle from "../../../scss/Utils.module.scss"
 class ProjectTecnologies extends Component {
 
 
@@ -13,11 +14,11 @@ class ProjectTecnologies extends Component {
 		let technologies = []
 
 		this.props.tech.forEach((tec) => {
-			technologies.push((<div className={FlexStyle.FlexColumnCenter} key={KeyGenerator.getNextKey()}>< img className={ImageStyle.SmallImage} key={KeyGenerator.getNextKey()} src={tec[0]} alt={tec[1]} /><p key={KeyGenerator.getNextKey()} className={TextStyle.NormalText}>{tec[1]}</p></div>))
+			technologies.push((<div className={`${FlexStyle.FlexColumnCenter} ${UtilStyle.SmallMargin}`} key={KeyGenerator.getNextKey()}>< img className={ImageStyle.SmallImage} key={KeyGenerator.getNextKey()} src={tec[0]} alt={tec[1]} /><p key={KeyGenerator.getNextKey()} className={TextStyle.NormalText}>{tec[1]}</p></div>))
 		})
 		
 		return (
-			<div className={`${FlexStyle.FlexRowCenter} ${ContainerStyle.TechContainer}`}>
+			<div className={`${FlexStyle.FlexRowCenter}  ${FlexStyle.Wrap} ${ContainerStyle.TechContainer}`}>
 				{technologies}
 			</div>
 		)

@@ -1,30 +1,25 @@
 
-$competence-basic-color: red;
-$competence-medium-color: yellow;
-$competence-good-color: #5aff00;
-$competence-excellent-color: Green;
-$small-border-color: black;
-$border-size: 1px;
+@import "../../../../scss/ThemeVariables.module.scss";
 .Level {
-  width: 15px;
-  height: 7px;
-  border-bottom: solid $small-border-color $border-size;
-  border-top: solid $small-border-color $border-size;
-  border-left: solid $small-border-color $border-size;
-  display: inline-block;
+	width: 15px;
+	height: 7px;
+	border-bottom: solid var(--small-border-color) var(--border-size);
+	border-top: solid var(--small-border-color) var(--border-size);
+	border-left: solid var(--small-border-color) var(--border-size);
+	display: inline-block;
 }
 .BasicLevel {
-  background-color: $competence-basic-color;
+	background-color: var(--competence-basic-color);
 }
 .MediumLevel {
-  background-color: $competence-medium-color;
+	background-color: var(--competence-medium-color);
 }
 .GoodLevel {
-  background-color: $competence-good-color;
+	background-color: var(--competence-good-color);
 }
 
 .ExcellentLevel {
-  background-color: $competence-excellent-color;
+	background-color: var(--competence-excellent-color);
 }
 
 .EmptyLevel {
@@ -40,8 +35,8 @@ $border-size: 1px;
 }
 
 .CompetenceContainer :last-child {
-  border-right: solid $small-border-color $border-size;
-  border-radius: 0px 5px 5px 0px;
+	border-right: solid var(--small-border-color) var(--border-size);
+	border-radius: 0px 5px 5px 0px;
 }
 
 .CompetenceContainer :first-child {

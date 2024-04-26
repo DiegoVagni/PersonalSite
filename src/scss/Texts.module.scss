@@ -1,12 +1,12 @@
 @import "./ThemeVariables.module.scss";
 .NormalText {
-	font-size: 1rem;
-	font-family: $Parag_Font
+	font-size: 1.5rem;
+	font-family: var(--Parag_Font)
 }
 .ButtonText {
 	font-size: 1rem;
-	font-family: $Parag_Font;
-	color: $Button_Text_Color;
+	font-family: var(--Parag_Font);
+	color: var(--Button_Text_Color);
 }
 .ParagText {
 	text-align: justify;
@@ -15,28 +15,35 @@
 
 .TitleText {
 	font-size: 2.5rem;
-	font-family: $Title_Font
+	font-family: var(--Title_Font)
 }
 
 .SubTitleText {
 	font-size: 2rem;
-	font-family: $Title_Font
+	font-family: var(--Title_Font)
 }
 
 .BiggestText {
 	font-size: 4rem;
-	font-family: $Title_Font
+	font-family: var(--Title_Font)
 }
 
 .BigText {
 	font-size: 3rem;
-	font-family: $Title_Font
+	font-family: var(--Title_Font)
 }
 
 .SmallText {
 	font-size: 0.5rem;
-	font-family: $Parag_Font
+	font-family: var(--Parag_Font)
 }
 .HiddenLink{
 	text-decoration:none;
+}
+
+.NoWrap{
+	flex-wrap:nowrap;
+}
+.Centered{
+	text-align:center;
 }

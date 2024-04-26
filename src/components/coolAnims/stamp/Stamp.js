@@ -1,32 +1,33 @@
 import { Component } from "react"
-import "./stamp.scss"
+import StampStyle from "./Stamp.module.scss"
 
 
 class Stamp extends Component {
    root = document.documentElement;
 	render() {
-
-		let stampContent = {
-			backgroundColor: this.props.color,
-
-		}
-		let stampContainer = {
-			backgroundColor: this.props.borderColor,
-			transform: "rotateZ(" + (this.props.rot ? this.props.rot : 0) + ")",
-			position: "fixed",
-			right: "130px",
-			top: "85px",
-			zIndex: "2"
+		let cont = StampStyle.StampContainer;
+		let stamp = StampStyle.Stamp;
+		if (this.props.Stamp == "new") {
+			cont += " " + StampStyle.NewOut;
+			stamp += " " + StampStyle.NewIn;
+		} else if (this.props.Stamp == "cool") {
+			cont += " " + StampStyle.CoolOut;
+			stamp += " " + StampStyle.CoolIn;
 		}
 		this.root?.style.setProperty(
-			"--base-color",
+			"--base-stamp-color",
 			this.props.parentColor
 		);
-		//parentcolor=$variabile sarcazzo.scss della card background - color: $Card_Background;
+		
+		this.root?.style.setProperty(
+			"--base-stamp-rot",
+			this.props.rot ? this.props.rot: "0 deg"
+		);
+		
 
 		return (
-			<div style={stampContainer}>
-				<div style={stampContent} className={"stamp"}><p>{this.props.children}</p></div>
+			<div className={cont}>
+				<div  className={stamp}><p>{this.props.children}</p></div>
 			</div>
 
 		)

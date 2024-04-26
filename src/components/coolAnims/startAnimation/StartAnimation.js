@@ -1,5 +1,5 @@
 import { Component } from "react"
-import "./startAnimation.scss"
+import "./StartAnimation.module.scss"
 class StartAnimation extends Component {
 	constructor(props) {
 		super(props)

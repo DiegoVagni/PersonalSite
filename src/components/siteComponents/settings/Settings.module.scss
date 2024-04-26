@@ -1,0 +1,58 @@
+@import "../../../scss/ThemeVariables.module.scss";
+
+.CenterSpan {
+	content: none;
+	border-left: 12px solid var(--Navbar_Color);
+	border-right: 12px solid var(--Navbar_Color);
+	border-top: 1px solid var(--Navbar_Color);
+	border-bottom: 5px solid var(--Navbar_Color);
+}
+.LeftSpan {
+	position: absolute;
+	left: -50%;
+	top: -5%;
+	content: none;
+	border-right: 7px solid var(--Navbar_Color);
+	border-left: 7px solid transparent;
+	border-top: 7px solid transparent;
+	border-bottom: 15px solid var(--Navbar_Color)
+}
+
+.RightSpan {
+	position: absolute;
+	content: none;
+	border-left: 7px solid var(--Navbar_Color);
+	border-right: 7px solid transparent;
+	border-top: 7px solid transparent;
+	border-bottom: 15px solid var(--Navbar_Color)
+}
+
+.Trapezoid {
+	position: absolute; 
+	right: 20px;
+	top: 100%
+}
+
+.SettingMenu {
+	width: auto;
+	height: fit-content;
+	min-height: 100px;
+	min-width: 200px;
+	max-width: 1000px;
+	max-height: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-items: start;
+	position: absolute;
+	right: 0px;
+	top: 130%;
+	padding: 5px;
+
+	border-radius: 10px 7px 10px 10px;
+	background-color: var(--Navbar_Color);
+	border-bottom: 2px solid var(--Navbar_Button_Border_Color);
+	border-left: 2px solid var(--Navbar_Button_Border_Color);
+	border-right: 2px solid var(--Navbar_Button_Border_Color);
+}

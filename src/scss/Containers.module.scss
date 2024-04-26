@@ -34,9 +34,16 @@
 
 .TechContainer {
 	margin: 5px;
-	background-color: $Card_Background
+	background-color: var( --Card_Background);
 }
 
+.SettingContainer{
+	height:fit-content;
+	width:40%;
+}
 
 .ButtonContainer {
+height:fit-content;
+justify-content:space-evenly;
+margin-top:10px;
 }

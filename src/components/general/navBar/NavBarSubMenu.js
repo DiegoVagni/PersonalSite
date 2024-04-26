@@ -4,10 +4,14 @@ import TrapezoidUp from "../../siteComponents/settings/TrapezoidUp";
 import NavBarStyle from "./Navbar.module.scss"
 
 class NavBarSubMenu extends Component {
-
 	render() {
-
-		return (<div className={NavBarStyle.NavBarSubMenu}>
+	let classna = NavBarStyle.NavBarSubMenu;
+		console.log(this.props.zindex)
+		console.log(this.props)
+	if(this.props.zindex) {
+		classna += " " + NavBarStyle.ZIndex;
+		}
+		return (<div className={classna}>
 			{this.props.trapezoid && <TrapezoidUp />}
 			{ this.props.children}
 			

@@ -1,5 +1,5 @@
 @import "../../../scss/ThemeVariables.module.scss";
 .Button {
 	border-radius: 10px;
-	background-color: $Button_Color;
+	background-color: var(--Button_Color);
 }

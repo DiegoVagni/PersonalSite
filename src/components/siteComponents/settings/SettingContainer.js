@@ -1,5 +1,5 @@
 import { Component } from "react"
-import styleSheet from "../../../utils/StyleSheet"
+import Flexes from "../../../scss/Flexes.module.scss"
 class SettingContainer extends Component {
 	
 	render() {
@@ -7,7 +7,7 @@ class SettingContainer extends Component {
 	
 		return (
 
-			<div style={styleSheet.getLayoutstyle("Setting_Container")}>
+			<div className={Flexes.FlexRowStart }>
 				{this.props.children}
 			</div>
 		)

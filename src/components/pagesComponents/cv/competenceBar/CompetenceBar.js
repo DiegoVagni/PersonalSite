@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Locale from "../../../../utils/Locale";
 import TextStyle from "../../../../scss/Texts.module.scss";
-import styles from "./competenceBar.module.scss";
+import styles from "./CompetenceBar.module.scss";
 
 class CompetenceBar extends Component {
   render() {

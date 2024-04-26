@@ -3,6 +3,7 @@ import CardStyle from "./Card.module.scss"
 import ContainerStyle from "../../../scss/Flexes.module.scss"
 import ImageStyle from "../../../scss/Images.module.scss"
 import TextStyle from "../../../scss/Texts.module.scss"
+
 class CardStat extends Component {
 	render() {
 

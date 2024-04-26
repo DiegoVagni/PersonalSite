@@ -137,7 +137,7 @@
 	"LudoGame_TeamSize": "2 sviluppatori",
 	"LudoGame_Committer": "Diego Vagni",
 	"LudoGame_Starting_Date": "27.09.2021",
-	"LudoGame_End_Date": "7.10.2021",
+	"LudoGame_End_Date": "07.10.2021",
 	"LudoGame_Description": "Questo progetto è stato eseguito insieme ad un collega di corso; abbiamo imparato ad  utilizzare Photonengine, il principale sistema di API multiplayer per Unity. Per farlo abbiamo sviluppato la versione virtuale del gioco LUDO, pensando anche ad ampliarlo. Ogni pedina del gioco equivale a un personaggio, con le sue abilità specifiche. Lo sviluppo di questo progetto è stato fondamentale per capire a fondo le diverse sfide di un sistema di gioco online e come risolverle efficacemente.",
 
 	"Tesi": "Tesi",
@@ -145,7 +145,7 @@
 	"Tesi_TeamSize": "1 sviluppatore",
 	"Tesi_Committer": "SUPSI",
 	"Tesi_Starting_Date": "03.2021",
-	"Tesi_End_Date": "6.2021",
+	"Tesi_End_Date": "06.2021",
 	"Tesi_Description": "La tesi l'ho sviluppata nell'ambito del Game Development. L'obbiettivo era quello di creare, in Unity, un mondo proceduralmente generato simile a quello di Minecraft. Ho deciso di usare un Octree, una struttura ad albero, per rappresentare il mondo. La particolarità degli Octree è la dimensione variabile delle foglie, sfruttata intenzionalmente per migliorare le performance di gioco. Grazie a ciò ho optato per generare diversi chunk anche sull'asse Y del mondo, a differenza di Minecraft in cui ciò non avviene.Un altro aspetto fondamentale del lavoro è stata la cura per l'estensibilità e l'ottimizzazione del codice.La tesi è stata valutata molto positivamente, in quanto ho fornito un prodotto immediatamente fungibile.",
 	"DownloadTesi": "Download tesi",
 	"Poster_Italian": "Poster (Italiano)",

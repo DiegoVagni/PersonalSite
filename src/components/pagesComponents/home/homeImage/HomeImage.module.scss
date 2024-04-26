@@ -1,7 +1,7 @@
 
 @import "../../../../scss/ThemeVariables.module.scss";
 .HomeImage {
-	border: 5px solid $Home_Links_Color
+	border: 5px solid var(--Home_Links_Color)
 }
 .HomeContainer {
 	min-width: 900px;
@@ -29,44 +29,44 @@
 }
 .DashlessHomeLink {
 	text-decoration: none;
-	font-family: $Link_Font;
-	color: $Home_Links_Color;
+	font-family: var(--Link_Font);
+	color: var(--Home_Links_Color);
 	margin: 0px;
 	padding: 0px
 }
 
 .HomeLinkDash {
 	height: 0px;
-	width:100px;
+	width: 100px;
 	position: absolute;
-	border: 2px solid $Home_Links_Color;
-	background-color: $Home_Links_Color;
+	border: 2px solid var(--Home_Links_Color);
+	background-color: var(--Home_Links_Color);
 }
 
 .TopBorder {
-	border-top: 4px solid $Home_Links_Color;
+	border-top: 4px solid var(--Home_Links_Color);
 }
 .BottomBorder {
-	border-bottom: 4px solid $Home_Links_Color;
+	border-bottom: 4px solid var(--Home_Links_Color);
 }
 .Link{
 	text-decoration:none;
 }
 .HomeLink {
 	text-decoration: none;
-	color: $Home_Links_Color;
-	font-size:2.5rem;
-	white-space:nowrap;
+	color: var(--Home_Links_Color);
+	font-size: 2.5rem;
+	white-space: nowrap;
 	position: absolute;
-	font-family: $Link_Font;
+	font-family: var(--Link_Font);
 	margin: 0px;
 	padding: 0px;
 }
 .HomeLinkContainer {
-	width:150px;
-	height:100px;
+	width: 150px;
+	height: 100px;
 	text-decoration: underline;
-	color: $Home_Links_Color;
+	color: var(--Home_Links_Color);
 	position: absolute;
 }
 

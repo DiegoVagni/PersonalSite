@@ -23,3 +23,22 @@
 	justify-items: center;
 	justify-content: flex-start;
 }
+.FlexRowEvenly {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	justify-content: space-evenly;
+}
+.FlexRowStart {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: flex-start;
+	justify-items: flex-start;
+	justify-content: flex-start;
+}
+.Wrap{
+	flex-wrap:wrap;
+}

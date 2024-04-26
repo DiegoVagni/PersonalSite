@@ -9,64 +9,44 @@
 	z-index: 10;
 	top: 0px;
 	width: 100%;
-	background-color: $Navbar_Color;
-	position:fixed;
+	background-color: var( --Navbar_Color);
+	position: fixed;
 }
 .NavBarInactiveButton {
-	background-color: $Navbar_Color;
-	color: $Navbar_Text_Color;
-	box-shadow: 0px 7px 10px -7px $Shadow;
+	background-color: var(--Navbar_Color);
+	color: var(--Navbar_Text_Color);
+	box-shadow: 0px 7px 10px -7px var(--Shadow);
 }
 .NavBarActiveButton {
-	background-color: $Navbar_Active_Button_Color;
-	color: $Navbar_ActiveText_Button_Color;
+	background-color: var( --Navbar_Active_Button_Color);
+	color: var(--Navbar_ActiveText_Button_Color);
 }
 .NavBarButton {
 
 	&:hover {
-		background-color: $Navbar_Hover_Button_Color;
-		color: $Navbar_Hover_Text_Button_Color;
+		background-color: var( --Navbar_Hover_Button_Color);
+		color: var(--Navbar_Hover_Text_Button_Color);
 	}
-	
+
 	max-height: 64px;
-	height:64px;
+	height: 64px;
 	text-decoration: none;
-	width:100%;
-	border-left: 1px solid $Navbar_Button_Border_Color;
-	border-right: 1px solid $Navbar_Button_Border_Color;
+	width: 100%;
+	border-left: 1px solid var(--Navbar_Button_Border_Color);
+	border-right: 1px solid var(--Navbar_Button_Border_Color);
 }
 
 .NavBarSubMenu {
-	background-color: $Navbar_Color;
 	width:100%;
 	min-height: 64px;
-	z-index:100;
 
 	position:fixed;
 }
-SettingMenu {
-	width: auto;
-	height: auto;
-	min-height: 100px;
-	min-width: 200px;
-	max-width: 1000px;
-	max-height: 100%;
-	overflow-y: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-items: start;
-	position: absolute;
-	right: 0px;
-	top: 130%;
-	padding: 5px;
-	border-radius: 10px 7px 10px 10px;
-	background-color: $Navbar_Color;
-	border-bottom: 2px solid $Navbar_Button_Border_Color;
-	border-left: 2px solid $Navbar_Button_Border_Color;
-	border-right: 2px solid $Navbar_Button_Border_Color;
-}
 
+.ZIndex {
+
+	z-index:-15;
+}
 .SettingContainer {
 	display: flex;
 	flex-direction: row;
@@ -87,29 +67,30 @@ SettingMenu {
 
 .NavBarText {
 	font-size: 1.5rem;
-	font-family: $NavBar_Font;
+	font-family: --NavBar_Font;
 	text-align:center;
 }
 
 .MenuButton {
 	&:hover {
-		background-color: $Navbar_Hover_Button_Color;
+		background-color: var(--Navbar_Hover_Button_Color);
 		cursor: pointer;
 	}
+
 	min-width: 64px;
 	min-height: 64px;
-	box-shadow: 0px 7px 10px -7px $Shadow
+	box-shadow: 0px 7px 10px -7px var(--Shadow)
 }
 
 .MiniButton {
 	&:hover {
-		background-color: $Navbar_Hover_Button_Color;
+		background-color: var(--Navbar_Hover_Button_Color);
 		cursor: pointer;
 	}
-	
+
 	min-width: 64px;
 	min-height: 64px;
-	box-shadow: 0px 7px 10px -7px $Shadow
+	box-shadow: 0px 7px 10px -7px var(--Shadow)
 }
 .MiniMenu {
 	width: 100%;

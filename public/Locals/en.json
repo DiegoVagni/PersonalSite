@@ -136,7 +136,7 @@
   "LudoGame_TeamSize": "2 devs",
   "LudoGame_Committer": "Diego Vagni",
   "LudoGame_Starting_Date": "27.09.2021",
-  "LudoGame_End_Date": "7.10.2021",
+  "LudoGame_End_Date": "07.10.2021",
   "LudoGame_Description": "This project was carried out together with a course colleague; we learned how to use Photonengine, the central multiplayer API system for Unity. To do this, we developed the virtual version of the LUDO game and are also thinking about expanding it. Each pawn in the game is equivalent to a character with its specific abilities. The development of this project was fundamental to fully understanding the different challenges of an online gaming system and how to solve them effectively.",
 
   "Tesi": "Tesi",
@@ -144,7 +144,7 @@
   "Tesi_TeamSize": "1 dev",
   "Tesi_Committer": "SUPSI",
   "Tesi_Starting_Date": "03.2021",
-  "Tesi_End_Date": "6.2021",
+  "Tesi_End_Date": "06.2021",
   "Tesi_Description": "I developed my dissertation in the field of Game Development. The goal was to create, in Unity, a procedurally generated world similar to that of Minecraft. I used an Octree, a tree structure, to represent the world. The Octree's peculiarity is the leaves' variable size, intentionally used to improve gaming performance. Thanks to this, I opted to generate several chunks on the Y axis of the world, unlike Minecraft, where this does not happen. Another fundamental aspect of the work was the attention to the extensibility and optimization of the code—the thesis was evaluated very positively, as I provided an immediately fungible product.",
 
   "DownloadTesi": "Download thesis",

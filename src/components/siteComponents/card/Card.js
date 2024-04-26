@@ -24,7 +24,7 @@ class Card extends Component {
 	}
 
 	updatePredicate() {
-		this.setState({ haveStamp: window.innerWidth > 600});
+		this.setState({ haveStamp: window.innerWidth > 800});
 	}
 	render() {
 		let stampType;
@@ -38,8 +38,8 @@ class Card extends Component {
 			{(this.state.haveStamp && this.props.stamp) ? stampType : <></>}
 			<div className={`${CardStyle.Card} ${FlexStyle.FlexColumnCenterTop}`}>
 				<div className={CardStyle.CardTitleContainer}>
-					<p className={TextStyle.TitleText}>{Locale.GetMessages(this.props.title)}</p>
-					{this.props.subTitle && <p className={TextStyle.SubTitleText }>{this.props.subTitle}</p>}
+					<p className={`${TextStyle.TitleText} ${TextStyle.Centered}`}>{Locale.GetMessages(this.props.title)}</p>
+					{this.props.subTitle && <p className={`${TextStyle.SubTitleText} ${TextStyle.Centered}` }>{this.props.subTitle}</p>}
 				</div>
 				{this.props.preview ? this.props.preview : <></>}
 				<div className={CardStyle.CardContainer}>

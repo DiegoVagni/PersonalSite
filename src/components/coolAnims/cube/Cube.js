@@ -1,5 +1,5 @@
 import { Component } from "react"
-import './cube.scss';
+import './Cube.module.scss';
 
 class Cube extends Component {
     render() {

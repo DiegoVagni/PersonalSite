@@ -2,7 +2,8 @@
 .CardContainer {
 	justify-content: flex-Start;
 	height: fit-content;
-	padding: 10px
+	padding: 10px;
+	width:100%;
 }
 
 .CardPage {
@@ -14,7 +15,7 @@
 	min-height: 98%;
 	min-width: 98%;
 	height: fit-content;
-	background-color: $Card_Background
+	background-color: var(--Card_Background)
 }
 
 .CardOuter {
@@ -24,16 +25,18 @@
 	min-height: 95%;
 	overflow-x: hidden;
 	overflow-y: auto;
-	box-shadow: $Shadow 0px 4px 12px;
-	border: 1px solid $Modal_Border;
-	background-color: $Card_Background;
+	box-shadow: var(--Shadow) 0px 4px 12px;
+	border: 1px solid var( --Modal_Border);
+	background-color: var( --Card_Background);
 }
 
 .CardTitleContainer {
-	background-color: $Card_Background;
+	background-color: var( --Card_Background);
 }
 
 .MP{
-	margin:10px;
-	padding:10px;
+	margin-left:10px;
+	margin-right:10px;
+	padding-left:10px;
+	padding-right:10px;
 }
