@@ -4,144 +4,145 @@ class StartAnimation extends Component {
 	constructor(props) {
 		super(props)
 		setTimeout(this.props.end
-		, 4500);
+			, 4500);
 	}
 	render() {
 		return (
-			<div  className={"container"}>
-				<div className={"animation01"}>
+			<div className={anim.container}>
+				<div className={anim.animation01}>
 					<div></div>
 					<div></div>
 					<div></div>
 					<div></div>
 					<div></div>
 				</div>
-				<div className={"animation02"}>
+				<div className={anim.animation02}>
 					<div></div>
 					<div></div>
 				</div>
-				<div className={"animation03"}>
-					<div className={"circle"}>
-						<div className={"circle_element01"}></div>
+				<div className={anim.animation03}>
+					<div className={anim.circle}>
+						<div className={anim.circle_element01}></div>
 					</div>
-					<div className={"circle"}>
-						<div className={"circle_element02"}></div>
+					<div className={anim.circle}>
+						<div className={anim.circle_element02}></div>
 					</div>
-					<div className={"circle"}>
-						<div className={"circle_element03"}></div>
+					<div className={anim.circle}>
+						<div className={anim.circle_element03}></div>
 					</div>
-					<div className={"animation04"}>
-						<div className={"line_wrapper line_wrapper01"}>
-							<span className={"line line01"}></span>
-						</div>
-						<div className={"rotate45"}>
-							<div className={"line_wrapper line_wrapper02"}>
-								<span className={"line line02"}></span>
-							</div>
-						</div>
-						<div className={"line_wrapper line_wrapper03"}>
-							<span className={"line line03"}></span>
-						</div>
-						<div className={"rotate135"}>
-							<div className={"line_wrapper line_wrapper04"}>
-								<span className={"line line04"}></span>
-							</div>
-						</div>
-						<div className={"line_wrapper line_wrapper05"}>
-							<span className={"line line05"}></span>
-						</div>
-						<div className={"rotate-135"}>
-							<div className={"line_wrapper line_wrapper06"}>
-								<span className={"line line06"}></span>
-							</div>
-						</div>
-						<div className={"line_wrapper line_wrapper07"}>
-							<span className={"line line07"}></span>
-						</div>
-						<div className={"rotate-45"}>
-							<div className={"line_wrapper line_wrapper08"}>
-								<span className={"line line08"}></span>
-							</div>
-						</div>
 					</div>
-					<div className={"animation05"}>
-						<div className={"double_wrapper02 green02"}>
-							<div className={"double_wrapper01 green01"}>
-								<div className={"double_block green00"}></div>
+					<div className={anim.animation04}>
+						<div className={`${anim.line_wrapper} ${anim.line_wrapper01}`}>
+							<span className={`${anim.line} ${anim.line01}`}></span>
+						</div>
+						<div className={anim.rotate45}>
+							<div className={`${anim.line_wrapper} ${anim.line_wrapper02}`}>
+								<span className={`${anim.line} ${anim.line02}`}></span>
 							</div>
 						</div>
-						<div className={"double_wrapper02 navy02"}>
-							<div className={"double_wrapper01 navy01"}>
-								<div className={"double_block navy00"}></div>
+						<div className={`${anim.line_wrapper} ${anim.line_wrapper03}`}>
+							<span className={`${anim.line} ${anim.line03}`}></span>
+						</div>
+						<div className={anim.rotate135}>
+							<div className={`${anim.line_wrapper} ${anim.line_wrapper04}`}>
+								<span className={`${anim.line} ${anim.line04}`}></span>
 							</div>
 						</div>
-						<div className={"double_wrapper02 yellow02"}>
-							<div className={"double_wrapper01 yellow01"}>
-								<div className={"double_block yellow00"}></div>
+						<div className={`${anim.line_wrapper} ${anim.line_wrapper05}`}>
+							<span className={`${anim.line} ${anim.line05}`}></span>
+						</div>
+						<div className={anim.rotate135}>
+							<div className={`${anim.line_wrapper} ${anim.line_wrapper06}`}>
+								<span className={`${anim.line} ${anim.line06}`}></span>
 							</div>
 						</div>
-						<div className={"double_wrapper02 blue02"}>
-							<div className={"double_wrapper01 blue01"}>
-								<div className={"double_block blue00"}></div>
-							</div>
+						<div className={`${anim.line_wrapper} ${anim.line_wrapper07}`}>
+							<span className={`${anim.line} ${anim.line07}`}></span>
 						</div>
-						<div className={"double_wrapper02 red02"}>
-							<div className={"double_wrapper01 red01"}>
-								<div className={"double_block red00"}></div>
-							</div>
-						</div>
+						<div className={anim.rotate45}>
+							<div className={`${anim.line_wrapper} ${anim.line_wrapper08}`}>
+								<span className={`${anim.line} ${anim.line08}`}></span>
 					</div>
 				</div>
-				<div className={"animation06"}>
-					<div className={"rhombus05"}>
-						<div className={"rhombus04"}>
-							<div className={"rhombus03"}>
-								<div className={"rhombus02"}>
-									<div className={"rhombus01"}></div>
+				</div>
+				<div className={anim.animation05}>
+					<div className={`${anim.double_wrapper02} ${anim.green02}`}>
+					<div className={`${anim.double_wrapper01} ${anim.green01}`}>
+					<div className={`${anim.double_block} ${anim.green00}`}></div>
+			</div >
+						</div >
+							<div className={`${anim.double_wrapper02} ${anim.navy02}`}>
+							<div className={`${anim.double_wrapper01} ${anim.navy01}`}>
+							<div className={`${anim.double_block} ${anim.navy00}`}></div >
+							</div >
+						</div >
+				<div className={`${anim.double_wrapper02} ${anim.yellow02}`}>
+				<div className={`${anim.double_wrapper01} ${anim.yellow01}`}>
+				<div className={`${anim.double_block} ${anim.yellow00}`}></div >
+							</div >
+						</div >
+							<div className={`${anim.double_wrapper02} ${anim.blue02}`}>
+								<div className={`${anim.double_wrapper01} ${anim.blue01}`}>
+								<div className={`${anim.double_block} ${anim.blue00}`}></div >
+							</div >
+						</div >
+	<div className={`${anim.double_wrapper02} ${anim.red02}`}>
+		<div className={`${anim.double_wrapper01} ${anim.red01}`}>
+									<div className={`${anim.double_block} ${anim.red00}`}></div >
+							</div >
+						</div >
+					</div >
+				
+				<div className={anim.animation06}>
+					<div className={anim.rhombus05}>
+						<div className={anim.rhombus04}>
+							<div className={anim.rhombus03}>
+								<div className={anim.rhombus02}>
+									<div className={anim.rhombus01}></div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className={"animation07"}>
-					<div className={"circle"}>
-						<div className={"circle_element01"}></div>
+				<div className={anim.animation07}>
+					<div className={anim.circle}>
+						<div className={anim.circle_element01}></div>
 					</div>
-					<div className={"line_wrapper line_wrapper01"}>
-						<span className={"line line01"}></span>
-					</div>
-					<div className={"rotate60"}>
-						<div className={"line_wrapper line_wrapper02"}>
-							<span className={"line line02"}></span>
-						</div>
-					</div>
-					<div className={"rotate120"}>
-						<div className={"line_wrapper line_wrapper03"}>
-							<span className={"line line03"}></span>
-						</div>
-					</div>
-					<div className={"line_wrapper line_wrapper04"}>
-						<span className={"line line04"}></span>
-					</div>
-					<div className={"rotate-120"}>
-						<div className={"line_wrapper line_wrapper05"}>
-							<span className={"line line05"}></span>
-						</div>
-					</div>
-					<div className={"rotate-60"}>
-						<div className={"line_wrapper line_wrapper06"}>
-							<span className={"line line06"}></span>
-						</div>
-					</div>
-				</div>
-				<div className={"animation08"}>
-					<div ></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
-			</div>
+					<div className={`${anim.line_wrapper} ${anim.line_wrapper01}`}>
+						<span className={`${anim.line} ${anim.line01}`}></span>
+					</div >
+	<div className={anim.rotate60}>
+		<div className={`${anim.line_wrapper} ${anim.line_wrapper02}`}>
+		<span className={`${anim.line} ${anim.line02}`}></span>
+						</div >
+					</div >
+	<div className={anim.rotate120}>
+		<div className={`${anim.line_wrapper} ${anim.line_wrapper03}`}>
+		<span className={`${anim.line} ${anim.line03}`}></span>
+						</div >
+					</div >
+	<div className={`${anim.line_wrapper} ${anim.line_wrapper04}`}>
+		<span className={`${anim.line} ${anim.line04}`}></span >
+					</div >
+	<div className={anim.rotate120}>
+		<div className={`${anim.line_wrapper} ${anim.line_wrapper05}`}>
+		<span className={`${anim.line} ${anim.line05}`}></span>
+						</div >
+					</div >
+	<div className={anim.rotate60}>
+								<div className={`${anim.line_wrapper} ${anim.line_wrapper06}`}>
+								<span className={`${anim.line} ${anim.line06}`}></span>
+						</div >
+					</div >
+				</div >
+	<div className={anim.animation08}>
+		<div ></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+			</div >
 		)
 	}
 }

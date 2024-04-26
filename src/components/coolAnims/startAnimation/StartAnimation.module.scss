@@ -4,10 +4,11 @@ Basic style
 @import "../../../scss/ThemeVariables.module.scss";
 .container {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	overflow: hidden;
 	margin: 0;
+	background-color:var(--Page_Background)
 }
 
 
@@ -1309,35 +1310,36 @@ animation08
 	opacity: 0;
 }
 
-	.animation08 div:nth-of-type(1) {
-		width: 100%;
-		height: 100%;
-		background: #242324;
-	}
+.animation08 div:nth-of-type(1) {
+	width: 100%;
+	height: 100%;
+	background: var(--Page_Background);
+	
+}
 
-	.animation08 div:nth-of-type(2) {
-		width: 100%;
-		height: 25%;
-		background: #75cfb9;
-	}
+.animation08 div:nth-of-type(2) {
+	width: 100%;
+	height: 25%;
+	background: var(--WelcomeAnimColor4);
+}
 
-	.animation08 div:nth-of-type(3) {
-		width: 100%;
-		height: 25%;
-		background: #457ed4;
-	}
+.animation08 div:nth-of-type(3) {
+	width: 100%;
+	height: 25%;
+	background: var(--WelcomeAnimColor3);
+}
 
-	.animation08 div:nth-of-type(4) {
-		width: 100%;
-		height: 25%;
-		background: #e8595f;
-	}
+.animation08 div:nth-of-type(4) {
+	width: 100%;
+	height: 25%;
+	background: var(--WelcomeAnimColor2);
+}
 
-	.animation08 div:nth-of-type(5) {
-		width: 100%;
-		height: 25%;
-		background: #ffe08b;
-	}
+.animation08 div:nth-of-type(5) {
+	width: 100%;
+	height: 25%;
+	background: var(--WelcomeAnimColor1);
+}
 
 @keyframes animation08 {
 	0% {
