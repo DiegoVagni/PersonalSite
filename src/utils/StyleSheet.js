@@ -23,16 +23,28 @@ class StyleSheet {
 	}
 	static style(styleCode) {
 
-		if (StyleSheet.styles == null) return "#fffff"
+		
 		return StyleSheet.styles.get(styleCode)
 	}
 
 	static changeStyle(key, value) {
-
+	
 		StyleSheet.styles.set(key, value);
+		window.root?.style.setProperty(
+			key,
+			value
+		);
 	}
 	static loadFromLocalStorage(refreshApp) {
 		StyleSheet.styles = new Map(JSON.parse(localStorage["style"]))
+		StyleSheet.styles.forEach((value, key) => {
+		
+			window.root?.style.setProperty(
+				key,
+				value
+			);
+		})
+		
 		refreshApp()
 	}
 	static loadDefaultstyle(refreshApp) {
@@ -46,15 +58,14 @@ class StyleSheet {
 				'Accept': 'application/json'
 			},
 			method: 'GET'
-		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json)) }).then(() => localStorage.setItem("style", JSON.stringify(Array.from(StyleSheet.styles.entries())))).then(() => refreshApp());
-	}
+		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json)) }).then(() => localStorage.setItem("style", JSON.stringify(Array.from(StyleSheet.styles.entries())))).then(() => {
+			StyleSheet.styles.forEach((value, key) => {
 
-
-	static getLayoutstyle(key) {
-		switch (key) {
-			default: return {}
-
-		}
+				window.root?.style.setProperty(
+					key,
+					value
+				);
+			}) }).then(() => refreshApp());
 	}
 }
 export default StyleSheet

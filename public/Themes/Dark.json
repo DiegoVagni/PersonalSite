@@ -1,39 +1,39 @@
 {
-	"Navbar_Color": "#212121",
-	"Navbar_Active_Button_Color": "#181818",
-	"Navbar_Hover_Button_Color": "#212121",
-	"Navbar_Button_Border_Color": "#181818",
+	"--Navbar_Color": "#212121",
+	"--Navbar_Active_Button_Color": "#181818",
+	"--Navbar_Hover_Button_Color": "#212121",
+	"--Navbar_Button_Border_Color": "#181818",
 
-	"Navbar_Text_Color": "#ffffff",
-	"Navbar_ActiveText_Button_Color": "#ffffff",
-	"Navbar_Hover_Text_Button_Color": "#ffffff",
-	"Button_Text_Color": "#ffffff",
+	"--Navbar_Text_Color": "#ffffff",
+	"--Navbar_ActiveText_Button_Color": "#ffffff",
+	"--Navbar_Hover_Text_Button_Color": "#ffffff",
+	"--Button_Text_Color": "#ffffff",
 
-	"Setting_Button_Border_Color": "#181818",
+	"--Setting_Button_Border_Color": "#181818",
 
-	"Modal_Color": "#212121",
-	"Modal_Border": "#aaaaaa",
+	"--Modal_Color": "#212121",
+	"--Modal_Border": "#aaaaaa",
 
-	"Home_Background": "#181818",
-	"Home_Links_Color": "#ffffff",
+	"--Home_Background": "#181818",
+	"--Home_Links_Color": "#ffffff",
 
-	"Shadow": "#aaaaaa",
-	"Text_Color": "#ffffff",
+	"--Shadow": "#aaaaaa",
+	"--Text_Color": "#ffffff",
 
-	"Page_Background": "#181818",
-	"Card_Background": "#212121",
+	"--Page_Background": "#181818",
+	"--Card_Background": "#212121",
 
-	"Button_Color": "#3d3d3d",
+	"--Button_Color": "#3d3d3d",
 
-	"Cool_Stamp": "#1800F2",
-	"New_Stamp": "#F10000",
-	"Cool_Stamp_BorderColor": "#FFFFFF",
-	"New_Stamp_BorderColor": "#FFFFFF",
+	"--Cool_Stamp": "#1800F2",
+	"--New_Stamp": "#F10000",
+	"--Cool_Stamp_BorderColor": "#FFFFFF",
+	"--New_Stamp_BorderColor": "#FFFFFF",
 
-	"WelcomeAnimColor1": "#FFFFFF",
-	"WelcomeAnimColor2": "#F10000",
-	"WelcomeAnimColor3": "#C2BD18",
-	"WelcomeAnimColor4": "#F8F7D2",
+	"--WelcomeAnimColor1": "#FFFFFF",
+	"--WelcomeAnimColor2": "#F10000",
+	"--WelcomeAnimColor3": "#C2BD18",
+	"--WelcomeAnimColor4": "#F8F7D2",
 
-	"Select_BackgroundColor": "#FFFFFF"
+	"--Select_BackgroundColor": "#FFFFFF"
 }

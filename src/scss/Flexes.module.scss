@@ -39,6 +39,14 @@
 	justify-items: flex-start;
 	justify-content: flex-start;
 }
+.FlexRowBetween {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: flex-start;
+	justify-items: flex-start;
+	justify-content: space-between;
+}
 .Wrap{
 	flex-wrap:wrap;
 }

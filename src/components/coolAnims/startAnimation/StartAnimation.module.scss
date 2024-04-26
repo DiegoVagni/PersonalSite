@@ -1,7 +1,7 @@
 /*=================
 Basic style
 ==================*/
-
+@import "../../../scss/ThemeVariables.module.scss";
 .container {
 	position: relative;
 	width: 100%;
@@ -43,28 +43,28 @@ animation01
 	}
 
 		.animation01 div:nth-child(1) {
-			background-color: #d55959;
+			background-color: var(--WelcomeAnimColor1);
 			animation-delay: 0.4s;
 		}
 
-		.animation01 div:nth-child(2) {
-			background-color: #ffe08b;
-			animation-delay: 0.3s;
-		}
+.animation01 div:nth-child(2) {
+	background-color: var(--WelcomeAnimColor2);
+	animation-delay: 0.3s;
+}
 
-		.animation01 div:nth-child(3) {
-			background-color: #75cfb9;
-			animation-delay: 0.2s;
-		}
+.animation01 div:nth-child(3) {
+	background-color: var(--WelcomeAnimColor3);
+	animation-delay: 0.2s;
+}
 
-		.animation01 div:nth-child(4) {
-			background-color: #f1a05b;
-			animation-delay: 0.1s;
-		}
+.animation01 div:nth-child(4) {
+	background-color: var(--WelcomeAnimColor4);
+	animation-delay: 0.1s;
+}
 
-		.animation01 div:nth-child(5) {
-			background-color: #78bee4;
-		}
+.animation01 div:nth-child(5) {
+	background-color: var(--Page_Background);
+}
 
 @keyframes animation01 {
 	0% {
@@ -984,7 +984,7 @@ animation06
 	transform: translate(-50%, -50%) rotate(45deg);
 	width: 50vw;
 	height: 50vw;
-	background-color: #ef5958;
+	background-color: var(--WelcomeAnimColor1);
 }
 
 .rhombus03 {
@@ -994,7 +994,7 @@ animation06
 	transform: translate(-50%, -50%);
 	width: 37.5vw;
 	height: 37.5vw;
-	background-color: #77ceb9;
+	background-color: var(--WelcomeAnimColor2);
 }
 
 .rhombus02 {
@@ -1004,7 +1004,7 @@ animation06
 	transform: translate(-50%, -50%);
 	width: 25vw;
 	height: 25vw;
-	background-color: #ffe08b;
+	background-color: var(--WelcomeAnimColor3);
 }
 
 .rhombus01 {
@@ -1014,7 +1014,7 @@ animation06
 	transform: translate(-50%, -50%);
 	width: 12.25vw;
 	height: 12.25vw;
-	background-color: #f2f3df;
+	background-color: var(--WelcomeAnimColor4);
 }
 
 @keyframes rhombus {

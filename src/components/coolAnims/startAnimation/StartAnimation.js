@@ -1,5 +1,5 @@
 import { Component } from "react"
-import "./StartAnimation.module.scss"
+import anim from "./StartAnimation.module.scss"
 class StartAnimation extends Component {
 	constructor(props) {
 		super(props)
@@ -7,11 +7,10 @@ class StartAnimation extends Component {
 		, 4500);
 	}
 	render() {
-		let homePageColor = { backgroundColor:this.props.backCol }
 		return (
 			<div  className={"container"}>
 				<div className={"animation01"}>
-					<div style={homePageColor}></div>
+					<div></div>
 					<div></div>
 					<div></div>
 					<div></div>
@@ -136,7 +135,7 @@ class StartAnimation extends Component {
 					</div>
 				</div>
 				<div className={"animation08"}>
-					<div style={homePageColor }></div>
+					<div ></div>
 					<div></div>
 					<div></div>
 					<div></div>

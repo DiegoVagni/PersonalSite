@@ -6,8 +6,7 @@ import NavBarStyle from "./Navbar.module.scss"
 class NavBarSubMenu extends Component {
 	render() {
 	let classna = NavBarStyle.NavBarSubMenu;
-		console.log(this.props.zindex)
-		console.log(this.props)
+
 	if(this.props.zindex) {
 		classna += " " + NavBarStyle.ZIndex;
 		}

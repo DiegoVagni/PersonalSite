@@ -39,7 +39,7 @@
 	min-height: 100px;
 	min-width: 200px;
 	max-width: 1000px;
-	max-height: 100%;
+	
 	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
@@ -55,4 +55,8 @@
 	border-bottom: 2px solid var(--Navbar_Button_Border_Color);
 	border-left: 2px solid var(--Navbar_Button_Border_Color);
 	border-right: 2px solid var(--Navbar_Button_Border_Color);
+}
+
+.ColorPicker{
+	width:40%;
 }

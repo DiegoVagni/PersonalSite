@@ -10,7 +10,12 @@ import * as ReactDOM from 'react-dom';
 class Modal extends Component {
 	render() {
 		let modalClass = this.props.show ? ModalStyle.Show : ModalStyle.Hide;
+		if (this.props.height) {
+			modalClass += " " + ModalStyle.Height;
+		} else {
+			modalClass += " " + ModalStyle.Fit;
 
+		}
 		return ReactDOM.createPortal(
 			<div key={KeyGenerator.getNextKey()} className={`${ModalStyle.Modal} ${modalClass}`}>
 				<div key={KeyGenerator.getNextKey()} className={ModalStyle.ModalContent}>

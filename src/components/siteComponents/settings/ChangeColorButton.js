@@ -26,6 +26,7 @@ class ChangeColorButton extends Component {
 	}
 	showModal() {
 		this.setState({ show: true })
+		
 	}
 	Apply() {
 		
@@ -49,8 +50,8 @@ class ChangeColorButton extends Component {
 
 		return (
 			<div key={KeyGenerator.getNextKey()}>
-				<Button key={KeyGenerator.getNextKey()} style={styleSheet.getLayoutstyle("Button")} onClick={this.showModal} text={Locale.GetMessages("Colors_Setting") } />
-				<Modal key={KeyGenerator.getNextKey()} root={this.props.root} show={this.state.show} handleClose={this.hideModal} buttons={[<Button key={KeyGenerator.getNextKey()} text={Locale.GetMessages("Apply")} onClick={this.Apply} />, <Button key={KeyGenerator.getNextKey()} text={Locale.GetMessages("CopyStyleSheet")} onClick={this.CopyStyleSheet} />]}>
+				<Button key={KeyGenerator.getNextKey()} onClick={this.showModal} text={Locale.GetMessages("Colors_Setting") } />
+				<Modal height={true } key={KeyGenerator.getNextKey()} root={this.props.root} show={this.state.show} handleClose={this.hideModal} buttons={[<Button key={KeyGenerator.getNextKey()} text={Locale.GetMessages("Apply")} onClick={this.Apply} />, <Button key={KeyGenerator.getNextKey()} text={Locale.GetMessages("CopyStyleSheet")} onClick={this.CopyStyleSheet} />]}>
 					<div key={KeyGenerator.getNextKey()} >
 						{ pickers}
 					</div>
