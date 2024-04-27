@@ -1,8 +1,9 @@
 import { Component } from "react";
 import Cube from "../../coolAnims/cube/Cube"
-import styleSheet from "../../../utils/StyleSheet"
-import "../../../scss/Texts.module.scss"
-import "../../../scss/App.module.scss"
+import StyleSheet from "../../../utils/StyleSheet"
+import text from "../../../scss/Texts.module.scss"
+import Flexes from "../../../scss/Flexes.module.scss"
+import App from "../../../scss/App.module.scss"
 class Loading extends Component {
 	constructor(props) {
 		super(props)
@@ -27,11 +28,10 @@ class Loading extends Component {
 	
 		return (
 
-
-			<div className={["FlexColumnCenter","FullParent"]}
-			>
-				{this.state.haveCube && styleSheet.getAnimationBool() ? (<Cube translateX={0} translateY={-50}></Cube>) : (<></>)}
-				<p className={"BiggestText" }>LOADING</p>
+			<div
+				className={`${Flexes.FlexColumnCenter} ${App.FullParent}`}	>
+				{this.state.haveCube && StyleSheet.getAnimationBool() ? (<Cube></Cube>) : (<></>)}
+				<p className={text.NormalText}>LOADING</p>
 			</div>
 		)
 	}

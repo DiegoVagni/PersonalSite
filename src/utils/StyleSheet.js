@@ -23,7 +23,7 @@ class StyleSheet {
 	}
 	static style(styleCode) {
 
-		
+		if (StyleSheet.styles == null) { return "#FFFFFF" };
 		return StyleSheet.styles.get(styleCode)
 	}
 

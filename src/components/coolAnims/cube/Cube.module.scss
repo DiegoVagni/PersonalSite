@@ -4,7 +4,7 @@ div {
 	transform-style: preserve-3d;
 }
 $count: 5;
-$size: 15px;
+$size: 30px;
 .container {
 	position: relative;
 	display: grid;
@@ -43,11 +43,6 @@ $size: 15px;
 	height: 100%;
 	transition: 500ms;
 	animation: rotate random(10000) + 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190) infinite alternate;
-
-
- 
-		
-	
 
 	&.-x {
 		transform: rotateX(-30deg);
@@ -135,6 +130,15 @@ $size: 15px;
 	100% {
 		transform: scale3d(0.1, 0.1, 0.1);
 	}
+}
+.Cubes {
+	transform-style: preserve-3d;
+		width: 40%;
+		height: 40%; 
+		max-height: 40%;
+		min-height:40%; 
+		position:fixed;
+		transform: translate(0,2500%);
 }
 @keyframes rotate {
 	0% {

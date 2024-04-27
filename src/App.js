@@ -70,11 +70,10 @@ class App extends Component {
 }
 	render() {
 		if (!this.state.ready) { return <Loading></Loading> }
-		let backCol = this.props.location !== "/" ? styleSheet.style("Page_Background") : styleSheet.style("Home_Background");
-		document.body.style.backgroundColor = backCol
+
 		return (
 			<>
-				{styleSheet.getAnimationBool() && this.state.first ? (<StartAnimation backCol={backCol} end={this.EndAnimHook} ></StartAnimation>) : (<>
+				{styleSheet.getAnimationBool() && this.state.first ? (<StartAnimation end={this.EndAnimHook} ></StartAnimation>) : (<>
 					
 					<DVNavBar root={this.props.root} languageChange={this.ChangeLanguage} location={this.props.location} refreshApp={this.RefreshApplication} />
 					<Page>
