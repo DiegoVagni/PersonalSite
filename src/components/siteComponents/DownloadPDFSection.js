@@ -15,7 +15,7 @@ class DownloadPDFSection extends Component {
 				</p>
 				<div className={Download.DownloadSection }>
 					<div className={Flexes.FlexColumnCenter}>
-						{this.props.links.map((link) => { return (<a key={KeyGenerator.getNextKey()} className={Download.DownloadLink} download={link.download} href={link.to}> {Locale.GetMessages(link.local)}</a>) })}
+						{this.props.links.map((link) => { return (<a key={KeyGenerator.getNextKey()} className={Download.DownloadLink} download={link.download} href={link.from}> {Locale.GetMessages(link.local)}</a>) })}
 					</div>
 				</div>
 			</div>

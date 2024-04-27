@@ -93,7 +93,7 @@ class CV extends Component {
 					</SkillContainer>
 
 				</SkillsPageSection>
-				<DownloadPDFSection title={"DownloadCV"} links={[{ download: "Diego_Vagni_CV_ITA.pdf", to: "/public/cvita.pdf", local: "Italian" }, { download: "Diego_Vagni_CV_ENG.pdf", to: "/public/cveng.pdf", local: "English" }]} />
+				<DownloadPDFSection title={"DownloadCV"} links={[{ download: "Diego_Vagni_CV_ITA.pdf", from: "Downloads/cv/cvita.pdf", local: "Italian" }, { download: "Diego_Vagni_CV_ENG.pdf", from: "Downloads/cv/cveng.pdf", local: "English" }]} />
 			</div>
 		);
 	}

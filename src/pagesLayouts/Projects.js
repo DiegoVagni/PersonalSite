@@ -67,7 +67,7 @@ class Projects extends Component {
 					stampRot={"15deg"}
 					GitHub={Locale.GetMessages("Private")}
 					to={'https://supsi.ch'} preview={<ImgPreview src={Tesi} local={"Tesi"} ></ImgPreview>}
-					downloads={<DownloadPDFSection title={"Downloads"} links={[{ download: "Diego_Vagni_TESI_ITA.pdf", to: "/public/tesi.pdf", local: "Italian" }, { download: "Diego_Vagni_POSTER_TESI_ITA.pdf", to: "/public/poster_tesi.pdf", local: "Poster_Italian" }]} /> }
+					downloads={<DownloadPDFSection title={"Downloads"} links={[{ download: "Diego_Vagni_TESI_ITA.pdf", from: "Downloads/tesi/tesi.pdf", local: "Italian" }, { download: "Diego_Vagni_POSTER_TESI_ITA.pdf", from: "Downloads/tesi/poster_tesi.pdf", local: "Poster_Italian" }]} /> }
 					/>
 			
 				<ProjectCard
