@@ -49,7 +49,10 @@ class NavBar extends Component {
 	}
 	render() {
 		if (this.props.location == "/") {
-			return (<></>)
+			return (<nav className={`${NavBarStyle.NavBarHidden} ${FlexStyle.FlexRowEnd} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`} > <MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
+				{this.state.settingsMenuOpen && <NavBarSubMenu zindex={true} trapezoid={true} root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} ><SettingMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} />
+				</NavBarSubMenu>}
+				</nav>)
 		}
 		if (!this.state.miniWidth) {
 			return (

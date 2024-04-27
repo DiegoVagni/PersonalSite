@@ -12,6 +12,13 @@
 	background-color: var( --Navbar_Color);
 	position: fixed;
 }
+.NavBarHidden {
+	z-index: 10;
+	top: 0px;
+	width: 100%;
+	background-color: var( --Page_Background);
+	position: fixed;
+}
 .NavBarInactiveButton {
 	background-color: var(--Navbar_Color);
 	color: var(--Navbar_Text_Color);
