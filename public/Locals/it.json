@@ -105,7 +105,7 @@
 	"Site_TeamSize": "1 persona",
 	"Site_Committer": "Diego Vagni",
 	"Site_Starting_Date": "24.01.2024",
-	"Site_End_Date": "In proseguimento",
+	"Site_End_Date": "12.02.2024",
 	"Site_Description": "Avendo bisogno di uno spazio dove mostrare il mio lavoro, ho scelto di rendere anche il sito stesso una prova di ciò che sono in grado di fare.  Ho optato per creare il più possibile in maniera originale (come il sistema di localizzazione o la possibilità di cambiare tema),senza l’ausilio di librerie,   proprio per essere maggiormente flessibile e efficace nella mantenibilità del codice. Ho, a volte, riadattato parte di codice preso online, in quanto anch'esso è parte del lavoro di un ingegnere. Lavorare su di esso mi ha permesso di rafforzare le conoscenze riguardanti le tecnologie usate e imparare meglio l'utilizzo delle animazioni. \n Lo scheletro e tutti i contenuti sono stati fatti in 4 giorni, il restante tempo è stato speso nel refactoring e migliorare il sito",
 
 	"LastRun": "LastRun",

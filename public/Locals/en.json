@@ -99,11 +99,11 @@
   "Cool_Stamp_Message": "COOL",
 
   "Site": "This site",
-  "Site_Time": "12 working days",
+  "Site_Time": "15 working days",
   "Site_TeamSize": "1 dev",
   "Site_Committer": "Diego Vagni",
   "Site_Starting_Date": "24.01.2024",
-  "Site_End_Date": "In progress",
+  "Site_End_Date": "12.02.2024",
   "Site_Description": "Needing a space to showcase my work, I made the site proof of what I could do. I opted to create as much as possible in an original way (such as the localization system or the possibility of changing themes) without using libraries precisely to be more flexible and effective in maintaining the code. I have, at times, re-adapted part of the code taken online, as it is also part of the work of an engineer. Working on it allowed me to strengthen my knowledge of the technologies used and learn how to use animations better.",
   "LastRun": "LastRun",
   "LastRun_Time": "1 month",

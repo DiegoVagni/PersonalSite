@@ -36,7 +36,6 @@ class Projects extends Component {
 					tech={[[Css, Locale.GetMessages("Css")], [Javascript, Locale.GetMessages("Javascript")], [Html, Locale.GetMessages("Html")], [React, Locale.GetMessages("React")]]}
 					stamp="new"
 					stampRot={"15deg"}
-					GitHub={"Coming Soon"}
 					to={'/'}
 					preview={<IFramePreview title={Locale.GetMessages("Site")} src={"/"} />}
 					/>
