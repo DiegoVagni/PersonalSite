@@ -53,6 +53,7 @@ class StyleSheet {
 	static loadstyle(index, refreshApp) {
 		
 		StyleSheet.currentIndex = index;
+		localStorage["ThemeIndex"] = index;
 		fetch('Themes/' + StyleSheet.themes[StyleSheet.currentIndex].value, {
 			headers: {
 				'Accept': 'application/json'
