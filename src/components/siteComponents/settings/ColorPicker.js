@@ -7,7 +7,12 @@ import SettingStyle from "./Settings.module.scss"
 import KeyGenerator from "../../../utils/KeyGenerator"
 
 class ColorPicker extends Component {
-	
+	change(e) {
+		console.log("onchange" + e.target.value);
+	}
+	input(e) {
+		console.log("onInput"+e.target.value );
+	}
 	render() {
 	
 		return (
