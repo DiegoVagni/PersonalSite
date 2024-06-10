@@ -16,7 +16,7 @@ class Contacts extends Component {
 			<div className={`${FlexStyle.FlexRowCenter} ${ContainerStyle.ContactContainer}`}>
 				<ContactInfo src={Mail} alt={Locale.GetMessages("Mail")} social={Locale.GetMessages("Mail")} ><p className={TextStyle.NormalText}>DiegoVagni.dv@gmail.com</p></ContactInfo>
 				<ContactInfo src={Instagram} alt={Locale.GetMessages("Instagram")} social={Locale.GetMessages("Instagram")} ><p className={TextStyle.NormalText}>coming soon</p></ContactInfo>
-				<ContactInfo src={Linkedin} alt={Locale.GetMessages("Linkedin")} social={Locale.GetMessages("Linkedin")} ><p className={TextStyle.NormalText}>coming soon</p></ContactInfo>
+				<ContactInfo src={Linkedin} alt={Locale.GetMessages("Linkedin")} social={Locale.GetMessages("Linkedin")} ><a className={TextStyle.HiddenLink} href={"https://www.linkedin.com/in/diego-claudio-vagni-507141162/"} target={"_blank"} rel={"noreferrer"}><p className={TextStyle.NormalText}>Diego Claudio Vagni</p></a></ContactInfo>
 				<ContactInfo src={Git} alt={Locale.GetMessages("GitHub")} social={Locale.GetMessages("GitHub")} ><p className={TextStyle.NormalText}><a className={TextStyle.HiddenLink} href={"https://github.com/DiegoVagni"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("GitHub")}</a></p></ContactInfo>
 			</div>
 
