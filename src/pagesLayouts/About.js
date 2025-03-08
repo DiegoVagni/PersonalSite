@@ -10,7 +10,11 @@ class About extends Component {
 		return (
 			<div className={`${FlexStyle.FlexColumnCenterTop}`}>
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"FirstSteps"}></AboutMeCard>
+				<AboutMeCard styleSheet={this.props.styleSheet} title={"H-Farm"}></AboutMeCard>
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"SUPSIME"}></AboutMeCard>
+				<AboutMeCard styleSheet={this.props.styleSheet} title={"TAG"}></AboutMeCard>
+				<AboutMeCard styleSheet={this.props.styleSheet} title={"Vodafone"}></AboutMeCard>
+				<AboutMeCard styleSheet={this.props.styleSheet} title={"PartTime"}></AboutMeCard>
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"G3CLABSME"}></AboutMeCard>
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"OnlyMe"}></AboutMeCard>
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"Passions"}></AboutMeCard>

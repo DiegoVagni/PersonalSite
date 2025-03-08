@@ -139,7 +139,7 @@
   "LudoGame_End_Date": "07.10.2021",
   "LudoGame_Description": "This project was carried out together with a course colleague; we learned how to use Photonengine, the central multiplayer API system for Unity. To do this, we developed the virtual version of the LUDO game and are also thinking about expanding it. Each pawn in the game is equivalent to a character with its specific abilities. The development of this project was fundamental to fully understanding the different challenges of an online gaming system and how to solve them effectively.",
 
-  "Tesi": "Tesi",
+  "Tesi": "Thesis",
   "Tesi_Time": "1 semester",
   "Tesi_TeamSize": "1 dev",
   "Tesi_Committer": "SUPSI",
@@ -168,6 +168,18 @@
 
   "FirstSteps": "First steps",
   "FirstSteps_Description": "I was born in Milan on February 1, 1994. I have been passionate about this discipline since I discovered the world of IT. After middle school, I continued my studies, obtaining the scientific high school diploma in 2012. Before enrolling in university, I had the opportunity to intern at H-Farm, a StartUp incubator. I stayed there for a year, moving between different startups. This professionalizing experience was the first important one in my life, allowing me to learn a lot and stay for several months in London, where I perfected my English. Furthermore, since I was little, I have had the opportunity to spend several months a year at a meditation school in the Marche region, where I had the chance to experiment with different meditation techniques and get to know myself better.",
+
+  "H-Farm": "H-Farm",
+  "H-Farm_Description": "In October 2013, before starting university, I did a four-month internship at H-Farm, a startup incubator located in Treviso. There, I began studying front-end development. At that time, the first version of the React framework had just been released, and thanks to that experience, I started using React from the very beginning. Additionally, within H-Farm, I found a startup, ZOOPA, that needed a tester for mobile responsiveness. So, in the summer of 2013, I seized the opportunity, also thanks to ZOOPA's office in London, to spend a month in the British capital, where I improved my language skills by studying and going to the workplace.",
+
+  "TAG": "TAG Innovation School",
+  "TAG_Description": "In 2018, I found the time to attend a front-end development course (still with React) at the TAG Innovation School. This was a very important experience, both in terms of the skills developed and the networking opportunities. In fact, I had the chance to participate in a hackathon organized by Vodafone, which at the time was looking for talent for their chatbot TOBI. My team won the hackathon, and I was offered an internship within the company.",
+
+  "Vodafone": "Vodafone",
+  "Vodafone_Description": "Since July 2018, I have worked as an intern within Vodafone's TOBI tribe. TOBI is the company's omnichannel chatbot, operating simultaneously on the website, the iOS and Android applications, and answering customer calls before directing them to a human operator if necessary. My role involved monitoring the chatbot's outputs and performing quality control, as well as writing and managing various dialogue possibilities with the bot. This experience was very important to me, as it allowed me to work in a large company and gain first-hand exposure to the early stages of voice recognition systems and omnichannel chatbots.",
+
+  "PartTime": "Work in Swiss",
+  "PartTime_Description": "From 2013 to 2018, I worked part-time at Loram SA, managing IT systems and performing troubleshooting. Since 2018, I have been working remotely for Alamar GmbH, based in Schwyz. In this company as well, I work part-time, managing systems, troubleshooting, and assessing the applicability and impact of new technologies within the company's processes.",
 
   "SUPSIME": "University",
   "SUPSIME_Description": "In 2015, I started a degree course in computer engineering at SUPSI in Manno (Switzerland). The study path allowed me to touch on many IT fields, giving me a reasonable basis for most fields of my profession. Each field has its technologies, so I have learned to use of today's most requested languages over the years. Since SUPSI is a university with laboratory methodology, in those years, there was no shortage of projects in each specific course to be done both individually and in groups. Furthermore, the professors have always invited us to work in an Agile way, helping the integration within company systems even more from a human point of view. 2018, I dedicated a year to a web development course at the TAG Innovation School in Milan. Thanks to that experience, I participated in a hackathon organized by Vodafone regarding Tobi, their automatic customer management system. Not only did I win the Hackathon, together with my work group, but I also had the opportunity to intern for several months in the Milan office. This internship allowed me to observe a large company from the inside and taught me how the software works, starting from its output. Thanks to this expertise, I immediately learned to use most company tools expertly, with a pleasant surprise. In 2019, I returned to university to deliver my thesis in June 2021, finishing my degree in Computer Engineering.",
