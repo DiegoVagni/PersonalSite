@@ -8,7 +8,9 @@ const PrivacyPolicy = ({ onClose }) => {
     <div className={`${Priv.privacypolicy}`}>
       <div className={`${Priv.privaccontent}`}>
         <h2>Privacy</h2>
+
          <p>{Locale.GetMessages("privacy")}
+
           </p>
         <button className={`${Priv.privacybutton}`} onClick={onClose}>OK</button>
       </div>
