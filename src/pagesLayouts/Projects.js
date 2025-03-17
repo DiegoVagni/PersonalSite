@@ -34,7 +34,6 @@ class Projects extends Component {
 					key={KeyGenerator.getNextKey()}
 					title={"Site"}
 					tech={[[Css, Locale.GetMessages("Css")], [Javascript, Locale.GetMessages("Javascript")], [Html, Locale.GetMessages("Html")], [React, Locale.GetMessages("React")]]}
-					stamp="new"
 					stampRot={"15deg"}
 					GitHub={Locale.GetMessages("Private")}
 					to={'/'}
