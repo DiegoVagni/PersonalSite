@@ -12,6 +12,7 @@ import TeamWork from "../../../resources/icons/teamwork.svg"
 import Committer from "../../../resources/icons/committer.svg"
 import GitHub from "../../../resources/icons/gitHub.svg"
 import UtilStyle from "../../../scss/Utils.module.scss"
+import React from "react";
 class ProjectCard extends Component {
 
 

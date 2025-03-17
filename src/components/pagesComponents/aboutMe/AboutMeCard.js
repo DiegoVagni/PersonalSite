@@ -2,7 +2,7 @@ import { Component } from 'react'
 import Locale from "../../../utils/Locale"
 import TextStyles from "../../../scss/Texts.module.scss"
 import Card from "../../siteComponents/card/Card"
-
+import React from  "react";
 class AboutMeCard extends Component {
 
 	render() {

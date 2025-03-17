@@ -1,4 +1,6 @@
 import InvariantLabels from "../resources/invariant_labels.json"
+import React from "react"
+import KeyGenerator from "../utils/KeyGenerator"
 class Locale {
 	static defaultLocale = localStorage["locale"] ? localStorage["locale"] : "en";
 	static invariantMap = null;
@@ -22,13 +24,24 @@ class Locale {
 			localStorage.setItem("locale", localCode);
 		
 	}
-
+	static ParseMessage(message){
+		if(message.includes("\n")){
+	return message.split("\n").map((line, index) => (
+        <React.Fragment key={KeyGenerator.getNextKey()}>
+          {line}
+          <br />
+        </React.Fragment>
+      ))
+		}else{
+		return message;
+		}
+	}
 	static GetMessages(localName) {
 		if (this.invariantMap != null && this.invariantMap.get(localName)) return this.invariantMap.get(localName) 
 
 		if (this.localMap == null || this.localMap.get(localName) == undefined) return "MissingLocal";
 	
-		return this.localMap.get(localName);
+		return this.ParseMessage(this.localMap.get(localName));
 	}
 }
 
