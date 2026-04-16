@@ -1,40 +1,23 @@
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-
-# Allow all search engines to crawl everything else
-User-agent: Googlebot
 Allow: /
 
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-
-User-agent: Applebot
-Allow: /
-
-
-User-agent: Amazonbot
-Allow: /
-
-
-User-agent: CloudflareBot
-Allow: /
-
-# Block Baidu (if you don’t want indexing in China)
+# Blocked: indexes of limited value for a personal portfolio
 User-agent: Baiduspider
 Disallow: /
+
 User-agent: YandexBot
 Disallow: /
-# Allow Facebook & Twitter previews
+
+# Social preview crawlers (explicit allow for clarity)
 User-agent: facebookexternalhit
+Allow: /
+
 User-agent: Twitterbot
 Allow: /
 
-# Sitemap declaration (important for SEO)
+User-agent: LinkedInBot
+Allow: /
+
 Sitemap: https://www.diegovagni.com/sitemap.xml

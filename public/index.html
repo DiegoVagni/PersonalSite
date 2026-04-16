@@ -15,32 +15,61 @@
       form-action 'self';
       upgrade-insecure-requests;
       block-all-mixed-content;">
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="canonical" href="https://www.diegovagni.com" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="256x256" href="%PUBLIC_URL%/logo256.png" />
+    <link rel="canonical" href="https://www.diegovagni.com/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f1f5f9" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a" />
     <meta name="description"
-          content="Official website of Diego Vagni, IT engineer. Explore my work, insights, and projects." />
-    <meta name="keywords" content="Diego Vagni, IT engineer, web developer, Unity engine, AI Prompter, Swiss developer, sviluppatore ticino, technology" />
+          content="Diego Vagni — IT engineer and software developer based in Ticino, Switzerland. Unity and C# developer, full-stack web engineer, and builder of side projects. Portfolio, CV, and contacts." />
+    <meta name="keywords" content="Diego Vagni, IT engineer, software developer, Unity developer, C# developer, React developer, sviluppatore Ticino, Swiss software engineer, web developer, portfolio" />
     <meta name="author" content="Diego Vagni" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
     <!-- Open Graph (Facebook, LinkedIn) -->
-    <meta property="og:title" content="Diego Vagni - IT Engineer" />
-    <meta property="og:description" content="Explore the professional insights and projects of Diego Vagni, an expert IT engineer." />
-    <meta property="og:image" content="%PUBLIC_URL%/profile.jpg" />
-    <meta property="og:url" content="https://www.diegovagni.com" />
+    <meta property="og:site_name" content="Diego Vagni" />
+    <meta property="og:title" content="Diego Vagni — IT Engineer &amp; Software Developer" />
+    <meta property="og:description" content="Portfolio of Diego Vagni — IT engineer based in Ticino, Switzerland. Unity, C#, React, and side projects." />
+    <meta property="og:image" content="https://www.diegovagni.com/profile.jpg" />
+    <meta property="og:image:alt" content="Diego Vagni" />
+    <meta property="og:url" content="https://www.diegovagni.com/" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="it_IT" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Diego Vagni - IT Engineer" />
-    <meta name="twitter:description" content="Explore the professional insights and projects of Diego Vagni, an expert IT engineer." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/profile.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Diego Vagni — IT Engineer &amp; Software Developer" />
+    <meta name="twitter:description" content="Portfolio of Diego Vagni — IT engineer based in Ticino, Switzerland." />
+    <meta name="twitter:image" content="https://www.diegovagni.com/profile.jpg" />
+    <meta name="twitter:image:alt" content="Diego Vagni" />
 
+    <link rel="preload" as="image" href="%PUBLIC_URL%/profile.jpg" />
 
-
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Diego Vagni",
+      "alternateName": "Diego Claudio Vagni",
+      "url": "https://www.diegovagni.com/",
+      "image": "https://www.diegovagni.com/profile.jpg",
+      "jobTitle": "IT Engineer",
+      "email": "mailto:diegovagni.dv@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Ticino",
+        "addressCountry": "CH"
+      },
+      "knowsAbout": ["Unity", "C#", "React", "JavaScript", "Software Architecture", "Web Development"],
+      "sameAs": [
+        "https://github.com/DiegoVagni",
+        "https://www.linkedin.com/in/diego-claudio-vagni-507141162/"
+      ]
+    }
+    </script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -58,7 +87,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
-    <title>Diego Vagni</title>
+    <title>Diego Vagni — IT Engineer &amp; Software Developer</title>
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

@@ -1,6 +1,16 @@
 {
+  "name": "Diego Vagni — IT Engineer",
   "short_name": "Diego Vagni",
-  "name": "Diego Vagni",
+  "description": "Portfolio of Diego Vagni — IT engineer and software developer based in Ticino, Switzerland.",
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#f1f5f9",
+  "background_color": "#f1f5f9",
+  "categories": ["portfolio", "personal", "business"],
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +18,21 @@
       "type": "image/x-icon"
     },
     {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
       "src": "logo128.png",
       "type": "image/png",
-      "sizes": "128x128"
+      "sizes": "128x128",
+      "purpose": "any"
     },
     {
       "src": "logo256.png",
       "type": "image/png",
-      "sizes": "256x256"
+      "sizes": "256x256",
+      "purpose": "any"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
