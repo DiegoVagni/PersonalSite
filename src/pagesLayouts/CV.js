@@ -31,6 +31,9 @@ import TeamWork from "../resources/icons/teamwork.svg"
 import Flexible from "../resources/icons/flexible.svg"
 import FastLearner from "../resources/icons/fastLearner.svg"
 import AIPrompting from "../resources/icons/aiPrompting.svg"
+import SelfHostingAI from "../resources/icons/selfHostingAI.svg"
+import AIImageGen from "../resources/icons/aiImageGen.svg"
+import AIVideoGen from "../resources/icons/aiVideoGen.svg"
 import Net from "../resources/icons/net.svg"
 import ContainerStyle from "../scss/Containers.module.scss"
 import AnimStyle from "../scss/Anim.module.scss"
@@ -79,8 +82,11 @@ class CV extends Component {
 						<CompetenceBarContainer animTime={1.3} src={Hardware} maxCompetence={maxCompetence} competenceLevel={8} competence={Locale.GetMessages("Hardware")} ></CompetenceBarContainer>
 						<CompetenceBarContainer animTime={1.6} src={GitHub} maxCompetence={maxCompetence} competenceLevel={8} competence={Locale.GetMessages("GitHub")} ></CompetenceBarContainer>
 						<CompetenceBarContainer animTime={1.9} src={SystemMenagment} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("System_menagment")} ></CompetenceBarContainer>
-						<CompetenceBarContainer animTime={2.2} src={AIPrompting} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("AIPrompting")} ></CompetenceBarContainer>
-						<CompetenceBarContainer animTime={2.5} src={GraphicDesign} maxCompetence={maxCompetence} competenceLevel={3} competence={Locale.GetMessages("Graphic_Design")} ></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={2.2} src={AIPrompting} maxCompetence={maxCompetence} competenceLevel={8} competence={Locale.GetMessages("AIPrompting")} ></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={2.5} src={SelfHostingAI} maxCompetence={maxCompetence} competenceLevel={8} competence={Locale.GetMessages("SelfHostingAI")} ></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={2.8} src={AIImageGen} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("AIImageGeneration")} ></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={3.1} src={AIVideoGen} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("AIVideoGeneration")} ></CompetenceBarContainer>
+						<CompetenceBarContainer animTime={3.4} src={GraphicDesign} maxCompetence={maxCompetence} competenceLevel={6} competence={Locale.GetMessages("Graphic_Design")} ></CompetenceBarContainer>
 					</SkillContainer>
 				</SkillsPageSection>
 				<SkillsPageSection title={"Soft_Skills"}>

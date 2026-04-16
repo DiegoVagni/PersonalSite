@@ -72,6 +72,9 @@
   "Flexible": "Adjustment",
   "Empaty": "Empathic",
   "AIPrompting": "AI prompting",
+  "SelfHostingAI": "Self-hosting AI",
+  "AIImageGeneration": "AI image generation",
+  "AIVideoGeneration": "AI video generation",
   "FastLearner": "Fast learner",
   "DownloadCV": "Downlaod CV",
 

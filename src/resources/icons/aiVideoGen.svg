@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="800" height="800" fill="#000000">
+	<rect x="40" y="100" width="340" height="220" rx="12"/>
+	<rect x="60" y="118" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="105" y="118" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="150" y="118" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="195" y="118" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="240" y="118" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="285" y="118" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="330" y="118" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="60" y="278" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="105" y="278" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="150" y="278" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="195" y="278" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="240" y="278" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="285" y="278" width="30" height="24" rx="4" fill="#ffffff"/>
+	<rect x="330" y="278" width="30" height="24" rx="4" fill="#ffffff"/>
+	<path d="M170 175 L170 245 L240 210 Z" fill="#ffffff"/>
+	<circle cx="400" cy="420" r="72"/>
+	<path d="M400 375 L400 465" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+	<path d="M355 420 L445 420" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+</svg>
