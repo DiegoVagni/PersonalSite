@@ -1,5 +1,21 @@
 @import "../../../scss/ThemeVariables.module.scss";
+
 .Button {
-	border-radius: 10px;
+	border: none;
+	border-radius: 8px;
 	background-color: var(--Button_Color);
+	padding: 8px 20px;
+	cursor: pointer;
+	transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+
+	&:hover {
+		transform: translateY(-1px);
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+		opacity: 0.92;
+	}
+
+	&:active {
+		transform: translateY(0);
+		box-shadow: none;
+	}
 }

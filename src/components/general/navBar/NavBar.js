@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, createRef } from "react";
 import Locale from "../../../utils/Locale";
 import NavBarButton from "./NavBarButton";
 import NavBarSubMenu from "./NavBarSubMenu";
@@ -7,7 +7,6 @@ import MiniButton from "./MiniButton"
 import openButton from "../../../resources/icons/openMenu.svg"
 import SettingMenu from "../../siteComponents/settings/SettingMenu";
 import StyleSheet from "../../../utils/StyleSheet";
-import KeyGenerator from "../../../utils/KeyGenerator";
 
 import NavBarStyle from "./Navbar.module.scss"
 import FlexStyle from "../../../scss/Flexes.module.scss"
@@ -19,19 +18,40 @@ class NavBar extends Component {
 		this.state = {
 			settingsMenuOpen: false, miniWidth: false, minWidthMenu: false
 		};
+		this.navRef = createRef();
 		this.toggleSettingMenu = this.toggleSettingMenu.bind(this);
 		this.toggleMiniMenu = this.toggleMiniMenu.bind(this);
 		this.updatePredicate = this.updatePredicate.bind(this)
 		this.closeMenu = this.closeMenu.bind(this)
+		this.handleDocumentClick = this.handleDocumentClick.bind(this)
+		this.handleKeyDown = this.handleKeyDown.bind(this)
 	}
 
 	componentDidMount() {
 		this.updatePredicate();
 		window.addEventListener("resize", this.updatePredicate);
+		document.addEventListener("mousedown", this.handleDocumentClick);
+		document.addEventListener("keydown", this.handleKeyDown);
 	}
 
 	componentWillUnmount() {
 		window.removeEventListener("resize", this.updatePredicate);
+		document.removeEventListener("mousedown", this.handleDocumentClick);
+		document.removeEventListener("keydown", this.handleKeyDown);
+	}
+
+	handleDocumentClick(e) {
+		if (!this.state.settingsMenuOpen && !this.state.minWidthMenu) return;
+		const nav = this.navRef.current;
+		if (nav && nav.contains(e.target)) return;
+		if (e.target.closest && e.target.closest('[data-modal="true"]')) return;
+		this.closeMenu();
+	}
+
+	handleKeyDown(e) {
+		if (e.key === "Escape" && (this.state.settingsMenuOpen || this.state.minWidthMenu)) {
+			this.closeMenu();
+		}
 	}
 
 	updatePredicate() {
@@ -49,16 +69,16 @@ class NavBar extends Component {
 	}
 	render() {
 		if (this.props.location == "/") {
-			return (<nav className={`${NavBarStyle.NavBarHidden} ${FlexStyle.FlexRowEnd} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`} > <MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
+			return (<nav ref={this.navRef} className={`${NavBarStyle.NavBarHidden} ${FlexStyle.FlexRowEnd} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`} > <MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
 				{this.state.settingsMenuOpen && <NavBarSubMenu zindex={true} trapezoid={true} root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} ><SettingMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} />
 				</NavBarSubMenu>}
 				</nav>)
 		}
 		if (!this.state.miniWidth) {
 			return (
-				<nav className={`${NavBarStyle.NavBar} ${NavBarStyle.NavBarSeparator} ${FlexStyle.FlexRowCenter} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`}>
+				<nav ref={this.navRef} className={`${NavBarStyle.NavBar} ${NavBarStyle.NavBarSeparator} ${FlexStyle.FlexRowCenter} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`}>
 			<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
-			{this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to}>{Locale.GetMessages(button.local)}</NavBarButton>) })}
+			{this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={button.to} to={button.to}>{Locale.GetMessages(button.local)}</NavBarButton>) })}
 					<MenuButton onClick={this.toggleSettingMenu} src={this.props.settingButton.src} alt={Locale.GetMessages(this.props.settingButton.local)} />
 					{this.state.settingsMenuOpen && <NavBarSubMenu zindex={true} trapezoid={true} root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} ><SettingMenu root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} /></NavBarSubMenu>
 			}
@@ -66,12 +86,12 @@ class NavBar extends Component {
 			);
 	} else {
 	return (
-		<nav className={`${NavBarStyle.NavBar} ${NavBarStyle.NavBarSeparator} ${FlexStyle.FlexRowCenter} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`}>
+		<nav ref={this.navRef} className={`${NavBarStyle.NavBar} ${NavBarStyle.NavBarSeparator} ${FlexStyle.FlexRowCenter} ${StyleSheet.getAnimationBool() ? AnimStyle.FadeAnim2Sec : ""}`}>
 			<MenuButton to={this.props.homeButton.to} src={this.props.homeButton.src} alt={Locale.GetMessages(this.props.homeButton.local)} />
 			<div className={`${NavBarStyle.MiniButton} ${NavBarStyle.MiniMenu} ${FlexStyle.FlexColumnCenterTop}`}>
 				<MiniButton onClick={this.toggleMiniMenu} src={openButton} alt={Locale.GetMessages(this.props.settingButton.local)} />
 				{this.state.minWidthMenu && <NavBarSubMenu zindex={false} root={this.props.root} refreshApp={this.props.refreshApp} languageChange={this.props.languageChange} >{
-					this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={KeyGenerator.getNextKey()} to={button.to} onClick={this.closeMenu}>{Locale.GetMessages(button.local)}</NavBarButton>) })
+					this.props.navButtons.map((button) => { return (<NavBarButton location={this.props.location} key={button.to} to={button.to} onClick={this.closeMenu}>{Locale.GetMessages(button.local)}</NavBarButton>) })
 				}</NavBarSubMenu>
 				}
 			</div>

@@ -7,6 +7,7 @@
 	border-top: 1px solid var(--Navbar_Color);
 	border-bottom: 5px solid var(--Navbar_Color);
 }
+
 .LeftSpan {
 	position: absolute;
 	left: -50%;
@@ -15,7 +16,7 @@
 	border-right: 7px solid var(--Navbar_Color);
 	border-left: 7px solid transparent;
 	border-top: 7px solid transparent;
-	border-bottom: 15px solid var(--Navbar_Color)
+	border-bottom: 15px solid var(--Navbar_Color);
 }
 
 .RightSpan {
@@ -24,22 +25,21 @@
 	border-left: 7px solid var(--Navbar_Color);
 	border-right: 7px solid transparent;
 	border-top: 7px solid transparent;
-	border-bottom: 15px solid var(--Navbar_Color)
+	border-bottom: 15px solid var(--Navbar_Color);
 }
 
 .Trapezoid {
-	position: absolute; 
+	position: absolute;
 	right: 20px;
-	top: 100%
+	top: 100%;
 }
 
 .SettingMenu {
 	width: auto;
 	height: fit-content;
 	min-height: 100px;
-	min-width: 200px;
+	min-width: 240px;
 	max-width: 1000px;
-	
 	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
@@ -48,15 +48,28 @@
 	position: absolute;
 	right: 0px;
 	top: 130%;
-	padding: 5px;
-
-	border-radius: 10px 7px 10px 10px;
+	padding: 12px;
+	gap: 4px;
+	border-radius: 12px;
 	background-color: var(--Navbar_Color);
-	border-bottom: 2px solid var(--Navbar_Button_Border_Color);
-	border-left: 2px solid var(--Navbar_Button_Border_Color);
-	border-right: 2px solid var(--Navbar_Button_Border_Color);
+	border: 1px solid var(--Navbar_Button_Border_Color);
+	box-shadow: 0 8px 30px var(--Shadow);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
 }
 
-.ColorPicker{
-	width:40%;
+.ColorPicker {
+	width: 40%;
+	height: 36px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.Pointer {
+	cursor: pointer;
+}
+
+.Default {
+	cursor: default;
 }

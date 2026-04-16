@@ -1,49 +1,79 @@
 @import "./ThemeVariables.module.scss";
+
 .NormalText {
-	font-size: 1.5rem;
-	font-family: var(--Parag_Font)
-}
-.ButtonText {
 	font-size: 1rem;
 	font-family: var(--Parag_Font);
-	color: var(--Button_Text_Color);
+	font-weight: 400;
+	line-height: 1.7;
+	color: var(--Text_Color);
+	letter-spacing: -0.01em;
 }
+
+.ButtonText {
+	font-size: 0.875rem;
+	font-family: var(--Parag_Font);
+	font-weight: 500;
+	color: var(--Button_Text_Color);
+	letter-spacing: 0.02em;
+}
+
 .ParagText {
 	text-align: justify;
 	text-justify: inter-word;
 }
 
 .TitleText {
-	font-size: 2.5rem;
-	font-family: var(--Title_Font)
+	font-size: 2rem;
+	font-family: var(--Title_Font);
+	font-weight: 700;
+	color: var(--Text_Color);
+	letter-spacing: -0.025em;
 }
 
 .SubTitleText {
-	font-size: 2rem;
-	font-family: var(--Title_Font)
+	font-size: 1.5rem;
+	font-family: var(--Title_Font);
+	font-weight: 600;
+	color: var(--Text_Color);
+	letter-spacing: -0.02em;
 }
 
 .BiggestText {
-	font-size: 4rem;
-	font-family: var(--Title_Font)
+	font-size: 3.5rem;
+	font-family: var(--Title_Font);
+	font-weight: 700;
+	letter-spacing: -0.03em;
 }
 
 .BigText {
-	font-size: 3rem;
-	font-family: var(--Title_Font)
+	font-size: 2.5rem;
+	font-family: var(--Title_Font);
+	font-weight: 600;
+	letter-spacing: -0.025em;
 }
 
 .SmallText {
-	font-size: 0.5rem;
-	font-family: var(--Parag_Font)
-}
-.HiddenLink{
-	text-decoration:none;
+	font-size: 0.75rem;
+	font-family: var(--Parag_Font);
+	font-weight: 400;
+	color: var(--Text_Color);
 }
 
-.NoWrap{
-	flex-wrap:nowrap;
+.HiddenLink {
+	text-decoration: none;
+	color: var(--Text_Color);
+	transition: color 0.2s ease;
+
+	&:hover {
+		color: var(--Button_Color);
+	}
 }
-.Centered{
-	text-align:center;
+
+.NoWrap {
+	flex-wrap: nowrap;
+	white-space: nowrap;
+}
+
+.Centered {
+	text-align: center;
 }

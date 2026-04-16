@@ -1,36 +1,36 @@
-
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-
 @import "../../../scss/ThemeVariables.module.scss";
 
-
 .Stamp {
-	width: 200px;
-	height: 200px;
+	width: 180px;
+	height: 180px;
 	padding: 10px;
-	border: 1px solid black;
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	background-size: cover;
 	background-clip: content-box;
-
 	box-sizing: border-box;
 	position: relative;
 	margin: auto;
-	font: 400 2em/180px 'Baskerville', serif;
+	font: 600 1.8em/160px 'Sora', sans-serif;
 	color: #fbfbfb;
 	text-indent: 20px;
+	border-radius: 4px;
 }
-	.Stamp p {
-		text-align:center;
-	}
+
+.Stamp p {
+	text-align: center;
+	letter-spacing: 0.05em;
+}
+
 .Stamp:after {
 	content: "";
 	display: block;
 	position: absolute;
-	border: 50px solid transparent;
-	border-bottom: 50px solid var(--Card_Background);
-	bottom: -60px;
-	right: -65px;
-	box-shadow: 0px 7px 6px -9px black;
+	border: 45px solid transparent;
+	border-bottom: 45px solid var(--Card_Background);
+	bottom: -55px;
+	right: -58px;
+	box-shadow: 0px 5px 5px -7px rgba(0, 0, 0, 0.2);
 	transform: rotate(135deg);
 }
 
@@ -38,34 +38,33 @@
 	content: "";
 	display: block;
 	position: absolute;
-	border: 50px solid transparent;
-	border-top: 50px solid var(--Card_Background);
-	top: -60px;
-	left: -65px;
-	box-shadow: 0px -7px 6px -9px black;
+	border: 45px solid transparent;
+	border-top: 45px solid var(--Card_Background);
+	top: -55px;
+	left: -58px;
+	box-shadow: 0px -5px 5px -7px rgba(0, 0, 0, 0.2);
 	transform: rotate(135deg);
 }
+
 .StampContainer {
-	--color: green;
-	--border-color: blue;
-	transform: rotateZ(var(--base-stamp-rot));
 	position: fixed;
 	right: 5%;
 	top: 2%;
-	z-index: 2
+	z-index: 2;
 }
 
 .NewOut {
-	background-color: var(--New_Stamp_BorderColor)
+	background-color: var(--New_Stamp_BorderColor);
 }
-.NewIn{
-	background-color: var(--New_Stamp)
-	
+
+.NewIn {
+	background-color: var(--New_Stamp);
 }
+
 .CoolOut {
-	background-color: var(--Cool_Stamp_BorderColor)
+	background-color: var(--Cool_Stamp_BorderColor);
 }
 
 .CoolIn {
-	background-color: var(--Cool_Stamp)
+	background-color: var(--Cool_Stamp);
 }

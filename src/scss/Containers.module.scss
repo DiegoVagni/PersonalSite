@@ -1,17 +1,17 @@
 @import "./ThemeVariables.module.scss";
 
 .CompetenceContainer {
-	padding: 5px;
+	padding: 6px;
 	justify-items: flex-start;
 	flex-direction: row;
 	display: flex;
-	align-items: center
+	align-items: center;
 }
 
 .CVPageContainer {
 	width: 90%;
 	height: 90%;
-	padding:10px;
+	padding: 16px;
 }
 
 .ContactContainer {
@@ -20,7 +20,8 @@
 	flex-direction: row;
 	justify-content: space-around;
 	height: 90%;
-	width: 100%
+	width: 100%;
+	gap: 16px;
 }
 
 .CVSectionContainer {
@@ -29,21 +30,25 @@
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: row;
-	flex-flow: row wrap
+	flex-flow: row wrap;
+	gap: 4px;
 }
 
 .TechContainer {
-	margin: 5px;
-	background-color: var( --Card_Background);
+	margin: 8px;
+	padding: 8px 12px;
+	background-color: var(--Card_Background);
+	border-radius: 10px;
 }
 
-.SettingContainer{
-	height:fit-content;
-	width:40%;
+.SettingContainer {
+	height: fit-content;
+	width: 40%;
 }
 
 .ButtonContainer {
-height:fit-content;
-justify-content:space-evenly;
-margin-top:10px;
+	height: fit-content;
+	justify-content: space-evenly;
+	margin-top: 12px;
+	gap: 8px;
 }

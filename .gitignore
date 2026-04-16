@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 .firebase/
 .vs/
+mcp-test-server/node_modules/
+mcp-test-server/*.png
+.claude/

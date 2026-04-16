@@ -1,46 +1,70 @@
 .FadeAnim2Sec {
-	animation:fade 2s ease-in
-}
-.RightAnim2Sec {
-	animation: fadeInRight 2s linear
+	animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-@keyframes fadeInRight {
+.RightAnim2Sec {
+	animation: slideInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.Fade2Sec {
+	animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeUp {
 	0% {
-		transform: translate(300%,0px) ;
-		opacity:0
+		opacity: 0;
+		transform: translateY(20px);
 	}
-	10% {
-		transform: translate(300%,0px) ;
-		opacity:1
-	}
-	30%{
-		transform:translate(0px,0px)
-	}
-	50%{
-		transform:translate(50px,0px)
-	}
-	100%{
-		transform: translate(0px,0px)
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
+
+@keyframes slideInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(60px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 @keyframes fade {
 	0% {
-		opacity:0
+		opacity: 0;
 	}
-
 	100% {
-		opacity:1
+		opacity: 1;
 	}
 }
+
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
-		transform: scale(0.6);
+		transform: scale(0.95);
 	}
-
 	100% {
 		opacity: 1;
 		transform: scale(1);
+	}
+}
+
+@keyframes FadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(300%);
+	}
+	30% {
+		transform: translateX(0px);
+	}
+	50% {
+		transform: translateX(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
 	}
 }

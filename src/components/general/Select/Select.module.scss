@@ -1,12 +1,26 @@
 @import "../../../scss/ThemeVariables.module.scss";
+
 .Option {
-	font-size: 1rem;
+	font-size: 0.875rem;
 	font-family: var(--Parag_Font);
-	background-color: var(--Select_BackgroundColor)
+	background-color: var(--Select_BackgroundColor);
 }
 
 .Select {
 	width: auto;
 	height: auto;
-	background-color: var(--Select_BackgroundColor)
+	padding: 6px 12px;
+	border: 1px solid var(--Navbar_Button_Border_Color);
+	border-radius: 8px;
+	background-color: var(--Select_BackgroundColor);
+	color: var(--Text_Color);
+	font-family: var(--Parag_Font);
+	font-size: 0.875rem;
+	cursor: pointer;
+	outline: none;
+	transition: border-color 0.2s ease;
+
+	&:focus {
+		border-color: var(--Button_Color);
+	}
 }

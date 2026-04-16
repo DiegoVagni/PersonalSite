@@ -1,9 +1,9 @@
 
 
 class StyleSheet {
-	static font = "old london, sans-serif";
-	static titleFont = "old london, sans-serif";
-	static navBarFont = "old london, sans-serif";
+	static font = "'Inter', sans-serif";
+	static titleFont = "'Sora', sans-serif";
+	static navBarFont = "'Sora', sans-serif";
 
 	static themes = [{ name: "Light", value: "Light.json" }, { name: "Dark", value: "Dark.json" }]
 	static currentIndex = 0;
@@ -30,7 +30,7 @@ class StyleSheet {
 	static changeStyle(key, value) {
 	
 		StyleSheet.styles.set(key, value);
-		window.root?.style.setProperty(
+		document.documentElement.style.setProperty(
 			key,
 			value
 		);
@@ -39,7 +39,7 @@ class StyleSheet {
 		StyleSheet.styles = new Map(JSON.parse(localStorage["style"]))
 		StyleSheet.styles.forEach((value, key) => {
 		
-			window.root?.style.setProperty(
+			document.documentElement.style.setProperty(
 				key,
 				value
 			);
@@ -62,7 +62,7 @@ class StyleSheet {
 		}).then((data) => { return data.json() }).then((json) => { StyleSheet.styles = new Map(Object.entries(json)) }).then(() => localStorage.setItem("style", JSON.stringify(Array.from(StyleSheet.styles.entries())))).then(() => {
 			StyleSheet.styles.forEach((value, key) => {
 
-				window.root?.style.setProperty(
+				document.documentElement.style.setProperty(
 					key,
 					value
 				);

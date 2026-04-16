@@ -60,7 +60,7 @@ class App extends Component {
 
 	ChangeLanguage(e) {
 
-		let localCode = e.target == undefined ? e : e.target.value;
+		let localCode = e.target === undefined ? e : e.target.value;
 
 		Locale.ChangeLocale(localCode, this.RefreshApplication);
 

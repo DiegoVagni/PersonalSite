@@ -1,59 +1,67 @@
 @import "../../../scss/ThemeVariables.module.scss";
+
 .ActiveMouse {
-	cursor:pointer;
+	cursor: pointer;
 }
-.NormalMouse{
-	cursor:default;
+
+.NormalMouse {
+	cursor: default;
 }
+
 .NavBar {
 	z-index: 10;
 	top: 0px;
 	width: 100%;
-	background-color: var( --Navbar_Color);
+	background-color: var(--Navbar_Color);
 	position: fixed;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-bottom: 1px solid var(--Navbar_Button_Border_Color);
 }
+
 .NavBarHidden {
 	z-index: 10;
 	top: 0px;
 	width: 100%;
-	background-color: var( --Page_Background);
+	background-color: transparent;
 	position: fixed;
 }
+
 .NavBarInactiveButton {
-	background-color: var(--Navbar_Color);
+	background-color: transparent;
 	color: var(--Navbar_Text_Color);
-	box-shadow: 0px 7px 10px -7px var(--Shadow);
 }
+
 .NavBarActiveButton {
-	background-color: var( --Navbar_Active_Button_Color);
+	background-color: var(--Navbar_Active_Button_Color);
 	color: var(--Navbar_ActiveText_Button_Color);
 }
+
 .NavBarButton {
-
-	&:hover {
-		background-color: var( --Navbar_Hover_Button_Color);
-		color: var(--Navbar_Hover_Text_Button_Color);
-	}
-
 	max-height: 64px;
 	height: 64px;
 	text-decoration: none;
 	width: 100%;
 	border-left: 1px solid var(--Navbar_Button_Border_Color);
 	border-right: 1px solid var(--Navbar_Button_Border_Color);
+	transition: background-color 0.2s ease, color 0.2s ease;
+
+	&:hover {
+		background-color: var(--Navbar_Hover_Button_Color);
+		color: var(--Navbar_Hover_Text_Button_Color);
+	}
 }
 
 .NavBarSubMenu {
-	width:100%;
+	width: 100%;
 	min-height: 64px;
-
-	position:fixed;
+	position: fixed;
 }
 
 .ZIndex {
-
-	z-index:-15;
+	z-index: -15;
 }
+
 .SettingContainer {
 	display: flex;
 	flex-direction: row;
@@ -61,51 +69,53 @@
 	align-items: center;
 	align-content: flex-start;
 	width: 100%;
-	max-height: 50px
+	max-height: 50px;
 }
 
 .ColorPicker {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center
+	align-items: center;
 }
 
-
 .NavBarText {
-	font-size: 1.5rem;
-	font-family: --NavBar_Font;
-	text-align:center;
+	font-size: 0.95rem;
+	font-family: var(--NavBar_Font);
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
 }
 
 .MenuButton {
+	min-width: 64px;
+	min-height: 64px;
+	transition: background-color 0.2s ease;
+
 	&:hover {
 		background-color: var(--Navbar_Hover_Button_Color);
 		cursor: pointer;
 	}
-
-	min-width: 64px;
-	min-height: 64px;
-	box-shadow: 0px 7px 10px -7px var(--Shadow)
 }
 
 .MiniButton {
+	min-width: 64px;
+	min-height: 64px;
+	transition: background-color 0.2s ease;
+
 	&:hover {
 		background-color: var(--Navbar_Hover_Button_Color);
 		cursor: pointer;
 	}
-
-	min-width: 64px;
-	min-height: 64px;
-	box-shadow: 0px 7px 10px -7px var(--Shadow)
 }
+
 .MiniMenu {
 	width: 100%;
-	height:100%;
+	height: 100%;
 }
+
 .NavBarSeparator {
 	max-height: 64px;
 	min-height: 64px;
-	
-	
 }

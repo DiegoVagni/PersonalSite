@@ -1,6 +1,5 @@
 import InvariantLabels from "../resources/invariant_labels.json"
 import React from "react"
-import KeyGenerator from "../utils/KeyGenerator"
 class Locale {
 	static defaultLocale = localStorage["locale"] ? localStorage["locale"] : "en";
 	static invariantMap = null;
@@ -27,7 +26,7 @@ class Locale {
 	static ParseMessage(message){
 		if(message.includes("\n")){
 	return message.split("\n").map((line, index) => (
-        <React.Fragment key={KeyGenerator.getNextKey()}>
+        <React.Fragment key={index}>
           {line}
           <br />
         </React.Fragment>

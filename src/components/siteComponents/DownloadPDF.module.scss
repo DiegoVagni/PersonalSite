@@ -7,4 +7,12 @@
 
 .DownloadLink {
 	text-decoration: none;
+	color: var(--Button_Color);
+	font-weight: 500;
+	padding: 6px 0;
+	transition: opacity 0.2s ease;
+
+	&:hover {
+		opacity: 0.7;
+	}
 }

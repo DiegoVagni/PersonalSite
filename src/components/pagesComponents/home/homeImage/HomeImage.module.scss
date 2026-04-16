@@ -1,8 +1,16 @@
-
 @import "../../../../scss/ThemeVariables.module.scss";
+
 .HomeImage {
-	border: 5px solid var(--Home_Links_Color)
+	border: 4px solid var(--Home_Links_Color);
+	box-shadow: 0 8px 40px var(--Shadow);
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+	&:hover {
+		transform: scale(1.02);
+		box-shadow: 0 12px 48px var(--Shadow);
+	}
 }
+
 .HomeContainer {
 	min-width: 900px;
 	min-height: 900px;
@@ -12,27 +20,36 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 }
 
 .HomeImageRounded {
 	border-radius: 50%;
 	margin-top: 5%;
 }
+
 .ImageVert {
 	width: 50%;
 	height: auto;
 }
+
 .ImageHor {
 	height: 50%;
 	width: auto;
 }
+
 .DashlessHomeLink {
 	text-decoration: none;
 	font-family: var(--Link_Font);
+	font-weight: 600;
 	color: var(--Home_Links_Color);
 	margin: 0px;
-	padding: 0px
+	padding: 8px 0;
+	transition: color 0.2s ease, transform 0.2s ease;
+
+	&:hover {
+		color: var(--Button_Color);
+		transform: translateX(4px);
+	}
 }
 
 .HomeLinkDash {
@@ -41,27 +58,38 @@
 	position: absolute;
 	border: 2px solid var(--Home_Links_Color);
 	background-color: var(--Home_Links_Color);
+	transition: width 0.3s ease;
 }
 
 .TopBorder {
-	border-top: 4px solid var(--Home_Links_Color);
+	border-top: 3px solid var(--Home_Links_Color);
 }
+
 .BottomBorder {
-	border-bottom: 4px solid var(--Home_Links_Color);
+	border-bottom: 3px solid var(--Home_Links_Color);
 }
-.Link{
-	text-decoration:none;
+
+.Link {
+	text-decoration: none;
 }
+
 .HomeLink {
 	text-decoration: none;
 	color: var(--Home_Links_Color);
-	font-size: 2.5rem;
+	font-size: 2rem;
+	font-weight: 600;
 	white-space: nowrap;
 	position: absolute;
 	font-family: var(--Link_Font);
 	margin: 0px;
 	padding: 0px;
+	transition: color 0.2s ease;
+
+	&:hover {
+		color: var(--Button_Color);
+	}
 }
+
 .HomeLinkContainer {
 	width: 150px;
 	height: 100px;
@@ -70,9 +98,9 @@
 	position: absolute;
 }
 
-.TopLeft{
-	top:150px;
-	left:90px;
+.TopLeft {
+	top: 150px;
+	left: 90px;
 }
 
 .TopRight {
@@ -89,10 +117,11 @@
 	bottom: 50px;
 	left: 670px;
 }
+
 .TopLeftDash {
-	top:75%;
+	top: 75%;
 	left: 75%;
-	transform:rotateZ(45deg)
+	transform: rotateZ(45deg);
 }
 
 .TopRightDash {
@@ -104,7 +133,7 @@
 .BottomLeftDash {
 	top: -45%;
 	left: 90%;
-	transform: rotateZ(-45deg)
+	transform: rotateZ(-45deg);
 }
 
 .BottomRightDash {

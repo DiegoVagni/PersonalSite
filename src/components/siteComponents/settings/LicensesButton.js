@@ -40,7 +40,7 @@ class LicensesButton extends Component {
 		return (
 			<div>
 				<p className={`${TextsStyle.NormalText} ${cursorstyle}`} onMouseEnter={this.activeMouse} onMouseLeave={this.deactiveMouse} onClick={this.showModal}>{Locale.GetMessages("Licenses")}</p>
-				<Modal root={this.props.root } show={this.state.show} handleClose={this.hideModal} handleApply={this.Apply}>
+				<Modal root={this.props.root} show={this.state.show} handleClose={this.hideModal}>
 					<div>
 						<p className={TextsStyle.NormalText}>{Locale.GetMessages("Stamp")} {Locale.GetMessages("Inspired")}: <a href={"https://codepen.io/slimsmearlapp/pen/DqVqPy"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("This_CodePen")}</a></p>
 						<p className={TextsStyle.NormalText}>{Locale.GetMessages("Home_Cube")} {Locale.GetMessages("Inspired")}: <a href={"https://codepen.io/t_afif/pen/PoJeqwN"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("This_CodePen")}</a></p>

@@ -12,7 +12,7 @@ class NavBarButton extends Component {
 			
 			<Link
 				onClick={this.props.onClick}
-				className={`${NavBarStyle.NavBarButton} ${FlexStyle.FlexRowCenter} ${this.props.location == this.props.to ? NavBarStyle.NavBarActiveButton : NavBarStyle.NavBarInactiveButton}`}
+				className={`${NavBarStyle.NavBarButton} ${FlexStyle.FlexRowCenter} ${this.props.location === this.props.to ? NavBarStyle.NavBarActiveButton : NavBarStyle.NavBarInactiveButton}`}
 				to={this.props.to}>
 				<p className={`${NavBarStyle.NavBarText}`}>
 					{this.props.children}</p>

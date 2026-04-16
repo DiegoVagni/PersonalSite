@@ -1,39 +1,39 @@
 {
-	"--Navbar_Color": "#87E0E0",
-	"--Navbar_Active_Button_Color": "#BAEDE6",
-	"--Navbar_Hover_Button_Color": "#DBF9F9",
-	"--Navbar_Button_Border_Color": "#BAEDE6",
+	"--Navbar_Color": "#ffffff",
+	"--Navbar_Active_Button_Color": "#f0f4ff",
+	"--Navbar_Hover_Button_Color": "#e8eeff",
+	"--Navbar_Button_Border_Color": "#e2e8f0",
 
-	"--Navbar_Text_Color": "#000000",
-	"--Navbar_ActiveText_Button_Color": "#000000",
-	"--Navbar_Hover_Text_Button_Color": "#000000",
-	"--Button_Text_Color": "#000000",
+	"--Navbar_Text_Color": "#334155",
+	"--Navbar_ActiveText_Button_Color": "#3b82f6",
+	"--Navbar_Hover_Text_Button_Color": "#2563eb",
+	"--Button_Text_Color": "#ffffff",
 
-	"--Setting_Button_Border_Color": "#9394a5",
+	"--Setting_Button_Border_Color": "#cbd5e1",
 
-	"--Modal_Color": "#A0E7E5",
-	"--Modal_Border": "#87E0E0",
+	"--Modal_Color": "#ffffff",
+	"--Modal_Border": "#e2e8f0",
 
-	"--Home_Links_Color": "#9394a5",
+	"--Home_Links_Color": "#475569",
+	"--Home_Background": "#f8fafc",
 
-	"--Shadow": "#484b6a",
-	"--Text_Color": "#484b6a",
+	"--Shadow": "rgba(15, 23, 42, 0.08)",
+	"--Text_Color": "#1e293b",
 
-	"--Page_Background": "#BAEDE6",
-	"--Card_Background": "#CEF2EE",
+	"--Page_Background": "#f1f5f9",
+	"--Card_Background": "#ffffff",
 
-	"--Button_Color": "#94BDCF",
+	"--Button_Color": "#3b82f6",
 
-	"--Cool_Stamp": "#1800F2",
-	"--New_Stamp": "#F10000",
-	"--Cool_Stamp_BorderColor": "#FFFFFF",
-	"--New_Stamp_BorderColor": "#FFFFFF",
+	"--Cool_Stamp": "#6366f1",
+	"--New_Stamp": "#ef4444",
+	"--Cool_Stamp_BorderColor": "#e0e7ff",
+	"--New_Stamp_BorderColor": "#fee2e2",
 
-	"--WelcomeAnimColor1": "#FFFFFF",
-	"--WelcomeAnimColor2": "#F10000",
-	"--WelcomeAnimColor3": "#C2BD18",
-	"--WelcomeAnimColor4": "#F8F7D2",
+	"--WelcomeAnimColor1": "#3b82f6",
+	"--WelcomeAnimColor2": "#8b5cf6",
+	"--WelcomeAnimColor3": "#06b6d4",
+	"--WelcomeAnimColor4": "#f1f5f9",
 
-	"--Select_BackgroundColor": "#FFFFFF"
-
+	"--Select_BackgroundColor": "#f8fafc"
 }

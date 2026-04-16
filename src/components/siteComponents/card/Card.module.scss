@@ -1,9 +1,10 @@
 @import "../../../scss/ThemeVariables.module.scss";
+
 .CardContainer {
-	justify-content: flex-Start;
+	justify-content: flex-start;
 	height: fit-content;
-	padding: 10px;
-	width:100%;
+	padding: 16px 20px;
+	width: 100%;
 }
 
 .CardPage {
@@ -15,28 +16,35 @@
 	min-height: 98%;
 	min-width: 98%;
 	height: fit-content;
-	background-color: var(--Card_Background)
+	background-color: var(--Card_Background);
 }
 
 .CardOuter {
-	border-radius: 10px;
-	margin: 10px;
+	border-radius: 16px;
+	margin: 16px;
 	width: 90%;
 	min-height: 95%;
 	overflow-x: hidden;
 	overflow-y: auto;
-	box-shadow: var(--Shadow) 0px 4px 12px;
-	border: 1px solid var( --Modal_Border);
-	background-color: var( --Card_Background);
+	box-shadow: 0 1px 3px var(--Shadow), 0 4px 20px var(--Shadow);
+	border: 1px solid var(--Modal_Border);
+	background-color: var(--Card_Background);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 30px var(--Shadow);
+	}
 }
 
 .CardTitleContainer {
-	background-color: var( --Card_Background);
+	background-color: var(--Card_Background);
+	padding: 8px 0;
 }
 
-.MP{
-	margin-left:10px;
-	margin-right:10px;
-	padding-left:10px;
-	padding-right:10px;
+.MP {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
