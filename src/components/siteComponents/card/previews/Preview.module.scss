@@ -1,19 +1,41 @@
 @import "../../../../scss/ThemeVariables.module.scss";
 
+.Preview {
+	width: 80%;
+	max-width: 900px;
+	aspect-ratio: 16 / 9;
+	border-radius: 12px;
+	margin: 8px auto;
+	overflow: hidden;
+	background-color: var(--Card_Background);
+	border: 1px solid var(--Modal_Border);
+	box-shadow: 0 4px 16px var(--Shadow);
+
+	img,
+	iframe {
+		width: 100%;
+		height: 100%;
+		display: block;
+		border: 0;
+	}
+
+	img {
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
 .PreviewBorders {
 	border-radius: 12px;
 }
 
 .FramePreview {
-	min-width: 80%;
-	min-height: 400px;
+	width: 100%;
+	height: 100%;
 }
 
-.Preview {
-	width: 80%;
-	height: auto;
-	min-height: 80%;
-	border-radius: 12px;
-	margin: 8px;
-	overflow: hidden;
+@media (max-width: 600px) {
+	.Preview {
+		width: 94%;
+	}
 }
