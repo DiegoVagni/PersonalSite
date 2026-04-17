@@ -7,6 +7,7 @@ import PrivacyButton from "./PrivacyButton";
 import ThemeSheetSelector from "./ThemeSheetSelector";
 import SettingContainer from "./SettingContainer";
 import AnimationState from "./AnimationState"
+import BuddyToggle from "./BuddyToggle"
 
 import TextStyle from "../../../scss/Texts.module.scss"
 import Utils from "../../../scss/Utils.module.scss"
@@ -32,6 +33,10 @@ class SettingMenu extends Component {
 				<SettingContainer>
 					<p className={`${TextStyle.NormalText} ${TextStyle.NoWrap} ${Utils.RightMargin}`}>{Locale.GetMessages("Animations")}</p>
 					<AnimationState root={this.props.root} refreshApp={this.props.refreshApp} />
+				</SettingContainer>
+				<SettingContainer>
+					<p className={`${TextStyle.NormalText} ${TextStyle.NoWrap} ${Utils.RightMargin}`}>{Locale.GetMessages("Buddy_Setting")}</p>
+					<BuddyToggle />
 				</SettingContainer>
 				<SettingContainer>
 					<PrivacyButton root={this.props.root}/>

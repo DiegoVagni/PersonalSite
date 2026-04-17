@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Locale from "./utils/Locale";
 import { useLocation } from "react-router-dom";
 import PrivacyPolicyWrapper from "./components/siteComponents/privacy/PrivacyPolicyWrapper";
+import Buddy from "./components/siteComponents/buddy/Buddy";
 import DVNavBar from "./components/siteComponents/navBar/DVNavBar";
 import NavBarStyle from "./components/general/navBar/Navbar.module.scss";
 import styleSheet from "./utils/StyleSheet"
@@ -89,6 +90,7 @@ class App extends Component {
 							<Route path="/skills" element={<CV styleSheet={styleSheet} />} />
 						</Routes>}
 						<PrivacyPolicyWrapper/>
+						<Buddy/>
 					</Page>
 					</>
 					

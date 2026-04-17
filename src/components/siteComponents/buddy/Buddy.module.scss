@@ -1,0 +1,559 @@
+@import "../../../scss/ThemeVariables.module.scss";
+
+/* Fixed palette — light grey body with matrix-green accents */
+$body: #a0aab8;
+$body-dark: #6b7685;
+$body-light: #c9d0dc;
+$joint: #5e6b7a;
+$joint-dark: #3f4856;
+$outline: #1a2028;
+$screen-bg: #05110a;
+$screen-lit: #00ff6a;
+$accent: #22ff77;
+
+.Buddy {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	z-index: 50;
+	display: flex;
+	align-items: flex-end;
+	gap: 14px;
+	pointer-events: none;
+
+	> * {
+		pointer-events: auto;
+	}
+}
+
+.Leaving {
+	animation: hoverAway 1.8s cubic-bezier(0.5, 0, 0.7, 1) forwards;
+}
+
+@keyframes hoverAway {
+	0%   { transform: translate(0, 0) rotate(0); opacity: 1; }
+	18%  { transform: translate(-14px, -8px) rotate(-6deg); opacity: 1; }
+	100% { transform: translate(115vw, -60px) rotate(16deg); opacity: 0; }
+}
+
+/* ── Robot container ───────────────────────────────────────── */
+
+.Robot {
+	position: relative;
+	width: 110px;
+	height: 230px;
+	background: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	animation: bob 4s ease-in-out infinite;
+	flex-shrink: 0;
+
+	&:hover { animation-duration: 2s; }
+	&[disabled] { cursor: default; }
+
+	* { box-sizing: border-box; }
+}
+
+@keyframes bob {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-4px); }
+}
+
+/* ── Antenna ───────────────────────────────────────────────── */
+
+.Antenna {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 24px;
+	height: 18px;
+	transform: translateX(-50%);
+}
+
+.AntennaStalk {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 3px;
+	height: 10px;
+	background: $outline;
+	transform: translateX(-50%);
+	border-radius: 2px;
+}
+
+.AntennaBall {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 30% 30%, #7dff99, $screen-lit 55%, #008f3e 100%);
+	border: 2px solid $outline;
+	transform: translateX(-50%);
+	box-shadow: 0 0 10px rgba(0, 255, 106, 0.8);
+	animation: antennaPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes antennaPulse {
+	0%, 72%, 100% { filter: brightness(1); }
+	85% { filter: brightness(1.4); }
+}
+
+.Spark {
+	position: absolute;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background: $screen-lit;
+	box-shadow: 0 0 4px $screen-lit;
+	animation: sparkFloat 2.2s ease-in-out infinite;
+}
+
+.Spark1 { top: 4px; right: -10px; }
+.Spark2 { top: -2px; right: -16px; animation-delay: 0.4s; }
+
+@keyframes sparkFloat {
+	0%, 100% { opacity: 0.3; transform: translateY(0); }
+	50% { opacity: 1; transform: translateY(-3px); }
+}
+
+/* ── Ear / headphone pieces ───────────────────────────────── */
+
+.Ear {
+	position: absolute;
+	top: 44px;
+	width: 14px;
+	height: 24px;
+	border-radius: 50% / 40%;
+	background: $joint;
+	border: 2px solid $outline;
+}
+
+.EarLeft  { left: -2px; }
+.EarRight { right: -2px; }
+
+.EarStub {
+	position: absolute;
+	top: 6px;
+	width: 8px;
+	height: 12px;
+	background: $body;
+	border: 2px solid $outline;
+	border-radius: 3px;
+
+	.EarLeft & { right: -6px; border-left: 0; border-radius: 0 3px 3px 0; }
+	.EarRight & { left: -6px; border-right: 0; border-radius: 3px 0 0 3px; }
+}
+
+/* ── Head ──────────────────────────────────────────────────── */
+
+.Head {
+	position: absolute;
+	left: 14px;
+	top: 18px;
+	width: 82px;
+	height: 68px;
+	background: linear-gradient(135deg, $body-light 0%, $body 45%, $body-dark 100%);
+	border: 2.5px solid $outline;
+	border-radius: 18px;
+	overflow: hidden;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.Brow {
+	position: absolute;
+	top: 10px;
+	left: 14px;
+	right: 14px;
+	height: 8px;
+	background: $body-light;
+	border-radius: 50% / 80%;
+	opacity: 0.85;
+}
+
+.Face {
+	position: absolute;
+	top: 22px;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.Eye {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #ffffff;
+	border: 2.5px solid $outline;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: eyeBlink 4.5s ease-in-out infinite;
+	transform-origin: center;
+}
+
+.Pupil {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: $outline;
+	transform: translateX(-1px);
+}
+
+@keyframes eyeBlink {
+	0%, 92%, 100% { transform: scaleY(1); }
+	95% { transform: scaleY(0.1); }
+}
+
+.Mouth {
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	width: 24px;
+	height: 10px;
+	border: 2.5px solid $outline;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-radius: 0 0 50% 50% / 0 0 100% 100%;
+	transform: translateX(-50%);
+}
+
+/* ── Neck ──────────────────────────────────────────────────── */
+
+.Neck {
+	position: absolute;
+	left: 47px;
+	top: 86px;
+	width: 16px;
+	height: 4px;
+	background: $joint-dark;
+	border-radius: 2px;
+}
+
+/* ── Body ──────────────────────────────────────────────────── */
+
+.Body {
+	position: absolute;
+	left: 10px;
+	top: 90px;
+	width: 90px;
+	height: 64px;
+	background: linear-gradient(135deg, $body-light 0%, $body 55%, $body-dark 100%);
+	border: 2.5px solid $outline;
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.BodyShade {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to right, transparent 55%, rgba(0, 0, 0, 0.12) 100%);
+	pointer-events: none;
+}
+
+.Screen {
+	position: absolute;
+	top: 6px;
+	left: 12px;
+	right: 12px;
+	height: 18px;
+	background: linear-gradient(to bottom, $screen-bg 0%, #334a58 100%);
+	border: 2px solid $outline;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 0 5px;
+}
+
+.ScreenDot {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background: $accent;
+	box-shadow: 0 0 4px $accent;
+	animation: dotBlink 2s ease-in-out infinite;
+
+	&:nth-child(2) { animation-delay: 0.6s; background: $screen-lit; box-shadow: 0 0 4px $screen-lit; }
+}
+
+@keyframes dotBlink {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.35; }
+}
+
+.Grill {
+	position: absolute;
+	bottom: 6px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 44px;
+	height: 8px;
+	background: $body-dark;
+	border: 2px solid $outline;
+	border-radius: 3px;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 4px;
+		right: 4px;
+		height: 2px;
+		background: $outline;
+		opacity: 0.45;
+		transform: translateY(-50%);
+		border-radius: 1px;
+	}
+}
+
+/* ── Arms ──────────────────────────────────────────────────── */
+
+.Arm {
+	position: absolute;
+	top: 102px;
+	width: 18px;
+	height: 90px;
+}
+
+.ArmLeft  { left: -6px; }
+.ArmRight { right: -6px; }
+
+.Shoulder {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: $joint;
+	border: 2px solid $outline;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.UpperArm {
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	width: 10px;
+	height: 32px;
+	background: linear-gradient(to bottom, $body 0%, $body-dark 100%);
+	border: 2px solid $outline;
+	border-radius: 6px;
+	transform: translateX(-50%);
+}
+
+.Elbow {
+	position: absolute;
+	top: 36px;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: $joint;
+	border: 2px solid $outline;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.Forearm {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	width: 10px;
+	height: 28px;
+	background: linear-gradient(to bottom, $body 0%, $body-dark 100%);
+	border: 2px solid $outline;
+	border-radius: 6px;
+	transform: translateX(-50%);
+}
+
+.Hand {
+	position: absolute;
+	top: 74px;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	background: $joint;
+	border: 2px solid $outline;
+	border-radius: 50% 50% 40% 60%;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+/* ── Legs ──────────────────────────────────────────────────── */
+
+.Leg {
+	position: absolute;
+	bottom: 0;
+	width: 24px;
+	height: 76px;
+}
+
+.LegLeft  { left: 22px; }
+.LegRight { right: 22px; }
+
+.Hip {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: $joint;
+	border: 2px solid $outline;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.Thigh {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 10px;
+	height: 26px;
+	background: linear-gradient(to bottom, $body 0%, $body-dark 100%);
+	border: 2px solid $outline;
+	border-radius: 5px;
+	transform: translateX(-50%);
+}
+
+.Knee {
+	position: absolute;
+	top: 32px;
+	left: 50%;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: $joint;
+	border: 2px solid $outline;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+.Shin {
+	position: absolute;
+	top: 46px;
+	left: 50%;
+	width: 10px;
+	height: 20px;
+	background: linear-gradient(to bottom, $body 0%, $body-dark 100%);
+	border: 2px solid $outline;
+	border-radius: 5px;
+	transform: translateX(-50%);
+}
+
+.Foot {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 24px;
+	height: 14px;
+	background: $joint;
+	border: 2px solid $outline;
+	border-radius: 55% 55% 6px 6px / 70% 70% 6px 6px;
+	transform: translateX(-50%);
+	z-index: 2;
+}
+
+/* ── Hover shadow ──────────────────────────────────────────── */
+
+.HoverShadow {
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	width: 80px;
+	height: 8px;
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.28) 0%, transparent 70%);
+	border-radius: 50%;
+	transform: translateX(-50%);
+	animation: shadowBob 4s ease-in-out infinite;
+	z-index: 0;
+}
+
+@keyframes shadowBob {
+	0%, 100% { width: 80px; opacity: 0.5; }
+	50% { width: 68px; opacity: 0.35; }
+}
+
+/* ── Speech bubble ─────────────────────────────────────────── */
+
+.Bubble {
+	position: relative;
+	min-width: 200px;
+	max-width: 300px;
+	min-height: 44px;
+	padding: 12px 36px 12px 16px;
+	background: var(--Card_Background);
+	border: 2px solid var(--Text_Color);
+	border-radius: 16px;
+	box-shadow: 0 4px 18px var(--Shadow);
+	animation: pop 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+	margin-bottom: 140px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: -9px;
+		top: 50%;
+		width: 14px;
+		height: 14px;
+		background: var(--Card_Background);
+		border-left: 2px solid var(--Text_Color);
+		border-bottom: 2px solid var(--Text_Color);
+		transform: translateY(-50%) rotate(45deg);
+	}
+}
+
+@keyframes pop {
+	from { opacity: 0; transform: translateX(-6px) scale(0.95); }
+	to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+.BubbleText {
+	margin: 0;
+	font-size: 0.85rem;
+	line-height: 1.4;
+	color: var(--Text_Color);
+	font-family: var(--Parag_Font);
+}
+
+.Close {
+	position: absolute;
+	top: 4px;
+	right: 6px;
+	width: 22px;
+	height: 22px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	color: var(--Text_Color);
+	font-size: 1.2rem;
+	line-height: 1;
+	cursor: pointer;
+	opacity: 0.55;
+	border-radius: 50%;
+	transition: opacity 0.15s ease, background 0.15s ease;
+
+	&:hover { opacity: 1; background: var(--Modal_Border); }
+	&:focus-visible { outline: 2px solid var(--Button_Color); outline-offset: 2px; }
+}
+
+/* ── Mobile ────────────────────────────────────────────────── */
+
+@media (max-width: 500px) {
+	.Buddy {
+		left: 8px;
+		bottom: 8px;
+		gap: 10px;
+		transform: scale(0.72);
+		transform-origin: bottom left;
+	}
+}
