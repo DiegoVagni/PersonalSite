@@ -185,14 +185,14 @@ const Buddy = () => {
 							<span className={Style.UmbrellaHandle} />
 						</span>
 						<span className={Style.MatrixRain} aria-hidden>
-							{Array.from({ length: 14 }).map((_, i) => (
+							{Array.from({ length: 11 }).map((_, i) => (
 								<span
 									key={i}
 									className={Style.RainColumn}
 									style={{
-										left: `${(i * 100) / 14}%`,
-										animationDelay: `${(i * 0.13) % 1.2}s`,
-										animationDuration: `${1.4 + (i % 4) * 0.35}s`,
+										left: `${((i + 0.5) * 100) / 11}%`,
+										animationDelay: `${(i * 0.15) % 1.4}s`,
+										animationDuration: `${1.5 + (i % 4) * 0.35}s`,
 									}}
 								>
 									{"10110101001011010010".split("").map((c, j) => (

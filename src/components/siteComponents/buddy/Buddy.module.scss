@@ -1273,27 +1273,27 @@ $accent: #22ff77;
 
 .MatrixRain {
 	position: absolute;
-	left: 50%;
+	left: 55px;  /* robot center */
 	top: -90px;
-	width: 320px;
-	height: 330px;
+	width: 220px;
+	height: 300px;
 	transform: translateX(-50%);
 	pointer-events: none;
 	overflow: hidden;
 	z-index: 15;
 	mask-image: radial-gradient(
-		ellipse 60px 34px at 50% 58px,
+		ellipse 75px 36px at 50% 72px,
 		transparent 0%,
-		transparent 70%,
-		black 85%
+		transparent 78%,
+		black 92%
 	);
 	-webkit-mask-image: radial-gradient(
-		ellipse 60px 34px at 50% 58px,
+		ellipse 75px 36px at 50% 72px,
 		transparent 0%,
-		transparent 70%,
-		black 85%
+		transparent 78%,
+		black 92%
 	);
-	animation: rainFadeInOut 5s ease-in-out forwards;
+	animation: rainFadeInOut 7s ease-in-out forwards;
 }
 
 /* Rain only visible while umbrella is open-ish */
