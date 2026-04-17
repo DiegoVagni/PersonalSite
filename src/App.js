@@ -90,8 +90,8 @@ class App extends Component {
 							<Route path="/skills" element={<CV styleSheet={styleSheet} />} />
 						</Routes>}
 						<PrivacyPolicyWrapper/>
-						<Buddy/>
 					</Page>
+					<Buddy/>
 					</>
 					
 				) 
