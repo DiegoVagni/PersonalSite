@@ -6,7 +6,7 @@ const LINE_COUNT = 8;
 const ROTATE_MS = 7000;
 const STORAGE_KEY = "buddyDismissed";
 
-const EXIT_VARIANTS = ["walk", "rocket", "glitch", "teleport", "flip", "crab"];
+const EXIT_VARIANTS = ["walk", "rocket", "glitch", "teleport", "crab"];
 // Set to a specific variant name to force it for debugging; null means random.
 const EXIT_VARIANT_OVERRIDE = null;
 const pickVariant = () =>

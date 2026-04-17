@@ -371,18 +371,18 @@ $accent: #22ff77;
 }
 @keyframes crabBody {
 	0%   { transform: rotate(0) translateY(0) scaleY(1); }
-	100% { transform: rotate(0) translateY(4px) scaleY(0.88); }
+	100% { transform: rotate(0) translateY(10px) scaleY(0.82); }
 }
 
-/* ── Arms: shoulder lifts, elbow bends ── */
+/* ── Arms: shoulder raises outward, elbow bends sharply (L-shape) ── */
 
 .Leave_crab .ArmLeft .UpperArm {
 	animation: crabLeftUpper 3.4s ease-out forwards;
 }
 @keyframes crabLeftUpper {
 	0%   { transform: translateX(-50%) rotate(0); }
-	22%  { transform: translateX(-50%) rotate(120deg); }
-	100% { transform: translateX(-50%) rotate(120deg); }
+	22%  { transform: translateX(-50%) rotate(105deg); }
+	100% { transform: translateX(-50%) rotate(105deg); }
 }
 
 .Leave_crab .ArmLeft .Forearm {
@@ -390,8 +390,8 @@ $accent: #22ff77;
 }
 @keyframes crabLeftFore {
 	0%   { transform: translateX(-50%) rotate(0); }
-	22%  { transform: translateX(-50%) rotate(60deg); }
-	100% { transform: translateX(-50%) rotate(60deg); }
+	22%  { transform: translateX(-50%) rotate(100deg); }
+	100% { transform: translateX(-50%) rotate(100deg); }
 }
 
 .Leave_crab .ArmRight .UpperArm {
@@ -399,8 +399,8 @@ $accent: #22ff77;
 }
 @keyframes crabRightUpper {
 	0%   { transform: translateX(-50%) rotate(0); }
-	22%  { transform: translateX(-50%) rotate(-120deg); }
-	100% { transform: translateX(-50%) rotate(-120deg); }
+	22%  { transform: translateX(-50%) rotate(-105deg); }
+	100% { transform: translateX(-50%) rotate(-105deg); }
 }
 
 .Leave_crab .ArmRight .Forearm {
@@ -408,19 +408,19 @@ $accent: #22ff77;
 }
 @keyframes crabRightFore {
 	0%   { transform: translateX(-50%) rotate(0); }
-	22%  { transform: translateX(-50%) rotate(-60deg); }
-	100% { transform: translateX(-50%) rotate(-60deg); }
+	22%  { transform: translateX(-50%) rotate(-100deg); }
+	100% { transform: translateX(-50%) rotate(-100deg); }
 }
 
-/* ── Legs: thigh splays outward, knee bends so shin drops vertical ── */
+/* ── Legs: thigh splays nearly horizontal, shin drops vertical → deep sumo squat ── */
 
 .Leave_crab .LegLeft .Thigh {
 	animation: crabLeftThigh 3.4s ease-out forwards;
 }
 @keyframes crabLeftThigh {
 	0%   { transform: translateX(-50%) rotate(0); }
-	22%  { transform: translateX(-50%) rotate(75deg); }
-	100% { transform: translateX(-50%) rotate(75deg); }
+	22%  { transform: translateX(-50%) rotate(88deg); }
+	100% { transform: translateX(-50%) rotate(88deg); }
 }
 
 .Leave_crab .LegLeft .Shin {
@@ -428,8 +428,8 @@ $accent: #22ff77;
 }
 @keyframes crabLeftShin {
 	0%   { transform: translateX(-50%) rotate(0); }
-	22%  { transform: translateX(-50%) rotate(-75deg); }  /* cancel thigh's rotation so shin points down */
-	100% { transform: translateX(-50%) rotate(-75deg); }
+	22%  { transform: translateX(-50%) rotate(-88deg); }
+	100% { transform: translateX(-50%) rotate(-88deg); }
 }
 
 .Leave_crab .LegRight .Thigh {
@@ -437,8 +437,8 @@ $accent: #22ff77;
 }
 @keyframes crabRightThigh {
 	0%   { transform: translateX(-50%) rotate(0); }
-	22%  { transform: translateX(-50%) rotate(-75deg); }
-	100% { transform: translateX(-50%) rotate(-75deg); }
+	22%  { transform: translateX(-50%) rotate(-88deg); }
+	100% { transform: translateX(-50%) rotate(-88deg); }
 }
 
 .Leave_crab .LegRight .Shin {
@@ -446,8 +446,8 @@ $accent: #22ff77;
 }
 @keyframes crabRightShin {
 	0%   { transform: translateX(-50%) rotate(0); }
-	22%  { transform: translateX(-50%) rotate(75deg); }
-	100% { transform: translateX(-50%) rotate(75deg); }
+	22%  { transform: translateX(-50%) rotate(88deg); }
+	100% { transform: translateX(-50%) rotate(88deg); }
 }
 
 /* Bubble fades away so the raised V-arms are visible */
