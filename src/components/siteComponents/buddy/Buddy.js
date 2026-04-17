@@ -112,31 +112,39 @@ const Buddy = () => {
 				</span>
 				<span className={`${Style.Arm} ${Style.ArmLeft}`}>
 					<span className={Style.Shoulder} />
-					<span className={Style.UpperArm} />
-					<span className={Style.Elbow} />
-					<span className={Style.Forearm} />
-					<span className={Style.Hand} />
+					<span className={Style.UpperArm}>
+						<span className={Style.Elbow} />
+						<span className={Style.Forearm}>
+							<span className={Style.Hand} />
+						</span>
+					</span>
 				</span>
 				<span className={`${Style.Arm} ${Style.ArmRight}`}>
 					<span className={Style.Shoulder} />
-					<span className={Style.UpperArm} />
-					<span className={Style.Elbow} />
-					<span className={Style.Forearm} />
-					<span className={Style.Hand} />
+					<span className={Style.UpperArm}>
+						<span className={Style.Elbow} />
+						<span className={Style.Forearm}>
+							<span className={Style.Hand} />
+						</span>
+					</span>
 				</span>
 				<span className={`${Style.Leg} ${Style.LegLeft}`}>
 					<span className={Style.Hip} />
-					<span className={Style.Thigh} />
-					<span className={Style.Knee} />
-					<span className={Style.Shin} />
-					<span className={Style.Foot} />
+					<span className={Style.Thigh}>
+						<span className={Style.Knee} />
+						<span className={Style.Shin}>
+							<span className={Style.Foot} />
+						</span>
+					</span>
 				</span>
 				<span className={`${Style.Leg} ${Style.LegRight}`}>
 					<span className={Style.Hip} />
-					<span className={Style.Thigh} />
-					<span className={Style.Knee} />
-					<span className={Style.Shin} />
-					<span className={Style.Foot} />
+					<span className={Style.Thigh}>
+						<span className={Style.Knee} />
+						<span className={Style.Shin}>
+							<span className={Style.Foot} />
+						</span>
+					</span>
 				</span>
 				<span className={Style.HoverShadow} />
 			</button>

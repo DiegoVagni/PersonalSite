@@ -331,119 +331,123 @@ $accent: #22ff77;
 }
 
 /* ──────── Variant 6: crab walk off (to the left) ──────── */
+/* Uses the nested limb anatomy: rotate UpperArm/Thigh at the
+   shoulder/hip, Forearm/Shin at the elbow/knee — so joints
+   actually bend. Scuttle uses a stepping cadence, not smooth
+   translate. */
 
 .Leave_crab {
-	animation: crabScuttle 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
+	animation: crabScuttle 3.4s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
 }
 
 @keyframes crabScuttle {
 	0%   { transform: translate(0, 0); }
-	8%   { transform: translate(32px, 10px); }       /* scoot right into pose so both V-arms fit */
-	14%  { transform: translate(36px, 18px); }       /* squat lower */
-	22%  { transform: translate(32px, 14px); }       /* tiny pop */
-	28%  { transform: translate(36px, 18px); }
-	35%  { transform: translate(0, 16px); }          /* begin scuttling left, retract initial scoot */
-	50%  { transform: translate(-30vw, 18px); }
-	65%  { transform: translate(-60vw, 15px); }
-	80%  { transform: translate(-90vw, 18px); }
-	100% { transform: translate(-130vw, 16px); }     /* off left */
+	6%   { transform: translate(24px, 6px); }        /* scoot right so V-arms fit */
+	14%  { transform: translate(30px, 18px); }       /* squat into crab pose */
+	22%  { transform: translate(28px, 22px); }
+	/* step cadence (each step = quick x-move then hold) */
+	30%  { transform: translate(-30px, 18px); }      /* step 1: left, light bob up */
+	34%  { transform: translate(-40px, 22px); }      /* plant */
+	44%  { transform: translate(-16vw, 18px); }      /* step 2 */
+	48%  { transform: translate(-18vw, 22px); }
+	58%  { transform: translate(-40vw, 18px); }      /* step 3 */
+	62%  { transform: translate(-42vw, 22px); }
+	72%  { transform: translate(-65vw, 18px); }      /* step 4 */
+	76%  { transform: translate(-67vw, 22px); }
+	86%  { transform: translate(-95vw, 18px); }      /* step 5 */
+	100% { transform: translate(-130vw, 22px); }     /* off left */
 }
 
-/* Head drops + small tilt */
 .Leave_crab .Head {
 	animation: crabHead 0.6s ease-out forwards;
 }
 @keyframes crabHead {
 	0%   { transform: rotate(0) translateY(0); }
-	100% { transform: rotate(-3deg) translateY(10px); }
+	100% { transform: rotate(-3deg) translateY(8px); }
 }
 
-/* Body squats + compresses */
 .Leave_crab .Body {
 	animation: crabBody 0.6s ease-out forwards;
 }
 @keyframes crabBody {
 	0%   { transform: rotate(0) translateY(0) scaleY(1); }
-	100% { transform: rotate(0) translateY(6px) scaleY(0.82); }
+	100% { transform: rotate(0) translateY(4px) scaleY(0.88); }
 }
 
-/* Arms raised up in a V (above the head, spread outward).
-   Positive rotate on the viewer-left arm swings it clockwise
-   from pointing-down to pointing-up-and-left, which is the V's
-   left stroke. Right arm is the mirror (negative). */
-.Leave_crab .ArmLeft {
-	animation: crabArmLeftV 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
-	transform-origin: 50% 7px;
-}
-@keyframes crabArmLeftV {
-	0%   { transform: rotate(0); }
-	20%  { transform: rotate(135deg); }
-	35%  { transform: rotate(125deg); }
-	55%  { transform: rotate(135deg); }
-	75%  { transform: rotate(125deg); }
-	100% { transform: rotate(130deg); }
-}
+/* ── Arms: shoulder lifts, elbow bends ── */
 
-.Leave_crab .ArmRight {
-	animation: crabArmRightV 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
-	transform-origin: 50% 7px;
+.Leave_crab .ArmLeft .UpperArm {
+	animation: crabLeftUpper 3.4s ease-out forwards;
 }
-@keyframes crabArmRightV {
-	0%   { transform: rotate(0); }
-	20%  { transform: rotate(-135deg); }
-	35%  { transform: rotate(-125deg); }
-	55%  { transform: rotate(-135deg); }
-	75%  { transform: rotate(-125deg); }
-	100% { transform: rotate(-130deg); }
-}
-
-/* Thighs splayed outward at hips (knees go outward) */
-.Leave_crab .LegLeft {
-	animation: crabLegLeftWide 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
-	transform-origin: 50% 7px;
-}
-@keyframes crabLegLeftWide {
-	0%   { transform: rotate(0); }
-	20%  { transform: rotate(60deg); }
-	40%  { transform: rotate(52deg); }
-	60%  { transform: rotate(60deg); }
-	80%  { transform: rotate(52deg); }
-	100% { transform: rotate(58deg); }
-}
-
-.Leave_crab .LegRight {
-	animation: crabLegRightWide 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
-	transform-origin: 50% 7px;
-}
-@keyframes crabLegRightWide {
-	0%   { transform: rotate(0); }
-	20%  { transform: rotate(-60deg); }
-	40%  { transform: rotate(-52deg); }
-	60%  { transform: rotate(-60deg); }
-	80%  { transform: rotate(-52deg); }
-	100% { transform: rotate(-58deg); }
-}
-
-/* Shins counter-rotate around the knee so feet stay pointing down
-   (creates the bent-knee "(  )" silhouette). */
-.Leave_crab .LegLeft .Shin {
-	animation: crabShinLeft 3s ease-out forwards;
-	transform-origin: 50% -7px;
-}
-@keyframes crabShinLeft {
+@keyframes crabLeftUpper {
 	0%   { transform: translateX(-50%) rotate(0); }
-	25%  { transform: translateX(-50%) rotate(-55deg); }
-	100% { transform: translateX(-50%) rotate(-50deg); }
+	22%  { transform: translateX(-50%) rotate(120deg); }
+	100% { transform: translateX(-50%) rotate(120deg); }
+}
+
+.Leave_crab .ArmLeft .Forearm {
+	animation: crabLeftFore 3.4s ease-out forwards;
+}
+@keyframes crabLeftFore {
+	0%   { transform: translateX(-50%) rotate(0); }
+	22%  { transform: translateX(-50%) rotate(60deg); }
+	100% { transform: translateX(-50%) rotate(60deg); }
+}
+
+.Leave_crab .ArmRight .UpperArm {
+	animation: crabRightUpper 3.4s ease-out forwards;
+}
+@keyframes crabRightUpper {
+	0%   { transform: translateX(-50%) rotate(0); }
+	22%  { transform: translateX(-50%) rotate(-120deg); }
+	100% { transform: translateX(-50%) rotate(-120deg); }
+}
+
+.Leave_crab .ArmRight .Forearm {
+	animation: crabRightFore 3.4s ease-out forwards;
+}
+@keyframes crabRightFore {
+	0%   { transform: translateX(-50%) rotate(0); }
+	22%  { transform: translateX(-50%) rotate(-60deg); }
+	100% { transform: translateX(-50%) rotate(-60deg); }
+}
+
+/* ── Legs: thigh splays outward, knee bends so shin drops vertical ── */
+
+.Leave_crab .LegLeft .Thigh {
+	animation: crabLeftThigh 3.4s ease-out forwards;
+}
+@keyframes crabLeftThigh {
+	0%   { transform: translateX(-50%) rotate(0); }
+	22%  { transform: translateX(-50%) rotate(75deg); }
+	100% { transform: translateX(-50%) rotate(75deg); }
+}
+
+.Leave_crab .LegLeft .Shin {
+	animation: crabLeftShin 3.4s ease-out forwards;
+}
+@keyframes crabLeftShin {
+	0%   { transform: translateX(-50%) rotate(0); }
+	22%  { transform: translateX(-50%) rotate(-75deg); }  /* cancel thigh's rotation so shin points down */
+	100% { transform: translateX(-50%) rotate(-75deg); }
+}
+
+.Leave_crab .LegRight .Thigh {
+	animation: crabRightThigh 3.4s ease-out forwards;
+}
+@keyframes crabRightThigh {
+	0%   { transform: translateX(-50%) rotate(0); }
+	22%  { transform: translateX(-50%) rotate(-75deg); }
+	100% { transform: translateX(-50%) rotate(-75deg); }
 }
 
 .Leave_crab .LegRight .Shin {
-	animation: crabShinRight 3s ease-out forwards;
-	transform-origin: 50% -7px;
+	animation: crabRightShin 3.4s ease-out forwards;
 }
-@keyframes crabShinRight {
+@keyframes crabRightShin {
 	0%   { transform: translateX(-50%) rotate(0); }
-	25%  { transform: translateX(-50%) rotate(55deg); }
-	100% { transform: translateX(-50%) rotate(50deg); }
+	22%  { transform: translateX(-50%) rotate(75deg); }
+	100% { transform: translateX(-50%) rotate(75deg); }
 }
 
 /* Bubble fades away so the raised V-arms are visible */
@@ -456,7 +460,6 @@ $accent: #22ff77;
 	100% { transform: scale(0.3) translateX(-40px); opacity: 0; }
 }
 
-/* Keep the robot rendered on top of any lingering bubble pixels */
 .Leave_crab .Robot {
 	z-index: 5;
 }
@@ -826,6 +829,9 @@ $accent: #22ff77;
 	}
 }
 
+/* UpperArm is the parent of elbow+forearm+hand (nested anatomy),
+   so rotating UpperArm at the shoulder swings the rest with it,
+   and rotating Forearm at the elbow bends the elbow. */
 .UpperArm {
 	position: absolute;
 	top: 8px;
@@ -836,6 +842,7 @@ $accent: #22ff77;
 	border: 2px solid $outline;
 	border-radius: 6px;
 	transform: translateX(-50%);
+	transform-origin: 50% -1px;
 	transform-style: preserve-3d;
 
 	&::before {
@@ -851,8 +858,8 @@ $accent: #22ff77;
 
 .Elbow {
 	position: absolute;
-	top: 36px;
 	left: 50%;
+	bottom: -7px;
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
@@ -875,14 +882,15 @@ $accent: #22ff77;
 
 .Forearm {
 	position: absolute;
-	top: 50px;
 	left: 50%;
+	top: 100%;
 	width: 10px;
 	height: 28px;
 	background: linear-gradient(to bottom, $body 0%, $body-dark 100%);
 	border: 2px solid $outline;
 	border-radius: 6px;
 	transform: translateX(-50%);
+	transform-origin: 50% -3px;
 	transform-style: preserve-3d;
 
 	&::before {
@@ -898,8 +906,8 @@ $accent: #22ff77;
 
 .Hand {
 	position: absolute;
-	top: 74px;
 	left: 50%;
+	bottom: -9px;
 	width: 14px;
 	height: 14px;
 	background: $joint;
@@ -957,6 +965,9 @@ $accent: #22ff77;
 	}
 }
 
+/* Thigh is the parent of knee+shin+foot, so rotating Thigh at
+   the hip swings everything below, and rotating Shin at the knee
+   bends the knee. */
 .Thigh {
 	position: absolute;
 	top: 10px;
@@ -967,6 +978,7 @@ $accent: #22ff77;
 	border: 2px solid $outline;
 	border-radius: 5px;
 	transform: translateX(-50%);
+	transform-origin: 50% -3px;
 	transform-style: preserve-3d;
 
 	&::before {
@@ -982,8 +994,8 @@ $accent: #22ff77;
 
 .Knee {
 	position: absolute;
-	top: 32px;
 	left: 50%;
+	bottom: -7px;
 	width: 14px;
 	height: 14px;
 	border-radius: 50%;
@@ -1006,14 +1018,15 @@ $accent: #22ff77;
 
 .Shin {
 	position: absolute;
-	top: 46px;
 	left: 50%;
+	top: 100%;
 	width: 10px;
 	height: 20px;
 	background: linear-gradient(to bottom, $body 0%, $body-dark 100%);
 	border: 2px solid $outline;
 	border-radius: 5px;
 	transform: translateX(-50%);
+	transform-origin: 50% -3px;
 	transform-style: preserve-3d;
 
 	&::before {
@@ -1029,8 +1042,8 @@ $accent: #22ff77;
 
 .Foot {
 	position: absolute;
-	bottom: 0;
 	left: 50%;
+	top: 100%;
 	width: 24px;
 	height: 14px;
 	background: $joint;
