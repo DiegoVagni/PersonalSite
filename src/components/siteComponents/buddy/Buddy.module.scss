@@ -1162,6 +1162,83 @@ $accent: #22ff77;
    IDLE ACTIONS — fun things the buddy does between dismissals.
    ══════════════════════════════════════════════════════════════ */
 
+/* ── Idle: dance ── */
+
+/* Whole-body sway (hips) */
+.Idle_dance .Robot {
+	animation: danceShimmy 1.1s ease-in-out infinite;
+}
+@keyframes danceShimmy {
+	0%, 100% { transform: translateX(-5px) rotate(-4deg); }
+	50%      { transform: translateX(5px)  rotate(4deg); }
+}
+
+/* Head bops on the beat (twice as fast as the sway) */
+.Idle_dance .Head {
+	animation: danceHeadBop 0.55s ease-in-out infinite;
+}
+@keyframes danceHeadBop {
+	0%, 100% { transform: translateY(0) rotate(0); }
+	50%      { transform: translateY(-4px) rotate(2deg); }
+}
+
+/* Arms raised in a tight V, pumping to the beat (hands near head) */
+.Idle_dance .ArmLeft .UpperArm {
+	animation: danceLeftUpper 1.1s ease-in-out infinite;
+}
+@keyframes danceLeftUpper {
+	0%, 100% { transform: translateX(-50%) rotate(170deg); }
+	50%      { transform: translateX(-50%) rotate(155deg); }
+}
+
+.Idle_dance .ArmLeft .Forearm {
+	animation: danceLeftFore 1.1s ease-in-out infinite;
+}
+@keyframes danceLeftFore {
+	0%, 100% { transform: translateX(-50%) rotate(20deg); }
+	50%      { transform: translateX(-50%) rotate(-10deg); }
+}
+
+.Idle_dance .ArmRight .UpperArm {
+	animation: danceRightUpper 1.1s ease-in-out 0.55s infinite;
+}
+@keyframes danceRightUpper {
+	0%, 100% { transform: translateX(-50%) rotate(-170deg); }
+	50%      { transform: translateX(-50%) rotate(-155deg); }
+}
+
+.Idle_dance .ArmRight .Forearm {
+	animation: danceRightFore 1.1s ease-in-out 0.55s infinite;
+}
+@keyframes danceRightFore {
+	0%, 100% { transform: translateX(-50%) rotate(-20deg); }
+	50%      { transform: translateX(-50%) rotate(10deg); }
+}
+
+/* Knees bend slightly on each beat */
+.Idle_dance .LegLeft .Thigh {
+	animation: danceKneeBend 0.55s ease-in-out infinite;
+}
+.Idle_dance .LegRight .Thigh {
+	animation: danceKneeBend 0.55s ease-in-out 0.275s infinite;
+}
+@keyframes danceKneeBend {
+	0%, 100% { transform: translateX(-50%) rotate(0); }
+	50%      { transform: translateX(-50%) rotate(10deg); }
+}
+
+.Idle_dance .LegLeft .Shin {
+	animation: danceShinBend 0.55s ease-in-out infinite;
+}
+.Idle_dance .LegRight .Shin {
+	animation: danceShinBend 0.55s ease-in-out 0.275s infinite;
+}
+@keyframes danceShinBend {
+	0%, 100% { transform: translateX(-50%) rotate(0); }
+	50%      { transform: translateX(-50%) rotate(-10deg); }
+}
+
+
 /* ── Idle: matrix rain + umbrella ── */
 
 /* Umbrella pops out of the head — no arm movement.

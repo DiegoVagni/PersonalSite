@@ -13,7 +13,7 @@ const pickVariant = () =>
 	EXIT_VARIANT_OVERRIDE ||
 	EXIT_VARIANTS[Math.floor(Math.random() * EXIT_VARIANTS.length)];
 
-const IDLE_ACTIONS = ["matrix"];
+const IDLE_ACTIONS = ["matrix", "dance"];
 const IDLE_MIN_DELAY_MS = 15000;
 const IDLE_MAX_DELAY_MS = 28000;
 const IDLE_DURATION_MS = 7000;
