@@ -50,6 +50,7 @@ class LicensesButton extends Component {
 							<p className={`${TextsStyle.NormalText} ${Utils.RightMargin}`}>{Locale.GetMessages("Icons")} {Locale.GetMessages("MadeBy")}: <a href={"https://carolsebastiano.myportfolio.com/"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("Karoll")}</a></p>
 							<SmallContactInfo src={Instagram} alt={Locale.GetMessages("Instagram")} social={Locale.GetMessages("Instagram")} ><a href={"https://www.instagram.com/kerolsphoto/"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("Karoll_Insta")}</a></SmallContactInfo>
 						</div>
+						<p className={TextsStyle.NormalText}>{Locale.GetMessages("BuiltWith")}: <a href={"https://www.anthropic.com/claude"} target={"_blank"} rel={"noreferrer"}>{Locale.GetMessages("ClaudeOpus")}</a></p>
 					</div>
 				</Modal>
 			</div>
