@@ -27,13 +27,48 @@ $accent: #22ff77;
 }
 
 .Leaving {
-	animation: hoverAway 1.8s cubic-bezier(0.5, 0, 0.7, 1) forwards;
+	animation: walkAwayLeft 3s linear forwards;
+	perspective: 700px;
 }
 
-@keyframes hoverAway {
-	0%   { transform: translate(0, 0) rotate(0); opacity: 1; }
-	18%  { transform: translate(-14px, -8px) rotate(-6deg); opacity: 1; }
-	100% { transform: translate(115vw, -60px) rotate(16deg); opacity: 0; }
+@keyframes walkAwayLeft {
+	0%   { transform: translateX(0); opacity: 1; }
+	20%  { transform: translateX(0); opacity: 1; }
+	95%  { transform: translateX(-120vw); opacity: 1; }
+	100% { transform: translateX(-125vw); opacity: 0; }
+}
+
+.Leaving .Robot {
+	animation: robotTurn 3s ease-out forwards;
+	transform-style: preserve-3d;
+}
+
+@keyframes robotTurn {
+	0%   { transform: rotateY(0deg); }
+	18%  { transform: rotateY(-75deg); }
+	100% { transform: rotateY(-75deg); }
+}
+
+.Leaving .LegLeft,
+.Leaving .ArmRight {
+	animation: limbSwingA 0.42s ease-in-out infinite;
+	transform-origin: 50% 7px;
+}
+
+.Leaving .LegRight,
+.Leaving .ArmLeft {
+	animation: limbSwingB 0.42s ease-in-out infinite;
+	transform-origin: 50% 7px;
+}
+
+@keyframes limbSwingA {
+	0%, 100% { transform: rotate(-22deg); }
+	50%      { transform: rotate(22deg); }
+}
+
+@keyframes limbSwingB {
+	0%, 100% { transform: rotate(22deg); }
+	50%      { transform: rotate(-22deg); }
 }
 
 /* ── Robot container ───────────────────────────────────────── */
