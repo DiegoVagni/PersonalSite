@@ -83,6 +83,7 @@ $accent: #22ff77;
 	cursor: pointer;
 	animation: bob 4s ease-in-out infinite;
 	flex-shrink: 0;
+	transform-style: preserve-3d;
 
 	&:hover { animation-duration: 2s; }
 	&[disabled] { cursor: default; }
@@ -193,8 +194,29 @@ $accent: #22ff77;
 	background: linear-gradient(135deg, $body-light 0%, $body 45%, $body-dark 100%);
 	border: 2.5px solid $outline;
 	border-radius: 18px;
-	overflow: hidden;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+	transform-style: preserve-3d;
+
+	/* back plane + 2 intermediate planes → thick sandwich → reads as 3D when rotated */
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $body-dark;
+		border: 2.5px solid $outline;
+		border-radius: 18px;
+		transform: translateZ(-20px);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $body;
+		border: 2.5px solid $outline;
+		border-radius: 18px;
+		transform: translateZ(-10px);
+	}
 }
 
 .Brow {
@@ -281,8 +303,28 @@ $accent: #22ff77;
 	background: linear-gradient(135deg, $body-light 0%, $body 55%, $body-dark 100%);
 	border: 2.5px solid $outline;
 	border-radius: 14px;
-	overflow: hidden;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+	transform-style: preserve-3d;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $body-dark;
+		border: 2.5px solid $outline;
+		border-radius: 14px;
+		transform: translateZ(-20px);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $body;
+		border: 2.5px solid $outline;
+		border-radius: 14px;
+		transform: translateZ(-10px);
+	}
 }
 
 .BodyShade {
