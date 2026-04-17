@@ -330,91 +330,129 @@ $accent: #22ff77;
 	100% { transform: translate(125vw, 60px) rotate(-720deg); }
 }
 
-/* ──────── Variant 6: crab walk off ──────── */
+/* ──────── Variant 6: crab walk off (to the left) ──────── */
 
 .Leave_crab {
-	animation: crabScuttle 2.8s cubic-bezier(0.2, 0.6, 0.3, 1) forwards;
+	animation: crabScuttle 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
 }
 
 @keyframes crabScuttle {
 	0%   { transform: translate(0, 0); }
-	10%  { transform: translate(0, 4px); }
-	16%  { transform: translate(0, 10px); }
-	100% { transform: translate(130vw, 10px); }
+	10%  { transform: translate(-2px, 10px); }       /* squat into pose */
+	14%  { transform: translate(-4px, 18px); }
+	22%  { transform: translate(-6px, 14px); }       /* tiny pop */
+	28%  { transform: translate(-8px, 18px); }
+	35%  { transform: translate(-12vw, 16px); }      /* start scuttling left */
+	50%  { transform: translate(-35vw, 18px); }
+	65%  { transform: translate(-60vw, 15px); }
+	80%  { transform: translate(-90vw, 18px); }
+	100% { transform: translate(-130vw, 16px); }     /* off left */
 }
 
-/* Body/head drop + tilt into crab pose */
+/* Head drops + small tilt */
 .Leave_crab .Head {
 	animation: crabHead 0.6s ease-out forwards;
 }
 @keyframes crabHead {
 	0%   { transform: rotate(0) translateY(0); }
-	100% { transform: rotate(6deg) translateY(8px); }
+	100% { transform: rotate(-3deg) translateY(10px); }
 }
 
+/* Body squats + compresses */
 .Leave_crab .Body {
 	animation: crabBody 0.6s ease-out forwards;
 }
 @keyframes crabBody {
-	0%   { transform: rotate(0) translateY(0); }
-	100% { transform: rotate(-3deg) translateY(4px) scaleY(0.9); }
+	0%   { transform: rotate(0) translateY(0) scaleY(1); }
+	100% { transform: rotate(0) translateY(6px) scaleY(0.82); }
 }
 
-/* Splay limbs outward + small bob to simulate scuttle */
+/* Arms raised up in a V (above the head, spread outward) */
 .Leave_crab .ArmLeft {
-	animation: crabArmLeft 2.8s ease-out forwards;
+	animation: crabArmLeftV 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
 	transform-origin: 50% 7px;
 }
-@keyframes crabArmLeft {
+@keyframes crabArmLeftV {
 	0%   { transform: rotate(0); }
-	20%  { transform: rotate(-70deg); }
-	30%  { transform: rotate(-55deg); }
-	50%  { transform: rotate(-70deg); }
-	70%  { transform: rotate(-55deg); }
-	90%  { transform: rotate(-70deg); }
-	100% { transform: rotate(-60deg); }
+	18%  { transform: rotate(-155deg); }
+	35%  { transform: rotate(-145deg); }
+	52%  { transform: rotate(-158deg); }
+	70%  { transform: rotate(-145deg); }
+	88%  { transform: rotate(-158deg); }
+	100% { transform: rotate(-150deg); }
 }
 
 .Leave_crab .ArmRight {
-	animation: crabArmRight 2.8s ease-out forwards;
+	animation: crabArmRightV 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
 	transform-origin: 50% 7px;
 }
-@keyframes crabArmRight {
+@keyframes crabArmRightV {
 	0%   { transform: rotate(0); }
-	20%  { transform: rotate(55deg); }
-	30%  { transform: rotate(70deg); }
-	50%  { transform: rotate(55deg); }
-	70%  { transform: rotate(70deg); }
-	90%  { transform: rotate(55deg); }
-	100% { transform: rotate(60deg); }
+	18%  { transform: rotate(155deg); }
+	35%  { transform: rotate(145deg); }
+	52%  { transform: rotate(158deg); }
+	70%  { transform: rotate(145deg); }
+	88%  { transform: rotate(158deg); }
+	100% { transform: rotate(150deg); }
 }
 
+/* Legs splayed wide outward (sumo/crab stance), with bob for gait */
 .Leave_crab .LegLeft {
-	animation: crabLegLeft 2.8s ease-out forwards;
+	animation: crabLegLeftWide 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
 	transform-origin: 50% 7px;
 }
-@keyframes crabLegLeft {
+@keyframes crabLegLeftWide {
 	0%   { transform: rotate(0); }
-	20%  { transform: rotate(-55deg); }
-	30%  { transform: rotate(-40deg); }
-	50%  { transform: rotate(-55deg); }
-	70%  { transform: rotate(-40deg); }
-	90%  { transform: rotate(-55deg); }
-	100% { transform: rotate(-48deg); }
+	18%  { transform: rotate(-65deg); }
+	35%  { transform: rotate(-50deg); }
+	52%  { transform: rotate(-65deg); }
+	70%  { transform: rotate(-50deg); }
+	88%  { transform: rotate(-65deg); }
+	100% { transform: rotate(-58deg); }
 }
 
 .Leave_crab .LegRight {
-	animation: crabLegRight 2.8s ease-out forwards;
+	animation: crabLegRightWide 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
 	transform-origin: 50% 7px;
 }
-@keyframes crabLegRight {
+@keyframes crabLegRightWide {
 	0%   { transform: rotate(0); }
-	20%  { transform: rotate(40deg); }
-	30%  { transform: rotate(55deg); }
-	50%  { transform: rotate(40deg); }
-	70%  { transform: rotate(55deg); }
-	90%  { transform: rotate(40deg); }
-	100% { transform: rotate(48deg); }
+	18%  { transform: rotate(65deg); }
+	35%  { transform: rotate(50deg); }
+	52%  { transform: rotate(65deg); }
+	70%  { transform: rotate(50deg); }
+	88%  { transform: rotate(65deg); }
+	100% { transform: rotate(58deg); }
+}
+
+/* Shins kick back inward so the knees truly "bend" */
+.Leave_crab .LegLeft .Shin {
+	animation: crabShinLeft 3s ease-out forwards;
+	transform-origin: 50% -7px;
+}
+@keyframes crabShinLeft {
+	0%   { transform: translateX(-50%) rotate(0); }
+	25%  { transform: translateX(-50%) rotate(55deg); }
+	100% { transform: translateX(-50%) rotate(50deg); }
+}
+
+.Leave_crab .LegRight .Shin {
+	animation: crabShinRight 3s ease-out forwards;
+	transform-origin: 50% -7px;
+}
+@keyframes crabShinRight {
+	0%   { transform: translateX(-50%) rotate(0); }
+	25%  { transform: translateX(-50%) rotate(-55deg); }
+	100% { transform: translateX(-50%) rotate(-50deg); }
+}
+
+/* Bubble drops with the robot */
+.Leave_crab .Bubble {
+	animation: crabBubble 0.6s ease-out forwards;
+}
+@keyframes crabBubble {
+	0%   { transform: translateY(0); }
+	100% { transform: translateY(14px); }
 }
 
 /* ── Robot container ───────────────────────────────────────── */
