@@ -6,9 +6,13 @@ const LINE_COUNT = 8;
 const ROTATE_MS = 7000;
 const STORAGE_KEY = "buddyDismissed";
 
+// Change this to pick which exit animation to test.
+// Eventually we'll randomize across all implemented variants.
+const EXIT_VARIANT = "rocket";
+
 const Buddy = () => {
 	const [dismissed, setDismissed] = useState(() => localStorage.getItem(STORAGE_KEY) === "true");
-	const [leaving, setLeaving] = useState(false);
+	const [variant, setVariant] = useState(null); // null | "walk" | "rocket" | …
 	const [index, setIndex] = useState(() => Math.floor(Math.random() * LINE_COUNT));
 	const [bump, setBump] = useState(0);
 	const timerRef = useRef(null);
@@ -19,20 +23,20 @@ const Buddy = () => {
 	};
 
 	useEffect(() => {
-		if (dismissed || leaving) return;
+		if (dismissed || variant) return;
 		timerRef.current = setInterval(advance, ROTATE_MS);
 		return () => clearInterval(timerRef.current);
-	}, [dismissed, leaving]);
+	}, [dismissed, variant]);
 
 	useEffect(() => {
 		const onSummon = () => {
 			setDismissed(false);
-			setLeaving(false);
+			setVariant(null);
 		};
 		const onDismiss = () => {
 			clearInterval(timerRef.current);
 			setDismissed(true);
-			setLeaving(false);
+			setVariant(null);
 		};
 		window.addEventListener("buddy:summon", onSummon);
 		window.addEventListener("buddy:dismiss", onDismiss);
@@ -45,29 +49,34 @@ const Buddy = () => {
 	const handleClose = (e) => {
 		e.stopPropagation();
 		clearInterval(timerRef.current);
-		setLeaving(true);
+		setVariant(EXIT_VARIANT);
 	};
 
-	const handleLeaveEnd = () => {
+	const handleLeaveEnd = (e) => {
+		// Only fire when the outermost element's own animation ends,
+		// not when a descendant's (short) animation ends.
+		if (e.target !== e.currentTarget) return;
 		localStorage.setItem(STORAGE_KEY, "true");
 		setDismissed(true);
+		setVariant(null);
 	};
 
 	if (dismissed) return null;
 
 	const text = Locale.GetMessages(`Buddy_Line_${index + 1}`);
+	const variantClass = variant ? `${Style.Leaving} ${Style[`Leave_${variant}`]}` : "";
 
 	return (
 		<div
-			className={`${Style.Buddy} ${leaving ? Style.Leaving : ""}`}
-			onAnimationEnd={leaving ? handleLeaveEnd : undefined}
+			className={`${Style.Buddy} ${variantClass}`}
+			onAnimationEnd={variant ? handleLeaveEnd : undefined}
 		>
 			<button
 				className={Style.Robot}
 				onClick={advance}
 				aria-label="Next message"
 				type="button"
-				disabled={leaving}
+				disabled={!!variant}
 			>
 				<span className={Style.Antenna}>
 					<span className={Style.AntennaStalk} />
