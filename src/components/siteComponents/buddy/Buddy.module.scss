@@ -312,6 +312,111 @@ $accent: #22ff77;
 	100% { transform: translate(-50%, -50%) scaleX(0) rotate(180deg); opacity: 0; }
 }
 
+/* ──────── Variant 5: jump + flip ──────── */
+
+.Leave_flip {
+	animation: flipArc 2s cubic-bezier(0.35, 0, 0.65, 1) forwards;
+	transform-origin: center bottom;
+}
+
+@keyframes flipArc {
+	0%   { transform: translate(0, 0) rotate(0deg); }
+	8%   { transform: translate(-4px, 6px) rotate(-4deg); }
+	16%  { transform: translate(0, -20px) rotate(-30deg); }
+	30%  { transform: translate(10vw, -180px) rotate(-180deg); }
+	50%  { transform: translate(30vw, -240px) rotate(-360deg); }
+	70%  { transform: translate(60vw, -180px) rotate(-540deg); }
+	88%  { transform: translate(95vw, -40px) rotate(-680deg); }
+	100% { transform: translate(125vw, 60px) rotate(-720deg); }
+}
+
+/* ──────── Variant 6: crab walk off ──────── */
+
+.Leave_crab {
+	animation: crabScuttle 2.8s cubic-bezier(0.2, 0.6, 0.3, 1) forwards;
+}
+
+@keyframes crabScuttle {
+	0%   { transform: translate(0, 0); }
+	10%  { transform: translate(0, 4px); }
+	16%  { transform: translate(0, 10px); }
+	100% { transform: translate(130vw, 10px); }
+}
+
+/* Body/head drop + tilt into crab pose */
+.Leave_crab .Head {
+	animation: crabHead 0.6s ease-out forwards;
+}
+@keyframes crabHead {
+	0%   { transform: rotate(0) translateY(0); }
+	100% { transform: rotate(6deg) translateY(8px); }
+}
+
+.Leave_crab .Body {
+	animation: crabBody 0.6s ease-out forwards;
+}
+@keyframes crabBody {
+	0%   { transform: rotate(0) translateY(0); }
+	100% { transform: rotate(-3deg) translateY(4px) scaleY(0.9); }
+}
+
+/* Splay limbs outward + small bob to simulate scuttle */
+.Leave_crab .ArmLeft {
+	animation: crabArmLeft 2.8s ease-out forwards;
+	transform-origin: 50% 7px;
+}
+@keyframes crabArmLeft {
+	0%   { transform: rotate(0); }
+	20%  { transform: rotate(-70deg); }
+	30%  { transform: rotate(-55deg); }
+	50%  { transform: rotate(-70deg); }
+	70%  { transform: rotate(-55deg); }
+	90%  { transform: rotate(-70deg); }
+	100% { transform: rotate(-60deg); }
+}
+
+.Leave_crab .ArmRight {
+	animation: crabArmRight 2.8s ease-out forwards;
+	transform-origin: 50% 7px;
+}
+@keyframes crabArmRight {
+	0%   { transform: rotate(0); }
+	20%  { transform: rotate(55deg); }
+	30%  { transform: rotate(70deg); }
+	50%  { transform: rotate(55deg); }
+	70%  { transform: rotate(70deg); }
+	90%  { transform: rotate(55deg); }
+	100% { transform: rotate(60deg); }
+}
+
+.Leave_crab .LegLeft {
+	animation: crabLegLeft 2.8s ease-out forwards;
+	transform-origin: 50% 7px;
+}
+@keyframes crabLegLeft {
+	0%   { transform: rotate(0); }
+	20%  { transform: rotate(-55deg); }
+	30%  { transform: rotate(-40deg); }
+	50%  { transform: rotate(-55deg); }
+	70%  { transform: rotate(-40deg); }
+	90%  { transform: rotate(-55deg); }
+	100% { transform: rotate(-48deg); }
+}
+
+.Leave_crab .LegRight {
+	animation: crabLegRight 2.8s ease-out forwards;
+	transform-origin: 50% 7px;
+}
+@keyframes crabLegRight {
+	0%   { transform: rotate(0); }
+	20%  { transform: rotate(40deg); }
+	30%  { transform: rotate(55deg); }
+	50%  { transform: rotate(40deg); }
+	70%  { transform: rotate(55deg); }
+	90%  { transform: rotate(40deg); }
+	100% { transform: rotate(48deg); }
+}
+
 /* ── Robot container ───────────────────────────────────────── */
 
 .Robot {

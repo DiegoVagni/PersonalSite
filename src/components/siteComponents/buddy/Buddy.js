@@ -6,9 +6,12 @@ const LINE_COUNT = 8;
 const ROTATE_MS = 7000;
 const STORAGE_KEY = "buddyDismissed";
 
-// Change this to pick which exit animation to test.
-// Eventually we'll randomize across all implemented variants.
-const EXIT_VARIANT = "teleport";
+const EXIT_VARIANTS = ["walk", "rocket", "glitch", "teleport", "flip", "crab"];
+// Set to a specific variant name to force it for debugging; null means random.
+const EXIT_VARIANT_OVERRIDE = null;
+const pickVariant = () =>
+	EXIT_VARIANT_OVERRIDE ||
+	EXIT_VARIANTS[Math.floor(Math.random() * EXIT_VARIANTS.length)];
 
 const Buddy = () => {
 	const [dismissed, setDismissed] = useState(() => localStorage.getItem(STORAGE_KEY) === "true");
@@ -49,7 +52,7 @@ const Buddy = () => {
 	const handleClose = (e) => {
 		e.stopPropagation();
 		clearInterval(timerRef.current);
-		setVariant(EXIT_VARIANT);
+		setVariant(pickVariant());
 	};
 
 	const handleLeaveEnd = (e) => {
