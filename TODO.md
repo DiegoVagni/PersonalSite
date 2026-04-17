@@ -2,7 +2,9 @@
 
 ## Projects to add
 
-- Gambardella
-- Zombie Character Designer
 - Libreria
-- Oovie
+- ZombieGame
+- Gambardella
+- Oovie Studios
+- Minerva
+- PaulProject
