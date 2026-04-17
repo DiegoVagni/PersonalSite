@@ -1,5 +1,12 @@
-.NoneDeco{
-	text-decoration:none;
+.NoneDeco,
+.NoneDeco:link,
+.NoneDeco:visited,
+.NoneDeco:active {
+	text-decoration: none;
+	color: var(--Home_Links_Color);
+}
+.NoneDeco:hover {
+	color: var(--Button_Color);
 }
 .DescriptionContainer {
 	height: fit-content;
