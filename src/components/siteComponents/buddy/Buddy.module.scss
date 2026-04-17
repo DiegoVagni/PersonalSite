@@ -197,7 +197,7 @@ $accent: #22ff77;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
 	transform-style: preserve-3d;
 
-	/* back plane + 2 intermediate planes → thick sandwich → reads as 3D when rotated */
+	/* back face */
 	&::before {
 		content: "";
 		position: absolute;
@@ -205,17 +205,22 @@ $accent: #22ff77;
 		background: $body-dark;
 		border: 2.5px solid $outline;
 		border-radius: 18px;
-		transform: translateZ(-20px);
+		transform: translateZ(-22px);
 	}
 
+	/* right-side wall: YZ-plane at x=head.right, z=[0,-22] */
 	&::after {
 		content: "";
 		position: absolute;
-		inset: 0;
-		background: $body;
+		right: 0;
+		top: 0;
+		width: 22px;
+		height: 100%;
+		background: linear-gradient(to right, $body, $body-dark);
 		border: 2.5px solid $outline;
-		border-radius: 18px;
-		transform: translateZ(-10px);
+		border-radius: 0 18px 18px 0;
+		transform: rotateY(-90deg);
+		transform-origin: right center;
 	}
 }
 
@@ -313,17 +318,21 @@ $accent: #22ff77;
 		background: $body-dark;
 		border: 2.5px solid $outline;
 		border-radius: 14px;
-		transform: translateZ(-20px);
+		transform: translateZ(-22px);
 	}
 
 	&::after {
 		content: "";
 		position: absolute;
-		inset: 0;
-		background: $body;
+		right: 0;
+		top: 0;
+		width: 22px;
+		height: 100%;
+		background: linear-gradient(to right, $body, $body-dark);
 		border: 2.5px solid $outline;
-		border-radius: 14px;
-		transform: translateZ(-10px);
+		border-radius: 0 14px 14px 0;
+		transform: rotateY(-90deg);
+		transform-origin: right center;
 	}
 }
 
@@ -397,6 +406,7 @@ $accent: #22ff77;
 	top: 102px;
 	width: 18px;
 	height: 90px;
+	transform-style: preserve-3d;
 }
 
 .ArmLeft  { left: -6px; }
@@ -412,7 +422,18 @@ $accent: #22ff77;
 	background: $joint;
 	border: 2px solid $outline;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
 	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		background: $joint-dark;
+		border: 2px solid $outline;
+		transform: translateZ(-8px);
+	}
 }
 
 .UpperArm {
@@ -425,6 +446,17 @@ $accent: #22ff77;
 	border: 2px solid $outline;
 	border-radius: 6px;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $body-dark;
+		border: 2px solid $outline;
+		border-radius: 6px;
+		transform: translateZ(-8px);
+	}
 }
 
 .Elbow {
@@ -437,7 +469,18 @@ $accent: #22ff77;
 	background: $joint;
 	border: 2px solid $outline;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
 	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		background: $joint-dark;
+		border: 2px solid $outline;
+		transform: translateZ(-8px);
+	}
 }
 
 .Forearm {
@@ -450,6 +493,17 @@ $accent: #22ff77;
 	border: 2px solid $outline;
 	border-radius: 6px;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $body-dark;
+		border: 2px solid $outline;
+		border-radius: 6px;
+		transform: translateZ(-8px);
+	}
 }
 
 .Hand {
@@ -462,7 +516,18 @@ $accent: #22ff77;
 	border: 2px solid $outline;
 	border-radius: 50% 50% 40% 60%;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
 	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $joint-dark;
+		border: 2px solid $outline;
+		border-radius: 50% 50% 40% 60%;
+		transform: translateZ(-8px);
+	}
 }
 
 /* ── Legs ──────────────────────────────────────────────────── */
@@ -472,6 +537,7 @@ $accent: #22ff77;
 	bottom: 0;
 	width: 24px;
 	height: 76px;
+	transform-style: preserve-3d;
 }
 
 .LegLeft  { left: 22px; }
@@ -487,7 +553,18 @@ $accent: #22ff77;
 	background: $joint;
 	border: 2px solid $outline;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
 	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		background: $joint-dark;
+		border: 2px solid $outline;
+		transform: translateZ(-8px);
+	}
 }
 
 .Thigh {
@@ -500,6 +577,17 @@ $accent: #22ff77;
 	border: 2px solid $outline;
 	border-radius: 5px;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $body-dark;
+		border: 2px solid $outline;
+		border-radius: 5px;
+		transform: translateZ(-8px);
+	}
 }
 
 .Knee {
@@ -512,7 +600,18 @@ $accent: #22ff77;
 	background: $joint;
 	border: 2px solid $outline;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
 	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		background: $joint-dark;
+		border: 2px solid $outline;
+		transform: translateZ(-8px);
+	}
 }
 
 .Shin {
@@ -525,6 +624,17 @@ $accent: #22ff77;
 	border: 2px solid $outline;
 	border-radius: 5px;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $body-dark;
+		border: 2px solid $outline;
+		border-radius: 5px;
+		transform: translateZ(-8px);
+	}
 }
 
 .Foot {
@@ -537,7 +647,18 @@ $accent: #22ff77;
 	border: 2px solid $outline;
 	border-radius: 55% 55% 6px 6px / 70% 70% 6px 6px;
 	transform: translateX(-50%);
+	transform-style: preserve-3d;
 	z-index: 2;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: $joint-dark;
+		border: 2px solid $outline;
+		border-radius: 55% 55% 6px 6px / 70% 70% 6px 6px;
+		transform: translateZ(-8px);
+	}
 }
 
 /* ── Hover shadow ──────────────────────────────────────────── */
