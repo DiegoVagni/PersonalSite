@@ -193,7 +193,7 @@ $accent: #22ff77;
 	height: 68px;
 	background: linear-gradient(135deg, $body-light 0%, $body 45%, $body-dark 100%);
 	border: 2.5px solid $outline;
-	border-radius: 18px;
+	border-radius: 4px;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
 	transform-style: preserve-3d;
 
@@ -204,7 +204,7 @@ $accent: #22ff77;
 		inset: 0;
 		background: $body-dark;
 		border: 2.5px solid $outline;
-		border-radius: 18px;
+		border-radius: 4px;
 		transform: translateZ(-22px);
 	}
 
@@ -218,7 +218,7 @@ $accent: #22ff77;
 		height: 100%;
 		background: linear-gradient(to right, $body, $body-dark);
 		border: 2.5px solid $outline;
-		border-radius: 0 18px 18px 0;
+		border-radius: 0 4px 4px 0;
 		transform: rotateY(-90deg);
 		transform-origin: right center;
 	}
@@ -307,7 +307,7 @@ $accent: #22ff77;
 	height: 64px;
 	background: linear-gradient(135deg, $body-light 0%, $body 55%, $body-dark 100%);
 	border: 2.5px solid $outline;
-	border-radius: 14px;
+	border-radius: 4px;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
 	transform-style: preserve-3d;
 
@@ -317,7 +317,7 @@ $accent: #22ff77;
 		inset: 0;
 		background: $body-dark;
 		border: 2.5px solid $outline;
-		border-radius: 14px;
+		border-radius: 4px;
 		transform: translateZ(-22px);
 	}
 
@@ -330,7 +330,7 @@ $accent: #22ff77;
 		height: 100%;
 		background: linear-gradient(to right, $body, $body-dark);
 		border: 2.5px solid $outline;
-		border-radius: 0 14px 14px 0;
+		border-radius: 0 4px 4px 0;
 		transform: rotateY(-90deg);
 		transform-origin: right center;
 	}
