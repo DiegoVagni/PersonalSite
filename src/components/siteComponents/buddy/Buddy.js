@@ -8,7 +8,7 @@ const STORAGE_KEY = "buddyDismissed";
 
 // Change this to pick which exit animation to test.
 // Eventually we'll randomize across all implemented variants.
-const EXIT_VARIANT = "rocket";
+const EXIT_VARIANT = "glitch";
 
 const Buddy = () => {
 	const [dismissed, setDismissed] = useState(() => localStorage.getItem(STORAGE_KEY) === "true");

@@ -149,6 +149,83 @@ $accent: #22ff77;
 	50%      { transform: translateX(-50%) scaleX(0.92); }
 }
 
+/* ──────── Variant 3: glitch-out (matrix dissolve in place) ──────── */
+
+.Leave_glitch {
+	animation: glitchCollapse 1.6s linear forwards, glitchTint 1.6s linear forwards;
+	transform-origin: center center;
+}
+
+@keyframes glitchTint {
+	0%   { filter: sepia(1) hue-rotate(60deg) saturate(3)   brightness(1)   drop-shadow(0 0 6px  rgba(0, 255, 106, 0.7)); }
+	20%  { filter: sepia(1) hue-rotate(70deg) saturate(4)   brightness(1.1) drop-shadow(0 0 10px rgba(0, 255, 106, 0.9)); }
+	50%  { filter: sepia(1) hue-rotate(60deg) saturate(5)   brightness(1.2) drop-shadow(0 0 14px rgba(0, 255, 106, 1));   }
+	85%  { filter: sepia(1) hue-rotate(70deg) saturate(6)   brightness(1.4) drop-shadow(0 0 20px rgba(0, 255, 106, 1));   }
+	100% { filter: sepia(1) hue-rotate(70deg) saturate(8)   brightness(1.8) drop-shadow(0 0 24px rgba(0, 255, 106, 1));   }
+}
+
+@keyframes glitchCollapse {
+	0%   { transform: translateX(0); }
+	4%   { transform: translateX(-5px) skewX(2deg); }
+	8%   { transform: translateX(6px) skewX(-3deg); }
+	12%  { transform: translateX(-3px); }
+	16%  { transform: translateX(4px) skewX(1deg); }
+	22%  { transform: translateX(-6px); }
+	28%  { transform: translateX(2px) skewX(-2deg); }
+	36%  { transform: translateX(-4px); }
+	44%  { transform: translateX(5px) skewX(2deg); }
+	55%  { transform: translateX(-2px); }
+	66%  { transform: translateX(3px); }
+	75%  { transform: translateX(-1px) scaleY(0.95); }
+	85%  { transform: scale(1.02, 0.35); }
+	93%  { transform: scale(1.08, 0.04); }
+	100% { transform: scale(0.3, 0); }
+}
+
+.Leave_glitch .Robot::before {
+	content: "";
+	position: absolute;
+	inset: -20px;
+	background:
+		repeating-linear-gradient(
+			to bottom,
+			transparent 0px,
+			transparent 3px,
+			rgba(0, 255, 106, 0.22) 4px,
+			rgba(0, 255, 106, 0.05) 5px,
+			transparent 6px
+		);
+	pointer-events: none;
+	z-index: 10;
+	animation: scanMove 0.35s linear infinite, scanFade 1.6s linear forwards;
+}
+
+@keyframes scanMove {
+	0%   { background-position-y: 0; }
+	100% { background-position-y: 6px; }
+}
+
+@keyframes scanFade {
+	0%   { opacity: 0; }
+	10%  { opacity: 1; }
+	80%  { opacity: 1; }
+	100% { opacity: 0.3; }
+}
+
+.Leave_glitch .Bubble {
+	animation: bubbleGlitch 1.6s linear forwards;
+}
+
+@keyframes bubbleGlitch {
+	0%   { transform: translateX(0); }
+	10%  { transform: translateX(-3px); }
+	20%  { transform: translateX(4px); }
+	30%  { transform: translateX(-2px); }
+	50%  { transform: translateX(0); }
+	80%  { transform: scale(1, 0.1); }
+	100% { transform: scale(0.2, 0); }
+}
+
 /* ── Robot container ───────────────────────────────────────── */
 
 .Robot {
