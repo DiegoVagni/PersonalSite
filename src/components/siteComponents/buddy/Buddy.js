@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Locale from "../../../utils/Locale";
 import Style from "./Buddy.module.scss";
 
-const LINE_COUNT = 8;
+const LINE_COUNT = 11;
 const ROTATE_MS = 7000;
 const STORAGE_KEY = "buddyDismissed";
 
