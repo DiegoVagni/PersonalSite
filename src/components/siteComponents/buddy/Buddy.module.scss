@@ -226,6 +226,92 @@ $accent: #22ff77;
 	100% { transform: scale(0.2, 0); }
 }
 
+/* ──────── Variant 4: shrink + teleport ──────── */
+
+/* Dummy animation on the container so onAnimationEnd fires on .Buddy
+   after 1.2s. The Buddy itself stays at scale(1) so the twinkle
+   pseudo-elements aren't affected by the shrink. */
+.Leave_teleport {
+	animation: teleportTimer 1.2s linear forwards;
+}
+
+@keyframes teleportTimer {
+	0%, 100% { opacity: 1; }
+}
+
+.Leave_teleport .Robot {
+	animation: teleportShrink 0.5s cubic-bezier(0.7, 0, 0.6, 1) forwards;
+	transform-origin: center center;
+}
+
+@keyframes teleportShrink {
+	0%   { transform: scale(1, 1); }
+	30%  { transform: scale(1.2, 0.8); }
+	55%  { transform: scale(0.8, 1.2); }
+	100% { transform: scale(0, 0); }
+}
+
+.Leave_teleport .Bubble {
+	animation: bubbleFade 0.3s ease-in forwards;
+	transform-origin: left center;
+}
+
+@keyframes bubbleFade {
+	0%   { transform: scale(1); opacity: 1; }
+	100% { transform: scale(0); opacity: 0; }
+}
+
+.Leave_teleport::after {
+	content: "";
+	position: absolute;
+	left: 60px;
+	top: 160px;
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle,
+		#ffffff 0%,
+		#c7ffe0 20%,
+		#00ff6a 45%,
+		rgba(0, 255, 106, 0.3) 70%,
+		transparent 100%
+	);
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	animation: twinklePop 0.85s ease-out 0.35s forwards;
+	z-index: 100;
+}
+
+@keyframes twinklePop {
+	0%   { width: 0; height: 0; opacity: 0; }
+	10%  { width: 20px; height: 20px; opacity: 1; }
+	40%  { width: 120px; height: 120px; opacity: 1; }
+	100% { width: 240px; height: 240px; opacity: 0; }
+}
+
+.Leave_teleport::before {
+	content: "";
+	position: absolute;
+	left: 60px;
+	top: 160px;
+	width: 200px;
+	height: 3px;
+	background: linear-gradient(to right, transparent, #ffffff 45%, #ffffff 55%, transparent);
+	transform: translate(-50%, -50%) scaleX(0);
+	pointer-events: none;
+	animation: twinkleBeam 0.7s ease-out 0.4s forwards;
+	z-index: 101;
+	box-shadow: 0 0 6px #00ff6a;
+}
+
+@keyframes twinkleBeam {
+	0%   { transform: translate(-50%, -50%) scaleX(0) rotate(0deg); opacity: 0; }
+	25%  { transform: translate(-50%, -50%) scaleX(1.2) rotate(0deg); opacity: 1; }
+	50%  { transform: translate(-50%, -50%) scaleX(1.4) rotate(90deg); opacity: 1; }
+	100% { transform: translate(-50%, -50%) scaleX(0) rotate(180deg); opacity: 0; }
+}
+
 /* ── Robot container ───────────────────────────────────────── */
 
 .Robot {
