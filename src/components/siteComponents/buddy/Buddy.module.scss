@@ -338,12 +338,12 @@ $accent: #22ff77;
 
 @keyframes crabScuttle {
 	0%   { transform: translate(0, 0); }
-	10%  { transform: translate(-2px, 10px); }       /* squat into pose */
-	14%  { transform: translate(-4px, 18px); }
-	22%  { transform: translate(-6px, 14px); }       /* tiny pop */
-	28%  { transform: translate(-8px, 18px); }
-	35%  { transform: translate(-12vw, 16px); }      /* start scuttling left */
-	50%  { transform: translate(-35vw, 18px); }
+	8%   { transform: translate(32px, 10px); }       /* scoot right into pose so both V-arms fit */
+	14%  { transform: translate(36px, 18px); }       /* squat lower */
+	22%  { transform: translate(32px, 14px); }       /* tiny pop */
+	28%  { transform: translate(36px, 18px); }
+	35%  { transform: translate(0, 16px); }          /* begin scuttling left, retract initial scoot */
+	50%  { transform: translate(-30vw, 18px); }
 	65%  { transform: translate(-60vw, 15px); }
 	80%  { transform: translate(-90vw, 18px); }
 	100% { transform: translate(-130vw, 16px); }     /* off left */
@@ -367,19 +367,21 @@ $accent: #22ff77;
 	100% { transform: rotate(0) translateY(6px) scaleY(0.82); }
 }
 
-/* Arms raised up in a V (above the head, spread outward) */
+/* Arms raised up in a V (above the head, spread outward).
+   Positive rotate on the viewer-left arm swings it clockwise
+   from pointing-down to pointing-up-and-left, which is the V's
+   left stroke. Right arm is the mirror (negative). */
 .Leave_crab .ArmLeft {
 	animation: crabArmLeftV 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
 	transform-origin: 50% 7px;
 }
 @keyframes crabArmLeftV {
 	0%   { transform: rotate(0); }
-	18%  { transform: rotate(-155deg); }
-	35%  { transform: rotate(-145deg); }
-	52%  { transform: rotate(-158deg); }
-	70%  { transform: rotate(-145deg); }
-	88%  { transform: rotate(-158deg); }
-	100% { transform: rotate(-150deg); }
+	20%  { transform: rotate(135deg); }
+	35%  { transform: rotate(125deg); }
+	55%  { transform: rotate(135deg); }
+	75%  { transform: rotate(125deg); }
+	100% { transform: rotate(130deg); }
 }
 
 .Leave_crab .ArmRight {
@@ -388,27 +390,25 @@ $accent: #22ff77;
 }
 @keyframes crabArmRightV {
 	0%   { transform: rotate(0); }
-	18%  { transform: rotate(155deg); }
-	35%  { transform: rotate(145deg); }
-	52%  { transform: rotate(158deg); }
-	70%  { transform: rotate(145deg); }
-	88%  { transform: rotate(158deg); }
-	100% { transform: rotate(150deg); }
+	20%  { transform: rotate(-135deg); }
+	35%  { transform: rotate(-125deg); }
+	55%  { transform: rotate(-135deg); }
+	75%  { transform: rotate(-125deg); }
+	100% { transform: rotate(-130deg); }
 }
 
-/* Legs splayed wide outward (sumo/crab stance), with bob for gait */
+/* Thighs splayed outward at hips (knees go outward) */
 .Leave_crab .LegLeft {
 	animation: crabLegLeftWide 3s cubic-bezier(0.3, 0.6, 0.3, 1) forwards;
 	transform-origin: 50% 7px;
 }
 @keyframes crabLegLeftWide {
 	0%   { transform: rotate(0); }
-	18%  { transform: rotate(-65deg); }
-	35%  { transform: rotate(-50deg); }
-	52%  { transform: rotate(-65deg); }
-	70%  { transform: rotate(-50deg); }
-	88%  { transform: rotate(-65deg); }
-	100% { transform: rotate(-58deg); }
+	20%  { transform: rotate(60deg); }
+	40%  { transform: rotate(52deg); }
+	60%  { transform: rotate(60deg); }
+	80%  { transform: rotate(52deg); }
+	100% { transform: rotate(58deg); }
 }
 
 .Leave_crab .LegRight {
@@ -417,23 +417,23 @@ $accent: #22ff77;
 }
 @keyframes crabLegRightWide {
 	0%   { transform: rotate(0); }
-	18%  { transform: rotate(65deg); }
-	35%  { transform: rotate(50deg); }
-	52%  { transform: rotate(65deg); }
-	70%  { transform: rotate(50deg); }
-	88%  { transform: rotate(65deg); }
-	100% { transform: rotate(58deg); }
+	20%  { transform: rotate(-60deg); }
+	40%  { transform: rotate(-52deg); }
+	60%  { transform: rotate(-60deg); }
+	80%  { transform: rotate(-52deg); }
+	100% { transform: rotate(-58deg); }
 }
 
-/* Shins kick back inward so the knees truly "bend" */
+/* Shins counter-rotate around the knee so feet stay pointing down
+   (creates the bent-knee "(  )" silhouette). */
 .Leave_crab .LegLeft .Shin {
 	animation: crabShinLeft 3s ease-out forwards;
 	transform-origin: 50% -7px;
 }
 @keyframes crabShinLeft {
 	0%   { transform: translateX(-50%) rotate(0); }
-	25%  { transform: translateX(-50%) rotate(55deg); }
-	100% { transform: translateX(-50%) rotate(50deg); }
+	25%  { transform: translateX(-50%) rotate(-55deg); }
+	100% { transform: translateX(-50%) rotate(-50deg); }
 }
 
 .Leave_crab .LegRight .Shin {
@@ -442,17 +442,23 @@ $accent: #22ff77;
 }
 @keyframes crabShinRight {
 	0%   { transform: translateX(-50%) rotate(0); }
-	25%  { transform: translateX(-50%) rotate(-55deg); }
-	100% { transform: translateX(-50%) rotate(-50deg); }
+	25%  { transform: translateX(-50%) rotate(55deg); }
+	100% { transform: translateX(-50%) rotate(50deg); }
 }
 
-/* Bubble drops with the robot */
+/* Bubble fades away so the raised V-arms are visible */
 .Leave_crab .Bubble {
-	animation: crabBubble 0.6s ease-out forwards;
+	animation: crabBubble 0.35s ease-in forwards;
+	transform-origin: left center;
 }
 @keyframes crabBubble {
-	0%   { transform: translateY(0); }
-	100% { transform: translateY(14px); }
+	0%   { transform: scale(1); opacity: 1; }
+	100% { transform: scale(0.3) translateX(-40px); opacity: 0; }
+}
+
+/* Keep the robot rendered on top of any lingering bubble pixels */
+.Leave_crab .Robot {
+	z-index: 5;
 }
 
 /* ── Robot container ───────────────────────────────────────── */
