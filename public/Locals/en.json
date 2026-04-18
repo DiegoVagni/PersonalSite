@@ -153,6 +153,15 @@
   "PaulProject_Starting_Date": "10.10.2025",
   "PaulProject_End_Date": "15.02.2026",
   "PaulProject_Description": "Video-music AI tool takes a piece of music and turns it into a video. It runs diarization to split the track by channel (voice, each instrument, and so on), then a custom pipeline keeps characters, locations and actions consistent from one frame to the next. A self-hosted LLM enriches the prompts for Stable Diffusion so every generated image reflects the music being played at that moment, frame by frame. On the lip-sync side, it uses Wav2Lip to line up mouth movement with the vocal track. The only step still done by hand is stitching the final clips and the music together.\n\nI built it as a personal warm-up before starting at Oovie Studios, to practice exactly the kind of music-driven video generation their work centers on. Fully local, solo, from October 2025 to mid-February 2026. Stack is React on the frontend and FastAPI / Python on the backend, tying everything together.",
+
+  "Fongit": "Swiss Startup Investment Rating",
+  "Fongit_Time": "2.5 months",
+  "Fongit_TeamSize": "1 dev",
+  "Fongit_Committer": "Antonio Gambardella",
+  "Fongit_Starting_Date": "01.07.2025",
+  "Fongit_End_Date": "15.09.2025",
+  "Fongit_Description": "Swiss Startup Investment Rating is a tool that scouts the Swiss startup scene to surface the best candidates to invest in. It scrapes the web for Swiss startup data and stores everything in a local database. Each entry is then pushed through an external LLM that scores the company on investment potential, and the results are ranked so the most promising names end up at the top of the list.\n\nBuilt solo from July to mid September 2025 on commission from Antonio Gambardella. Stack is React on the frontend and Node.js on the backend.",
+
   "LastRun": "LastRun",
   "LastRun_Time": "1 month",
   "LastRun_TeamSize": "2 devs",

@@ -75,6 +75,14 @@ class Projects extends Component {
 					/>
 
 				<ProjectCard
+					title={"Fongit"}
+					tech={[[React, Locale.GetMessages("React")], [NodeJS, Locale.GetMessages("NodeJS")]]}
+					GitHub={Locale.GetMessages("Private")}
+					to={'https://ch.linkedin.com/in/antonio-gambardella-geneva'}
+					preview={<ImgPreview src={TopSecret} local={"Fongit"} />}
+					/>
+
+				<ProjectCard
 					title={"Site"}
 					tech={[[Css, Locale.GetMessages("Css")], [Javascript, Locale.GetMessages("Javascript")], [Html, Locale.GetMessages("Html")], [React, Locale.GetMessages("React")]]}
 					stampRot={"15deg"}
