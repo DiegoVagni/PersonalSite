@@ -33,20 +33,20 @@ class Projects extends Component {
 		return (
 			<div className={FlexStyle.FlexColumnCenterTop}>
 				<ProjectCard
+					title={"OOEdit"}
+					tech={[[React, Locale.GetMessages("React")], [NodeJS, Locale.GetMessages("NodeJS")], [MongoDB, Locale.GetMessages("MongoDB")]]}
+					GitHub={Locale.GetMessages("Private")}
+					to={'https://www.ooviestudios.com/en'}
+					preview={<ImgPreview src={TopSecret} local={"OOEdit"} />}
+					/>
+
+				<ProjectCard
 					title={"Site"}
 					tech={[[Css, Locale.GetMessages("Css")], [Javascript, Locale.GetMessages("Javascript")], [Html, Locale.GetMessages("Html")], [React, Locale.GetMessages("React")]]}
 					stampRot={"15deg"}
 					GitHub={Locale.GetMessages("Private")}
 					to={'/'}
 					preview={<IFramePreview title={Locale.GetMessages("Site")} src={"/"} />}
-					/>
-
-				<ProjectCard
-					title={"OOEdit"}
-					tech={[[React, Locale.GetMessages("React")], [NodeJS, Locale.GetMessages("NodeJS")], [MongoDB, Locale.GetMessages("MongoDB")]]}
-					GitHub={Locale.GetMessages("Private")}
-					to={'https://www.ooviestudios.com/en'}
-					preview={<ImgPreview src={TopSecret} local={"OOEdit"} />}
 					/>
 
 				<ProjectCard
