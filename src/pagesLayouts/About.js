@@ -17,6 +17,7 @@ class About extends Component {
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"PartTime"}></AboutMeCard>
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"G3CLABSME"}></AboutMeCard>
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"OnlyMe"}></AboutMeCard>
+				<AboutMeCard styleSheet={this.props.styleSheet} title={"BackToConsulence"}></AboutMeCard>
 				<AboutMeCard styleSheet={this.props.styleSheet} title={"Passions"}></AboutMeCard>
 			</div>
 
