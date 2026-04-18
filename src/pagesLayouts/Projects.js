@@ -28,6 +28,7 @@ import SmashWorlds from "../resources/images/smashWorlds.jpg"
 import TopSecret from "../resources/images/topsecret.jpg"
 import LibraryImg from "../resources/images/library.png"
 import MinervaImg from "../resources/images/minerva.png"
+import VideoAIImg from "../resources/images/videoai.png"
 import TTC from "../components/pagesComponents/projectPage/TTC_Preview/TTC"
 import Preview from "../components/siteComponents/card/previews/Preview"
 
@@ -63,6 +64,14 @@ class Projects extends Component {
 					GitHub={Locale.GetMessages("Private")}
 					to={'/'}
 					preview={<ImgPreview src={MinervaImg} local={"Minerva"} />}
+					/>
+
+				<ProjectCard
+					title={"PaulProject"}
+					tech={[[React, Locale.GetMessages("React")], [Python, Locale.GetMessages("Python")], [FastAPI, Locale.GetMessages("FastAPI")]]}
+					GitHub={Locale.GetMessages("Private")}
+					to={'/'}
+					preview={<ImgPreview src={VideoAIImg} local={"PaulProject"} />}
 					/>
 
 				<ProjectCard

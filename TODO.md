@@ -4,6 +4,5 @@
 
 - ZombieGame
 - Gambardella
-- PaulProject
 - Character Builder
 - Fongit
