@@ -5,7 +5,6 @@
 - Libreria
 - ZombieGame
 - Gambardella
-- Oovie Studios
 - Minerva
 - PaulProject
 - Character Builder

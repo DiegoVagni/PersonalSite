@@ -127,6 +127,14 @@
 	"Site_End_Date": "12.02.2024",
 	"Site_Description": "Avendo bisogno di uno spazio dove mostrare il mio lavoro, ho scelto di rendere anche il sito stesso una prova di ciò che sono in grado di fare. \n Ho optato per creare il più possibile in maniera originale (come il sistema di localizzazione o la possibilità di cambiare tema),senza l’ausilio di librerie,   proprio per essere maggiormente flessibile e efficace nella mantenibilità del codice. Ho, a volte, riadattato parte di codice preso online, in quanto anch'esso è parte del lavoro di un ingegnere. Lavorare su di esso mi ha permesso di rafforzare le conoscenze riguardanti le tecnologie usate e imparare meglio l'utilizzo delle animazioni. \n Lo scheletro e tutti i contenuti sono stati fatti in 4 giorni, il restante tempo è stato speso nel refactoring e migliorare il sito.\n Di tanto in tanto continuo ad aggiornarlo e migliorarlo.",
 
+	"OOEdit": "OO Edit",
+	"OOEdit_Time": "In corso",
+	"OOEdit_TeamSize": "3 sviluppatori",
+	"OOEdit_Committer": "Oovie Studios",
+	"OOEdit_Starting_Date": "01.01.2026",
+	"OOEdit_End_Date": "In corso",
+	"OOEdit_Description": "OO Edit è il tool interno che sto sviluppando con Oovie Studios a supporto del loro lavoro. Oovie Studios produce film generati con AI sincronizzati alla musica dal vivo, dove le immagini cambiano in tempo reale con l'esecuzione; hanno già portato questo tipo di esperienze a brand come Dell Technologies e Luxottica, e a istituzioni culturali come il Teatro Verdi e La Filarmonica. Il tool permette al team di costruire storyboard per queste produzioni e di usare l'AI per modificare le clip dentro lo stesso workspace, così l'intero flusso dall'idea al girato finale resta in un unico posto. Lavoro sia lato frontend (React) sia lato backend (Node.js + MongoDB). In corso.",
+
 	"LastRun": "LastRun",
 	"LastRun_Time": "1 mese",
 	"LastRun_TeamSize": "2 persone",

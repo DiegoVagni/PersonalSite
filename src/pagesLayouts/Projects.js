@@ -13,6 +13,8 @@ import React from "../resources/icons/react.svg"
 import CSharp from "../resources/icons/c_sharp.svg"
 import Python from "../resources/icons/python.svg"
 import Unity from "../resources/icons/unity.svg"
+import NodeJS from "../resources/icons/nodejs.svg"
+import MongoDB from "../resources/icons/mongodb.svg"
 import DownloadPDFSection from "../components/siteComponents/DownloadPDFSection"
 import Twitch from "../resources/images/twitch.png"
 import LastRun from "../resources/images/lastRun.png"
@@ -20,6 +22,7 @@ import LudoGame from "../resources/images/ludoGame.png"
 import ComFram from "../resources/images/ComFram.png"
 import Tesi from "../resources/images/tesi_preview.png"
 import SmashWorlds from "../resources/images/smashWorlds.jpg"
+import TopSecret from "../resources/images/topsecret.jpg"
 import TTC from "../components/pagesComponents/projectPage/TTC_Preview/TTC"
 import Preview from "../components/siteComponents/card/previews/Preview"
 
@@ -37,7 +40,15 @@ class Projects extends Component {
 					to={'/'}
 					preview={<IFramePreview title={Locale.GetMessages("Site")} src={"/"} />}
 					/>
-					
+
+				<ProjectCard
+					title={"OOEdit"}
+					tech={[[React, Locale.GetMessages("React")], [NodeJS, Locale.GetMessages("NodeJS")], [MongoDB, Locale.GetMessages("MongoDB")]]}
+					GitHub={Locale.GetMessages("Private")}
+					to={'https://www.ooviestudios.com/en'}
+					preview={<ImgPreview src={TopSecret} local={"OOEdit"} />}
+					/>
+
 				<ProjectCard
 					title={"Comunication_Framework"}
 					tech={[[CSharp, Locale.GetMessages("CSharp")], [Net, Locale.GetMessages("Net")]]}
