@@ -2,7 +2,6 @@
 
 ## Projects to add
 
-- Libreria
 - ZombieGame
 - Gambardella
 - Minerva

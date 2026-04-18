@@ -15,6 +15,7 @@ import Python from "../resources/icons/python.svg"
 import Unity from "../resources/icons/unity.svg"
 import NodeJS from "../resources/icons/nodejs.svg"
 import MongoDB from "../resources/icons/mongodb.svg"
+import Sqlite from "../resources/icons/sqlite.svg"
 import DownloadPDFSection from "../components/siteComponents/DownloadPDFSection"
 import Twitch from "../resources/images/twitch.png"
 import LastRun from "../resources/images/lastRun.png"
@@ -23,6 +24,7 @@ import ComFram from "../resources/images/ComFram.png"
 import Tesi from "../resources/images/tesi_preview.png"
 import SmashWorlds from "../resources/images/smashWorlds.jpg"
 import TopSecret from "../resources/images/topsecret.jpg"
+import LibraryImg from "../resources/images/library.png"
 import TTC from "../components/pagesComponents/projectPage/TTC_Preview/TTC"
 import Preview from "../components/siteComponents/card/previews/Preview"
 
@@ -38,6 +40,16 @@ class Projects extends Component {
 					GitHub={Locale.GetMessages("Private")}
 					to={'https://www.ooviestudios.com/en'}
 					preview={<ImgPreview src={TopSecret} local={"OOEdit"} />}
+					/>
+
+				<ProjectCard
+					title={"LibraryManager"}
+					tech={[[React, Locale.GetMessages("React")], [NodeJS, Locale.GetMessages("NodeJS")], [Sqlite, Locale.GetMessages("SQLite")]]}
+					stamp={"new"}
+					stampRot={"15deg"}
+					GitHub={Locale.GetMessages("OnRequest")}
+					to={'/'}
+					preview={<ImgPreview src={LibraryImg} local={"LibraryManager"} />}
 					/>
 
 				<ProjectCard
