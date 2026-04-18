@@ -4,7 +4,6 @@
 
 - ZombieGame
 - Gambardella
-- Minerva
 - PaulProject
 - Character Builder
 - Fongit

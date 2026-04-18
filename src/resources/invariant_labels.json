@@ -22,6 +22,7 @@
 	"Linux": "Linux",
 	"MongoDB": "MongoDB",
 	"SQLite": "SQLite",
+	"FastAPI": "FastAPI",
 	"Net": ".Net",
 
 

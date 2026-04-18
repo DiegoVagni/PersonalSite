@@ -142,6 +142,13 @@
 	"LibraryManager_Starting_Date": "01.03.2026",
 	"LibraryManager_End_Date": "20.03.2026",
 	"LibraryManager_Description": "Library Manager è un progetto personale che mi sono costruito per tenere traccia della mia collezione di fumetti e del resto della mia libreria. Volevo un posto unico dove mettere ogni dettaglio di ogni volume: autore, prezzo, condizioni e tutto il resto. In più, ho misurato ogni scaffale di casa e ho dato a ogni manga la sua profondità, così il tool fa girare un algoritmo che, secondo le mie regole di posizionamento, decide la posizione migliore per ogni libro sugli scaffali.\n\nGira su un server basato su Arduino nella rete di casa, con frontend in React, backend in Node.js e SQLite per l'archiviazione. Visto che il sistema sa dove si trova ogni volume, tengo anche un piccolo tablet accanto agli scaffali per cercarli, come in un terminale delle biblioteche pubbliche. Fatto da solo in circa tre settimane, a marzo 2026. Chiuso.",
+	"Minerva": "Minerva",
+	"Minerva_Time": "In corso",
+	"Minerva_TeamSize": "1 persona",
+	"Minerva_Committer": "Diego Vagni",
+	"Minerva_Starting_Date": "13.11.2025",
+	"Minerva_End_Date": "In corso",
+	"Minerva_Description": "Minerva è la mia Intelligent Neural Enhanced Responsive Virtual Assistant. È un sistema totalmente locale e self-hosted che sto costruendo da solo, nel tempo libero, come il mio assistente AI personale.\n\nSotto il cofano può far girare modelli diversi per generazione immagini, LLM, riconoscimento e trascrizione vocale, diarizzazione musicale e text-to-speech. Uno strato RAG le dà memoria persistente fra le sessioni, e ha varie modalità operative, dalla conversazione normale alla scrittura di codice, ognuna con il suo comportamento.\n\nGira tutto su hardware di casa, quindi è davvero lenta: l'inferenza locale richiede potenza, e sto ancora ampliando la macchina man mano. È un progetto volutamente di lungo periodo. Continuo ad aggiornarla, a ottimizzare ciò che c'è e ad aggiungere ferro. Il prossimo passo è il riconoscimento visivo, più lo scanning di mail e del PC perché possa aiutarmi a ordinare file ed email automaticamente.\n\nLo stack è ampio: React, Node.js, Python, FastAPI e Docker sono la spina dorsale. È anche il posto dove buona parte di ciò che ho imparato in anni di IT sta riversandosi, silenziosamente.",
 
 	"LastRun": "LastRun",
 	"LastRun_Time": "1 mese",
