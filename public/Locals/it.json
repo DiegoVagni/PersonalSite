@@ -48,6 +48,8 @@
 	"--WelcomeAnimColor3": "Animazione iniziale colore 3",
 	"--WelcomeAnimColor4": "Animazione iniziale colore 4",
 	"--Select_BackgroundColor": "Colore sfondo selettori",
+	"--Timeline_Line_Color": "Colore linea timeline",
+	"--Timeline_Dot_Color": "Colore cerchi timeline",
 
 
 	"Languages": "Lingue",
@@ -111,6 +113,7 @@
 
 	"Stamp": "Francobollo ",
 	"HomeAnimation": "Animazione iniziale",
+	"Still_Working": "Continuando a lavorare",
 
 	"CardStat_TeamSize": "Dimensione team",
 	"CardStat_Time": "Tempo impiegato",

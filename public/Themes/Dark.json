@@ -35,5 +35,8 @@
 	"--WelcomeAnimColor3": "#22d3ee",
 	"--WelcomeAnimColor4": "#1e293b",
 
-	"--Select_BackgroundColor": "#334155"
+	"--Select_BackgroundColor": "#334155",
+
+	"--Timeline_Line_Color": "#475569",
+	"--Timeline_Dot_Color": "#60a5fa"
 }

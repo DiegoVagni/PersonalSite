@@ -1,0 +1,188 @@
+.Timeline {
+	width: 100%;
+	padding: 40px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.Track {
+	position: relative;
+	width: 100%;
+	max-width: 1100px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.Spine {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	background: var(--Timeline_Line_Color);
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.Item {
+	display: flex;
+	position: relative;
+	width: 100%;
+	align-items: flex-start;
+	min-height: 40px;
+}
+
+.Left { justify-content: flex-start; }
+.Right { justify-content: flex-end; }
+
+.Side {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+.Left .Side { align-items: flex-end; padding-right: 2px; }
+.Right .Side { align-items: flex-start; padding-left: 2px; }
+
+.Dot {
+	position: absolute;
+	left: 50%;
+	top: 6px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: var(--Timeline_Dot_Color);
+	transform: translateX(-50%);
+	z-index: 2;
+	box-shadow: 0 0 0 5px var(--Page_Background);
+	transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.Branch {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+.Left .Branch { flex-direction: row; }
+.Right .Branch { flex-direction: row; }
+
+.Connector {
+	height: 4px;
+	width: 40px;
+	background: var(--Timeline_Line_Color);
+	flex-shrink: 0;
+	transition: width 0.25s, background 0.25s;
+}
+
+.Title {
+	font-family: var(--Title_Font);
+	font-size: 1.75rem;
+	color: var(--Text_Color);
+	padding: 2px 14px;
+	transition: color 0.2s;
+}
+
+.Left .Title { text-align: right; }
+.Right .Title { text-align: left; }
+
+.Branch:hover .Title { color: var(--Timeline_Dot_Color); }
+.Item:hover .Dot { transform: translateX(-50%) scale(1.2); }
+.Item:hover .Connector { width: 54px; background: var(--Timeline_Dot_Color); }
+
+.Card {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.45s ease, padding 0.45s ease, margin-top 0.3s ease, opacity 0.3s ease;
+	width: 100%;
+	background: var(--Card_Background);
+	color: var(--Text_Color);
+	border-radius: 10px;
+	box-shadow: 0 4px 14px var(--Shadow);
+	padding: 0 24px;
+	margin-top: 0;
+	opacity: 0;
+	box-sizing: border-box;
+}
+
+.CardText {
+	margin: 0;
+	text-align: justify;
+	white-space: pre-line;
+}
+
+.Item.Open .Card {
+	max-height: 4000px;
+	padding: 18px 24px;
+	margin-top: 14px;
+	opacity: 1;
+}
+
+@media (hover: hover) {
+	.Item:hover .Card {
+		max-height: 4000px;
+		padding: 18px 24px;
+		margin-top: 14px;
+		opacity: 1;
+	}
+}
+
+.Base {
+	position: relative;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	padding: 40px 0 60px 0;
+}
+
+.Base::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	height: 4px;
+	background: var(--Timeline_Line_Color);
+	transform: translateY(-50%);
+	z-index: 0;
+}
+
+.BaseText {
+	position: relative;
+	z-index: 1;
+	background: var(--Page_Background);
+	padding: 10px 28px;
+	font-family: var(--Title_Font);
+	color: var(--Text_Color);
+	font-size: 2.25rem;
+	line-height: 1;
+}
+
+@media (max-width: 800px) {
+	.Timeline { padding: 20px 0 0 0; }
+	.Track { gap: 20px; padding: 0 10px; }
+	.Spine { left: 24px; }
+	.Dot { left: 24px; }
+	.Item { justify-content: flex-start; }
+	.Side,
+	.Left .Side,
+	.Right .Side {
+		width: calc(100% - 54px);
+		margin-left: 54px;
+		align-items: flex-start;
+		padding: 0;
+	}
+	.Left .Branch, .Right .Branch { flex-direction: row; }
+	.Left .Title, .Right .Title { text-align: left; }
+	.Title { font-size: 1.4rem; }
+	.BaseText { font-size: 1.65rem; padding: 8px 20px; }
+}

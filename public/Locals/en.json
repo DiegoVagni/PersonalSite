@@ -48,6 +48,8 @@
   "--WelcomeAnimColor3": "Starting animation color 3",
   "--WelcomeAnimColor4": "Starting animation color 4",
   "--Select_BackgroundColor": "Select background color",
+  "--Timeline_Line_Color": "Timeline line color",
+  "--Timeline_Dot_Color": "Timeline dot color",
 
   "Languages": "Languages",
   "Software_Design": "Software design",
@@ -109,6 +111,7 @@
 
   "Stamp": "Stamp",
   "HomeAnimation": "Starting animation",
+  "Still_Working": "Still working",
 
   "CardStat_TeamSize": "Team size",
   "CardStat_Time": "Needed time",

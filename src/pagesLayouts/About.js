@@ -1,27 +1,27 @@
 import { Component } from "react";
-import styleSheet from "../utils/StyleSheet";
-import AboutMeCard from "../components/pagesComponents/aboutMe/AboutMeCard"
+import AboutTimeline from "../components/pagesComponents/aboutMe/AboutTimeline"
 import FlexStyle from "../scss/Flexes.module.scss"
 
 
 class About extends Component {
 	render() {
-
+		const events = [
+			"FirstSteps",
+			"H-Farm",
+			"SUPSIME",
+			"TAG",
+			"Vodafone",
+			"PartTime",
+			"G3CLABSME",
+			"OnlyMe",
+			"BackToConsulence",
+			"AIRapport",
+			"Passions",
+		]
 		return (
 			<div className={`${FlexStyle.FlexColumnCenterTop}`}>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"FirstSteps"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"H-Farm"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"SUPSIME"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"TAG"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"Vodafone"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"PartTime"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"G3CLABSME"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"OnlyMe"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"BackToConsulence"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"AIRapport"}></AboutMeCard>
-				<AboutMeCard styleSheet={this.props.styleSheet} title={"Passions"}></AboutMeCard>
+				<AboutTimeline events={events} />
 			</div>
-
 		);
 	}
 }
