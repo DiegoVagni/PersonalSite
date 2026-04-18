@@ -83,6 +83,14 @@ class Projects extends Component {
 					/>
 
 				<ProjectCard
+					title={"CharacterBuilder"}
+					tech={[[CSharp, Locale.GetMessages("CSharp")], [Unity, Locale.GetMessages("Unity")]]}
+					GitHub={Locale.GetMessages("Private")}
+					to={'/'}
+					preview={<ImgPreview src={TopSecret} local={"CharacterBuilder"} />}
+					/>
+
+				<ProjectCard
 					title={"Site"}
 					tech={[[Css, Locale.GetMessages("Css")], [Javascript, Locale.GetMessages("Javascript")], [Html, Locale.GetMessages("Html")], [React, Locale.GetMessages("React")]]}
 					stampRot={"15deg"}

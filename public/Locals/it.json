@@ -166,6 +166,14 @@
 	"Fongit_End_Date": "15.09.2025",
 	"Fongit_Description": "Swiss Startup Investment Rating è un tool pensato per individuare le startup svizzere più interessanti su cui investire. Fa scraping del web per raccogliere dati sulle startup svizzere e li salva in un database locale. Poi ogni voce viene passata attraverso un LLM esterno che le assegna un punteggio sul potenziale di investimento, e i risultati vengono ordinati in modo che i nomi più promettenti emergano in cima alla lista.\n\nCostruito da solo, da luglio a metà settembre 2025, su commissione di Antonio Gambardella. Lo stack è React lato frontend e Node.js lato backend.",
 
+	"CharacterBuilder": "Character Builder",
+	"CharacterBuilder_Time": "17 mesi",
+	"CharacterBuilder_TeamSize": "1 persona",
+	"CharacterBuilder_Committer": "Diego Vagni",
+	"CharacterBuilder_Starting_Date": "10.02.2024",
+	"CharacterBuilder_End_Date": "15.07.2025",
+	"CharacterBuilder_Description": "Character Builder è un tool modulare per generare personaggi per i videogiochi. Gestisce background, statistiche, razza, parti del corpo, organi, malattie e nomi, tutto definito come dato, così ogni pezzo può essere sostituito, esteso o combinato senza toccare il codice. Il sistema è disaccoppiato da Unity il più possibile, così la stessa logica può essere riutilizzata anche fuori da Unity, ed è progettato sin dall'inizio per funzionare in multiplayer.\n\nCostruito da solo in C# su Unity, da febbraio 2024 a metà luglio 2025.",
+
 	"LastRun": "LastRun",
 	"LastRun_Time": "1 mese",
 	"LastRun_TeamSize": "2 persone",
